@@ -13,10 +13,11 @@ export default function ProgrammaPage() {
   return (
     <div className="pb-24 md:pb-0">
       {/* ===== HERO SECTION ===== */}
-      <section className="px-8 md:px-16 pt-36 pb-24">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-12 items-end">
+      <section className="gradient-hero px-8 md:px-16 pt-36 pb-24 relative overflow-hidden">
+        <div className="absolute top-20 right-0 w-[400px] h-[400px] rounded-full bg-primary/[0.03] blur-[80px] pointer-events-none" />
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-12 items-end relative">
           <div className="flex-1">
-            <span className="inline-block px-3 py-1 bg-secondary-container text-on-secondary-container font-bold text-xs uppercase tracking-widest rounded mb-6">
+            <span className="inline-block px-3 py-1 bg-secondary-container/80 text-on-secondary-container font-bold text-xs uppercase tracking-widest rounded-full mb-6 backdrop-blur-sm">
               Peer-Group Coaching
             </span>
             <h1 className="font-[family-name:var(--font-headline)] text-5xl md:text-7xl font-black tracking-tighter leading-[0.9] mb-8">
@@ -30,7 +31,7 @@ export default function ProgrammaPage() {
             </p>
           </div>
           <div className="relative w-full md:w-1/3">
-            <div className="bg-primary text-white p-6 rounded-xl relative z-10">
+            <div className="btn-primary p-6 rounded-xl relative z-10">
               <div className="flex items-center gap-2 mb-2">
                 <span
                   className="material-symbols-outlined text-white"
@@ -51,18 +52,18 @@ export default function ProgrammaPage() {
       </section>
 
       {/* ===== PEER-GROUP METHODE — Bento Grid ===== */}
-      <section className="bg-surface-container-low py-32 px-8 md:px-16">
+      <section className="gradient-warm py-32 px-8 md:px-16">
         <div className="max-w-7xl mx-auto">
           <div className="mb-16">
             <h2 className="font-[family-name:var(--font-headline)] text-4xl font-bold mb-4">
               De Groep is het Mechanisme
             </h2>
-            <div className="w-24 h-1 bg-secondary" />
+            <div className="w-24 h-1 bg-gradient-to-r from-secondary to-primary rounded-full" />
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
             {/* Radicale Accountability */}
-            <div className="md:col-span-8 bg-surface-container p-12 rounded-xl flex flex-col md:flex-row gap-12 items-center">
+            <div className="md:col-span-8 bg-white p-12 rounded-2xl flex flex-col md:flex-row gap-12 items-center card-hover border border-outline-variant/10">
               <div className="flex-1">
                 <h3 className="font-[family-name:var(--font-headline)] text-3xl font-bold mb-4">
                   Radicale Accountability
@@ -84,7 +85,7 @@ export default function ProgrammaPage() {
             </div>
 
             {/* -80% stat */}
-            <div className="md:col-span-4 bg-secondary text-white p-12 rounded-xl flex flex-col justify-center text-center">
+            <div className="md:col-span-4 text-white p-12 rounded-2xl flex flex-col justify-center text-center" style={{ background: "linear-gradient(165deg, #b868c7 0%, #A559B4 50%, #8a3d9a 100%)" }}>
               <span className="text-6xl font-black mb-2">-80%</span>
               <span className="font-bold text-xl leading-tight">
                 Minder terugval door groepsaccountability vs. solo coaching
@@ -92,7 +93,7 @@ export default function ProgrammaPage() {
             </div>
 
             {/* Strategisch Sparren */}
-            <div className="md:col-span-5 bg-surface-container-high p-12 rounded-xl">
+            <div className="md:col-span-5 bg-white p-12 rounded-2xl card-hover border border-outline-variant/10">
               <span className="material-symbols-outlined text-secondary text-4xl mb-4">
                 hub
               </span>
@@ -106,7 +107,7 @@ export default function ProgrammaPage() {
             </div>
 
             {/* Quote */}
-            <div className="md:col-span-7 bg-white p-12 rounded-xl shadow-sm flex flex-col justify-center">
+            <div className="md:col-span-7 bg-white p-12 rounded-2xl editorial-shadow flex flex-col justify-center">
               <p className="italic text-2xl leading-relaxed text-on-surface mb-6">
                 &ldquo;Het begint bij de switch in sport, omdat je daar fysiek
                 jezelf onder controle krijgt, krijg je veel andere dingen in je
@@ -116,9 +117,9 @@ export default function ProgrammaPage() {
                 <Image
                   src="/images/jaap-willem.jpg"
                   alt="Jaap Willem"
-                  width={40}
-                  height={40}
-                  className="rounded-full object-cover"
+                  width={44}
+                  height={44}
+                  className="avatar"
                 />
                 <div>
                   <span className="text-sm font-bold not-italic text-secondary">
@@ -181,7 +182,7 @@ export default function ProgrammaPage() {
 
             <Link
               href="/intake"
-              className="mt-10 block text-center border-2 border-primary text-primary font-bold text-sm py-3.5 rounded-lg hover:bg-primary hover:text-white transition-colors"
+              className="mt-10 block text-center btn-secondary font-bold text-sm py-3.5 rounded-lg"
             >
               Kies Core
             </Link>
@@ -226,7 +227,7 @@ export default function ProgrammaPage() {
 
             <Link
               href="/intake"
-              className="mt-10 block text-center bg-primary text-white font-bold text-sm py-3.5 rounded-lg hover:bg-primary-dark transition-colors"
+              className="mt-10 block text-center btn-primary font-bold text-sm py-3.5 rounded-lg"
             >
               Kies Plus
             </Link>
@@ -263,7 +264,7 @@ export default function ProgrammaPage() {
 
             <Link
               href="/intake"
-              className="mt-10 block text-center border-2 border-on-surface text-on-surface font-bold text-sm py-3.5 rounded-lg hover:bg-on-surface hover:text-white transition-colors"
+              className="mt-10 block text-center border-2 border-on-surface text-on-surface font-bold text-sm py-3.5 rounded-lg hover:bg-on-surface hover:text-white transition-all duration-300"
             >
               Kies Ultimate
             </Link>
@@ -273,7 +274,7 @@ export default function ProgrammaPage() {
       </section>
 
       {/* ===== SOCIAL PROOF — Testimonials ===== */}
-      <section className="bg-surface-container-low py-32 overflow-hidden px-8 md:px-16">
+      <section className="gradient-warm py-32 overflow-hidden px-8 md:px-16">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
             <h2 className="font-[family-name:var(--font-headline)] text-4xl font-bold max-w-md">
@@ -283,7 +284,7 @@ export default function ProgrammaPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             {/* Testimonial 1 */}
-            <div className="bg-white p-12 rounded-2xl">
+            <div className="bg-white p-12 rounded-2xl card-hover editorial-shadow">
               <div className="flex gap-1 mb-6">
                 {[1, 2, 3, 4, 5].map((i) => (
                   <span
@@ -303,9 +304,9 @@ export default function ProgrammaPage() {
                 <Image
                   src="/images/simon.png"
                   alt="Simon"
-                  width={48}
-                  height={48}
-                  className="rounded-full object-cover"
+                  width={44}
+                  height={44}
+                  className="avatar"
                 />
                 <div>
                   <p className="font-bold">Simon</p>
@@ -315,7 +316,7 @@ export default function ProgrammaPage() {
             </div>
 
             {/* Testimonial 2 */}
-            <div className="bg-white p-12 rounded-2xl">
+            <div className="bg-white p-12 rounded-2xl card-hover editorial-shadow">
               <div className="flex gap-1 mb-6">
                 {[1, 2, 3, 4, 5].map((i) => (
                   <span
@@ -335,9 +336,9 @@ export default function ProgrammaPage() {
                 <Image
                   src="/images/marc.jpg"
                   alt="Marc"
-                  width={48}
-                  height={48}
-                  className="rounded-full object-cover"
+                  width={44}
+                  height={44}
+                  className="avatar"
                 />
                 <div>
                   <p className="font-bold">Marc</p>
@@ -377,8 +378,9 @@ export default function ProgrammaPage() {
       {/* ===== FINAL CTA ===== */}
       <section className="py-20 px-8 md:px-16">
         <div className="max-w-7xl mx-auto">
-          <div className="bg-inverse-surface rounded-[3rem] p-12 md:p-24 text-center relative overflow-hidden">
-            <div className="absolute inset-0 bg-primary/10" />
+          <div className="gradient-dark rounded-[3rem] p-12 md:p-24 text-center relative overflow-hidden">
+            <div className="absolute -top-20 -right-20 w-96 h-96 rounded-full bg-primary/[0.08] blur-[80px] pointer-events-none" />
+            <div className="absolute -bottom-20 -left-20 w-64 h-64 rounded-full bg-secondary/[0.06] blur-[60px] pointer-events-none" />
             <div className="relative z-10">
               <h2 className="font-[family-name:var(--font-headline)] text-4xl md:text-6xl font-black text-white mb-6">
                 Klaar om te bewegen?
@@ -390,7 +392,7 @@ export default function ProgrammaPage() {
               <div className="inline-flex flex-col items-center gap-4">
                 <Link
                   href="/intake"
-                  className="bg-primary hover:bg-primary-dark text-white px-12 py-5 rounded-full text-xl font-bold transition-all shadow-2xl"
+                  className="btn-primary px-12 py-5 rounded-full text-xl font-bold"
                 >
                   Plan een Kennismakingsgesprek
                 </Link>

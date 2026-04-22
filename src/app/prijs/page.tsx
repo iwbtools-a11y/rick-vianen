@@ -37,10 +37,11 @@ export default function PrijsPage() {
       {/* ============================================================ */}
       {/*  1 — HERO                                                    */}
       {/* ============================================================ */}
-      <section className="pt-32 px-8 md:px-16">
-        <div className="max-w-7xl mx-auto py-20 md:py-28">
+      <section className="gradient-hero pt-32 px-8 md:px-16 relative overflow-hidden">
+        <div className="absolute top-20 left-0 w-[400px] h-[400px] rounded-full bg-secondary/[0.03] blur-[80px] pointer-events-none" />
+        <div className="max-w-7xl mx-auto py-20 md:py-28 relative">
           {/* Badge */}
-          <span className="inline-block bg-secondary-container text-on-secondary-container text-xs font-bold tracking-widest uppercase px-5 py-2 rounded-full mb-8">
+          <span className="inline-block bg-secondary-container/80 text-on-secondary-container text-xs font-bold tracking-widest uppercase px-5 py-2 rounded-full mb-8 backdrop-blur-sm">
             Investeer in Jezelf
           </span>
 
@@ -96,7 +97,7 @@ export default function PrijsPage() {
 
             <Link
               href="/intake"
-              className="mt-10 block text-center border-2 border-primary text-primary font-bold text-sm py-3.5 rounded-lg hover:bg-primary hover:text-white transition-colors"
+              className="mt-10 block text-center btn-secondary font-bold text-sm py-3.5 rounded-lg"
             >
               Kies Core
             </Link>
@@ -132,7 +133,7 @@ export default function PrijsPage() {
 
             <Link
               href="/intake"
-              className="mt-10 block text-center bg-primary text-white font-bold text-sm py-3.5 rounded-lg hover:bg-primary-dark transition-colors"
+              className="mt-10 block text-center btn-primary font-bold text-sm py-3.5 rounded-lg"
             >
               Kies Plus
             </Link>
@@ -185,7 +186,7 @@ export default function PrijsPage() {
                   alt="Laura"
                   width={40}
                   height={40}
-                  className="rounded-full object-cover"
+                  className="avatar"
                 />
                 <div>
                   <p className="text-sm font-bold text-on-surface">Laura</p>
@@ -202,7 +203,7 @@ export default function PrijsPage() {
                   alt="Chantal"
                   width={40}
                   height={40}
-                  className="rounded-full object-cover"
+                  className="avatar"
                 />
                 <div>
                   <p className="text-sm font-bold text-on-surface">Chantal</p>
@@ -243,7 +244,7 @@ export default function PrijsPage() {
                   alt="Inge"
                   width={56}
                   height={56}
-                  className="rounded-full object-cover shrink-0"
+                  className="avatar-lg"
                 />
                 <div>
                   <p className="text-sm text-on-surface-variant italic leading-relaxed">
@@ -304,16 +305,10 @@ export default function PrijsPage() {
       {/*  5 — FINAL CTA                                               */}
       {/* ============================================================ */}
       <section className="px-8 md:px-16 pb-24 md:pb-32">
-        <div className="max-w-7xl mx-auto relative overflow-hidden bg-surface-container-high rounded-lg py-20 md:py-28 px-8 text-center">
+        <div className="max-w-7xl mx-auto relative overflow-hidden gradient-cta rounded-2xl py-20 md:py-28 px-8 text-center">
           {/* Decorative blur circles */}
-          <div
-            className="absolute -top-20 -left-20 w-64 h-64 rounded-full bg-primary/10 blur-3xl pointer-events-none"
-            aria-hidden="true"
-          />
-          <div
-            className="absolute -bottom-20 -right-20 w-80 h-80 rounded-full bg-secondary/10 blur-3xl pointer-events-none"
-            aria-hidden="true"
-          />
+          <div className="absolute -top-20 -left-20 w-64 h-64 rounded-full bg-primary/[0.06] blur-[60px] pointer-events-none" />
+          <div className="absolute -bottom-20 -right-20 w-80 h-80 rounded-full bg-secondary/[0.06] blur-[60px] pointer-events-none" />
 
           <div className="relative z-10 max-w-2xl mx-auto">
             <h2 className="font-[family-name:var(--font-headline)] text-4xl md:text-6xl font-black tracking-tighter leading-[0.95]">
@@ -331,13 +326,13 @@ export default function PrijsPage() {
             <div className="flex flex-col sm:flex-row justify-center gap-4 mt-10">
               <Link
                 href="/intake"
-                className="bg-primary text-white font-bold text-sm px-8 py-3.5 rounded-lg hover:bg-primary-dark transition-colors"
+                className="btn-primary font-bold text-sm px-8 py-3.5 rounded-lg"
               >
                 Plan een Kennismakingsgesprek
               </Link>
               <Link
                 href="/programma"
-                className="border-2 border-primary text-primary font-bold text-sm px-8 py-3.5 rounded-lg hover:bg-primary hover:text-white transition-colors"
+                className="btn-secondary font-bold text-sm px-8 py-3.5 rounded-lg"
               >
                 Bekijk het Programma
               </Link>

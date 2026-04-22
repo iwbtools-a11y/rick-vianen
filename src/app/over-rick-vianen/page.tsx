@@ -12,7 +12,7 @@ export default function OverRickVianen() {
   return (
     <div className="pb-24 md:pb-0">
       {/* ───────────────────────── 1. HERO ───────────────────────── */}
-      <section className="pt-32 bg-surface">
+      <section className="pt-32 gradient-hero">
         <div className="max-w-7xl mx-auto px-8 py-12 md:py-20">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-end">
             {/* Left — 7 cols */}
@@ -224,9 +224,10 @@ export default function OverRickVianen() {
       {/* ──────────────────────── 5. CTA ──────────────────────────── */}
       <section className="bg-surface-container-highest">
         <div className="max-w-7xl mx-auto px-8 py-24 md:py-32">
-          <div className="bg-[#271813] rounded-xl p-12 md:p-20 relative overflow-hidden">
-            {/* Decorative blur circle */}
-            <div className="absolute -top-32 -right-32 w-96 h-96 rounded-full bg-secondary/10 blur-3xl pointer-events-none" />
+          <div className="gradient-dark rounded-2xl p-12 md:p-20 relative overflow-hidden">
+            {/* Decorative blur circles */}
+            <div className="absolute -top-32 -right-32 w-96 h-96 rounded-full bg-primary/[0.08] blur-[80px] pointer-events-none" />
+            <div className="absolute -bottom-20 -left-20 w-64 h-64 rounded-full bg-secondary/[0.06] blur-[60px] pointer-events-none" />
 
             <div className="relative z-10 grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
               {/* Text — left */}
@@ -245,7 +246,7 @@ export default function OverRickVianen() {
               <div className="md:col-span-4 flex md:justify-end">
                 <Link
                   href="/intake"
-                  className="inline-flex items-center gap-3 bg-primary text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-primary-dark transition-colors"
+                  className="inline-flex items-center gap-3 btn-primary px-8 py-4 rounded-lg font-bold text-lg"
                 >
                   <span className="material-symbols-outlined text-xl">
                     calendar_today

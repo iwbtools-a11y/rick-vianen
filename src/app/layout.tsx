@@ -3,7 +3,7 @@ import { Plus_Jakarta_Sans, Manrope } from "next/font/google";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { WhatsAppButton } from "@/components/whatsapp-button";
-import { StickyCta } from "@/components/sticky-cta";
+
 import "./globals.css";
 
 const plusJakarta = Plus_Jakarta_Sans({
@@ -44,7 +44,6 @@ export default function RootLayout({
         <main>{children}</main>
         <Footer />
         <WhatsAppButton />
-        <StickyCta />
       </body>
     </html>
   );

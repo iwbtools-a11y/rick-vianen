@@ -46,7 +46,7 @@ export function Navbar() {
                   className={`font-[family-name:var(--font-headline)] font-bold text-sm tracking-tight transition-colors duration-300 ${
                     isActive
                       ? "text-primary border-b-2 border-primary pb-1"
-                      : "text-on-surface hover:text-secondary"
+                      : "text-on-surface hover:text-primary link-hover"
                   }`}
                 >
                   {link.label}
@@ -58,7 +58,7 @@ export function Navbar() {
           <div className="flex items-center gap-4">
             <Link
               href="/intake"
-              className="bg-primary text-white px-6 py-2.5 text-sm font-bold rounded-lg hover:bg-primary-dark transition-colors"
+              className="btn-primary px-6 py-2.5 text-sm font-bold rounded-lg"
             >
               Gratis Gesprek
             </Link>

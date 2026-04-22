@@ -71,7 +71,7 @@ export default function IntakePage() {
           </p>
           <Link
             href="/"
-            className="inline-flex items-center gap-2 bg-primary text-white px-8 py-4 rounded-lg font-bold hover:bg-primary-dark transition-colors"
+            className="inline-flex items-center gap-2 btn-primary px-8 py-4 rounded-lg font-bold"
           >
             <span className="material-symbols-outlined text-xl">
               arrow_back
@@ -128,7 +128,7 @@ export default function IntakePage() {
               href="https://calendly.com/rickvianen"
               target="_blank"
               rel="noopener noreferrer"
-              className="shrink-0 bg-primary text-white px-8 py-4 rounded-xl font-bold text-sm hover:bg-primary-dark transition-colors flex items-center gap-2"
+              className="shrink-0 btn-primary px-8 py-4 rounded-xl font-bold text-sm flex items-center gap-2"
             >
               <span className="material-symbols-outlined text-xl">calendar_today</span>
               Open Calendly
@@ -374,7 +374,7 @@ export default function IntakePage() {
             <div className="pt-4">
               <button
                 type="submit"
-                className="w-full md:w-auto bg-primary text-white px-12 py-5 rounded-lg font-[family-name:var(--font-headline)] font-bold text-lg hover:bg-primary-dark transition-colors editorial-shadow flex items-center justify-center gap-3"
+                className="w-full md:w-auto btn-primary px-12 py-5 rounded-lg font-[family-name:var(--font-headline)] font-bold text-lg flex items-center justify-center gap-3"
               >
                 <span className="material-symbols-outlined text-2xl">
                   send
