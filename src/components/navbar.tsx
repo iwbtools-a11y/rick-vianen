@@ -60,7 +60,7 @@ export function Navbar() {
               href="/intake"
               className="bg-primary text-white px-6 py-2.5 text-sm font-bold rounded-lg hover:bg-primary-dark transition-colors"
             >
-              Start Nu
+              Gratis Gesprek
             </Link>
             {/* Mobile hamburger */}
             <button

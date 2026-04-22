@@ -89,11 +89,10 @@ export default function IntakePage() {
       <section className="pt-32 pb-8 px-8 md:px-16">
         <div className="max-w-3xl mx-auto">
           <h1 className="font-[family-name:var(--font-headline)] text-3xl md:text-4xl font-black tracking-tight mb-3">
-            Intake <span className="text-primary">Formulier</span>
+            Plan een <span className="text-primary">Gratis Gesprek</span>
           </h1>
           <p className="text-on-surface-variant leading-relaxed mb-6">
-            30 minuten. Geen pitch. Vul het formulier in en Rick neemt
-            persoonlijk contact op.
+            30 minuten. Geen pitch. Rick benoemt eerlijk wat hij ziet &mdash; daarna weet je het.
           </p>
           <div className="inline-flex items-center gap-3 p-3 bg-surface-container-low rounded-xl">
             <Image
@@ -109,6 +108,36 @@ export default function IntakePage() {
                 Persoonlijke review binnen 48 uur
               </p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Calendly Quick Book */}
+      <section className="px-8 md:px-16 py-8">
+        <div className="max-w-3xl mx-auto">
+          <div className="bg-surface-container rounded-xl p-8 flex flex-col sm:flex-row items-center gap-6">
+            <div className="flex-1">
+              <h2 className="font-[family-name:var(--font-headline)] font-bold text-lg mb-2">
+                Direct inplannen?
+              </h2>
+              <p className="text-on-surface-variant text-sm leading-relaxed">
+                Plan direct een gratis kennismakingsgesprek van 30 minuten via Calendly. Liever eerst het formulier invullen? Scroll naar beneden.
+              </p>
+            </div>
+            <a
+              href="https://calendly.com/rickvianen"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="shrink-0 bg-primary text-white px-8 py-4 rounded-xl font-bold text-sm hover:bg-primary-dark transition-colors flex items-center gap-2"
+            >
+              <span className="material-symbols-outlined text-xl">calendar_today</span>
+              Open Calendly
+            </a>
+          </div>
+          <div className="flex items-center gap-4 my-8">
+            <div className="flex-1 h-px bg-outline-variant/30" />
+            <span className="text-on-surface-variant text-sm font-bold uppercase tracking-widest">Of vul het formulier in</span>
+            <div className="flex-1 h-px bg-outline-variant/30" />
           </div>
         </div>
       </section>
