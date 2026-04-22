@@ -112,9 +112,21 @@ export default function ProgrammaPage() {
                 jezelf onder controle krijgt, krijg je veel andere dingen in je
                 leven ook onder controle.&rdquo;
               </p>
-              <span className="text-sm font-bold not-italic text-secondary">
-                Maarten
-              </span>
+              <div className="flex items-center gap-3">
+                <Image
+                  src="/images/jaap-willem.jpg"
+                  alt="Jaap Willem"
+                  width={40}
+                  height={40}
+                  className="rounded-full object-cover"
+                />
+                <div>
+                  <span className="text-sm font-bold not-italic text-secondary">
+                    Jaap Willem
+                  </span>
+                  <p className="text-xs text-on-surface-variant">CEO Administratiebureau</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -297,6 +309,7 @@ export default function ProgrammaPage() {
                 />
                 <div>
                   <p className="font-bold">Simon</p>
+                  <p className="text-xs text-on-surface-variant">Restaurant Eigenaar</p>
                 </div>
               </div>
             </div>
@@ -328,6 +341,7 @@ export default function ProgrammaPage() {
                 />
                 <div>
                   <p className="font-bold">Marc</p>
+                  <p className="text-xs text-on-surface-variant">Ondernemer</p>
                 </div>
               </div>
             </div>

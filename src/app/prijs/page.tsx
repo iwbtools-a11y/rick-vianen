@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -177,13 +178,37 @@ export default function PrijsPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* quote 1 */}
             <div className="bg-surface-container-low p-8 rounded-xl">
-              <p className="text-lg italic text-on-surface mb-4">&ldquo;Er was een leven voor MOVE, en een leven na MOVE.&rdquo;</p>
-              <p className="text-sm font-bold text-on-surface-variant">&mdash; Oud-klant MOVE</p>
+              <p className="text-lg italic text-on-surface mb-6">&ldquo;Er was een leven voor MOVE, en een leven na MOVE.&rdquo;</p>
+              <div className="flex items-center gap-3">
+                <Image
+                  src="/images/laura.jpg"
+                  alt="Laura"
+                  width={40}
+                  height={40}
+                  className="rounded-full object-cover"
+                />
+                <div>
+                  <p className="text-sm font-bold text-on-surface">Laura</p>
+                  <p className="text-xs text-on-surface-variant">Arts</p>
+                </div>
+              </div>
             </div>
             {/* quote 2 */}
             <div className="bg-surface-container-low p-8 rounded-xl">
-              <p className="text-lg italic text-on-surface mb-4">&ldquo;Rick leeft naar wat hij zegt.&rdquo;</p>
-              <p className="text-sm font-bold text-on-surface-variant">&mdash; Chantal</p>
+              <p className="text-lg italic text-on-surface mb-6">&ldquo;Rick leeft naar wat hij zegt.&rdquo;</p>
+              <div className="flex items-center gap-3">
+                <Image
+                  src="/images/chantal.jpg"
+                  alt="Chantal"
+                  width={40}
+                  height={40}
+                  className="rounded-full object-cover"
+                />
+                <div>
+                  <p className="text-sm font-bold text-on-surface">Chantal</p>
+                  <p className="text-xs text-on-surface-variant">Raadsheer</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -213,15 +238,20 @@ export default function PrijsPage() {
 
               {/* Quote / avatar */}
               <div className="flex items-center gap-4 mt-10 pt-8 border-t border-outline-variant/30">
-                <div className="w-14 h-14 rounded-full bg-secondary-container flex items-center justify-center shrink-0">
-                  <span className="material-symbols-outlined text-on-secondary-container text-2xl">
-                    groups
-                  </span>
+                <Image
+                  src="/images/inge.jpg"
+                  alt="Inge"
+                  width={56}
+                  height={56}
+                  className="rounded-full object-cover shrink-0"
+                />
+                <div>
+                  <p className="text-sm text-on-surface-variant italic leading-relaxed">
+                    &ldquo;De groep zorgde ervoor dat ik eindelijk die stap zette
+                    waar ik al twee jaar over twijfelde.&rdquo;
+                  </p>
+                  <p className="text-xs font-bold text-on-surface mt-1">Inge &middot; Directiesecretariaat</p>
                 </div>
-                <p className="text-sm text-on-surface-variant italic leading-relaxed">
-                  &ldquo;De groep zorgde ervoor dat ik eindelijk die stap zette
-                  waar ik al twee jaar over twijfelde.&rdquo;
-                </p>
               </div>
             </div>
 

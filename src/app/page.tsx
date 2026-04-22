@@ -342,7 +342,7 @@ export default function Home() {
                     Simon
                   </p>
                   <p className="text-xs text-on-surface-variant">
-                    Ondernemer &middot; MOVE Plus deelnemer
+                    Restaurant Eigenaar &middot; MOVE Plus deelnemer
                   </p>
                 </div>
               </div>
@@ -369,7 +369,7 @@ export default function Home() {
                 </div>
                 <p className="text-on-surface-variant text-sm italic">
                   &ldquo;Een liefdevolle pitbull was wat ik nodig had.&rdquo;
-                  &mdash; Maarten, Manager
+                  &mdash; Jaap Willem, CEO
                 </p>
               </div>
             </div>
@@ -380,11 +380,20 @@ export default function Home() {
                 &ldquo;Rust, overzicht en controle op mijn leven &mdash; dat was
                 mijn grote winst. Na 8 weken sliep ik beter, trainde ik 4x per week en nam ik betere beslissingen op werk.&rdquo;
               </p>
-              <div>
-                <p className="font-[family-name:var(--font-headline)] font-bold text-sm">
-                  Barbara
-                </p>
-                <p className="text-xs text-on-surface-variant">Financieel Adviseur</p>
+              <div className="flex items-center gap-3">
+                <Image
+                  src="/images/barbara.jpg"
+                  alt="Barbara"
+                  width={40}
+                  height={40}
+                  className="rounded-full object-cover"
+                />
+                <div>
+                  <p className="font-[family-name:var(--font-headline)] font-bold text-sm">
+                    Barbara
+                  </p>
+                  <p className="text-xs text-on-surface-variant">Ambachtelijk Kleermaker</p>
+                </div>
               </div>
             </div>
 
@@ -392,13 +401,22 @@ export default function Home() {
             <div className="bg-surface p-8 rounded-2xl">
               <p className="text-on-surface italic leading-relaxed mb-6">
                 &ldquo;Mijn werk wint het de hele tijd van het sporten. Ik kies
-                gewoon voor gemak.&rdquo; &mdash; zo dacht ik. Tot MOVE. Nu train ik 5x per week en mijn omzet is 30% gegroeid.
+                gewoon voor gemak.&rdquo; &mdash; zo dacht ik. Tot MOVE.
               </p>
-              <div>
-                <p className="font-[family-name:var(--font-headline)] font-bold text-sm">
-                  Remco
-                </p>
-                <p className="text-xs text-on-surface-variant">Eigenaar marketingbureau</p>
+              <div className="flex items-center gap-3">
+                <Image
+                  src="/images/koen.png"
+                  alt="Koen"
+                  width={40}
+                  height={40}
+                  className="rounded-full object-cover"
+                />
+                <div>
+                  <p className="font-[family-name:var(--font-headline)] font-bold text-sm">
+                    Koen
+                  </p>
+                  <p className="text-xs text-on-surface-variant">Strategisch Communicatieadviseur</p>
+                </div>
               </div>
             </div>
 
@@ -408,11 +426,20 @@ export default function Home() {
                 &ldquo;Rick leeft naar wat hij zegt. Dat is de reden waarom ik
                 instapte. Na 13 weken voelde ik me sterker dan in jaren.&rdquo;
               </p>
-              <div>
-                <p className="font-[family-name:var(--font-headline)] font-bold text-sm">
-                  Chantal
-                </p>
-                <p className="text-xs text-on-surface-variant">HR Director</p>
+              <div className="flex items-center gap-3">
+                <Image
+                  src="/images/chantal.jpg"
+                  alt="Chantal"
+                  width={40}
+                  height={40}
+                  className="rounded-full object-cover"
+                />
+                <div>
+                  <p className="font-[family-name:var(--font-headline)] font-bold text-sm">
+                    Chantal
+                  </p>
+                  <p className="text-xs text-on-surface-variant">Raadsheer</p>
+                </div>
               </div>
             </div>
           </div>
