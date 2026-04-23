@@ -11,9 +11,9 @@ export default function Home() {
         <div className="absolute top-20 right-0 w-[500px] h-[500px] rounded-full bg-primary/[0.03] blur-[100px] pointer-events-none" />
         <div className="absolute bottom-0 left-1/4 w-[400px] h-[400px] rounded-full bg-secondary/[0.04] blur-[80px] pointer-events-none" />
 
-        <div className="max-w-5xl mx-auto relative">
-          {/* Top — text */}
-          <div className="text-center mb-10 md:mb-14">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center relative">
+          {/* Left — Text + CTAs */}
+          <div>
             {/* Badge */}
             <div className="inline-flex items-center bg-surface-container-high/80 text-primary px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest backdrop-blur-sm mb-6">
               13 weken. 8 plekken. Geen jojo meer.
@@ -27,29 +27,12 @@ export default function Home() {
             </h1>
 
             {/* Subtitle */}
-            <p className="text-on-surface-variant text-lg md:text-xl max-w-2xl mx-auto leading-relaxed mt-6">
-              Bekijk Rick&apos;s presentatie en ontdek waarom 500+ professionals hun leven veranderden met de MOVE methode.
+            <p className="text-on-surface-variant text-lg md:text-xl leading-relaxed mt-6 max-w-lg">
+              Performance coaching voor ambitieuze professionals die sport, mindset en business als &eacute;&eacute;n geheel willen aanpakken.
             </p>
-          </div>
 
-          {/* Video */}
-          <div className="relative rounded-2xl overflow-hidden shadow-2xl bg-on-surface">
-            <div className="aspect-video">
-              <iframe
-                src="https://www.loom.com/embed/0b783f8172c2458e8e016527adac50aa?hide_owner=true&hide_share=true&hide_title=true"
-                frameBorder="0"
-                allowFullScreen
-                allow="autoplay; fullscreen"
-                className="absolute inset-0 w-full h-full"
-              />
-            </div>
-            {/* Subtle glow behind video */}
-            <div className="absolute -inset-4 -z-10 rounded-3xl bg-gradient-to-br from-primary/[0.06] to-secondary/[0.06] blur-xl" />
-          </div>
-
-          {/* Below video — CTAs + urgency */}
-          <div className="mt-10 md:mt-14 flex flex-col items-center gap-6">
-            <div className="flex flex-col sm:flex-row items-center gap-4">
+            {/* CTAs */}
+            <div className="flex flex-col sm:flex-row items-start gap-4 mt-8">
               <Link
                 href="/intake"
                 className="btn-primary px-8 py-4 text-base font-bold rounded-xl"
@@ -64,21 +47,33 @@ export default function Home() {
               </Link>
             </div>
 
-            {/* Urgency + stat */}
-            <div className="flex flex-col sm:flex-row items-center gap-6 text-sm text-on-surface-variant">
-              <div className="flex items-center gap-2">
-                <span className="material-symbols-outlined text-lg text-secondary">group</span>
-                <span>
-                  Mei-cohort: nog{" "}
-                  <strong className="text-on-surface">4 plekken</strong>{" "}
-                  beschikbaar
-                </span>
-              </div>
-              <span className="hidden sm:inline text-outline-variant">|</span>
-              <div className="flex items-center gap-2">
-                <span className="font-[family-name:var(--font-headline)] font-extrabold text-secondary">70%</span>
-                <span>succesratio in onze peer-groups</span>
-              </div>
+            {/* Urgency */}
+            <div className="flex items-center gap-2 mt-6 text-sm text-on-surface-variant">
+              <span className="material-symbols-outlined text-lg text-secondary">group</span>
+              <span>
+                Mei-cohort: nog{" "}
+                <strong className="text-on-surface">4 plekken</strong>{" "}
+                beschikbaar
+              </span>
+            </div>
+          </div>
+
+          {/* Right — Rick photo + floating stat */}
+          <div className="relative">
+            <div className="aspect-[4/5] rounded-2xl overflow-hidden relative shadow-2xl">
+              <Image
+                src="/images/rick-hero.png"
+                alt="Rick Vianen - Performance Coach"
+                fill
+                className="object-cover"
+                priority
+              />
+              <div className="absolute inset-x-0 bottom-0 h-1/4 bg-gradient-to-t from-black/10 to-transparent" />
+            </div>
+            {/* Floating stat box */}
+            <div className="absolute -bottom-6 -left-6 bg-white p-5 rounded-xl shadow-xl border border-outline-variant/10 hidden md:block">
+              <p className="font-[family-name:var(--font-headline)] text-4xl font-black text-secondary tracking-tighter">70%</p>
+              <p className="text-on-surface-variant text-xs font-bold uppercase tracking-widest mt-1">Succesratio Peer-Groups</p>
             </div>
           </div>
         </div>
@@ -213,8 +208,37 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ───────────────── WAT KLANTEN ZEGGEN ───────────────── */}
+      {/* ───────────────── VIDEO PRESENTATIE ───────────────── */}
       <section className="gradient-warm py-24 md:py-32 px-8 md:px-16">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-12">
+            <p className="text-secondary uppercase tracking-[0.2em] text-sm font-bold mb-4">
+              Bekijk de Presentatie
+            </p>
+            <h2 className="font-[family-name:var(--font-headline)] text-4xl md:text-5xl font-extrabold tracking-tighter text-on-surface mb-4">
+              Rick legt het <span className="text-primary">zelf</span> uit.
+            </h2>
+            <p className="text-on-surface-variant text-lg max-w-2xl mx-auto leading-relaxed">
+              20 minuten die je vertellen waarom 500+ professionals hun leven veranderden met de MOVE methode.
+            </p>
+          </div>
+
+          <div className="relative rounded-2xl overflow-hidden shadow-2xl bg-on-surface">
+            <div className="aspect-video">
+              <iframe
+                src="https://www.loom.com/embed/0b783f8172c2458e8e016527adac50aa?hide_owner=true&hide_share=true&hide_title=true"
+                frameBorder="0"
+                allowFullScreen
+                allow="autoplay; fullscreen"
+                className="absolute inset-0 w-full h-full"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ───────────────── WAT KLANTEN ZEGGEN ───────────────── */}
+      <section className="bg-surface-container-low py-24 md:py-32 px-8 md:px-16">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-16">
             <h2 className="font-[family-name:var(--font-headline)] text-4xl md:text-5xl font-extrabold tracking-tighter text-on-surface">
