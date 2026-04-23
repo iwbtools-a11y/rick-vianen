@@ -6,16 +6,16 @@ export default function Home() {
   return (
     <div className="pb-24 md:pb-0">
       {/* ───────────────────────── HERO ───────────────────────── */}
-      <section className="gradient-hero pt-32 pb-20 md:pt-48 md:pb-32 px-8 md:px-16 relative overflow-hidden">
+      <section className="gradient-hero pt-32 pb-20 md:pt-44 md:pb-32 px-8 md:px-16 relative overflow-hidden">
         {/* Soft ambient glow */}
         <div className="absolute top-20 right-0 w-[500px] h-[500px] rounded-full bg-primary/[0.03] blur-[100px] pointer-events-none" />
         <div className="absolute bottom-0 left-1/4 w-[400px] h-[400px] rounded-full bg-secondary/[0.04] blur-[80px] pointer-events-none" />
 
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center relative">
-          {/* Left column */}
-          <div className="lg:col-span-7 flex flex-col gap-8">
+        <div className="max-w-5xl mx-auto relative">
+          {/* Top — text */}
+          <div className="text-center mb-10 md:mb-14">
             {/* Badge */}
-            <div className="inline-flex self-start items-center bg-surface-container-high/80 text-primary px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest backdrop-blur-sm">
+            <div className="inline-flex items-center bg-surface-container-high/80 text-primary px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest backdrop-blur-sm mb-6">
               13 weken. 8 plekken. Geen jojo meer.
             </div>
 
@@ -27,12 +27,29 @@ export default function Home() {
             </h1>
 
             {/* Subtitle */}
-            <p className="text-on-surface-variant text-lg md:text-xl max-w-xl leading-relaxed">
-              In 13 weken van &lsquo;ik weet het&rsquo; naar &lsquo;ik doe het&rsquo;. Sport, mindset en business als &eacute;&eacute;n systeem &mdash; met een groep die je niet laat zitten.
+            <p className="text-on-surface-variant text-lg md:text-xl max-w-2xl mx-auto leading-relaxed mt-6">
+              Bekijk Rick&apos;s presentatie en ontdek waarom 500+ professionals hun leven veranderden met de MOVE methode.
             </p>
+          </div>
 
-            {/* CTAs */}
-            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
+          {/* Video */}
+          <div className="relative rounded-2xl overflow-hidden shadow-2xl bg-on-surface">
+            <div className="aspect-video">
+              <iframe
+                src="https://www.loom.com/embed/0b783f8172c2458e8e016527adac50aa?hide_owner=true&hide_share=true&hide_title=true"
+                frameBorder="0"
+                allowFullScreen
+                allow="autoplay; fullscreen"
+                className="absolute inset-0 w-full h-full"
+              />
+            </div>
+            {/* Subtle glow behind video */}
+            <div className="absolute -inset-4 -z-10 rounded-3xl bg-gradient-to-br from-primary/[0.06] to-secondary/[0.06] blur-xl" />
+          </div>
+
+          {/* Below video — CTAs + urgency */}
+          <div className="mt-10 md:mt-14 flex flex-col items-center gap-6">
+            <div className="flex flex-col sm:flex-row items-center gap-4">
               <Link
                 href="/intake"
                 className="btn-primary px-8 py-4 text-base font-bold rounded-xl"
@@ -47,43 +64,21 @@ export default function Home() {
               </Link>
             </div>
 
-            {/* Urgency */}
-            <div className="flex items-center gap-3 text-on-surface-variant text-sm">
-              <span className="material-symbols-outlined text-lg text-secondary">
-                group
-              </span>
-              <span>
-                Mei-cohort: nog{" "}
-                <strong className="text-on-surface">4 plekken</strong>{" "}
-                beschikbaar
-              </span>
-            </div>
-          </div>
-
-          {/* Right column */}
-          <div className="lg:col-span-5 relative">
-            <div className="aspect-[4/5] rounded-2xl w-full overflow-hidden relative shadow-2xl">
-              <Image
-                src="/images/rick-hero.png"
-                alt="Rick Vianen - Performance Coach"
-                fill
-                className="object-cover"
-                priority
-              />
-              {/* Subtle gradient overlay at bottom */}
-              <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-black/10 to-transparent" />
-            </div>
-
-            {/* Floating stat box */}
-            <div className="absolute -bottom-6 -left-6 bg-white rounded-2xl p-5 editorial-shadow border border-outline-variant/20">
-              <div className="flex items-baseline gap-2">
-                <span className="font-[family-name:var(--font-headline)] text-4xl font-extrabold text-secondary">
-                  70%
+            {/* Urgency + stat */}
+            <div className="flex flex-col sm:flex-row items-center gap-6 text-sm text-on-surface-variant">
+              <div className="flex items-center gap-2">
+                <span className="material-symbols-outlined text-lg text-secondary">group</span>
+                <span>
+                  Mei-cohort: nog{" "}
+                  <strong className="text-on-surface">4 plekken</strong>{" "}
+                  beschikbaar
                 </span>
               </div>
-              <p className="text-on-surface-variant text-sm mt-1 max-w-[180px] leading-snug">
-                Succes ratio in onze peer-groups
-              </p>
+              <span className="hidden sm:inline text-outline-variant">|</span>
+              <div className="flex items-center gap-2">
+                <span className="font-[family-name:var(--font-headline)] font-extrabold text-secondary">70%</span>
+                <span>succesratio in onze peer-groups</span>
+              </div>
             </div>
           </div>
         </div>
