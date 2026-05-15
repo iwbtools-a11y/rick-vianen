@@ -2,12 +2,69 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { Faq } from "@/components/faq";
+import { FaqJsonLd } from "@/components/faq-jsonld";
 
 export const metadata: Metadata = {
   title: "Programma | MOVE Coaching",
   description:
     "Het MOVE programma: peer-group methode, radicale accountability en elite coaching. Ontdek de groepsdynamiek van Rick Vianen.",
 };
+
+function ValueItem({
+  children,
+  value,
+  icon = "check_circle",
+  highlight = false,
+}: {
+  children: React.ReactNode;
+  value: string;
+  icon?: string;
+  highlight?: boolean;
+}) {
+  return (
+    <li className="flex items-center justify-between gap-3 py-3 border-b border-outline-variant/15 last:border-0">
+      <div className="flex items-start gap-3 flex-1">
+        <span
+          className={`material-symbols-outlined text-lg mt-0.5 shrink-0 ${highlight ? "text-secondary" : "text-primary"}`}
+          style={highlight ? { fontVariationSettings: "'FILL' 1" } : undefined}
+        >
+          {icon}
+        </span>
+        <span className="text-on-surface-variant text-sm leading-relaxed">{children}</span>
+      </div>
+      <span className={`text-sm font-bold shrink-0 ${highlight ? "text-secondary" : "text-on-surface/60"}`}>
+        {value}
+      </span>
+    </li>
+  );
+}
+
+const programmaFaqs = [
+  {
+    question: "Hoe ziet een typische MOVE-week eruit?",
+    answer: "Elke week volgt dezelfde structuur: een kort kennismoment (3-10 min), een praktische opdracht die je direct toepast, en op donderdag een live groeps-Q&A. Daarnaast train je volgens je schema en check je in via de accountability-tool. Totaal 2-3 uur per week.",
+  },
+  {
+    question: "Wat als ik een week mis?",
+    answer: "Het leven gebeurt. Als je een sessie mist, krijg je de opname en de opdracht achteraf. Maar: MOVE werkt door consistentie. De groep houdt je scherp en mist het als je er niet bent. Dat is juist de kracht.",
+  },
+  {
+    question: "Hoe groot is de groep?",
+    answer: "Maximaal 8 professionals per cohort. Dit is geen marketing-getal maar een bewuste keuze: groot genoeg voor diversiteit aan perspectieven, klein genoeg zodat niemand zich kan verstoppen. Rick coacht elk cohort persoonlijk.",
+  },
+  {
+    question: "Welke resultaten kan ik verwachten na 100 dagen?",
+    answer: "Zichtbaar fysiek resultaat, meer energie, betere focus en een werkend systeem dat je vasthoudt. De echte verschuiving: van 'ik moet mezelf motiveren' naar 'ik heb een structuur die het werk voor mij doet'. De eerste shift is voelbaar binnen 2 weken.",
+  },
+  {
+    question: "Wat is het verschil tussen Core, Performance en Ultimate?",
+    answer: "Core is de eerlijke instap: het fundament zonder de verdieping. Performance is het vlaggenschip met wekelijkse Q&A's, trainingsschema op maat en 3 jaar Notion-toegang. Ultimate voegt wekelijks 1-op-1 coaching met Rick toe.",
+  },
+  {
+    question: "Wat houdt de proces-garantie in?",
+    answer: "Als je elke stap uitvoert — check-ins, metingen, opdrachten, trainingsschema — en na 100 dagen geen aantoonbare vooruitgang ziet, dan werkt Rick kosteloos extra tijd met je door. De garantie zit in het proces: als jij het werk doet, werkt het.",
+  },
+];
 
 export default function ProgrammaPage() {
   return (
@@ -26,7 +83,7 @@ export default function ProgrammaPage() {
             </h1>
             <p className="text-xl md:text-2xl font-medium text-on-surface-variant max-w-xl">
               Een groep gelijkgestemden die je niet laat zitten. 4-8
-              professionals per cohort. 13 weken. Confronterend, meetbaar,
+              professionals per cohort. 100 dagen. Confronterend, meetbaar,
               blijvend.
             </p>
           </div>
@@ -51,12 +108,123 @@ export default function ProgrammaPage() {
         </div>
       </section>
 
+      {/* ===== HORIZONTAL TIMELINE ===== */}
+      <section className="py-24 md:py-32 px-8 md:px-16 overflow-hidden">
+        <div className="max-w-7xl mx-auto">
+          <div className="mb-16">
+            <span className="inline-block px-3 py-1 bg-secondary-container/80 text-on-secondary-container font-bold text-xs uppercase tracking-widest rounded-full mb-6">
+              Hoe het werkt
+            </span>
+            <h2 className="font-[family-name:var(--font-headline)] text-4xl md:text-5xl font-black tracking-tight">
+              Jouw 100 dagen in <span className="text-primary italic">5 stappen</span>
+            </h2>
+          </div>
+
+          <div className="overflow-x-auto pb-4 -mx-8 px-8 md:mx-0 md:px-0">
+            <div className="flex items-start gap-0 min-w-[900px]">
+              {[
+                {
+                  step: "01",
+                  title: "Kennismaking",
+                  desc: "30 minuten. Geen pitch. We kijken of MOVE bij jou past en wat je wilt bereiken.",
+                  icon: "handshake",
+                  when: "Voor de start",
+                },
+                {
+                  step: "02",
+                  title: "Persoonlijke kick-off",
+                  desc: "1-op-1 intake met Rick. Doelen stellen, metingen vastleggen, jouw startpunt bepalen.",
+                  icon: "person",
+                  when: "Week 0",
+                },
+                {
+                  step: "03",
+                  title: "Groeps kick-off",
+                  desc: "Start van jouw cohort. Maximaal 8 professionals. Jullie groep wordt gevormd.",
+                  icon: "groups",
+                  when: "Week 1",
+                },
+                {
+                  step: "04",
+                  title: "12 weken MOVE cyclus",
+                  desc: "Elke week dezelfde structuur: Master, Operate, Validate, Elevate. Wekelijkse les, opdracht en Q&A.",
+                  icon: "cycle",
+                  when: "Week 1–12",
+                },
+                {
+                  step: "05",
+                  title: "Eindevenement",
+                  desc: "Afsluiting, eindmetingen, resultaten vieren en jouw volgende stap bepalen.",
+                  icon: "emoji_events",
+                  when: "Week 13",
+                },
+              ].map((item, i) => (
+                <div key={i} className="flex items-start flex-1 min-w-[170px]">
+                  <div className="flex flex-col items-center w-full">
+                    {/* Node + line */}
+                    <div className="flex items-center w-full mb-6">
+                      <div className={`h-0.5 flex-1 ${i === 0 ? "bg-transparent" : "bg-gradient-to-r from-outline-variant/40 to-primary/40"}`} />
+                      <div className="w-14 h-14 rounded-full bg-white border-[3px] border-primary flex items-center justify-center shrink-0 shadow-md relative z-10">
+                        <span
+                          className="material-symbols-outlined text-primary text-2xl"
+                          style={{ fontVariationSettings: "'FILL' 1" }}
+                        >
+                          {item.icon}
+                        </span>
+                      </div>
+                      <div className={`h-0.5 flex-1 ${i === 4 ? "bg-transparent" : "bg-gradient-to-r from-primary/40 to-outline-variant/40"}`} />
+                    </div>
+
+                    {/* Content */}
+                    <div className="text-center px-3">
+                      <span className="text-xs font-bold text-primary tracking-wider uppercase">
+                        {item.when}
+                      </span>
+                      <h3 className="font-[family-name:var(--font-headline)] text-lg font-bold mt-1 mb-2 tracking-tight">
+                        {item.title}
+                      </h3>
+                      <p className="text-on-surface-variant text-sm leading-relaxed">
+                        {item.desc}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* MOVE Cycle detail */}
+          <div className="mt-16 bg-on-surface p-1 rounded-xl">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-1">
+              {[
+                { letter: "M", label: "Master", desc: "Kort, scherp kennismoment van 3-10 minuten. Exact wat je nodig hebt." },
+                { letter: "O", label: "Operate", desc: "Directe toepassing in je leven, business of gezondheid. Praktisch en onmiddellijk uitvoerbaar." },
+                { letter: "V", label: "Validate", desc: "Eerlijk terugkijken. Wat werkte? Wat brak af? Observeer je gedrag en resultaten." },
+                { letter: "E", label: "Elevate", desc: "Verfijn en verbeter. Beter dan vorige week. Vooruitgang zit in de aanpassingen." },
+              ].map((m, i) => (
+                <div key={i} className="bg-surface-container-low p-8 rounded-lg">
+                  <span className="font-[family-name:var(--font-headline)] text-4xl font-black text-primary">
+                    {m.letter}
+                  </span>
+                  <h4 className="font-[family-name:var(--font-headline)] text-lg font-bold tracking-tight mt-2 mb-2">
+                    {m.label}
+                  </h4>
+                  <p className="text-on-surface-variant text-sm leading-relaxed">
+                    {m.desc}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ===== PEER-GROUP METHODE — Bento Grid ===== */}
       <section className="gradient-warm py-32 px-8 md:px-16">
         <div className="max-w-7xl mx-auto">
           <div className="mb-16">
             <h2 className="font-[family-name:var(--font-headline)] text-4xl font-bold mb-4">
-              De Groep is het Mechanisme
+              De groep is het mechanisme
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-secondary to-primary rounded-full" />
           </div>
@@ -66,7 +234,7 @@ export default function ProgrammaPage() {
             <div className="md:col-span-8 bg-white p-12 rounded-2xl flex flex-col md:flex-row gap-12 items-center card-hover border border-outline-variant/10">
               <div className="flex-1">
                 <h3 className="font-[family-name:var(--font-headline)] text-3xl font-bold mb-4">
-                  Radicale Accountability
+                  Radicale accountability
                 </h3>
                 <p className="text-lg leading-relaxed text-on-surface-variant">
                   Niet Rick die je bij de hand neemt — een groep gelijkgestemden
@@ -98,7 +266,7 @@ export default function ProgrammaPage() {
                 hub
               </span>
               <h3 className="font-[family-name:var(--font-headline)] text-2xl font-bold mb-4">
-                Strategisch Sparren
+                Strategisch sparren
               </h3>
               <p className="text-on-surface-variant">
                 Directe feedback op je business- en mindsetuitdagingen van
@@ -109,23 +277,15 @@ export default function ProgrammaPage() {
             {/* Quote */}
             <div className="md:col-span-7 bg-white p-12 rounded-2xl editorial-shadow flex flex-col justify-center">
               <p className="italic text-2xl leading-relaxed text-on-surface mb-6">
-                &ldquo;Het begint bij de switch in sport, omdat je daar fysiek
-                jezelf onder controle krijgt, krijg je veel andere dingen in je
-                leven ook onder controle.&rdquo;
+                &ldquo;Geen excuses meer bedenken om niet te gaan sporten maar gewoon doen. We voelen ons heerlijk qua licht en geest. Minder last van kleine kwaaltjes. Beter humeur en helderder.&rdquo;
               </p>
               <div className="flex items-center gap-3">
-                <Image
-                  src="/images/jaap-willem.jpg"
-                  alt="Jaap Willem"
-                  width={44}
-                  height={44}
-                  className="avatar"
-                />
+                <div className="w-11 h-11 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold text-sm">R</div>
                 <div>
                   <span className="text-sm font-bold not-italic text-secondary">
-                    Jaap Willem
+                    Ronald
                   </span>
-                  <p className="text-xs text-on-surface-variant">CEO Administratiebureau</p>
+                  <p className="text-xs text-on-surface-variant">ZZP-er</p>
                 </div>
               </div>
             </div>
@@ -133,148 +293,208 @@ export default function ProgrammaPage() {
         </div>
       </section>
 
-      {/* ===== KIES JE TRAJECT — Pricing ===== */}
+      {/* ===== ENRICHED PRICING — Value Stacks ===== */}
       <section className="py-32 px-8 md:px-16">
         <div className="max-w-7xl mx-auto">
-        <div className="mb-24">
-          <h2 className="font-[family-name:var(--font-headline)] text-5xl font-extrabold mb-4">
-            Kies je Traject.
+          <div className="mb-24">
+            <h2 className="font-[family-name:var(--font-headline)] text-5xl font-extrabold mb-4">
+              Kies je traject.
+            </h2>
+            <p className="text-xl text-on-surface-variant max-w-2xl">
+              Alle trajecten duren 100 dagen. Eenmalige investering, inclusief kick-off en
+              afsluitevent. Bekijk precies wat je krijgt.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            {/* ── MOVE Core ── */}
+            <div className="bg-surface-container-low rounded-2xl overflow-hidden flex flex-col">
+              <div className="p-10 pb-6">
+                <p className="font-[family-name:var(--font-headline)] text-2xl font-black tracking-tight">
+                  MOVE Core
+                </p>
+                <p className="text-on-surface-variant text-sm mt-1 mb-6">
+                  De eerlijke instap. Voor wie wil proeven wat implementatie echt betekent.
+                </p>
+
+                <div className="mb-6">
+                  <span className="font-[family-name:var(--font-headline)] text-5xl font-black tracking-tighter">
+                    &euro;1.497
+                  </span>
+                  <span className="text-on-surface-variant text-sm ml-1">eenmalig</span>
+                </div>
+
+                <div className="flex items-center gap-2 mb-6">
+                  <span className="text-xs text-on-surface-variant line-through">&euro;4.193 waarde</span>
+                  <span className="text-xs font-bold text-white bg-secondary px-2 py-0.5 rounded-full">Bespaar 64%</span>
+                </div>
+
+                <Link
+                  href="/intake"
+                  className="block text-center btn-secondary font-bold text-sm py-3.5 rounded-lg"
+                >
+                  Kies Core
+                </Link>
+              </div>
+
+              <div className="border-t border-outline-variant/20 p-10 pt-6 flex-1">
+                <p className="text-xs font-bold uppercase tracking-wider text-on-surface mb-4">Wat je krijgt</p>
+                <ul>
+                  <ValueItem value="€397">Persoonlijke kick-off (1-op-1 intake + doelen)</ValueItem>
+                  <ValueItem value="€597">Groeps kick-off (start cohort, max 8)</ValueItem>
+                  <ValueItem value="€1.764">12 weken exclusieve content</ValueItem>
+                  <ValueItem value="€647">Eindevenement (afsluiting + metingen)</ValueItem>
+                </ul>
+                <p className="text-xs font-bold uppercase tracking-wider text-on-surface mb-4 mt-6">Bonussen</p>
+                <ul>
+                  <ValueItem value="€197" icon="card_giftcard" highlight>Notion volgsysteem</ValueItem>
+                  <ValueItem value="€297" icon="card_giftcard" highlight>Directe vraagstelmogelijkheid via kanaal</ValueItem>
+                  <ValueItem value="€197" icon="card_giftcard" highlight>Bibliotheek met trainingen &amp; inspiratie</ValueItem>
+                  <ValueItem value="€97" icon="card_giftcard" highlight>MOVE Foodguide</ValueItem>
+                  <ValueItem value="∞" icon="favorite" highlight>Kleine groep die elkaar support</ValueItem>
+                </ul>
+              </div>
+            </div>
+
+            {/* ── MOVE Performance (Featured) ── */}
+            <div className="relative bg-white rounded-2xl shadow-xl lg:scale-[1.03] z-20 overflow-hidden flex flex-col border-2 border-primary/20">
+              <span className="absolute -top-0 left-0 right-0 bg-primary text-white text-xs font-bold tracking-wider uppercase py-2.5 text-center">
+                MEEST GEKOZEN — HET VLAGGENSCHIP
+              </span>
+
+              <div className="p-10 pb-6 pt-14">
+                <p className="font-[family-name:var(--font-headline)] text-2xl font-black tracking-tight text-primary">
+                  MOVE Performance
+                </p>
+                <p className="text-on-surface-variant text-sm mt-1 mb-6">
+                  De volle stack. Voor wie klaar is met alleen proberen.
+                </p>
+
+                <div className="mb-6">
+                  <span className="font-[family-name:var(--font-headline)] text-5xl font-black tracking-tighter">
+                    &euro;2.497
+                  </span>
+                  <span className="text-on-surface-variant text-sm ml-1">eenmalig</span>
+                </div>
+
+                <div className="flex items-center gap-2 mb-6">
+                  <span className="text-xs text-on-surface-variant line-through">&euro;8.358 waarde</span>
+                  <span className="text-xs font-bold text-white bg-secondary px-2 py-0.5 rounded-full">Bespaar 70%</span>
+                </div>
+
+                <Link
+                  href="/intake"
+                  className="block text-center btn-primary font-bold text-sm py-3.5 rounded-lg"
+                >
+                  Kies Performance
+                </Link>
+              </div>
+
+              <div className="border-t border-outline-variant/20 p-10 pt-6 flex-1">
+                <p className="text-xs font-bold uppercase tracking-wider text-on-surface mb-4">Alles uit Core, plus</p>
+                <ul>
+                  <ValueItem value="€2.364" icon="bolt">12&times; wekelijkse Q&amp;A + context-verdieping</ValueItem>
+                  <ValueItem value="€501">Trainingsschema op maat (elke 4 weken bijgesteld)</ValueItem>
+                  <ValueItem value="€1.497" icon="bolt">3 jaar toegang Notion-systeem (ook na stop)</ValueItem>
+                </ul>
+                <p className="text-xs font-bold uppercase tracking-wider text-on-surface mb-4 mt-6">Bonussen</p>
+                <ul>
+                  <ValueItem value="€397" icon="card_giftcard" highlight>Persoonlijke kick-off (1-op-1 intake)</ValueItem>
+                  <ValueItem value="€597" icon="card_giftcard" highlight>Groeps kick-off (max 8)</ValueItem>
+                  <ValueItem value="€1.764" icon="card_giftcard" highlight>12 weken exclusieve content</ValueItem>
+                  <ValueItem value="€647" icon="card_giftcard" highlight>Eindevenement + metingen</ValueItem>
+                  <ValueItem value="€297" icon="card_giftcard" highlight>Directe vraagstelmogelijkheid via kanaal</ValueItem>
+                  <ValueItem value="€197" icon="card_giftcard" highlight>Bibliotheek trainingen &amp; inspiratie</ValueItem>
+                  <ValueItem value="€97" icon="card_giftcard" highlight>MOVE Foodguide</ValueItem>
+                  <ValueItem value="∞" icon="favorite" highlight>Kleine groep die elkaar support</ValueItem>
+                </ul>
+              </div>
+            </div>
+
+            {/* ── MOVE Ultimate ── */}
+            <div className="bg-surface-container-low rounded-2xl overflow-hidden flex flex-col">
+              <div className="p-10 pb-6">
+                <p className="font-[family-name:var(--font-headline)] text-2xl font-black tracking-tight">
+                  MOVE Ultimate
+                </p>
+                <p className="text-on-surface-variant text-sm mt-1 mb-6">
+                  Private. Voor wie wekelijks 1-op-1 met Rick wil werken.
+                </p>
+
+                <div className="mb-6">
+                  <span className="font-[family-name:var(--font-headline)] text-5xl font-black tracking-tighter">
+                    &euro;4.997
+                  </span>
+                  <span className="text-on-surface-variant text-sm ml-1">eenmalig</span>
+                </div>
+
+                <div className="flex items-center gap-2 mb-6">
+                  <span className="text-xs text-on-surface-variant line-through">&euro;13.322 waarde</span>
+                  <span className="text-xs font-bold text-white bg-secondary px-2 py-0.5 rounded-full">Bespaar 62%</span>
+                </div>
+
+                <Link
+                  href="/intake"
+                  className="block text-center border-2 border-on-surface text-on-surface font-bold text-sm py-3.5 rounded-lg hover:bg-on-surface hover:text-white transition-all duration-300"
+                >
+                  Kies Ultimate
+                </Link>
+              </div>
+
+              <div className="border-t border-outline-variant/20 p-10 pt-6 flex-1">
+                <p className="text-xs font-bold uppercase tracking-wider text-on-surface mb-4">Alles uit Performance, plus</p>
+                <ul>
+                  <ValueItem value="€4.764" icon="bolt">12&times; wekelijkse 1-op-1 sessie met Rick</ValueItem>
+                  <ValueItem value="€497" icon="bolt">Directe toegang tot Rick (24/7)</ValueItem>
+                </ul>
+                <p className="text-xs font-bold uppercase tracking-wider text-on-surface mb-4 mt-6">Inclusief uit Performance</p>
+                <ul>
+                  <ValueItem value="€2.364" icon="card_giftcard" highlight>12&times; wekelijkse Q&amp;A + verdieping</ValueItem>
+                  <ValueItem value="€501" icon="card_giftcard" highlight>Trainingsschema op maat</ValueItem>
+                  <ValueItem value="€1.497" icon="card_giftcard" highlight>3 jaar Notion-systeem</ValueItem>
+                  <ValueItem value="€1.764" icon="card_giftcard" highlight>12 weken exclusieve content</ValueItem>
+                  <ValueItem value="€647" icon="card_giftcard" highlight>Eindevenement + metingen</ValueItem>
+                  <ValueItem value="€197" icon="card_giftcard" highlight>Bibliotheek trainingen &amp; inspiratie</ValueItem>
+                  <ValueItem value="€97" icon="card_giftcard" highlight>MOVE Foodguide</ValueItem>
+                  <ValueItem value="∞" icon="favorite" highlight>Kleine groep die elkaar support</ValueItem>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ===== GARANTIE ===== */}
+      <section className="gradient-warm py-24 md:py-32 px-8 md:px-16">
+        <div className="max-w-4xl mx-auto text-center">
+          <span
+            className="material-symbols-outlined text-secondary text-6xl mb-6"
+            style={{ fontVariationSettings: "'FILL' 1" }}
+          >
+            verified
+          </span>
+          <h2 className="font-[family-name:var(--font-headline)] text-4xl md:text-5xl font-black tracking-tight mb-6">
+            Proces-garantie
           </h2>
-          <p className="text-xl text-on-surface-variant">
-            Alle trajecten duren 13 weken (1 kwartaal). Inclusief kick-off en
-            afsluitevent.
+          <p className="text-lg text-on-surface-variant leading-relaxed max-w-2xl mx-auto mb-8">
+            Als jij elke stap uitvoert zoals we die samen uitzetten — check-ins,
+            metingen, opdrachten, trainingsschema — en je ziet na 100 dagen geen
+            aantoonbare vooruitgang op jouw doelen, dan werk ik kosteloos
+            extra tijd met je door tot je het haalt.
           </p>
-        </div>
-
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-0 items-center">
-          {/* Core */}
-          <div className="bg-surface-container-low p-10 rounded-lg flex flex-col h-full">
-            <p className="font-[family-name:var(--font-headline)] text-2xl font-black tracking-tight">
-              MOVE Core
-            </p>
-            <p className="text-on-surface-variant text-sm mt-1">De Basis</p>
-
-            <div className="mt-8 mb-10">
-              <span className="font-[family-name:var(--font-headline)] text-5xl font-black tracking-tighter">
-                &euro;1.497
-              </span>
-              <span className="text-on-surface-variant text-sm ml-1">/kwartaal</span>
-            </div>
-
-            <ul className="space-y-5 flex-1">
-              <li className="flex items-start gap-3">
-                <span className="material-symbols-outlined text-primary text-xl mt-0.5 shrink-0">check_circle</span>
-                <span className="text-on-surface-variant leading-relaxed">1-op-1 onboardingsgesprek</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="material-symbols-outlined text-primary text-xl mt-0.5 shrink-0">check_circle</span>
-                <span className="text-on-surface-variant leading-relaxed">Wekelijkse les + opdracht</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="material-symbols-outlined text-primary text-xl mt-0.5 shrink-0">check_circle</span>
-                <span className="text-on-surface-variant leading-relaxed">Live Q&amp;A donderdag (groep)</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="material-symbols-outlined text-primary text-xl mt-0.5 shrink-0">check_circle</span>
-                <span className="text-on-surface-variant leading-relaxed">Kick-off &amp; afsluitevent</span>
-              </li>
-            </ul>
-
-            <Link
-              href="/intake"
-              className="mt-10 block text-center btn-secondary font-bold text-sm py-3.5 rounded-lg"
-            >
-              Kies Core
-            </Link>
-          </div>
-
-          {/* Plus (Featured) */}
-          <div className="relative bg-white p-12 rounded-lg shadow-xl lg:scale-105 z-20 flex flex-col">
-            <span className="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-white text-xs font-bold tracking-wider uppercase px-5 py-2 rounded-full whitespace-nowrap">
-              MEEST GEKOZEN
+          <div className="inline-flex items-center gap-3 bg-white px-6 py-4 rounded-xl editorial-shadow">
+            <span className="material-symbols-outlined text-primary text-2xl" style={{ fontVariationSettings: "'FILL' 1" }}>
+              shield
             </span>
-
-            <p className="font-[family-name:var(--font-headline)] text-2xl font-black tracking-tight text-primary">
-              MOVE Plus
+            <p className="text-sm font-bold text-on-surface">
+              De garantie zit in het proces. Als jij het werk doet, werkt het.
             </p>
-            <p className="text-on-surface-variant text-sm mt-1">Meest Gekozen</p>
-
-            <div className="mt-8 mb-10">
-              <span className="font-[family-name:var(--font-headline)] text-6xl font-black tracking-tighter">
-                &euro;2.497
-              </span>
-              <span className="text-on-surface-variant text-sm ml-1">/kwartaal</span>
-            </div>
-
-            <ul className="space-y-5 flex-1">
-              <li className="flex items-start gap-3">
-                <span className="material-symbols-outlined text-primary text-xl mt-0.5 shrink-0">bolt</span>
-                <span className="text-on-surface-variant leading-relaxed">Alles uit MOVE Core</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="material-symbols-outlined text-primary text-xl mt-0.5 shrink-0">check_circle</span>
-                <span className="text-on-surface-variant leading-relaxed">Op maat trainingsschema</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="material-symbols-outlined text-primary text-xl mt-0.5 shrink-0">check_circle</span>
-                <span className="text-on-surface-variant leading-relaxed">Dagelijkse trainingen via app</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="material-symbols-outlined text-primary text-xl mt-0.5 shrink-0">bolt</span>
-                <span className="text-on-surface-variant leading-relaxed">Accountability-tool toegang</span>
-              </li>
-            </ul>
-
-            <Link
-              href="/intake"
-              className="mt-10 block text-center btn-primary font-bold text-sm py-3.5 rounded-lg"
-            >
-              Kies Plus
-            </Link>
           </div>
-
-          {/* Ultimate */}
-          <div className="bg-surface-container-low p-10 rounded-lg flex flex-col h-full">
-            <p className="font-[family-name:var(--font-headline)] text-2xl font-black tracking-tight">
-              MOVE Ultimate
-            </p>
-            <p className="text-on-surface-variant text-sm mt-1">Maximaal Resultaat</p>
-
-            <div className="mt-8 mb-10">
-              <span className="font-[family-name:var(--font-headline)] text-5xl font-black tracking-tighter">
-                &euro;4.997
-              </span>
-              <span className="text-on-surface-variant text-sm ml-1">/kwartaal</span>
-            </div>
-
-            <ul className="space-y-5 flex-1">
-              <li className="flex items-start gap-3">
-                <span className="material-symbols-outlined text-primary text-xl mt-0.5 shrink-0">check_circle</span>
-                <span className="text-on-surface-variant leading-relaxed">Alles uit MOVE Plus</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="material-symbols-outlined text-primary text-xl mt-0.5 shrink-0">check_circle</span>
-                <span className="text-on-surface-variant leading-relaxed">Wekelijks 1-op-1 met Rick</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="material-symbols-outlined text-primary text-xl mt-0.5 shrink-0">check_circle</span>
-                <span className="text-on-surface-variant leading-relaxed">Directe toegang tot Rick</span>
-              </li>
-            </ul>
-
-            <Link
-              href="/intake"
-              className="mt-10 block text-center border-2 border-on-surface text-on-surface font-bold text-sm py-3.5 rounded-lg hover:bg-on-surface hover:text-white transition-all duration-300"
-            >
-              Kies Ultimate
-            </Link>
-          </div>
-        </div>
         </div>
       </section>
 
       {/* ===== SOCIAL PROOF — Testimonials ===== */}
-      <section className="gradient-warm py-32 overflow-hidden px-8 md:px-16">
+      <section className="py-32 overflow-hidden px-8 md:px-16">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
             <h2 className="font-[family-name:var(--font-headline)] text-4xl font-bold max-w-md">
@@ -297,20 +517,19 @@ export default function ProgrammaPage() {
                 ))}
               </div>
               <p className="text-xl italic mb-8">
-                &ldquo;Ik was iemand die dacht dat coaching niets voor mij was,
-                maar niets bleek minder waar.&rdquo;
+                &ldquo;Het belangrijkste dat ik meeneem is het motto van Rick: Het is simpel, maar niet gemakkelijk! Het verliezen van 20 kg lichaamsgewicht was het grootste resultaat.&rdquo;
               </p>
               <div className="flex items-center gap-4">
                 <Image
-                  src="/images/simon.png"
-                  alt="Simon"
+                  src="/images/inge.jpg"
+                  alt="Inge"
                   width={44}
                   height={44}
                   className="avatar"
                 />
                 <div>
-                  <p className="font-bold">Simon</p>
-                  <p className="text-xs text-on-surface-variant">Restaurant Eigenaar</p>
+                  <p className="font-bold">Inge</p>
+                  <p className="text-xs text-on-surface-variant">Management Assistent</p>
                 </div>
               </div>
             </div>
@@ -329,20 +548,19 @@ export default function ProgrammaPage() {
                 ))}
               </div>
               <p className="text-xl italic mb-8">
-                &ldquo;Niet voor mezelf kiezen was mijn grootste
-                bottleneck.&rdquo;
+                &ldquo;Het idee dat ik sterker ben dan ik denk, is iets wat ik echt geleerd heb door zijn coaching. Uiteindelijk de kwart triathlon in 3 uur en 5 minuten gelopen!&rdquo;
               </p>
               <div className="flex items-center gap-4">
                 <Image
-                  src="/images/marc.jpg"
-                  alt="Marc"
+                  src="/images/laura.jpg"
+                  alt="Laura"
                   width={44}
                   height={44}
                   className="avatar"
                 />
                 <div>
-                  <p className="font-bold">Marc</p>
-                  <p className="text-xs text-on-surface-variant">Ondernemer</p>
+                  <p className="font-bold">Laura</p>
+                  <p className="text-xs text-on-surface-variant">Arts</p>
                 </div>
               </div>
             </div>
@@ -351,28 +569,25 @@ export default function ProgrammaPage() {
       </section>
 
       {/* ===== FAQ ===== */}
-      <section className="py-32 px-8 md:px-16">
+      <section className="gradient-warm py-32 px-8 md:px-16">
         <div className="max-w-4xl mx-auto">
-        <h2 className="font-[family-name:var(--font-headline)] text-4xl font-bold mb-16">
-          Veelgestelde Vragen
-        </h2>
-        <Faq
-          items={[
-            {
-              question: "Waarom heb ik er een ander voor nodig? Ik moet het zelf kunnen.",
-              answer: "Hulp zoeken is niet zwak — het is slim. Als je het zelf kon, had je het al gedaan. De groep is het mechanisme, niet Rick alleen.",
-            },
-            {
-              question: "Werkt dit echt, of val ik opnieuw terug?",
-              answer: "13 weken herhaling + wekelijkse structuur + groepsaccountability zijn specifiek gebouwd zodat je niet terugvalt. De methode werkt op gedrag, niet op motivatie.",
-            },
-            {
-              question: "Ik heb geen tijd.",
-              answer: "Tijd is niet het echte bezwaar — prioriteit is het bezwaar. MOVE is gebouwd voor drukke mensen: 1 prioriteit per week.",
-            },
-          ]}
-        />
+          <h2 className="font-[family-name:var(--font-headline)] text-4xl font-bold mb-16">
+            Veelgestelde vragen
+          </h2>
+          <Faq items={programmaFaqs} />
+          <div className="text-center mt-10">
+            <Link
+              href="/veelgestelde-vragen"
+              className="inline-flex items-center gap-2 text-primary font-bold group link-hover"
+            >
+              Bekijk alle vragen
+              <span className="material-symbols-outlined text-lg transition-transform duration-300 group-hover:translate-x-1">
+                arrow_forward
+              </span>
+            </Link>
+          </div>
         </div>
+        <FaqJsonLd items={programmaFaqs} />
       </section>
 
       {/* ===== FINAL CTA ===== */}
@@ -386,7 +601,7 @@ export default function ProgrammaPage() {
                 Klaar om te bewegen?
               </h2>
               <p className="text-surface-container-highest/60 text-lg md:text-xl mb-12 max-w-2xl mx-auto">
-                De volgende cohort start in mei. 8 plekken. Daarna is het
+                De volgende cohort start op 30 mei. 8 plekken. Daarna is het
                 najaar.
               </p>
               <div className="inline-flex flex-col items-center gap-4">
@@ -394,7 +609,7 @@ export default function ProgrammaPage() {
                   href="/intake"
                   className="btn-primary px-12 py-5 rounded-full text-xl font-bold"
                 >
-                  Plan een Kennismakingsgesprek
+                  Plan een kennismakingsgesprek
                 </Link>
                 <p className="text-surface-container-highest/40 text-sm font-medium tracking-wide uppercase">
                   30 minuten. Geen pitch. Daarna weet je het.

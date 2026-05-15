@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 
@@ -9,7 +10,7 @@ const navLinks = [
   { href: "/programma", label: "Programma" },
   { href: "/prijs", label: "Prijs" },
   { href: "/over-rick-vianen", label: "Over Rick" },
-  { href: "/blog", label: "Gratis Waarde" },
+  { href: "/blog", label: "Blog" },
 ];
 
 const mobileNavLinks = [
@@ -17,7 +18,7 @@ const mobileNavLinks = [
   { href: "/programma", label: "Programma", icon: "calendar_today" },
   { href: "/prijs", label: "Prijs", icon: "payments" },
   { href: "/over-rick-vianen", label: "Over Rick", icon: "person" },
-  { href: "/blog", label: "Gratis", icon: "article" },
+  { href: "/blog", label: "Blog", icon: "article" },
 ];
 
 export function Navbar() {
@@ -29,11 +30,15 @@ export function Navbar() {
       {/* Desktop Nav */}
       <nav className="fixed top-0 w-full z-50 glass-nav">
         <div className="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
-          <Link
-            href="/"
-            className="text-2xl font-black text-primary italic font-[family-name:var(--font-headline)] tracking-tight"
-          >
-            MOVE
+          <Link href="/" className="block">
+            <Image
+              src="/images/move-logo.png"
+              alt="MOVE Coaching"
+              width={140}
+              height={48}
+              className="h-15 w-auto"
+              priority
+            />
           </Link>
 
           <div className="hidden md:flex items-center gap-10">
@@ -60,7 +65,7 @@ export function Navbar() {
               href="/intake"
               className="btn-primary px-6 py-2.5 text-sm font-bold rounded-lg"
             >
-              Gratis Gesprek
+              Plan gesprek
             </Link>
             {/* Mobile hamburger */}
             <button

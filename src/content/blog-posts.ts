@@ -50,7 +50,7 @@ export const blogPosts: BlogPost[] = [
         <li><strong>Kleine winsten</strong> — Kleine dagelijkse veranderingen leiden tot grote verbeteringen.</li>
       </ul>
 
-      <p>Download de gratis habit tracker en begin vandaag. Geen excuses, alleen actie.</p>
+      <p>Download de habit tracker en begin vandaag. Geen excuses, alleen actie.</p>
     `,
   },
   {
@@ -59,7 +59,7 @@ export const blogPosts: BlogPost[] = [
     date: "6 februari 2025",
     category: "Implementatie",
     excerpt:
-      "Een gratis video over de 3 type beloftes van 20 minuten. Sinds ik dit toepas ben ik effici\u00ebnter, betrouwbaarder en heb ik meer tijd voor wat er echt toe doet.",
+      "Een video over de 3 type beloftes van 20 minuten. Sinds ik dit toepas ben ik effici\u00ebnter, betrouwbaarder en heb ik meer tijd voor wat er echt toe doet.",
     content: `
       <p>Jaren geleden werd ik door een coach gechallenged op mijn betrouwbaarheid. 'Het komt wel goed', 'ik doe het later wel', 'maak je geen zorgen'. Klinkt herkenbaar? Ik deed het constant.</p>
 
@@ -122,7 +122,7 @@ export const blogPosts: BlogPost[] = [
 
       <p>Die ervaring is precies waarom ik nu doe wat ik doe. Coaching verandert levens op manieren die je niet verwacht.</p>
 
-      <p>De versie van mijzelf van vijf jaar geleden kon zich mijn huidige leven niet voorstellen: high-performance coach, IRONMAN 70.3 finisher, en verloofd met mijn droompartner.</p>
+      <p>De versie van mijzelf van vijf jaar geleden kon zich mijn huidige leven niet voorstellen: high-performance coach, IRONMAN finisher, en verloofd met mijn droompartner.</p>
 
       <p>Niet mijn ouders, niet ik, niemand had dit zien aankomen. En dat is precies het punt — je weet niet wat er mogelijk is totdat je begint.</p>
     `,
@@ -148,7 +148,7 @@ export const blogPosts: BlogPost[] = [
       <h3>Tool 3: Praktische stappen om effectief bij te sturen</h3>
       <p>In zowel business als gezondheid. De meeste mensen weten wat ze moeten doen. Het probleem is bijsturen wanneer het niet loopt. Deze tool geeft je een framework om snel te schakelen.</p>
 
-      <p>Dit zijn lessen die mijn leven hebben veranderd, en die ik nu gratis deel. Want kennis hoort niet achter een paywall.</p>
+      <p>Dit zijn lessen die mijn leven hebben veranderd, en die ik nu deel. Want kennis hoort niet achter een paywall.</p>
     `,
   },
 ];

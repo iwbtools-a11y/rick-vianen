@@ -21,7 +21,7 @@ export default function OverRickVianen() {
                 Over MOVE
               </p>
               <h1 className="font-[family-name:var(--font-headline)] text-5xl md:text-7xl font-black tracking-tighter leading-[0.9]">
-                Van Feestbeest
+                Van feestbeest
                 <br />
                 <span className="text-primary">naar IRONMAN.</span>
               </h1>
@@ -76,18 +76,18 @@ export default function OverRickVianen() {
             {/* Right — Story text */}
             <div className="lg:pt-8">
               <h2 className="font-[family-name:var(--font-headline)] text-4xl md:text-5xl font-black tracking-tight mb-10">
-                De Architect van MOVE
+                De architect van MOVE
               </h2>
               <div className="space-y-6 text-on-surface-variant leading-relaxed">
                 <p>
                   Het begon met het inschrijven voor de eerste halve IRONMAN. Van
-                  feestbeest naar IRONMAN 70.3 finisher &mdash; met tranen over
+                  feestbeest naar IRONMAN finisher &mdash; met tranen over
                   zijn wangen bij de finish. De echte winst was niet de finish,
                   maar de skills: discipline, dealen met gedachten, prioriteiten
                   stellen.
                 </p>
                 <p>
-                  Die ervaring plantte het zaad voor wat later MOVE zou worden:
+                  Die ervaring plantte het zaadje voor wat later MOVE zou worden:
                   een coachingfilosofie die sport, mindset en business als
                   &eacute;&eacute;n onlosmakelijk geheel beschouwt. Geen
                   theorie, geen fluff &mdash; alleen werkende structuur.
@@ -97,6 +97,15 @@ export default function OverRickVianen() {
                   presteren aan de buitenkant, maar merken dat gezondheid,
                   energie en structuur achterblijven bij wie ze willen zijn.
                   Confronterend, meetbaar, blijvend.
+                </p>
+                <p>
+                  Rick investeerde bijna &euro;100.000 om getraind te worden als coach, onder leiding van Dusan Djukich, een van de grootste business coaches van Amerika, schrijver van het boek en founder van Straight Line Leadership. Hiervoor is hij onder andere meerdere weekenden naar Amerika geweest om te trainen en het werk zelf te implementeren.
+                </p>
+                <p>
+                  Naast de coaching is Rick zelf IRONMAN finisher en ervaarde zelf de waarde van het behalen van zo&rsquo;n groot doel voor zijn persoonlijke en zakelijke leven.
+                </p>
+                <p>
+                  Dit samen is de grondslag van MOVE. De combinatie van sport en business coaching.
                 </p>
               </div>
               <Link
@@ -122,7 +131,7 @@ export default function OverRickVianen() {
             </span>
           </div>
           <h2 className="font-[family-name:var(--font-headline)] text-4xl md:text-5xl font-black tracking-tight mb-10">
-            Onze Missie
+            Onze missie
           </h2>
           <p className="text-xl md:text-2xl leading-relaxed text-on-surface-variant">
             Het enige peer-group traject in Nederland waar ambitieuze
@@ -146,7 +155,7 @@ export default function OverRickVianen() {
             {/* Top-left: Alles Hangt Samen (col-span-8) */}
             <div className="md:col-span-8 bg-surface-container-low rounded-xl p-10 border-l-4 border-primary">
               <h3 className="font-[family-name:var(--font-headline)] text-2xl font-bold tracking-tight mb-4">
-                Alles Hangt Samen
+                Alles hangt samen
               </h3>
               <p className="text-on-surface-variant leading-relaxed mb-8 max-w-lg">
                 Fysiek, mentaal, werk, relatie &mdash; niet los aanpakken. MOVE
@@ -166,12 +175,12 @@ export default function OverRickVianen() {
             </div>
 
             {/* Top-right: 90% stat (col-span-4) */}
-            <div className="md:col-span-4 bg-[#271813] rounded-xl p-10 flex flex-col justify-between min-h-[220px]">
-              <p className="font-[family-name:var(--font-headline)] text-7xl md:text-8xl font-black text-primary tracking-tighter">
-                90%
+            <div className="md:col-span-4 bg-[#271813] rounded-xl p-10 flex flex-col justify-center min-h-[220px] overflow-hidden">
+              <p className="font-[family-name:var(--font-headline)] text-3xl md:text-4xl font-black text-primary tracking-tighter">
+                90% implementatie
               </p>
-              <p className="text-surface-container-highest/60 text-sm font-bold uppercase tracking-widest">
-                Doen, 10% Theorie
+              <p className="text-surface-container-highest/50 text-base font-bold uppercase tracking-widest">
+                10% kennis
               </p>
             </div>
 
@@ -194,7 +203,7 @@ export default function OverRickVianen() {
                     volunteer_activism
                   </span>
                   <h4 className="font-[family-name:var(--font-headline)] text-lg font-bold tracking-tight mb-2">
-                    Verantwoordelijkheid is Bevrijdend
+                    Verantwoordelijkheid is bevrijdend
                   </h4>
                   <p className="text-on-surface-variant text-sm leading-relaxed">
                     Jij bent verantwoordelijk, niet je omstandigheden. Dat is
@@ -208,7 +217,7 @@ export default function OverRickVianen() {
                     groups
                   </span>
                   <h4 className="font-[family-name:var(--font-headline)] text-lg font-bold tracking-tight mb-2">
-                    De Groep is het Mechanisme
+                    De groep is het mechanisme
                   </h4>
                   <p className="text-on-surface-variant text-sm leading-relaxed">
                     Je maakt elkaar een belofte. Niet Rick die je bij de hand
@@ -246,12 +255,12 @@ export default function OverRickVianen() {
               <div className="md:col-span-4 flex md:justify-end">
                 <Link
                   href="/intake"
-                  className="inline-flex items-center gap-3 btn-primary px-8 py-4 rounded-lg font-bold text-lg"
+                  className="inline-flex items-center justify-center gap-3 btn-primary px-8 py-4 rounded-lg font-bold text-lg whitespace-nowrap w-full md:w-auto"
                 >
                   <span className="material-symbols-outlined text-xl">
                     calendar_today
                   </span>
-                  Plan een Kennismakingsgesprek
+                  Plan gesprek
                 </Link>
               </div>
             </div>

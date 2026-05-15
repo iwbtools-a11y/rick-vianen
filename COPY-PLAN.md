@@ -12,7 +12,7 @@ Based on: Strategie & Content Database (April 2026)
 
 ### Pricing (WRONG on current site)
 - **Current**: Core €499/mo, Pro €849/mo, Elite €1,800/mo (monthly)
-- **Correct**: MOVE Core €1.497/kw, MOVE Plus €2.497/kw, MOVE Ultimate €4.997/kw (per kwartaal / 13 weken)
+- **Correct**: MOVE Core €1.497/kw, MOVE Performance €2.497/kw, MOVE Ultimate €4.997/kw (per kwartaal / 13 weken)
 
 ### Method
 - **Current**: Generic "Audit, Architectuur, Actie, Autoriteit"
@@ -89,7 +89,7 @@ Based on: Strategie & Content Database (April 2026)
   - Wekelijkse les + opdracht (MOVE methode)
   - Live Q&A donderdag (groep)
   - Activate afsluitevent + certificaat
-- MOVE Plus: €2.497/kwartaal (POPULAR)
+- MOVE Performance: €2.497/kwartaal (POPULAR)
   - Alles uit Core +
   - Op maat trainingsschema
   - Dagelijkse trainingen via accountability-tool
@@ -115,7 +115,7 @@ Based on: Strategie & Content Database (April 2026)
 
 **Pricing Tiers** (FIX ALL PRICES)
 - MOVE Core — €1.497/kwartaal
-- MOVE Plus — €2.497/kwartaal (Meest gekozen)
+- MOVE Performance — €2.497/kwartaal (Meest gekozen)
 - MOVE Ultimate — €4.997/kwartaal
 
 **Remove**: Trust bar with fake logos (FORBES etc.) — violates tone of voice guidelines ("geen verkooptrucs")

@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MOVE Coaching — Klaviyo Design Guide</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Manrope', sans-serif;
+      font-weight: 400;
+      color: #271813;
+      background: #fff8f6;
+      line-height: 1.6;
+      padding: 40px 24px 80px;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    /* ─── TYPOGRAPHY ─── */
+    h1, h2, h3, h4, h5 {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+      color: #271813;
+    }
+
+    .guide-title {
+      font-size: 48px;
+      margin-bottom: 8px;
+    }
+    .guide-subtitle {
+      font-size: 18px;
+      color: #5a4138;
+      margin-bottom: 60px;
+      font-weight: 400;
+    }
+
+    .section-title {
+      font-size: 28px;
+      margin-bottom: 24px;
+      padding-top: 48px;
+      border-top: 2px solid #e3bfb3;
+    }
+    .section-title:first-of-type { border-top: none; padding-top: 0; }
+
+    /* ─── SWATCHES ─── */
+    .swatches {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 16px;
+      margin-bottom: 40px;
+    }
+    .swatch {
+      border-radius: 12px;
+      padding: 24px 20px;
+      min-height: 120px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+    .swatch-name {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 700;
+      font-size: 14px;
+      margin-bottom: 4px;
+    }
+    .swatch-hex {
+      font-family: monospace;
+      font-size: 13px;
+      opacity: 0.7;
+    }
+
+    /* ─── TYPE SPECIMENS ─── */
+    .type-specimen {
+      margin-bottom: 24px;
+      padding: 24px;
+      background: #fff;
+      border-radius: 12px;
+      border: 1px solid #e3bfb3;
+    }
+    .type-meta {
+      font-size: 12px;
+      color: #8e7067;
+      font-family: monospace;
+      margin-bottom: 8px;
+    }
+
+    /* ─── BUTTONS ─── */
+    .button-row {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+    }
+    .btn {
+      display: inline-block;
+      padding: 14px 32px;
+      border-radius: 8px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 700;
+      font-size: 14px;
+      text-decoration: none;
+      cursor: pointer;
+      border: none;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+    .btn:hover { transform: translateY(-1px); }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #E85211 0%, #d04400 100%);
+      color: #fff;
+      box-shadow: 0 2px 8px rgba(232, 82, 17, 0.2);
+    }
+    .btn-primary:hover { box-shadow: 0 4px 20px rgba(232, 82, 17, 0.35); }
+
+    .btn-secondary {
+      background: transparent;
+      color: #E85211;
+      border: 2px solid #E85211;
+    }
+    .btn-secondary:hover { background: #E85211; color: #fff; }
+
+    .btn-dark {
+      background: #271813;
+      color: #fff;
+    }
+
+    /* ─── CODE BLOCKS ─── */
+    .code-block {
+      background: #271813;
+      color: #f8ddd4;
+      padding: 20px 24px;
+      border-radius: 12px;
+      font-family: monospace;
+      font-size: 13px;
+      line-height: 1.7;
+      overflow-x: auto;
+      margin-bottom: 24px;
+    }
+    .code-block .comment { color: #8e7067; }
+    .code-block .value { color: #E85211; }
+
+    /* ─── TABLE ─── */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 40px;
+    }
+    th, td {
+      text-align: left;
+      padding: 12px 16px;
+      border-bottom: 1px solid #e3bfb3;
+      font-size: 14px;
+    }
+    th {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 700;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #8e7067;
+    }
+    td code {
+      font-family: monospace;
+      background: #fff1ed;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 13px;
+    }
+
+    /* ─── FORM PREVIEW ─── */
+    .form-preview {
+      background: #fff;
+      border-radius: 16px;
+      padding: 40px;
+      border: 1px solid #e3bfb3;
+      margin-bottom: 40px;
+    }
+    .form-preview label {
+      display: block;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 700;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #5a4138;
+      margin-bottom: 8px;
+    }
+    .form-preview input,
+    .form-preview select,
+    .form-preview textarea {
+      width: 100%;
+      background: #f8ddd4;
+      border: none;
+      border-radius: 8px;
+      padding: 16px 20px;
+      font-family: 'Manrope', sans-serif;
+      font-size: 15px;
+      color: #271813;
+      margin-bottom: 20px;
+      outline: none;
+      transition: box-shadow 0.2s ease;
+    }
+    .form-preview input:focus,
+    .form-preview textarea:focus {
+      box-shadow: 0 0 0 2px #E85211;
+    }
+    .form-preview input::placeholder,
+    .form-preview textarea::placeholder {
+      color: rgba(90, 65, 56, 0.4);
+    }
+
+    /* ─── EMAIL PREVIEW ─── */
+    .email-preview {
+      max-width: 600px;
+      margin: 0 auto 40px;
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid #e3bfb3;
+    }
+    .email-header {
+      background: linear-gradient(135deg, #E85211 0%, #d04400 100%);
+      color: #fff;
+      padding: 40px 32px;
+      text-align: center;
+    }
+    .email-header h2 {
+      color: #fff;
+      font-size: 28px;
+      margin-bottom: 8px;
+    }
+    .email-body {
+      padding: 32px;
+    }
+    .email-body p {
+      color: #5a4138;
+      font-size: 15px;
+      line-height: 1.7;
+      margin-bottom: 16px;
+    }
+    .email-footer {
+      padding: 24px 32px;
+      background: #fff1ed;
+      text-align: center;
+      font-size: 12px;
+      color: #8e7067;
+    }
+
+    .note {
+      background: #fff1ed;
+      border-left: 4px solid #E85211;
+      padding: 16px 20px;
+      border-radius: 0 8px 8px 0;
+      margin-bottom: 24px;
+      font-size: 14px;
+      color: #5a4138;
+    }
+  </style>
+</head>
+<body>
+
+  <h1 class="guide-title">MOVE Coaching</h1>
+  <p class="guide-subtitle">Klaviyo design guide &mdash; fonts, colors, buttons, form &amp; email styling</p>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- FONTS                                           -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <h2 class="section-title">Fonts</h2>
+
+  <div class="note">
+    Both fonts are free on Google Fonts. In Klaviyo, go to <strong>Styles &gt; Fonts</strong> and add them as web fonts using the URLs below.
+  </div>
+
+  <div class="code-block">
+    <span class="comment">/* Google Fonts import — paste in Klaviyo custom CSS or template &lt;head&gt; */</span><br>
+    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;family=Manrope:wght@400;500;600;700&amp;display=swap');
+  </div>
+
+  <table>
+    <thead>
+      <tr><th>Role</th><th>Font</th><th>Weights used</th><th>Fallback</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Headlines, buttons, labels</td>
+        <td><strong>Plus Jakarta Sans</strong></td>
+        <td>700 (bold), 800 (extra-bold)</td>
+        <td><code>Arial, Helvetica, sans-serif</code></td>
+      </tr>
+      <tr>
+        <td>Body text, paragraphs</td>
+        <td><strong>Manrope</strong></td>
+        <td>400 (regular), 600 (semi-bold), 700 (bold)</td>
+        <td><code>Arial, Helvetica, sans-serif</code></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="type-specimen">
+    <p class="type-meta">Plus Jakarta Sans &middot; 800 &middot; Headlines</p>
+    <h2 style="font-size: 36px; margin-bottom: 8px;">Klaar om te bewegen?</h2>
+    <h3 style="font-size: 24px; color: #E85211;">Start jouw traject vandaag.</h3>
+  </div>
+
+  <div class="type-specimen">
+    <p class="type-meta">Manrope &middot; 400 / 600 &middot; Body</p>
+    <p style="font-size: 16px; color: #5a4138; line-height: 1.7;">
+      MOVE is een 13-weeks peer-group coachingtraject voor ambitieuze professionals.
+      In kleine groepen van maximaal 8 deelnemers werk je gelijktijdig aan sport,
+      mindset en business &mdash; onder begeleiding van Rick Vianen.
+    </p>
+    <p style="font-size: 14px; color: #8e7067;">
+      <span style="font-weight: 600;">Let op:</span> letter-spacing on headlines is <code>-0.03em</code> (tight tracking).
+    </p>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- COLORS                                          -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <h2 class="section-title">Colors</h2>
+
+  <h3 style="font-size: 18px; margin-bottom: 16px;">Primary</h3>
+  <div class="swatches">
+    <div class="swatch" style="background: #E85211; color: #fff;">
+      <span class="swatch-name">Primary</span>
+      <span class="swatch-hex">#E85211</span>
+    </div>
+    <div class="swatch" style="background: #d04400; color: #fff;">
+      <span class="swatch-name">Primary dark</span>
+      <span class="swatch-hex">#d04400</span>
+    </div>
+    <div class="swatch" style="background: #a63500; color: #fff;">
+      <span class="swatch-name">Primary darker</span>
+      <span class="swatch-hex">#a63500</span>
+    </div>
+    <div class="swatch" style="background: #ffdbcf; color: #271813;">
+      <span class="swatch-name">Primary light</span>
+      <span class="swatch-hex">#ffdbcf</span>
+    </div>
+  </div>
+
+  <h3 style="font-size: 18px; margin-bottom: 16px;">Secondary</h3>
+  <div class="swatches">
+    <div class="swatch" style="background: #A559B4; color: #fff;">
+      <span class="swatch-name">Secondary (purple)</span>
+      <span class="swatch-hex">#A559B4</span>
+    </div>
+    <div class="swatch" style="background: #732b84; color: #fff;">
+      <span class="swatch-name">Secondary dark</span>
+      <span class="swatch-hex">#732b84</span>
+    </div>
+  </div>
+
+  <h3 style="font-size: 18px; margin-bottom: 16px;">Backgrounds &amp; surfaces</h3>
+  <div class="swatches">
+    <div class="swatch" style="background: #fff8f6; border: 1px solid #e3bfb3;">
+      <span class="swatch-name">Page background</span>
+      <span class="swatch-hex">#fff8f6</span>
+    </div>
+    <div class="swatch" style="background: #fff1ed; border: 1px solid #e3bfb3;">
+      <span class="swatch-name">Surface light</span>
+      <span class="swatch-hex">#fff1ed</span>
+    </div>
+    <div class="swatch" style="background: #ffe9e3; border: 1px solid #e3bfb3;">
+      <span class="swatch-name">Surface</span>
+      <span class="swatch-hex">#ffe9e3</span>
+    </div>
+    <div class="swatch" style="background: #f8ddd4; border: 1px solid #e3bfb3;">
+      <span class="swatch-name">Surface dark</span>
+      <span class="swatch-hex">#f8ddd4</span>
+    </div>
+    <div class="swatch" style="background: #ffffff; border: 1px solid #e3bfb3;">
+      <span class="swatch-name">White (cards)</span>
+      <span class="swatch-hex">#ffffff</span>
+    </div>
+  </div>
+
+  <h3 style="font-size: 18px; margin-bottom: 16px;">Text &amp; dark</h3>
+  <div class="swatches">
+    <div class="swatch" style="background: #271813; color: #fff;">
+      <span class="swatch-name">Heading text</span>
+      <span class="swatch-hex">#271813</span>
+    </div>
+    <div class="swatch" style="background: #5a4138; color: #fff;">
+      <span class="swatch-name">Body text</span>
+      <span class="swatch-hex">#5a4138</span>
+    </div>
+    <div class="swatch" style="background: #8e7067; color: #fff;">
+      <span class="swatch-name">Muted text</span>
+      <span class="swatch-hex">#8e7067</span>
+    </div>
+    <div class="swatch" style="background: #e3bfb3;">
+      <span class="swatch-name">Border / divider</span>
+      <span class="swatch-hex">#e3bfb3</span>
+    </div>
+    <div class="swatch" style="background: #3d2d27; color: #fff;">
+      <span class="swatch-name">Dark card bg</span>
+      <span class="swatch-hex">#3d2d27</span>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- BUTTONS                                         -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <h2 class="section-title">Buttons</h2>
+
+  <div class="button-row">
+    <a class="btn btn-primary">Gratis gesprek</a>
+    <a class="btn btn-secondary">Bekijk het programma</a>
+    <a class="btn btn-dark">Kies Performance</a>
+  </div>
+
+  <table>
+    <thead>
+      <tr><th>Style</th><th>Background</th><th>Text</th><th>Border radius</th><th>Padding</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Primary</strong></td>
+        <td><code>linear-gradient(135deg, #E85211, #d04400)</code></td>
+        <td><code>#ffffff</code></td>
+        <td><code>8px</code></td>
+        <td><code>14px 32px</code></td>
+      </tr>
+      <tr>
+        <td><strong>Secondary</strong></td>
+        <td><code>transparent</code></td>
+        <td><code>#E85211</code></td>
+        <td><code>8px</code></td>
+        <td><code>12px 32px</code> + <code>2px border #E85211</code></td>
+      </tr>
+      <tr>
+        <td><strong>Dark</strong></td>
+        <td><code>#271813</code></td>
+        <td><code>#ffffff</code></td>
+        <td><code>8px</code></td>
+        <td><code>14px 32px</code></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="code-block">
+    <span class="comment">/* Klaviyo button CSS — paste in form/email custom styles */</span><br><br>
+    .btn-move-primary {<br>
+    &nbsp;&nbsp;background: linear-gradient(135deg, <span class="value">#E85211</span> 0%, <span class="value">#d04400</span> 100%);<br>
+    &nbsp;&nbsp;color: <span class="value">#ffffff</span>;<br>
+    &nbsp;&nbsp;font-family: 'Plus Jakarta Sans', Arial, sans-serif;<br>
+    &nbsp;&nbsp;font-weight: 700;<br>
+    &nbsp;&nbsp;font-size: 14px;<br>
+    &nbsp;&nbsp;padding: 14px 32px;<br>
+    &nbsp;&nbsp;border-radius: 8px;<br>
+    &nbsp;&nbsp;border: none;<br>
+    &nbsp;&nbsp;cursor: pointer;<br>
+    &nbsp;&nbsp;text-decoration: none;<br>
+    &nbsp;&nbsp;display: inline-block;<br>
+    }
+  </div>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- FORM STYLING                                    -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <h2 class="section-title">Form styling</h2>
+
+  <div class="note">
+    Use these values when styling your Klaviyo form to match the website.
+  </div>
+
+  <table>
+    <thead>
+      <tr><th>Element</th><th>Property</th><th>Value</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Form background</td><td>background</td><td><code>#fff8f6</code> or <code>#ffffff</code></td></tr>
+      <tr><td>Input background</td><td>background</td><td><code>#f8ddd4</code></td></tr>
+      <tr><td>Input text</td><td>color</td><td><code>#271813</code></td></tr>
+      <tr><td>Input placeholder</td><td>color</td><td><code>rgba(90, 65, 56, 0.4)</code></td></tr>
+      <tr><td>Input border</td><td>border</td><td><code>none</code></td></tr>
+      <tr><td>Input border-radius</td><td>border-radius</td><td><code>8px</code></td></tr>
+      <tr><td>Input padding</td><td>padding</td><td><code>16px 20px</code></td></tr>
+      <tr><td>Input focus</td><td>box-shadow</td><td><code>0 0 0 2px #E85211</code></td></tr>
+      <tr><td>Label font</td><td>font-family</td><td><code>Plus Jakarta Sans</code></td></tr>
+      <tr><td>Label weight</td><td>font-weight</td><td><code>700</code></td></tr>
+      <tr><td>Label size</td><td>font-size</td><td><code>11px</code></td></tr>
+      <tr><td>Label style</td><td>text-transform</td><td><code>uppercase</code></td></tr>
+      <tr><td>Label tracking</td><td>letter-spacing</td><td><code>0.1em</code></td></tr>
+      <tr><td>Label color</td><td>color</td><td><code>#5a4138</code></td></tr>
+      <tr><td>Submit button</td><td>—</td><td>Use <code>.btn-move-primary</code> styles above</td></tr>
+    </tbody>
+  </table>
+
+  <h3 style="font-size: 18px; margin-bottom: 16px;">Form preview</h3>
+  <div class="form-preview">
+    <label>Volledige naam *</label>
+    <input type="text" placeholder="Je volledige naam" />
+    <label>E-mail *</label>
+    <input type="email" placeholder="je@email.com" />
+    <label>Telefoonnummer</label>
+    <input type="tel" placeholder="+31 6 12345678" />
+    <a class="btn btn-primary" style="width: 100%; text-align: center; display: block;">Aanmelden</a>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- EMAIL TEMPLATE                                  -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <h2 class="section-title">Email template reference</h2>
+
+  <div class="note">
+    Use this as a visual reference when building Klaviyo email templates. The email-safe font stack is <code>'Plus Jakarta Sans', Arial, Helvetica, sans-serif</code>.
+  </div>
+
+  <table>
+    <thead>
+      <tr><th>Element</th><th>Value</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Email width</td><td><code>600px</code></td></tr>
+      <tr><td>Background</td><td><code>#fff8f6</code></td></tr>
+      <tr><td>Content block bg</td><td><code>#ffffff</code></td></tr>
+      <tr><td>Header bg</td><td><code>linear-gradient(135deg, #E85211, #d04400)</code></td></tr>
+      <tr><td>Header text</td><td><code>#ffffff</code></td></tr>
+      <tr><td>Body text</td><td><code>#5a4138</code></td></tr>
+      <tr><td>Heading text</td><td><code>#271813</code></td></tr>
+      <tr><td>Footer bg</td><td><code>#fff1ed</code></td></tr>
+      <tr><td>Footer text</td><td><code>#8e7067</code></td></tr>
+      <tr><td>Link color</td><td><code>#E85211</code></td></tr>
+      <tr><td>Border / divider</td><td><code>#e3bfb3</code></td></tr>
+      <tr><td>Border radius (cards)</td><td><code>12px</code></td></tr>
+      <tr><td>Content padding</td><td><code>32px</code></td></tr>
+    </tbody>
+  </table>
+
+  <h3 style="font-size: 18px; margin-bottom: 16px;">Email preview</h3>
+  <div class="email-preview">
+    <div class="email-header">
+      <h2>Welkom bij MOVE</h2>
+      <p style="opacity: 0.85; font-size: 15px;">Je aanmelding is ontvangen.</p>
+    </div>
+    <div class="email-body">
+      <p>Hoi {{ first_name }},</p>
+      <p>
+        Goed dat je de stap hebt gezet. Rick neemt binnen 48 uur persoonlijk
+        contact met je op voor een kennismakingsgesprek.
+      </p>
+      <p>
+        Geen verkoopgesprek &mdash; gewoon een eerlijk gesprek over waar je
+        staat en waar je naartoe wilt.
+      </p>
+      <div style="text-align: center; margin: 28px 0;">
+        <a class="btn btn-primary" style="text-decoration: none;">Bekijk het programma</a>
+      </div>
+      <p style="font-size: 13px; color: #8e7067;">
+        Vragen? Reply direct op deze mail of app Rick: +31 6 2052 3549
+      </p>
+    </div>
+    <div class="email-footer">
+      MOVE Coaching by Rick Vianen &middot; Utrecht, Nederland<br>
+      KvK: 94159475
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- QUICK REFERENCE                                 -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <h2 class="section-title">Quick copy-paste reference</h2>
+
+  <div class="code-block">
+    <span class="comment">/* ─── COLORS ─── */</span><br>
+    Primary:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="value">#E85211</span><br>
+    Primary dark:&nbsp;&nbsp;&nbsp;&nbsp;<span class="value">#d04400</span><br>
+    Secondary:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="value">#A559B4</span><br>
+    Page background:&nbsp;<span class="value">#fff8f6</span><br>
+    Surface light:&nbsp;&nbsp;&nbsp;<span class="value">#fff1ed</span><br>
+    Surface:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="value">#ffe9e3</span><br>
+    Input background:&nbsp;<span class="value">#f8ddd4</span><br>
+    Heading text:&nbsp;&nbsp;&nbsp;&nbsp;<span class="value">#271813</span><br>
+    Body text:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="value">#5a4138</span><br>
+    Muted text:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="value">#8e7067</span><br>
+    Border:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="value">#e3bfb3</span><br>
+    Dark bg:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="value">#271813</span><br>
+    White:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="value">#ffffff</span><br><br>
+    <span class="comment">/* ─── FONTS ─── */</span><br>
+    Headlines:&nbsp;&nbsp;'Plus Jakarta Sans', Arial, Helvetica, sans-serif&nbsp;&nbsp;weight: 700/800<br>
+    Body:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'Manrope', Arial, Helvetica, sans-serif&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;weight: 400/600<br><br>
+    <span class="comment">/* ─── BORDER RADIUS ─── */</span><br>
+    Inputs:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8px<br>
+    Cards:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;12px<br>
+    Buttons:&nbsp;&nbsp;&nbsp;&nbsp;8px<br><br>
+    <span class="comment">/* ─── KLAVIYO REDIRECT ─── */</span><br>
+    Thank-you page: https://rick-vianen.web.app/bedankt
+  </div>
+
+</body>
+</html>

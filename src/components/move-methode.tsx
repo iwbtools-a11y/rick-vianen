@@ -6,7 +6,7 @@ const steps = [
   {
     icon: "school",
     title: "Master",
-    text: "Kort, scherp kennismoment van 3-10 minuten. Exact wat je nodig hebt, geen fluff.",
+    text: "Kort, scherp kennismoment van 3-10 minuten. Exact wat je nodig hebt.",
   },
   {
     icon: "play_arrow",
@@ -51,7 +51,7 @@ export function MoveMethode() {
           <h2 className="font-[family-name:var(--font-headline)] text-4xl md:text-5xl font-extrabold tracking-tighter text-on-surface leading-tight">
             De MOVE
             <br />
-            Methode
+            methode
           </h2>
           <div className="h-1 w-20 bg-primary mt-6 mb-6 rounded-full" />
           <p className="text-on-surface-variant leading-relaxed">

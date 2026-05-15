@@ -113,7 +113,7 @@ export default async function BlogPostPage({
 
           <div className="relative z-10 text-center">
             <h2 className="text-3xl md:text-5xl font-black tracking-tight leading-tight text-white font-[family-name:var(--font-headline)]">
-              KLAAR OM TE BEWEGEN?
+              Klaar om te bewegen?
             </h2>
 
             <p className="mt-6 text-white/80 leading-relaxed text-base md:text-lg max-w-xl mx-auto">

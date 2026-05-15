@@ -1,17 +1,23 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export function Footer() {
   return (
     <footer className="bg-on-surface text-surface py-20 px-8">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-16">
-        <div>
-          <div className="text-3xl font-black text-primary font-[family-name:var(--font-headline)] uppercase tracking-tighter mb-8">
-            MOVE
-          </div>
-          <p className="text-surface-container-highest/60 leading-relaxed text-sm">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-[2fr_1fr_1fr_1fr] gap-12 md:gap-20">
+        <div className="md:pr-8">
+          <Image
+            src="/images/move-logo.png"
+            alt="MOVE Coaching"
+            width={140}
+            height={56}
+            className="h-10 w-auto mb-8 brightness-0 invert"
+          />
+          <p className="text-surface-container-highest/60 leading-relaxed text-sm mb-6">
             MOVE cre&euml;ert beweging &mdash; in je lijf, je hoofd en je
             leven. Voor professionals die klaar zijn met alleen beginnen.
           </p>
+          <div className="klaviyo-form-RPkNF4" />
         </div>
 
         <div>
@@ -31,7 +37,7 @@ export function Footer() {
             </li>
             <li>
               <Link href="/prijs" className="hover:text-primary transition-colors">
-                Tarieven
+                Prijs
               </Link>
             </li>
             <li>
@@ -41,7 +47,7 @@ export function Footer() {
             </li>
             <li>
               <Link href="/blog" className="hover:text-primary transition-colors">
-                Gratis Waarde
+                Blog
               </Link>
             </li>
             <li>
@@ -88,6 +94,11 @@ export function Footer() {
           </h5>
           <ul className="space-y-4 text-surface-container-highest">
             <li>
+              <Link href="/veelgestelde-vragen" className="hover:text-primary transition-colors">
+                Veelgestelde vragen
+              </Link>
+            </li>
+            <li>
               <Link href="/privacy" className="hover:text-primary transition-colors">
                 Privacybeleid
               </Link>
@@ -103,14 +114,9 @@ export function Footer() {
               </a>
             </li>
             <li>
-              <a
-                href="https://calendly.com/rick-rickvianen/strategiegespek"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-primary transition-colors"
-              >
-                Plan een Gesprek
-              </a>
+              <Link href="/intake" className="hover:text-primary transition-colors">
+                Plan een gesprek
+              </Link>
             </li>
           </ul>
         </div>

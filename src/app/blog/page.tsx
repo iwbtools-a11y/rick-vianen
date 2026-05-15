@@ -29,7 +29,7 @@ export default function BlogPage() {
           {/* Left 8 cols */}
           <div className="md:col-span-8">
             <span className="text-secondary uppercase tracking-widest text-xs font-bold font-[family-name:var(--font-headline)]">
-              Editorial Journal
+              Editorial journal
             </span>
             <h1 className="mt-4 text-5xl md:text-7xl font-black tracking-tighter leading-[0.9] font-[family-name:var(--font-headline)]">
               KINETIC
@@ -119,7 +119,7 @@ export default function BlogPage() {
         {/* Header row */}
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6 mb-12">
           <h2 className="text-3xl md:text-4xl font-black tracking-tight font-[family-name:var(--font-headline)]">
-            Alle Artikelen
+            Alle artikelen
           </h2>
         </div>
 
@@ -166,7 +166,7 @@ export default function BlogPage() {
       </section>
 
       {/* ─── 4. CTA BANNER ─── */}
-      <section className="mt-28 px-8 md:px-16 max-w-7xl mx-auto">
+      <section className="mt-28 mb-20 px-8 md:px-16 max-w-7xl mx-auto">
         <div className="relative bg-primary-container rounded-2xl px-8 py-16 md:px-16 md:py-20 overflow-hidden">
           {/* Decorative skewed background */}
           <div
@@ -179,7 +179,7 @@ export default function BlogPage() {
 
           <div className="relative z-10 max-w-2xl">
             <h2 className="text-3xl md:text-5xl font-black tracking-tight leading-tight text-white font-[family-name:var(--font-headline)]">
-              KLAAR OM JE GRENZEN TE VERLEGGEN?
+              Klaar om je grenzen te verleggen?
             </h2>
 
             <p className="mt-6 text-white/80 leading-relaxed text-base md:text-lg">
@@ -199,45 +199,13 @@ export default function BlogPage() {
                 href="/prijs"
                 className="inline-flex items-center justify-center border-2 border-white/40 text-white px-8 py-3.5 rounded-lg font-bold text-sm hover:border-white hover:bg-white/10 transition-colors font-[family-name:var(--font-headline)]"
               >
-                Bekijk Tarieven
+                Bekijk Prijs
               </Link>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ─── 5. NEWSLETTER SECTION ─── */}
-      <section className="mt-28 mb-20 px-8 md:px-16 max-w-7xl mx-auto border-t border-outline-variant pt-20">
-        <div className="max-w-2xl mx-auto text-center">
-          <span className="text-secondary uppercase tracking-widest text-xs font-bold font-[family-name:var(--font-headline)]">
-            Join the movement
-          </span>
-
-          <h2 className="mt-4 text-3xl md:text-4xl font-black tracking-tight leading-tight font-[family-name:var(--font-headline)]">
-            Ontvang wekelijks kinetische inspiratie direct in je inbox.
-          </h2>
-
-          <form className="mt-10 flex flex-col sm:flex-row gap-3 max-w-lg mx-auto">
-            <input
-              type="email"
-              placeholder="jouw@email.nl"
-              required
-              className="flex-1 px-5 py-3.5 rounded-lg border border-outline-variant bg-surface-container-lowest text-on-surface placeholder:text-on-surface-variant/50 focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-colors text-sm"
-            />
-            <button
-              type="submit"
-              className="bg-primary text-white px-8 py-3.5 rounded-lg font-bold text-sm hover:bg-primary-dark transition-colors font-[family-name:var(--font-headline)] shrink-0"
-            >
-              Inschrijven
-            </button>
-          </form>
-
-          <p className="mt-4 text-on-surface-variant/60 text-xs leading-relaxed">
-            Door je in te schrijven ga je akkoord met ons privacybeleid. Je
-            kunt je op elk moment uitschrijven.
-          </p>
-        </div>
-      </section>
     </div>
   );
 }

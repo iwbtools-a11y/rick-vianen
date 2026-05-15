@@ -1,6 +1,26 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Faq } from "@/components/faq";
+import { FaqJsonLd } from "@/components/faq-jsonld";
+
+const homeFaqs = [
+  {
+    question: "Wat is MOVE precies?",
+    answer: "MOVE is een 100-dagen peer-group coachingtraject voor ambitieuze professionals. In kleine groepen van maximaal 8 deelnemers werk je gelijktijdig aan sport, mindset en business — onder begeleiding van Rick Vianen.",
+  },
+  {
+    question: "Voor wie is MOVE bedoeld?",
+    answer: "Voor professionals (30-50 jaar) die goed presteren aan de buitenkant, maar merken dat gezondheid, energie en structuur achterblijven. Je weet wat je moet doen, maar je doet het niet consistent. MOVE biedt de structuur en de groep om dat te veranderen.",
+  },
+  {
+    question: "Hoe verschilt MOVE van andere coaching?",
+    answer: "De meeste coaching focust op één domein: sport óf mindset óf business. MOVE integreert alle drie als één systeem. Bovendien is de groep het mechanisme — niet de coach alleen. 11 van de 11 geïnterviewde klanten noemen de groep als het #1 werkende element.",
+  },
+  {
+    question: "Hoe begin ik?",
+    answer: "Met een kennismakingsgesprek van 30 minuten. Geen verkooppitch — Rick kijkt eerlijk of MOVE bij jou past en wat je wilt bereiken. Daarna besluit je zelf.",
+  },
+];
 
 export default function Home() {
   return (
@@ -11,12 +31,12 @@ export default function Home() {
         <div className="absolute top-20 right-0 w-[500px] h-[500px] rounded-full bg-primary/[0.03] blur-[100px] pointer-events-none" />
         <div className="absolute bottom-0 left-1/4 w-[400px] h-[400px] rounded-full bg-secondary/[0.04] blur-[80px] pointer-events-none" />
 
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center relative">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-12 lg:gap-16 items-center relative">
           {/* Left — Text + CTAs */}
           <div>
             {/* Badge */}
             <div className="inline-flex items-center bg-surface-container-high/80 text-primary px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest backdrop-blur-sm mb-6">
-              13 weken. 8 plekken. Geen jojo meer.
+              100 dagen. 8 plekken. Geen excuses meer.
             </div>
 
             {/* Headline */}
@@ -37,13 +57,13 @@ export default function Home() {
                 href="/intake"
                 className="btn-primary px-8 py-4 text-base font-bold rounded-xl"
               >
-                Plan een Gratis Kennismakingsgesprek
+                Plan een kennismakingsgesprek
               </Link>
               <Link
                 href="/programma"
                 className="btn-secondary px-8 py-4 text-base font-bold rounded-xl"
               >
-                Bekijk het Programma
+                Bekijk het programma
               </Link>
             </div>
 
@@ -51,16 +71,16 @@ export default function Home() {
             <div className="flex items-center gap-2 mt-6 text-sm text-on-surface-variant">
               <span className="material-symbols-outlined text-lg text-secondary">group</span>
               <span>
-                Mei-cohort: nog{" "}
+                30 mei: nog{" "}
                 <strong className="text-on-surface">4 plekken</strong>{" "}
                 beschikbaar
               </span>
             </div>
           </div>
 
-          {/* Right — Rick photo + floating stat */}
-          <div className="relative">
-            <div className="aspect-[4/5] rounded-2xl overflow-hidden relative shadow-2xl">
+          {/* Right — Rick photo */}
+          <div className="relative w-full lg:w-[340px] xl:w-[400px]">
+            <div className="aspect-[3/4] rounded-2xl overflow-hidden relative shadow-2xl">
               <Image
                 src="/images/rick-hero.png"
                 alt="Rick Vianen - Performance Coach"
@@ -69,11 +89,6 @@ export default function Home() {
                 priority
               />
               <div className="absolute inset-x-0 bottom-0 h-1/4 bg-gradient-to-t from-black/10 to-transparent" />
-            </div>
-            {/* Floating stat box */}
-            <div className="absolute -bottom-6 -left-6 bg-white p-5 rounded-xl shadow-xl border border-outline-variant/10 hidden md:block">
-              <p className="font-[family-name:var(--font-headline)] text-4xl font-black text-secondary tracking-tighter">70%</p>
-              <p className="text-on-surface-variant text-xs font-bold uppercase tracking-widest mt-1">Succesratio Peer-Groups</p>
             </div>
           </div>
         </div>
@@ -87,7 +102,7 @@ export default function Home() {
             <h2 className="font-[family-name:var(--font-headline)] text-4xl md:text-5xl font-extrabold tracking-tighter text-on-surface leading-tight">
               De <span className="text-primary">MOVE</span>
               <br />
-              Methode
+              methode
             </h2>
             <div className="h-1 w-20 bg-gradient-to-r from-primary to-secondary mt-6 mb-6 rounded-full" />
             <p className="text-on-surface-variant leading-relaxed">
@@ -99,7 +114,7 @@ export default function Home() {
           {/* Right — 2x2 grid */}
           <div className="md:w-2/3 grid grid-cols-1 sm:grid-cols-2 gap-6">
             {[
-              { icon: "school", letter: "M", title: "aster", text: "Kort, scherp kennismoment van 3-10 minuten. Exact wat je nodig hebt, geen fluff." },
+              { icon: "school", letter: "M", title: "aster", text: "Kort, scherp kennismoment van 3-10 minuten. Exact wat je nodig hebt." },
               { icon: "play_arrow", letter: "O", title: "perate", text: "Directe toepassing in je leven, business of gezondheid. Praktisch en onmiddellijk uitvoerbaar." },
               { icon: "fact_check", letter: "V", title: "alidate", text: "Eerlijk terugkijken. Wat werkte? Wat brak af? Observeer je gedrag en resultaten." },
               { icon: "trending_up", letter: "E", title: "levate", text: "Verfijn en verbeter. Beter dan vorige week. Vooruitgang zit in de aanpassingen." },
@@ -121,18 +136,17 @@ export default function Home() {
       </section>
 
       {/* ───────────────── DRIE PIJLERS ───────────────── */}
-      <section className="bg-surface py-24 md:py-32 px-8 md:px-16 relative">
+      <section className="bg-surface py-24 md:py-32 px-8 md:px-16 relative overflow-hidden">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[200px] bg-gradient-to-b from-surface-container-low/50 to-transparent pointer-events-none" />
 
         <div className="max-w-7xl mx-auto relative">
           {/* Header */}
           <div className="mb-16 max-w-2xl">
             <h2 className="font-[family-name:var(--font-headline)] text-4xl md:text-5xl font-extrabold tracking-tighter text-on-surface">
-              Drie Pijlers. <span className="text-secondary">E&eacute;n Systeem.</span>
+              Drie pijlers. <span className="text-secondary">E&eacute;n systeem.</span>
             </h2>
             <p className="text-on-surface-variant mt-4 text-lg leading-relaxed">
-              <span className="text-primary font-bold">Sport</span>, <span className="text-secondary font-bold">mindset</span> en <span className="text-on-surface font-bold">business</span> als &eacute;&eacute;n geheel &mdash;
-              niet als losse trajecten.
+              <span className="text-primary font-bold">Sport</span>, <span className="text-secondary font-bold">mindset</span> en <span className="text-on-surface font-bold">business</span>{" "}als &eacute;&eacute;n geheel &mdash; niet als losse trajecten.
             </p>
           </div>
 
@@ -147,12 +161,10 @@ export default function Home() {
                 Sport
               </h3>
               <p className="text-on-surface-variant leading-relaxed text-sm mb-6">
-                Een fit lijf is geen luxe maar een vereiste voor een succesvol
-                leven. Fysiek resultaat binnen 13 weken als bewijs dat de
-                methode werkt.
+                Een vitale levensstijl is geen luxe maar een vereiste voor een succesvol leven. Als je fit bent ben je:
               </p>
               <ul className="space-y-4">
-                {["Gepersonaliseerde trainingsschema\u2019s", "Voeding & herstelprotocollen", "Wekelijkse groepstraining"].map((item) => (
+                {["Productiever", "Ervaar je meer energie", "Kun je beter met stress omgaan"].map((item) => (
                   <li key={item} className="flex items-start gap-3">
                     <span className="material-symbols-outlined text-primary text-lg mt-0.5">arrow_forward</span>
                     <span className="text-on-surface-variant leading-relaxed">{item}</span>
@@ -174,7 +186,7 @@ export default function Home() {
                 dit doet&rsquo;. De interne saboteur herkennen en hanteren.
               </p>
               <ul className="space-y-4">
-                {["Cognitieve performance coaching", "Focus & besluitvaardigheid", "Emotionele regulatie"].map((item) => (
+                {["Versla de stem in je hoofd die je klein houdt", "Laat emoties niet meer je acties beïnvloeden"].map((item) => (
                   <li key={item} className="flex items-start gap-3">
                     <span className="material-symbols-outlined text-white/70 text-lg mt-0.5">arrow_forward</span>
                     <span className="text-white/85 leading-relaxed">{item}</span>
@@ -196,7 +208,7 @@ export default function Home() {
                 zonder executie is een hobby.
               </p>
               <ul className="space-y-4">
-                {["Strategische business reviews", "Peer-accountability partnerships", "Netwerk van high-performers"].map((item) => (
+                {["Maakt afspraken die worden nagekomen", "Haalt omzetcijfers", "Licht, opgewekt en effectief door het bedrijfsleven"].map((item) => (
                   <li key={item} className="flex items-start gap-3">
                     <span className="material-symbols-outlined text-primary text-lg mt-0.5">arrow_forward</span>
                     <span className="text-on-surface-variant leading-relaxed">{item}</span>
@@ -213,13 +225,13 @@ export default function Home() {
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-12">
             <p className="text-secondary uppercase tracking-[0.2em] text-sm font-bold mb-4">
-              Bekijk de Presentatie
+              Bekijk de presentatie
             </p>
             <h2 className="font-[family-name:var(--font-headline)] text-4xl md:text-5xl font-extrabold tracking-tighter text-on-surface mb-4">
               Rick legt het <span className="text-primary">zelf</span> uit.
             </h2>
             <p className="text-on-surface-variant text-lg max-w-2xl mx-auto leading-relaxed">
-              20 minuten die je vertellen waarom 500+ professionals hun leven veranderden met de MOVE methode.
+              20 minuten die je vertellen waarom 200 professionals hun leven veranderden met de MOVE methode.
             </p>
           </div>
 
@@ -242,10 +254,10 @@ export default function Home() {
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-16">
             <h2 className="font-[family-name:var(--font-headline)] text-4xl md:text-5xl font-extrabold tracking-tighter text-on-surface">
-              Wat Klanten Zeggen
+              Wat klanten zeggen
             </h2>
             <p className="text-on-surface-variant max-w-md">
-              Geen marketing-praat. Echte woorden van echte deelnemers.
+              Geen marketingpraat. Echte woorden van echte deelnemers.
             </p>
           </div>
 
@@ -265,24 +277,22 @@ export default function Home() {
                 ))}
               </div>
               <p className="text-xl md:text-2xl italic leading-relaxed text-on-surface mb-8">
-                &ldquo;Er was een leven v&oacute;&oacute;r MOVE, en een leven na
-                MOVE. De combinatie van sport, mindset en business heeft alles
-                veranderd. Ik ben 12 kilo afgevallen en run mijn bedrijf met meer focus dan ooit.&rdquo;
+                &ldquo;Het vinden van balans, en daarmee rust, overzicht en controle op mijn leven. De eerste stap was de sportieve uitdaging aangaan &mdash; en toen bleek verandering vooral te komen door te doen.&rdquo;
               </p>
               <div className="flex items-center gap-4">
                 <Image
-                  src="/images/simon.png"
-                  alt="Simon"
+                  src="/images/barbara.jpg"
+                  alt="Barbara"
                   width={44}
                   height={44}
                   className="avatar"
                 />
                 <div>
                   <p className="font-[family-name:var(--font-headline)] font-bold">
-                    Simon
+                    Barbara
                   </p>
                   <p className="text-xs text-on-surface-variant">
-                    Restaurant Eigenaar &middot; MOVE Plus deelnemer
+                    Ambachtelijk Kleermaker
                   </p>
                 </div>
               </div>
@@ -308,8 +318,8 @@ export default function Home() {
                   </span>
                 </div>
                 <p className="text-on-surface-variant text-sm italic">
-                  &ldquo;Een liefdevolle pitbull was wat ik nodig had.&rdquo;
-                  &mdash; Jaap Willem, CEO
+                  &ldquo;Rick helpt je niet: hij helpt je verder. Verder dan je voor mogelijk hield.&rdquo;
+                  &mdash; Koen
                 </p>
               </div>
             </div>
@@ -317,14 +327,13 @@ export default function Home() {
             {/* Quote 2 */}
             <div className="bg-white p-8 rounded-2xl card-hover border border-outline-variant/10">
               <p className="text-on-surface italic leading-relaxed mb-6">
-                &ldquo;Rust, overzicht en controle op mijn leven &mdash; dat was
-                mijn grote winst. Na 8 weken sliep ik beter, trainde ik 4x per week en nam ik betere beslissingen op werk.&rdquo;
+                &ldquo;Was iemand die dacht, coaching niets voor mij, niets bleek minder waar. Belangrijkste wat ik meeneem: je hebt maar 1 lichaam en geest, zorg daarvoor en haal er zo het maximale uit.&rdquo;
               </p>
               <div className="flex items-center gap-3">
-                <Image src="/images/barbara.jpg" alt="Barbara" width={44} height={44} className="avatar" />
+                <Image src="/images/simon.png" alt="Simon" width={44} height={44} className="avatar" />
                 <div>
-                  <p className="font-[family-name:var(--font-headline)] font-bold text-sm">Barbara</p>
-                  <p className="text-xs text-on-surface-variant">Ambachtelijk Kleermaker</p>
+                  <p className="font-[family-name:var(--font-headline)] font-bold text-sm">Simon</p>
+                  <p className="text-xs text-on-surface-variant">Horecaondernemer</p>
                 </div>
               </div>
             </div>
@@ -332,8 +341,7 @@ export default function Home() {
             {/* Quote 3 */}
             <div className="bg-white p-8 rounded-2xl card-hover border border-outline-variant/10">
               <p className="text-on-surface italic leading-relaxed mb-6">
-                &ldquo;Mijn werk wint het de hele tijd van het sporten. Ik kies
-                gewoon voor gemak.&rdquo; &mdash; zo dacht ik. Tot MOVE.
+                &ldquo;Weet je wat je doel is? Dan is Rick de beste coach om daar te komen. Hij vergoelijkt niet, maar zet je op scherp.&rdquo;
               </p>
               <div className="flex items-center gap-3">
                 <Image src="/images/koen.png" alt="Koen" width={44} height={44} className="avatar" />
@@ -347,11 +355,10 @@ export default function Home() {
             {/* Quote 4 */}
             <div className="bg-white p-8 rounded-2xl card-hover border border-outline-variant/10">
               <p className="text-on-surface italic leading-relaxed mb-6">
-                &ldquo;Rick leeft naar wat hij zegt. Dat is de reden waarom ik
-                instapte. Na 13 weken voelde ik me sterker dan in jaren.&rdquo;
+                &ldquo;Door Rick ben ik me bewuster van mijn mogelijkheden. Rick leeft naar wat hij zegt.&rdquo;
               </p>
               <div className="flex items-center gap-3">
-                <Image src="/images/chantal.jpg" alt="Chantal" width={44} height={44} className="avatar" />
+                <div className="w-11 h-11 rounded-full bg-surface-container-high flex items-center justify-center"><span className="font-bold text-primary text-sm">C</span></div>
                 <div>
                   <p className="font-[family-name:var(--font-headline)] font-bold text-sm">Chantal</p>
                   <p className="text-xs text-on-surface-variant">Raadsheer</p>
@@ -363,10 +370,10 @@ export default function Home() {
           {/* Stats row */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {[
-              { value: "500+", color: "text-primary", label: "Levens in Beweging" },
-              { value: "13", color: "text-secondary", label: "Weken per Traject" },
-              { value: "4-8", color: "text-on-surface", label: "Professionals per Groep" },
-              { value: "11/11", color: "text-on-surface", label: "Noemen de Groep als #1" },
+              { value: "200", color: "text-primary", label: "Levens in beweging" },
+              { value: "100", color: "text-secondary", label: "Dagen per traject" },
+              { value: "4-8", color: "text-on-surface", label: "Professionals per groep" },
+              { value: "11/11", color: "text-on-surface", label: "Noemen de groep als #1" },
             ].map((stat) => (
               <div key={stat.label} className="bg-white p-6 rounded-xl text-center card-hover border border-outline-variant/10">
                 <span className={`font-[family-name:var(--font-headline)] text-3xl md:text-4xl font-black ${stat.color}`}>
@@ -402,26 +409,35 @@ export default function Home() {
           {/* Text */}
           <div>
             <p className="text-secondary uppercase tracking-[0.2em] text-sm font-bold mb-4">
-              Je Coach
+              Je coach
             </p>
             <h2 className="font-[family-name:var(--font-headline)] text-4xl md:text-5xl font-extrabold tracking-tighter text-on-surface mb-6">
               Wie is Rick Vianen?
             </h2>
             <div className="space-y-4 text-on-surface-variant leading-relaxed">
               <p>
-                Van feestbeest naar IRONMAN 70.3 finisher. Die transformatie plantte het zaad voor MOVE: een coachingfilosofie die sport, mindset en business als &eacute;&eacute;n geheel beschouwt.
+                Van feestbeest naar IRONMAN finisher. Die transformatie plantte het zaadje voor MOVE: een coachingfilosofie die sport, mindset en business als &eacute;&eacute;n geheel beschouwt.
               </p>
               <p>
                 Rick coacht ambitieuze professionals die goed presteren aan de buitenkant, maar merken dat gezondheid, energie en structuur achterblijven. Confronterend, meetbaar, blijvend.
+              </p>
+              <p>
+                Rick investeerde bijna &euro;100.000 om getraind te worden als coach, onder leiding van Dusan Djukich, een van de grootste business coaches van Amerika, schrijver van het boek en founder van Straight Line Leadership. Hiervoor is hij onder andere meerdere weekenden naar Amerika geweest om te trainen en het werk zelf te implementeren.
+              </p>
+              <p>
+                Naast de coaching is Rick zelf IRONMAN finisher en ervaarde zelf de waarde van het behalen van zo&rsquo;n groot doel voor zijn persoonlijke en zakelijke leven.
+              </p>
+              <p>
+                Dit samen is de grondslag van MOVE. De combinatie van sport en business coaching.
               </p>
             </div>
 
             {/* Credentials */}
             <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
               {[
-                "500+ professionals gecoacht",
-                "IRONMAN 70.3 finisher",
-                "70% succesratio peer-groups",
+                "200 professionals gecoacht",
+                "IRONMAN finisher",
+                "Opgeleid door Dusan Djukich",
                 "KvK geregistreerd",
               ].map((cred) => (
                 <div key={cred} className="flex items-center gap-3 p-3 rounded-lg bg-surface-container-low/50">
@@ -448,28 +464,28 @@ export default function Home() {
       <section className="gradient-warm py-24 md:py-32 px-8 md:px-16">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="font-[family-name:var(--font-headline)] text-4xl md:text-5xl font-extrabold tracking-tighter text-on-surface mb-4">
-            Investeer in Jezelf
+            Investeer in jezelf
           </h2>
           <p className="text-on-surface-variant text-lg mb-12 max-w-2xl mx-auto">
-            Drie trajecten. E&eacute;n doel: jou in beweging krijgen en houden. 13 weken, inclusief kick-off en afsluitevent.
+            Drie trajecten. E&eacute;n doel: jou in beweging krijgen en houden. 100 dagen, inclusief kick-off en afsluitevent.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
             <div className="bg-white p-8 rounded-2xl card-hover border border-outline-variant/10">
               <p className="font-[family-name:var(--font-headline)] font-bold text-lg mb-1">MOVE Core</p>
               <p className="font-[family-name:var(--font-headline)] text-3xl font-black tracking-tighter">&euro;1.497</p>
-              <p className="text-on-surface-variant text-sm">/kwartaal</p>
+              <p className="text-on-surface-variant text-sm">eenmalig</p>
             </div>
             <div className="p-8 rounded-2xl relative card-hover text-white" style={{ background: "linear-gradient(135deg, #E85211 0%, #d04400 100%)" }}>
               <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-secondary text-white text-[10px] font-bold tracking-wider uppercase px-3 py-1 rounded-full shadow-md">Populair</span>
-              <p className="font-[family-name:var(--font-headline)] font-bold text-lg mb-1">MOVE Plus</p>
+              <p className="font-[family-name:var(--font-headline)] font-bold text-lg mb-1">MOVE Performance</p>
               <p className="font-[family-name:var(--font-headline)] text-3xl font-black tracking-tighter">&euro;2.497</p>
-              <p className="text-white/80 text-sm">/kwartaal</p>
+              <p className="text-white/80 text-sm">eenmalig</p>
             </div>
             <div className="bg-white p-8 rounded-2xl card-hover border border-outline-variant/10">
               <p className="font-[family-name:var(--font-headline)] font-bold text-lg mb-1">MOVE Ultimate</p>
               <p className="font-[family-name:var(--font-headline)] text-3xl font-black tracking-tighter">&euro;4.997</p>
-              <p className="text-on-surface-variant text-sm">/kwartaal</p>
+              <p className="text-on-surface-variant text-sm">eenmalig</p>
             </div>
           </div>
 
@@ -490,37 +506,28 @@ export default function Home() {
         <div className="max-w-4xl mx-auto">
           <div className="mb-12">
             <h2 className="font-[family-name:var(--font-headline)] text-4xl md:text-5xl font-extrabold tracking-tighter text-on-surface mb-4">
-              Veelgestelde Vragen
+              Veelgestelde vragen
             </h2>
             <p className="text-on-surface-variant text-lg">
-              De vragen die iedereen stelt maar niemand durft te vragen.
+              Eerlijke antwoorden op de belangrijkste vragen.
             </p>
           </div>
           <Faq
-            items={[
-              {
-                question: "Waarom heb ik een ander nodig? Ik moet het zelf kunnen.",
-                answer: "Hulp zoeken is niet zwak \u2014 het is slim. Als je het zelf kon, had je het al gedaan. De groep is het mechanisme: 11 van de 11 klanten noemen de groep als het #1 werkende element.",
-              },
-              {
-                question: "Ik heb geen tijd voor nog iets erbij.",
-                answer: "Tijd is niet het echte bezwaar \u2014 prioriteit is het bezwaar. MOVE is gebouwd voor drukke professionals: 1 les per week van 3-10 minuten, 1 groepssessie, 1 opdracht. Minder dan 2 uur per week.",
-              },
-              {
-                question: "Werkt dit echt, of val ik weer terug na 13 weken?",
-                answer: "13 weken herhaling + wekelijkse structuur + groepsaccountability zijn specifiek gebouwd zodat je niet terugvalt. De methode werkt op gedrag, niet op motivatie. 70% van onze deelnemers houdt de routine vast na het traject.",
-              },
-              {
-                question: "Is dit niet gewoon een dure sportschool?",
-                answer: "Nee. Sport is het startpunt \u2014 niet het doel. MOVE integreert sport, mindset en business als \u00e9\u00e9n systeem. De fysieke resultaten zijn het bewijs dat de methode werkt, de echte winst zit in je hele leven.",
-              },
-              {
-                question: "Wat als het niet bij mij past?",
-                answer: "Daarom begint elk traject met een gratis kennismakingsgesprek van 30 minuten. Geen pitch \u2014 Rick benoemt eerlijk wat hij ziet. Daarna weet je of MOVE bij je past.",
-              },
-            ]}
+            items={homeFaqs}
           />
+          <div className="text-center mt-10">
+            <Link
+              href="/veelgestelde-vragen"
+              className="inline-flex items-center gap-2 text-primary font-bold group link-hover"
+            >
+              Bekijk alle vragen
+              <span className="material-symbols-outlined text-lg transition-transform duration-300 group-hover:translate-x-1">
+                arrow_forward
+              </span>
+            </Link>
+          </div>
         </div>
+        <FaqJsonLd items={homeFaqs} />
       </section>
 
       {/* ───────────────── CTA ───────────────── */}
@@ -550,13 +557,13 @@ export default function Home() {
                 href="/intake"
                 className="btn-primary inline-block mt-8 px-10 py-4 text-base font-bold rounded-xl"
               >
-                Plan een Gratis Kennismakingsgesprek
+                Plan een kennismakingsgesprek
               </Link>
               <p className="mt-5 text-on-surface-variant text-sm flex items-center justify-center gap-2">
                 <span className="material-symbols-outlined text-secondary text-lg">
                   schedule
                 </span>
-                Mei-cohort: nog{" "}
+                30 mei: nog{" "}
                 <strong className="text-on-surface">4 plekken</strong>{" "}
                 beschikbaar
               </p>
