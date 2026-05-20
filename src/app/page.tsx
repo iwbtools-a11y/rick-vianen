@@ -230,19 +230,26 @@ export default function Home() {
             <h2 className="font-[family-name:var(--font-headline)] text-4xl md:text-5xl font-extrabold tracking-tighter text-on-surface mb-4">
               Rick legt het <span className="text-primary">zelf</span> uit.
             </h2>
-            <p className="text-on-surface-variant text-lg max-w-2xl mx-auto leading-relaxed">
-              20 minuten die je vertellen waarom 200 professionals hun leven veranderden met de MOVE methode.
-            </p>
+            <div className="text-on-surface-variant text-lg max-w-2xl mx-auto space-y-4 text-center">
+              <p className="leading-relaxed">
+                In mijn werk met ondernemers en professionals zie ik vrijwel altijd hetzelfde patroon:<br />
+                We dromen groot, maar laten ons vervolgens verlammen door de angst om de verkeerde keuze te maken. Of we wachten op het perfecte plan of moment. Er is altijd een reden te bedenken waarom het ambitieuze doel niet tot uitvoering komt.
+              </p>
+              <p className="leading-relaxed">
+                Maar het eindeloze wachten en iets slechts een droom laten levert later alleen maar frustratie en energieverlies op. De toekomstige &lsquo;&lsquo;jij&rsquo;&rsquo; gaat zitten met een gevoel... &lsquo;had ik toen maar...&rsquo;
+              </p>
+              <p className="leading-relaxed">
+                In deze video deel ik de belangrijkste shift die ik de afgelopen jaren leerde en waarom ik MOVE beschouw als mijn huidige levenswerk!
+              </p>
+            </div>
           </div>
 
           <div className="relative rounded-2xl overflow-hidden shadow-2xl bg-on-surface">
             <div className="aspect-video">
-              <iframe
-                src="https://www.loom.com/embed/0b783f8172c2458e8e016527adac50aa?hide_owner=true&hide_share=true&hide_title=true"
-                frameBorder="0"
-                allowFullScreen
-                allow="autoplay; fullscreen"
-                className="absolute inset-0 w-full h-full"
+              <video
+                src="/videos/move-presentatie.mp4"
+                controls
+                className="absolute inset-0 w-full h-full object-cover"
               />
             </div>
           </div>
