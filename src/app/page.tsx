@@ -71,9 +71,9 @@ export default function Home() {
             <div className="flex items-center gap-2 mt-6 text-sm text-on-surface-variant">
               <span className="material-symbols-outlined text-lg text-secondary">group</span>
               <span>
-                30 mei: nog{" "}
-                <strong className="text-on-surface">4 plekken</strong>{" "}
-                beschikbaar
+                Exclusieve mogelijkheid: We zijn opzoek naar nog{" "}
+                <strong className="text-on-surface">3 mensen</strong>{" "}
+                voor de beta versie van het vernieuwde traject
               </span>
             </div>
           </div>
@@ -568,11 +568,11 @@ export default function Home() {
               </Link>
               <p className="mt-5 text-on-surface-variant text-sm flex items-center justify-center gap-2">
                 <span className="material-symbols-outlined text-secondary text-lg">
-                  schedule
+                  group
                 </span>
-                30 mei: nog{" "}
-                <strong className="text-on-surface">4 plekken</strong>{" "}
-                beschikbaar
+                Exclusieve mogelijkheid: We zijn opzoek naar nog{" "}
+                <strong className="text-on-surface">3 mensen</strong>{" "}
+                voor de beta versie van het vernieuwde traject
               </p>
             </div>
           </div>
