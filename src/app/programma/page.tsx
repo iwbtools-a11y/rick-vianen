@@ -606,7 +606,9 @@ export default function ProgrammaPage() {
               </p>
               <div className="inline-flex flex-col items-center gap-4">
                 <Link
-                  href="/intake"
+                  href="https://calendly.com/rick-rickvianen/kennismaking"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="btn-primary px-12 py-5 rounded-full text-xl font-bold"
                 >
                   Plan een kennismakingsgesprek

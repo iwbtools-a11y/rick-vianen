@@ -525,7 +525,9 @@ export default function PrijsPage() {
 
             <div className="flex flex-col sm:flex-row justify-center gap-4 mt-10">
               <Link
-                href="/intake"
+                href="https://calendly.com/rick-rickvianen/kennismaking"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="btn-primary font-bold text-sm px-8 py-3.5 rounded-lg"
               >
                 Plan een kennismakingsgesprek

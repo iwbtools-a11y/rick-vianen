@@ -24,13 +24,13 @@ export default function BookingPage() {
         <div className="max-w-4xl mx-auto">
           <div className="bg-white rounded-2xl border border-outline-variant/10 overflow-hidden shadow-lg">
             <iframe
-              src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2eqD3m7wS_HD0RM79RIVgHR6abpGMVc_7XjWrq3BOzibYHapn64_O2HnKZZxyQDuKj9DK9NGU0?gv=true"
+              src="https://calendly.com/rick-rickvianen/kennismaking"
               style={{ border: 0 }}
               width="100%"
-              height="600"
+              height="700"
               frameBorder="0"
               title="Plan een kennismakingsgesprek met Rick Vianen"
-              className="w-full min-h-[600px]"
+              className="w-full min-h-[700px]"
             />
           </div>
         </div>

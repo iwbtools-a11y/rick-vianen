@@ -310,7 +310,9 @@ export default function VeelgesteldeVragenPage() {
                 Rick beantwoordt alles persoonlijk.
               </p>
               <Link
-                href="/intake"
+                href="https://calendly.com/rick-rickvianen/kennismaking"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="btn-primary inline-block px-10 py-4 text-base font-bold rounded-xl"
               >
                 Plan een kennismakingsgesprek
