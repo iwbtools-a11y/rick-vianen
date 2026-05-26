@@ -114,7 +114,7 @@ export function Footer() {
               </a>
             </li>
             <li>
-              <Link href="/intake" className="hover:text-primary transition-colors">
+              <Link href="https://calendly.com/rick-rickvianen/kennismaking" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
                 Plan een gesprek
               </Link>
             </li>

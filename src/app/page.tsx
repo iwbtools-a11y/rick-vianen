@@ -54,7 +54,7 @@ export default function Home() {
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row items-start gap-4 mt-8">
               <Link
-                href="/intake"
+                href="https://calendly.com/rick-rickvianen/kennismaking" target="_blank" rel="noopener noreferrer"
                 className="btn-primary px-8 py-4 text-base font-bold rounded-xl"
               >
                 Plan een kennismakingsgesprek
@@ -561,7 +561,7 @@ export default function Home() {
                 30 minuten. Geen pitch. Daarna weet je het.
               </p>
               <Link
-                href="/intake"
+                href="https://calendly.com/rick-rickvianen/kennismaking" target="_blank" rel="noopener noreferrer"
                 className="btn-primary inline-block mt-8 px-10 py-4 text-base font-bold rounded-xl"
               >
                 Plan een kennismakingsgesprek
