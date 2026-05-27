@@ -54,7 +54,7 @@ export default function Home() {
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row items-start gap-4 mt-8">
               <Link
-                href="https://calendly.com/rick-rickvianen/kennismaking" target="_blank" rel="noopener noreferrer"
+                href="/intake"
                 className="btn-primary px-8 py-4 text-base font-bold rounded-xl"
               >
                 Plan een kennismakingsgesprek
@@ -252,6 +252,15 @@ export default function Home() {
                 className="absolute inset-0 w-full h-full object-cover"
               />
             </div>
+          </div>
+
+          <div className="text-center mt-10">
+            <Link
+              href="/intake"
+              className="btn-primary inline-block px-10 py-4 text-base font-bold rounded-xl"
+            >
+              Plan een kennismakingsgesprek
+            </Link>
           </div>
         </div>
       </section>
@@ -561,19 +570,20 @@ export default function Home() {
                 30 minuten. Geen pitch. Daarna weet je het.
               </p>
               <Link
-                href="https://calendly.com/rick-rickvianen/kennismaking" target="_blank" rel="noopener noreferrer"
+                href="/intake"
                 className="btn-primary inline-block mt-8 px-10 py-4 text-base font-bold rounded-xl"
               >
                 Plan een kennismakingsgesprek
               </Link>
-              <p className="mt-5 text-on-surface-variant text-sm flex items-center justify-center gap-2">
-                <span className="material-symbols-outlined text-secondary text-lg">
-                  group
+              <div className="mt-5 text-on-surface-variant text-sm flex items-start justify-center gap-2">
+                <span className="material-symbols-outlined text-secondary text-lg mt-0.5 shrink-0">group</span>
+                <span>
+                  Exclusieve mogelijkheid: We zijn opzoek naar nog{" "}
+                  <strong className="text-on-surface">3 mensen</strong>
+                  <br />
+                  voor de beta versie van het vernieuwde traject
                 </span>
-                Exclusieve mogelijkheid: We zijn opzoek naar nog{" "}
-                <strong className="text-on-surface">3 mensen</strong>{" "}
-                voor de beta versie van het vernieuwde traject
-              </p>
+              </div>
             </div>
           </div>
         </div>

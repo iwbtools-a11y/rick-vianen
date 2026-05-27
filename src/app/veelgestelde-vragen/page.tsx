@@ -109,7 +109,7 @@ const praktischFaqs = [
   },
   {
     question: "Wanneer start het volgende cohort?",
-    answer: "Cohort 1 start op 30 mei 2026. Er zijn 4 cohorten per jaar. Na sluiting kom je op de wachtlijst voor het volgende cohort.",
+    answer: "Het beta cohort heeft nog 3 plekken beschikbaar. Er zijn 4 cohorten per jaar. Na sluiting kom je op de wachtlijst voor het volgende cohort.",
   },
   {
     question: "Waar vinden de sessies plaats?",
@@ -310,7 +310,7 @@ export default function VeelgesteldeVragenPage() {
                 Rick beantwoordt alles persoonlijk.
               </p>
               <Link
-                href="https://calendly.com/rick-rickvianen/kennismaking"
+                href="/intake"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-primary inline-block px-10 py-4 text-base font-bold rounded-xl"

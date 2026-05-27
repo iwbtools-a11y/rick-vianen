@@ -99,9 +99,9 @@ export default function ProgrammaPage() {
                 <span className="font-bold text-sm">COMMUNITY STATUS</span>
               </div>
               <p className="text-3xl font-black italic mb-1">
-                8 plekken per cohort
+                Nog 3 plekken beschikbaar
               </p>
-              <p className="text-sm opacity-90">Mei 2026 — bijna vol</p>
+              <p className="text-sm opacity-90">Beta cohort — exclusieve vroegboekprijs</p>
             </div>
             <div className="absolute -bottom-4 -right-4 w-full h-full bg-surface-container -z-10 rounded-xl" />
           </div>
@@ -601,12 +601,11 @@ export default function ProgrammaPage() {
                 Klaar om te bewegen?
               </h2>
               <p className="text-surface-container-highest/60 text-lg md:text-xl mb-12 max-w-2xl mx-auto">
-                De volgende cohort start op 30 mei. 8 plekken. Daarna is het
-                najaar.
+                Beta cohort: nog 3 plekken beschikbaar. Exclusieve vroegboekprijs &mdash; daarna gaat de prijs omhoog.
               </p>
               <div className="inline-flex flex-col items-center gap-4">
                 <Link
-                  href="https://calendly.com/rick-rickvianen/kennismaking"
+                  href="/intake"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-primary px-12 py-5 rounded-full text-xl font-bold"

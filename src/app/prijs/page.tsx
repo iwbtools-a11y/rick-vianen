@@ -98,7 +98,7 @@ export default function PrijsPage() {
               error
             </span>
             <p className="font-bold text-lg text-on-surface">
-              30 mei: nog <span className="text-primary">4 plekken</span> beschikbaar
+              Beta cohort: nog <span className="text-primary">3 plekken</span> beschikbaar
             </p>
           </div>
         </div>
@@ -519,13 +519,13 @@ export default function PrijsPage() {
               vandaag.
             </h2>
             <p className="text-on-surface-variant mt-6 leading-relaxed max-w-lg mx-auto">
-              Mei-cohort start binnenkort. 8 plekken per groep. Geen
+              Beta cohort: nog 3 plekken beschikbaar. Exclusieve vroegboekprijs. Geen
               wachtlijst &mdash; vol is vol.
             </p>
 
             <div className="flex flex-col sm:flex-row justify-center gap-4 mt-10">
               <Link
-                href="https://calendly.com/rick-rickvianen/kennismaking"
+                href="/intake"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-primary font-bold text-sm px-8 py-3.5 rounded-lg"

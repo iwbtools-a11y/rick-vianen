@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { KlaviyoForm } from "@/components/klaviyo-form";
 
 export function Footer() {
   return (
@@ -17,7 +18,7 @@ export function Footer() {
             MOVE cre&euml;ert beweging &mdash; in je lijf, je hoofd en je
             leven. Voor professionals die klaar zijn met alleen beginnen.
           </p>
-          <div className="klaviyo-form-RPkNF4" />
+          <KlaviyoForm formId="RPkNF4" />
         </div>
 
         <div>
@@ -106,15 +107,13 @@ export function Footer() {
             <li>
               <a
                 href="https://www.linkedin.com/in/rick-vianen-481a73179/"
-                target="_blank"
-                rel="noopener noreferrer"
                 className="hover:text-primary transition-colors"
               >
                 LinkedIn
               </a>
             </li>
             <li>
-              <Link href="https://calendly.com/rick-rickvianen/kennismaking" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+              <Link href="/intake" className="hover:text-primary transition-colors">
                 Plan een gesprek
               </Link>
             </li>

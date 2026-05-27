@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import { KlaviyoForm } from "@/components/klaviyo-form";
 
 export const metadata: Metadata = {
   title: "Intake | MOVE Coaching",
@@ -38,7 +39,7 @@ export default function IntakePage() {
 
       <section className="py-16 px-8 md:px-16">
         <div className="max-w-3xl mx-auto">
-          <div className="klaviyo-form-Xq59gb" />
+          <KlaviyoForm formId="Xq59gb" redirectOnSubmit="/intake/booking" />
         </div>
       </section>
     </div>

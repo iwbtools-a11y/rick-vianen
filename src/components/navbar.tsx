@@ -62,9 +62,7 @@ export function Navbar() {
 
           <div className="flex items-center gap-4">
             <Link
-              href="https://calendly.com/rick-rickvianen/kennismaking"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="/intake"
               className="btn-primary px-6 py-2.5 text-sm font-bold rounded-lg"
             >
               Plan gesprek

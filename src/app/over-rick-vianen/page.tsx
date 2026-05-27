@@ -254,7 +254,7 @@ export default function OverRickVianen() {
               {/* Button — right */}
               <div className="md:col-span-4 flex md:justify-end">
                 <Link
-                  href="https://calendly.com/rick-rickvianen/kennismaking"
+                  href="/intake"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center gap-3 btn-primary px-8 py-4 rounded-lg font-bold text-lg whitespace-nowrap w-full md:w-auto"

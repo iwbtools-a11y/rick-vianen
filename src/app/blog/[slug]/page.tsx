@@ -122,7 +122,7 @@ export default async function BlogPostPage({
             </p>
 
             <Link
-              href="https://calendly.com/rick-rickvianen/kennismaking"
+              href="/intake"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center bg-surface text-primary px-8 py-3.5 rounded-lg font-bold text-sm hover:bg-surface-container transition-colors font-[family-name:var(--font-headline)] mt-10"

@@ -20,19 +20,17 @@ export default function BookingPage() {
         </div>
       </section>
 
-      <section className="py-8 px-8 md:px-16 mb-12">
-        <div className="max-w-4xl mx-auto">
-          <div className="bg-white rounded-2xl border border-outline-variant/10 overflow-hidden shadow-lg">
-            <iframe
-              src="https://calendly.com/rick-rickvianen/kennismaking"
-              style={{ border: 0 }}
-              width="100%"
-              height="700"
-              frameBorder="0"
-              title="Plan een kennismakingsgesprek met Rick Vianen"
-              className="w-full min-h-[700px]"
-            />
-          </div>
+      <section className="py-8 mb-12">
+        <div className="bg-white shadow-lg overflow-hidden">
+          <iframe
+            src="https://calendly.com/rick-rickvianen/kennismaking"
+            style={{ border: 0 }}
+            width="100%"
+            height="800"
+            frameBorder="0"
+            title="Plan een kennismakingsgesprek met Rick Vianen"
+            className="w-full min-h-[800px] block"
+          />
         </div>
       </section>
     </div>
