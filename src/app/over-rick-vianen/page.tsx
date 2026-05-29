@@ -30,7 +30,7 @@ export default function OverRickVianen() {
             {/* Right — 5 cols */}
             <div className="md:col-span-5">
               <p className="text-on-surface-variant text-lg leading-relaxed">
-                Rick Vianen cre&euml;ert beweging &mdash; in lijf, hoofd en
+                Rick Vianen cre&euml;ert beweging, in lijf, hoofd en
                 leven. Voor professionals die weten wat ze moeten doen, maar het
                 niet volhouden.
               </p>
@@ -59,7 +59,7 @@ export default function OverRickVianen() {
                   format_quote
                 </span>
                 <p className="text-sm leading-relaxed font-medium">
-                  &ldquo;Rick leeft naar wat hij zegt.&rdquo; &mdash; Chantal
+                  &ldquo;Rick leeft naar wat hij zegt.&rdquo;<br />Chantal
                 </p>
               </div>
               {/* Mobile quote (shown inline) */}
@@ -68,7 +68,7 @@ export default function OverRickVianen() {
                   format_quote
                 </span>
                 <p className="text-sm leading-relaxed font-medium">
-                  &ldquo;Rick leeft naar wat hij zegt.&rdquo; &mdash; Chantal
+                  &ldquo;Rick leeft naar wat hij zegt.&rdquo;<br />Chantal
                 </p>
               </div>
             </div>
@@ -81,7 +81,7 @@ export default function OverRickVianen() {
               <div className="space-y-6 text-on-surface-variant leading-relaxed">
                 <p>
                   Het begon met het inschrijven voor de eerste halve IRONMAN. Van
-                  feestbeest naar IRONMAN finisher &mdash; met tranen over
+                  feestbeest naar IRONMAN finisher, met tranen over
                   zijn wangen bij de finish. De echte winst was niet de finish,
                   maar de skills: discipline, dealen met gedachten, prioriteiten
                   stellen.
@@ -90,7 +90,7 @@ export default function OverRickVianen() {
                   Die ervaring plantte het zaadje voor wat later MOVE zou worden:
                   een coachingfilosofie die sport, mindset en business als
                   &eacute;&eacute;n onlosmakelijk geheel beschouwt. Geen
-                  theorie, geen fluff &mdash; alleen werkende structuur.
+                  theorie, geen fluff, maar alleen werkende structuur.
                 </p>
                 <p>
                   Vandaag coacht Rick ambitieuze professionals die goed
@@ -158,7 +158,7 @@ export default function OverRickVianen() {
                 Alles hangt samen
               </h3>
               <p className="text-on-surface-variant leading-relaxed mb-8 max-w-lg">
-                Fysiek, mentaal, werk, relatie &mdash; niet los aanpakken. MOVE
+                Fysiek, mentaal, werk, relatie. Niet los aanpakken. MOVE
                 integreert alles in &eacute;&eacute;n systeem.
               </p>
               <div className="flex flex-wrap gap-3">
@@ -207,7 +207,7 @@ export default function OverRickVianen() {
                   </h4>
                   <p className="text-on-surface-variant text-sm leading-relaxed">
                     Jij bent verantwoordelijk, niet je omstandigheden. Dat is
-                    geen last &mdash; dat is vrijheid.
+                    geen last. Dat is vrijheid.
                   </p>
                 </div>
 
@@ -221,7 +221,7 @@ export default function OverRickVianen() {
                   </h4>
                   <p className="text-on-surface-variant text-sm leading-relaxed">
                     Je maakt elkaar een belofte. Niet Rick die je bij de hand
-                    neemt &mdash; een groep die je niet laat zitten.
+                    neemt, een groep die je niet laat zitten.
                   </p>
                 </div>
               </div>
@@ -246,8 +246,8 @@ export default function OverRickVianen() {
                   <span className="text-primary">Plan een gesprek.</span>
                 </h2>
                 <p className="text-surface-container-highest/60 leading-relaxed max-w-lg">
-                  30 minuten. Geen pitch. Rick benoemt wat hij ziet &mdash;
-                  direct en zonder verzachten. Daarna weet je het.
+                  30 minuten. Geen pitch. Rick benoemt wat hij ziet.
+                  Direct en zonder verzachten. Daarna weet je het.
                 </p>
               </div>
 

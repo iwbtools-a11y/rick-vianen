@@ -7,7 +7,7 @@ import { FaqJsonLd } from "@/components/faq-jsonld";
 export const metadata: Metadata = {
   title: "Prijs | MOVE Coaching",
   description:
-    "Kies het MOVE Coaching traject dat bij jou past. Core, Performance of Ultimate — investeer in jouw momentum.",
+    "Kies het MOVE Coaching traject dat bij jou past. Core, Performance of Ultimate. Investeer in jouw momentum.",
 };
 
 /* ------------------------------------------------------------------ */
@@ -48,7 +48,7 @@ function ValueItem({
 const prijsFaqs = [
   {
     question: "Is dit een eenmalige betaling?",
-    answer: "Ja. MOVE is een eenmalige investering voor het volledige 100-dagen traject — geen abonnement, geen terugkerende kosten. Je betaalt één keer en krijgt het complete programma inclusief kick-off en eindevenement.",
+    answer: "Ja. MOVE is een eenmalige investering voor het volledige 100-dagen traject. Geen abonnement, geen terugkerende kosten. Je betaalt één keer en krijgt het complete programma inclusief kick-off en eindevenement.",
   },
   {
     question: "Kan ik in termijnen betalen?",
@@ -162,7 +162,7 @@ export default function PrijsPage() {
             {/* ── MOVE Performance (Featured) ── */}
             <div className="relative bg-white rounded-2xl shadow-xl lg:scale-[1.03] z-20 overflow-hidden flex flex-col border-2 border-primary/20">
               <span className="absolute -top-0 left-0 right-0 bg-primary text-white text-xs font-bold tracking-wider uppercase py-2.5 text-center">
-                MEEST GEKOZEN — HET VLAGGENSCHIP
+                MEEST GEKOZEN · HET VLAGGENSCHIP
               </span>
 
               <div className="p-10 pb-6 pt-14">
@@ -405,7 +405,7 @@ export default function PrijsPage() {
                   Noemen de groep als #1 werkend element.
                 </h3>
                 <p className="text-on-surface-variant mt-4 leading-relaxed max-w-md">
-                  De MOVE methode is geen individuele coaching &mdash; het is een
+                  De MOVE methode is geen individuele coaching. Het is een
                   gecureerde omgeving van gelijkgestemde professionals die elkaar
                   accountable houden.
                 </p>
@@ -520,7 +520,7 @@ export default function PrijsPage() {
             </h2>
             <p className="text-on-surface-variant mt-6 leading-relaxed max-w-lg mx-auto">
               Beta cohort: nog 3 plekken beschikbaar. Exclusieve vroegboekprijs. Geen
-              wachtlijst &mdash; vol is vol.
+              wachtlijst. Vol is vol.
             </p>
 
             <div className="flex flex-col sm:flex-row justify-center gap-4 mt-10">

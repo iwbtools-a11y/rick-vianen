@@ -15,7 +15,7 @@ export function Footer() {
             className="h-10 w-auto mb-8 brightness-0 invert"
           />
           <p className="text-surface-container-highest/60 leading-relaxed text-sm mb-6">
-            MOVE cre&euml;ert beweging &mdash; in je lijf, je hoofd en je
+            MOVE cre&euml;ert beweging, in je lijf, je hoofd en je
             leven. Voor professionals die klaar zijn met alleen beginnen.
           </p>
           <KlaviyoForm formId="RPkNF4" />
@@ -97,6 +97,11 @@ export function Footer() {
             <li>
               <Link href="/veelgestelde-vragen" className="hover:text-primary transition-colors">
                 Veelgestelde vragen
+              </Link>
+            </li>
+            <li>
+              <Link href="/wachtlijst" className="hover:text-primary transition-colors">
+                Wachtlijst
               </Link>
             </li>
             <li>

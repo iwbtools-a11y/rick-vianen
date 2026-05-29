@@ -20,19 +20,19 @@ const sections = [
 const overMoveFaqs = [
   {
     question: "Wat is MOVE precies?",
-    answer: "MOVE is een 100-dagen peer-group coachingtraject voor ambitieuze professionals. In kleine groepen van maximaal 8 deelnemers werk je gelijktijdig aan sport, mindset en business — onder begeleiding van Rick Vianen. Het is geen cursus, geen online programma, maar een gestructureerd traject met wekelijkse accountability.",
+    answer: "MOVE is een 100-dagen peer-group coachingtraject voor ambitieuze professionals. In kleine groepen van maximaal 8 deelnemers werk je gelijktijdig aan sport, mindset en business, onder begeleiding van Rick Vianen. Het is geen cursus, geen online programma, maar een gestructureerd traject met wekelijkse accountability.",
   },
   {
     question: "Voor wie is MOVE bedoeld?",
-    answer: "Voor professionals tussen de 30 en 50 jaar die goed presteren aan de buitenkant, maar merken dat gezondheid, energie en structuur achterblijven. Denk aan ondernemers, leidinggevenden en ambitieuze professionals die weten wat ze moeten doen — maar het niet consistent doen.",
+    answer: "Voor professionals tussen de 30 en 50 jaar die goed presteren aan de buitenkant, maar merken dat gezondheid, energie en structuur achterblijven. Denk aan ondernemers, leidinggevenden en ambitieuze professionals die weten wat ze moeten doen, maar het niet consistent doen.",
   },
   {
     question: "Voor wie is MOVE niet bedoeld?",
-    answer: "MOVE is niet voor mensen in acute crisis of met een klinische diagnose — daarvoor zijn andere professionals beter toegerust. Het is ook niet voor mensen die een quick fix zoeken of niet bereid zijn elke week te verschijnen. MOVE werkt door consistentie en commitment.",
+    answer: "MOVE is niet voor mensen in acute crisis of met een klinische diagnose. Daarvoor zijn andere professionals beter toegerust. Het is ook niet voor mensen die een quick fix zoeken of niet bereid zijn elke week te verschijnen. MOVE werkt door consistentie en commitment.",
   },
   {
     question: "Hoe verschilt MOVE van andere coaching?",
-    answer: "De meeste coaching focust op één domein: sport, mindset of business. MOVE integreert alle drie als één systeem. Bovendien is de groep het mechanisme — niet de coach alleen. 11 van de 11 geïnterviewde klanten noemen de groep als het #1 werkende element.",
+    answer: "De meeste coaching focust op één domein: sport, mindset of business. MOVE integreert alle drie als één systeem. Bovendien is de groep het mechanisme, niet de coach alleen. 11 van de 11 geïnterviewde klanten noemen de groep als het #1 werkende element.",
   },
   {
     question: "Wie is Rick Vianen?",
@@ -47,11 +47,11 @@ const programmaFaqs = [
   },
   {
     question: "Wat als ik een week mis?",
-    answer: "Het leven gebeurt. Je krijgt de opname en opdracht achteraf. Maar MOVE werkt door consistentie — de groep houdt je scherp en mist het als je er niet bent. Dat is juist de kracht van peer-group coaching.",
+    answer: "Het leven gebeurt. Je krijgt de opname en opdracht achteraf. Maar MOVE werkt door consistentie. De groep houdt je scherp en mist het als je er niet bent. Dat is juist de kracht van peer-group coaching.",
   },
   {
     question: "Hoe groot is de groep?",
-    answer: "Maximaal 8 professionals per cohort. Groot genoeg voor diversiteit aan perspectieven, klein genoeg zodat niemand zich kan verstoppen. Rick coacht elk cohort persoonlijk — meer dan 8 is niet mogelijk zonder kwaliteitsverlies.",
+    answer: "Maximaal 8 professionals per cohort. Groot genoeg voor diversiteit aan perspectieven, klein genoeg zodat niemand zich kan verstoppen. Rick coacht elk cohort persoonlijk. Meer dan 8 is niet mogelijk zonder kwaliteitsverlies.",
   },
   {
     question: "Welke resultaten kan ik verwachten na 100 dagen?",
@@ -63,7 +63,7 @@ const programmaFaqs = [
   },
   {
     question: "Wat houdt de proces-garantie in?",
-    answer: "Als je elke stap uitvoert — check-ins, metingen, opdrachten, trainingsschema — en na 100 dagen geen aantoonbare vooruitgang ziet op de doelen die jullie bij intake hebben vastgelegd, dan werkt Rick kosteloos extra tijd met je door. Bij Ultimate gaan ook de 1-op-1 sessies door.",
+    answer: "Als je elke stap uitvoert (check-ins, metingen, opdrachten, trainingsschema) en na 100 dagen geen aantoonbare vooruitgang ziet op de doelen die jullie bij intake hebben vastgelegd, dan werkt Rick kosteloos extra tijd met je door. Bij Ultimate gaan ook de 1-op-1 sessies door.",
   },
   {
     question: "Kan ik na 100 dagen doorgaan?",
@@ -78,11 +78,11 @@ const prijzenFaqs = [
   },
   {
     question: "Wat is het verschil tussen Core, Performance en Ultimate?",
-    answer: "Core is de eerlijke instap: wekelijkse content, groeps kick-off en eindevenement. Performance voegt wekelijkse Q&A's, trainingsschema op maat en 3 jaar Notion-toegang toe — dit is het vlaggenschip. Ultimate is alles uit Performance plus wekelijks 60 minuten privé coaching met Rick.",
+    answer: "Core is de eerlijke instap: wekelijkse content, groeps kick-off en eindevenement. Performance voegt wekelijkse Q&A's, trainingsschema op maat en 3 jaar Notion-toegang toe. Dit is het vlaggenschip. Ultimate is alles uit Performance plus wekelijks 60 minuten privé coaching met Rick.",
   },
   {
     question: "Is dit een eenmalige betaling?",
-    answer: "Ja. MOVE is een eenmalige investering voor het volledige 100-dagen traject — geen abonnement, geen terugkerende kosten. Je betaalt één keer en krijgt het complete programma inclusief kick-off en eindevenement.",
+    answer: "Ja. MOVE is een eenmalige investering voor het volledige 100-dagen traject. Geen abonnement, geen terugkerende kosten. Je betaalt één keer en krijgt het complete programma inclusief kick-off en eindevenement.",
   },
   {
     question: "Kan ik in termijnen betalen?",
@@ -94,18 +94,18 @@ const prijzenFaqs = [
   },
   {
     question: "Waarom is Performance het meest gekozen?",
-    answer: "Performance bevat de volle stack: alles uit Core plus wekelijkse Q&A's voor context-verdieping, een trainingsschema op maat dat elke 4 weken wordt bijgesteld, en 3 jaar toegang tot het Notion-systeem. De totale waarde is €8.358 — je investeert eenmalig €2.497.",
+    answer: "Performance bevat de volle stack: alles uit Core plus wekelijkse Q&A's voor context-verdieping, een trainingsschema op maat dat elke 4 weken wordt bijgesteld, en 3 jaar toegang tot het Notion-systeem. De totale waarde is €8.358. Je investeert eenmalig €2.497.",
   },
   {
     question: "Wat als ik na een paar weken wil stoppen?",
-    answer: "MOVE is geen abonnement — het is een eenmalige investering en een commitment van 100 dagen. De groep rekent op jouw aanwezigheid en jij op die van hen. Twijfel je of MOVE bij je past? Daarom begint elk traject met een kennismakingsgesprek.",
+    answer: "MOVE is geen abonnement. Het is een eenmalige investering en een commitment van 100 dagen. De groep rekent op jouw aanwezigheid en jij op die van hen. Twijfel je of MOVE bij je past? Daarom begint elk traject met een kennismakingsgesprek.",
   },
 ];
 
 const praktischFaqs = [
   {
     question: "Hoe begin ik?",
-    answer: "Met een kennismakingsgesprek van 30 minuten. Geen verkooppitch — Rick kijkt eerlijk of MOVE bij jou past. Daarna besluit je zelf.",
+    answer: "Met een kennismakingsgesprek van 30 minuten. Geen verkooppitch. Rick kijkt eerlijk of MOVE bij jou past. Daarna besluit je zelf.",
   },
   {
     question: "Wanneer start het volgende cohort?",
@@ -121,7 +121,7 @@ const praktischFaqs = [
   },
   {
     question: "Hoeveel tijd kost het per week?",
-    answer: "Reken op 2-3 uur per week: een kennismoment (3-10 min), je opdracht uitvoeren, de groeps-Q&A op donderdag, en je trainingen. MOVE is gebouwd voor drukke professionals — 1 prioriteit per week.",
+    answer: "Reken op 2-3 uur per week: een kennismoment (3-10 min), je opdracht uitvoeren, de groeps-Q&A op donderdag, en je trainingen. MOVE is gebouwd voor drukke professionals. Eén prioriteit per week.",
   },
 ];
 
@@ -135,7 +135,7 @@ const allFaqsForSchema = [
 const objections = [
   {
     objection: "“Het is veel geld.”",
-    response: "Klopt. Wat kost het je als er niets verandert? Je zei net dat je al drie keer bent vastgelopen op dit patroon. Wat kost dat je inmiddels — in energie, in werk, in relatie? Het geld is niet het probleem. Weer een jaar in hetzelfde patroon zitten is het probleem.",
+    response: "Klopt. Wat kost het je als er niets verandert? Je zei net dat je al drie keer bent vastgelopen op dit patroon. Wat kost dat je inmiddels, in energie, in werk, in relatie? Het geld is niet het probleem. Weer een jaar in hetzelfde patroon zitten is het probleem.",
   },
   {
     objection: "“Kan ik het ook zelf?”",
@@ -147,15 +147,15 @@ const objections = [
   },
   {
     objection: "“Ik moet er nog over nadenken.”",
-    response: "Prima. Wat moet je precies afwegen? Vaak komt iemand erachter dat er niets te overwegen valt — of juist dat er iets specifieks is waar je op kunt ingaan. Het kennismakingsgesprek is vrijblijvend.",
+    response: "Prima. Wat moet je precies afwegen? Vaak komt iemand erachter dat er niets te overwegen valt. Of juist dat er iets specifieks is waar je op kunt ingaan. Het kennismakingsgesprek is vrijblijvend.",
   },
   {
     objection: "“Is het goed voor mijn relatie?”",
-    response: "Groeien maakt je een betere partner, geen andere. De vraag is: wat zit er onder deze vraag? MOVE helpt je om op alle levensdomeinen controle te krijgen — inclusief hoe je je verhoudt tot de mensen om je heen.",
+    response: "Groeien maakt je een betere partner, geen andere. De vraag is: wat zit er onder deze vraag? MOVE helpt je om op alle levensdomeinen controle te krijgen, inclusief hoe je je verhoudt tot de mensen om je heen.",
   },
   {
     objection: "“Ik heb geen tijd.”",
-    response: "Tijd is niet het echte bezwaar — prioriteit is het bezwaar. MOVE kost 2-3 uur per week. Je kijkt nu al Netflix, scrollt al door je telefoon. Het gaat niet om tijd. Het gaat om wat je belangrijk genoeg vindt.",
+    response: "Tijd is niet het echte bezwaar. Prioriteit is het bezwaar. MOVE kost 2-3 uur per week. Je kijkt nu al Netflix, scrollt al door je telefoon. Het gaat niet om tijd. Het gaat om wat je belangrijk genoeg vindt.",
   },
 ];
 
@@ -174,7 +174,7 @@ export default function VeelgesteldeVragenPage() {
           </h1>
           <p className="text-xl text-on-surface-variant max-w-2xl">
             Alles wat je wilt weten over MOVE, het programma, de investering en
-            wat je kunt verwachten. Geen verkooppraatjes — eerlijke antwoorden.
+            wat je kunt verwachten. Geen verkooppraatjes, maar eerlijke antwoorden.
           </p>
         </div>
       </section>
@@ -269,7 +269,7 @@ export default function VeelgesteldeVragenPage() {
             </h2>
             <p className="text-on-surface-variant text-lg max-w-2xl mx-auto">
               De bezwaren die je nu hebt, had elke MOVE-deelnemer ook. Hier zijn
-              eerlijke antwoorden — geen verkooptrucs.
+              eerlijke antwoorden, geen verkooptrucs.
             </p>
           </div>
 

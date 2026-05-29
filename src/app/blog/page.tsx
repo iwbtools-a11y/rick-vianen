@@ -97,7 +97,7 @@ export default function BlogPage() {
                   Rick Vianen
                 </p>
                 <p className="text-on-surface-variant text-xs">
-                  Performance Coach &mdash; {featured.date}
+                  Performance Coach · {featured.date}
                 </p>
               </div>
               <Link

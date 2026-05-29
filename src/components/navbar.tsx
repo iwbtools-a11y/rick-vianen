@@ -9,6 +9,7 @@ const navLinks = [
   { href: "/", label: "Home" },
   { href: "/programma", label: "Programma" },
   { href: "/prijs", label: "Prijs" },
+  { href: "/challenge", label: "Challenge" },
   { href: "/over-rick-vianen", label: "Over Rick" },
   { href: "/blog", label: "Blog" },
 ];
@@ -17,8 +18,8 @@ const mobileNavLinks = [
   { href: "/", label: "Home", icon: "home" },
   { href: "/programma", label: "Programma", icon: "calendar_today" },
   { href: "/prijs", label: "Prijs", icon: "payments" },
+  { href: "/challenge", label: "Challenge", icon: "bolt" },
   { href: "/over-rick-vianen", label: "Over Rick", icon: "person" },
-  { href: "/blog", label: "Blog", icon: "article" },
 ];
 
 export function Navbar() {

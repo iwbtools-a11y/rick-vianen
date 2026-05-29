@@ -27,8 +27,7 @@ export default function BedanktPage() {
           Je ontvangt een e-mail met de details.
         </p>
         <p className="text-on-surface-variant leading-relaxed mb-10">
-          30 minuten. Geen pitch. Rick benoemt eerlijk wat hij ziet &mdash;
-          daarna weet je het.
+          30 minuten. Geen pitch. Rick benoemt eerlijk wat hij ziet.
         </p>
         <div className="flex flex-col sm:flex-row justify-center gap-4">
           <Link

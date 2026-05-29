@@ -6,7 +6,7 @@ import { FaqJsonLd } from "@/components/faq-jsonld";
 const homeFaqs = [
   {
     question: "Wat is MOVE precies?",
-    answer: "MOVE is een 100-dagen peer-group coachingtraject voor ambitieuze professionals. In kleine groepen van maximaal 8 deelnemers werk je gelijktijdig aan sport, mindset en business — onder begeleiding van Rick Vianen.",
+    answer: "MOVE is een 100-dagen peer-group coachingtraject voor ambitieuze professionals. In kleine groepen van maximaal 8 deelnemers werk je gelijktijdig aan sport, mindset en business, onder begeleiding van Rick Vianen.",
   },
   {
     question: "Voor wie is MOVE bedoeld?",
@@ -14,11 +14,11 @@ const homeFaqs = [
   },
   {
     question: "Hoe verschilt MOVE van andere coaching?",
-    answer: "De meeste coaching focust op één domein: sport óf mindset óf business. MOVE integreert alle drie als één systeem. Bovendien is de groep het mechanisme — niet de coach alleen. 11 van de 11 geïnterviewde klanten noemen de groep als het #1 werkende element.",
+    answer: "De meeste coaching focust op één domein: sport óf mindset óf business. MOVE integreert alle drie als één systeem. Bovendien is de groep het mechanisme, niet de coach alleen. 11 van de 11 geïnterviewde klanten noemen de groep als het #1 werkende element.",
   },
   {
     question: "Hoe begin ik?",
-    answer: "Met een kennismakingsgesprek van 30 minuten. Geen verkooppitch — Rick kijkt eerlijk of MOVE bij jou past en wat je wilt bereiken. Daarna besluit je zelf.",
+    answer: "Met een kennismakingsgesprek van 30 minuten. Geen verkooppitch. Rick kijkt eerlijk of MOVE bij jou past en wat je wilt bereiken. Daarna besluit je zelf.",
   },
 ];
 
@@ -71,9 +71,9 @@ export default function Home() {
             <div className="flex items-center gap-2 mt-6 text-sm text-on-surface-variant">
               <span className="material-symbols-outlined text-lg text-secondary">group</span>
               <span>
-                Exclusieve mogelijkheid: We zijn opzoek naar nog{" "}
+                Exclusieve mogelijkheid: We zijn op zoek naar nog{" "}
                 <strong className="text-on-surface">3 mensen</strong>{" "}
-                voor de beta versie van het vernieuwde traject
+                voor de betaversie van het vernieuwde traject
               </span>
             </div>
           </div>
@@ -106,8 +106,7 @@ export default function Home() {
             </h2>
             <div className="h-1 w-20 bg-gradient-to-r from-primary to-secondary mt-6 mb-6 rounded-full" />
             <p className="text-on-surface-variant leading-relaxed">
-              Geen theorie, werkende structuur. Elke week dezelfde cyclus
-              &mdash; totdat het een tweede natuur wordt.
+              Geen theorie, maar werkende structuur. Elke week dezelfde cyclus, totdat het een tweede natuur wordt.
             </p>
           </div>
 
@@ -146,7 +145,7 @@ export default function Home() {
               Drie pijlers. <span className="text-secondary">E&eacute;n systeem.</span>
             </h2>
             <p className="text-on-surface-variant mt-4 text-lg leading-relaxed">
-              <span className="text-primary font-bold">Sport</span>, <span className="text-secondary font-bold">mindset</span> en <span className="text-on-surface font-bold">business</span>{" "}als &eacute;&eacute;n geheel &mdash; niet als losse trajecten.
+              <span className="text-primary font-bold">Sport</span>, <span className="text-secondary font-bold">mindset</span> en <span className="text-on-surface font-bold">business</span>{" "}als &eacute;&eacute;n geheel, niet als losse trajecten.
             </p>
           </div>
 
@@ -293,7 +292,7 @@ export default function Home() {
                 ))}
               </div>
               <p className="text-xl md:text-2xl italic leading-relaxed text-on-surface mb-8">
-                &ldquo;Het vinden van balans, en daarmee rust, overzicht en controle op mijn leven. De eerste stap was de sportieve uitdaging aangaan &mdash; en toen bleek verandering vooral te komen door te doen.&rdquo;
+                &ldquo;Het vinden van balans, en daarmee rust, overzicht en controle op mijn leven. De eerste stap was de sportieve uitdaging aangaan. Toen bleek verandering vooral te komen door te doen.&rdquo;
               </p>
               <div className="flex items-center gap-4">
                 <Image
@@ -334,8 +333,8 @@ export default function Home() {
                   </span>
                 </div>
                 <p className="text-on-surface-variant text-sm italic">
-                  &ldquo;Rick helpt je niet: hij helpt je verder. Verder dan je voor mogelijk hield.&rdquo;
-                  &mdash; Koen
+                  &ldquo;Rick helpt je niet, hij helpt je verder. Verder dan je voor mogelijk hield.&rdquo;
+                  <span className="block mt-2 not-italic font-bold text-xs">Koen</span>
                 </p>
               </div>
             </div>
@@ -517,6 +516,34 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ───────────────── CHALLENGE BANNER ───────────────── */}
+      <section className="py-12 px-8 md:px-16">
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-on-surface rounded-2xl p-8 md:p-12 flex flex-col md:flex-row items-center gap-8 relative overflow-hidden">
+            <div className="absolute -top-10 -right-10 w-48 h-48 rounded-full bg-primary/10 blur-[50px] pointer-events-none" />
+            <div className="flex-1 relative">
+              <span className="inline-block px-3 py-1 bg-primary/20 text-primary font-bold text-xs uppercase tracking-widest rounded-full mb-4">
+                Nieuw &middot; &euro;100
+              </span>
+              <h2 className="font-[family-name:var(--font-headline)] text-2xl md:text-3xl font-black text-white tracking-tight mb-3">
+                Nog niet klaar voor MOVE? Begin met de Challenge.
+              </h2>
+              <p className="text-white/60 text-sm leading-relaxed">
+                5 dagen. Eén ambitie van de plank. Je €100 is direct je korting als je daarna instroomt in MOVE.
+              </p>
+            </div>
+            <div className="shrink-0 relative">
+              <Link
+                href="/challenge"
+                className="btn-primary px-8 py-4 rounded-xl font-bold whitespace-nowrap block text-center"
+              >
+                Bekijk de Challenge
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ───────────────── FAQ ───────────────── */}
       <section className="bg-surface py-24 md:py-32 px-8 md:px-16">
         <div className="max-w-4xl mx-auto">
@@ -552,7 +579,7 @@ export default function Home() {
           {/* Urgency */}
           <div className="text-center mb-12">
             <p className="text-on-surface-variant text-lg italic leading-relaxed max-w-xl mx-auto">
-              Elke maand zonder systeem is een maand waarin je weet wat je moet doen &mdash; maar het niet doet.
+              Elke maand zonder systeem is een maand waarin je weet wat je moet doen, maar het niet doet.
             </p>
           </div>
 
@@ -578,10 +605,10 @@ export default function Home() {
               <div className="mt-5 text-on-surface-variant text-sm flex items-start justify-center gap-2">
                 <span className="material-symbols-outlined text-secondary text-lg mt-0.5 shrink-0">group</span>
                 <span>
-                  Exclusieve mogelijkheid: We zijn opzoek naar nog{" "}
+                  Exclusieve mogelijkheid: We zijn op zoek naar nog{" "}
                   <strong className="text-on-surface">3 mensen</strong>
                   <br />
-                  voor de beta versie van het vernieuwde traject
+                  voor de betaversie van het vernieuwde traject
                 </span>
               </div>
             </div>

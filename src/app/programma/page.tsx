@@ -62,7 +62,7 @@ const programmaFaqs = [
   },
   {
     question: "Wat houdt de proces-garantie in?",
-    answer: "Als je elke stap uitvoert — check-ins, metingen, opdrachten, trainingsschema — en na 100 dagen geen aantoonbare vooruitgang ziet, dan werkt Rick kosteloos extra tijd met je door. De garantie zit in het proces: als jij het werk doet, werkt het.",
+    answer: "Als je elke stap uitvoert (check-ins, metingen, opdrachten, trainingsschema) en na 100 dagen geen aantoonbare vooruitgang ziet, dan werkt Rick kosteloos extra tijd met je door. De garantie zit in het proces: als jij het werk doet, werkt het.",
   },
 ];
 
@@ -101,7 +101,7 @@ export default function ProgrammaPage() {
               <p className="text-3xl font-black italic mb-1">
                 Nog 3 plekken beschikbaar
               </p>
-              <p className="text-sm opacity-90">Beta cohort — exclusieve vroegboekprijs</p>
+              <p className="text-sm opacity-90">Beta cohort · exclusieve vroegboekprijs</p>
             </div>
             <div className="absolute -bottom-4 -right-4 w-full h-full bg-surface-container -z-10 rounded-xl" />
           </div>
@@ -237,7 +237,7 @@ export default function ProgrammaPage() {
                   Radicale accountability
                 </h3>
                 <p className="text-lg leading-relaxed text-on-surface-variant">
-                  Niet Rick die je bij de hand neemt — een groep gelijkgestemden
+                  Niet Rick die je bij de hand neemt, maar een groep gelijkgestemden
                   die je niet laat zitten. 11 van de 11 ge&iuml;nterviewde
                   klanten noemen de groep als het #1 werkende element.
                 </p>
@@ -359,7 +359,7 @@ export default function ProgrammaPage() {
             {/* ── MOVE Performance (Featured) ── */}
             <div className="relative bg-white rounded-2xl shadow-xl lg:scale-[1.03] z-20 overflow-hidden flex flex-col border-2 border-primary/20">
               <span className="absolute -top-0 left-0 right-0 bg-primary text-white text-xs font-bold tracking-wider uppercase py-2.5 text-center">
-                MEEST GEKOZEN — HET VLAGGENSCHIP
+                MEEST GEKOZEN · HET VLAGGENSCHIP
               </span>
 
               <div className="p-10 pb-6 pt-14">
@@ -477,8 +477,8 @@ export default function ProgrammaPage() {
             Proces-garantie
           </h2>
           <p className="text-lg text-on-surface-variant leading-relaxed max-w-2xl mx-auto mb-8">
-            Als jij elke stap uitvoert zoals we die samen uitzetten — check-ins,
-            metingen, opdrachten, trainingsschema — en je ziet na 100 dagen geen
+            Als jij elke stap uitvoert zoals we die samen uitzetten (check-ins,
+            metingen, opdrachten, trainingsschema) en je ziet na 100 dagen geen
             aantoonbare vooruitgang op jouw doelen, dan werk ik kosteloos
             extra tijd met je door tot je het haalt.
           </p>
@@ -601,7 +601,7 @@ export default function ProgrammaPage() {
                 Klaar om te bewegen?
               </h2>
               <p className="text-surface-container-highest/60 text-lg md:text-xl mb-12 max-w-2xl mx-auto">
-                Beta cohort: nog 3 plekken beschikbaar. Exclusieve vroegboekprijs &mdash; daarna gaat de prijs omhoog.
+                Beta cohort: nog 3 plekken beschikbaar. Exclusieve vroegboekprijs. Daarna gaat de prijs omhoog.
               </p>
               <div className="inline-flex flex-col items-center gap-4">
                 <Link
@@ -618,6 +618,22 @@ export default function ProgrammaPage() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* ===== CHALLENGE REFERENTIE ===== */}
+      <section className="pb-20 px-8 md:px-16">
+        <div className="max-w-7xl mx-auto text-center">
+          <p className="text-on-surface-variant text-sm mb-3">Nog niet klaar voor het volledige programma?</p>
+          <Link
+            href="/challenge"
+            className="inline-flex items-center gap-2 text-primary font-bold group link-hover"
+          >
+            Begin met MOVE the Challenge voor &euro;100
+            <span className="material-symbols-outlined text-lg transition-transform duration-300 group-hover:translate-x-1">
+              arrow_forward
+            </span>
+          </Link>
         </div>
       </section>
     </div>
