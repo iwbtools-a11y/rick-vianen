@@ -33,8 +33,10 @@ export default function ChallengePage() {
 
             <div className="flex flex-col sm:flex-row gap-4 items-start">
               <Link
-                href="/intake"
+                href="https://rick-vianen.plugandpay.com/checkout/move-challenge"
                 className="btn-primary px-10 py-4 rounded-full text-lg font-bold"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 Start de challenge voor &euro;100
               </Link>
@@ -45,7 +47,7 @@ export default function ChallengePage() {
                 >
                   verified
                 </span>
-                Doe alle 5 dagen het werk. Je €100 is je korting op MOVE.
+                Doe alle 5 dagen het werk. Je €100 is je korting op MOVE. Veilige betaling via Plug&amp;Pay.
               </div>
             </div>
           </div>
@@ -402,14 +404,17 @@ export default function ChallengePage() {
               </p>
               <div className="inline-flex flex-col items-center gap-4">
                 <Link
-                  href="/intake"
+                  href="https://rick-vianen.plugandpay.com/checkout/move-challenge"
                   className="btn-primary px-14 py-5 rounded-full text-xl font-bold"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   Start de challenge voor &euro;100
                 </Link>
                 <p className="text-white/40 text-sm font-medium tracking-wide uppercase">
                   €100 korting op MOVE &middot; Evergreen &middot; Start direct
                 </p>
+                <p className="text-white/30 text-xs">Veilige betaling via Plug&amp;Pay</p>
               </div>
             </div>
           </div>
