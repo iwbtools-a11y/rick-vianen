@@ -31,7 +31,7 @@ export default function ChallengePage() {
               brengt je in 5 dagen van uitstelgedrag naar eerste beweging.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 items-start">
+            <div className="flex flex-col items-start gap-2">
               <Link
                 href="https://rick-vianen.plugandpay.com/checkout/move-challenge"
                 className="btn-primary px-10 py-4 rounded-full text-lg font-bold"
@@ -40,15 +40,16 @@ export default function ChallengePage() {
               >
                 Start de challenge voor &euro;100
               </Link>
-              <div className="flex items-center gap-2 text-sm text-on-surface-variant pt-3">
+              <div className="flex items-center gap-2 text-sm text-on-surface-variant">
                 <span
                   className="material-symbols-outlined text-primary text-lg"
                   style={{ fontVariationSettings: "'FILL' 1" }}
                 >
                   verified
                 </span>
-                Doe alle 5 dagen het werk. Je €100 is je korting op MOVE. Veilige betaling via Plug&amp;Pay.
+                Doe alle 5 dagen het werk. Je €100 is je korting op MOVE.
               </div>
+              <p className="text-xs text-on-surface-variant/60 pl-1">Veilige betaling via Plug&amp;Pay</p>
             </div>
           </div>
 
