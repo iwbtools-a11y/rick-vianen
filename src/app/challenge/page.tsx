@@ -47,7 +47,7 @@ export default function ChallengePage() {
                 >
                   verified
                 </span>
-                Doe alle 5 dagen het werk. Je €100 is je korting op MOVE.
+                €100 korting op MOVE wanneer je investeert in de Challenge.
               </div>
               <p className="text-xs text-on-surface-variant/60 pl-1">Veilige betaling via Plug&amp;Pay</p>
             </div>
