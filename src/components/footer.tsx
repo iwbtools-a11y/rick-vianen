@@ -86,6 +86,9 @@ export function Footer() {
             <li className="text-surface-container-highest/60 text-sm">
               KvK: 94159475
             </li>
+            <li className="text-surface-container-highest/60 text-sm">
+              BTW: NL005069626B08
+            </li>
           </ul>
         </div>
 
@@ -112,6 +115,8 @@ export function Footer() {
             <li>
               <a
                 href="https://www.linkedin.com/in/rick-vianen-481a73179/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="hover:text-primary transition-colors"
               >
                 LinkedIn
