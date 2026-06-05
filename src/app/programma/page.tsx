@@ -613,7 +613,7 @@ export default function ProgrammaPage() {
                   Plan een kennismakingsgesprek
                 </Link>
                 <p className="text-surface-container-highest/40 text-sm font-medium tracking-wide uppercase">
-                  30 minuten. Geen pitch. Daarna weet je het.
+                  30 minuten. Geen pitch. Daarna weet je waar je staat.
                 </p>
               </div>
             </div>

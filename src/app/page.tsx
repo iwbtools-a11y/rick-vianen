@@ -594,7 +594,7 @@ export default function Home() {
                 doet.
               </h2>
               <p className="text-on-surface-variant mt-4 text-lg leading-relaxed max-w-lg mx-auto">
-                30 minuten. Geen pitch. Daarna weet je het.
+                30 minuten. Geen pitch. Daarna weet je waar je staat.
               </p>
               <Link
                 href="/intake"

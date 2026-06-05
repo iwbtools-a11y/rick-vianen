@@ -247,7 +247,7 @@ export default function OverRickVianen() {
                 </h2>
                 <p className="text-surface-container-highest/60 leading-relaxed max-w-lg">
                   30 minuten. Geen pitch. Rick benoemt wat hij ziet.
-                  Direct en zonder verzachten. Daarna weet je het.
+                  Direct en zonder verzachten. Daarna weet je waar je staat.
                 </p>
               </div>
 

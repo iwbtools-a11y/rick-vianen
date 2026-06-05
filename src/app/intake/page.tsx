@@ -17,7 +17,7 @@ export default function IntakePage() {
             Plan een <span className="text-primary">kennismakingsgesprek</span>
           </h1>
           <p className="text-on-surface-variant leading-relaxed mb-6">
-            30 minuten. Geen pitch. Rick benoemt eerlijk wat hij ziet. Daarna weet je het.
+            30 minuten. Geen pitch. Rick benoemt eerlijk wat hij ziet. Daarna weet je waar je staat.
           </p>
           <div className="inline-flex items-center gap-3 p-3 bg-surface-container-low rounded-xl">
             <Image
