@@ -62,8 +62,8 @@ const programmaFaqs = [
     answer: "MOVE staat voor Master, Operate, Validate, Elevate. Het is een wekelijkse cyclus: je leert iets (Master), past het direct toe (Operate), kijkt eerlijk terug (Validate) en verfijnt je aanpak (Elevate). Na 100 dagen is dit een tweede natuur.",
   },
   {
-    question: "Wat houdt de proces-garantie in?",
-    answer: "Als je elke stap uitvoert (check-ins, metingen, opdrachten, trainingsschema) en na 100 dagen geen aantoonbare vooruitgang ziet op de doelen die jullie bij intake hebben vastgelegd, dan werkt Rick kosteloos extra tijd met je door. Bij Ultimate gaan ook de 1-op-1 sessies door.",
+    question: "Wat is de garantie?",
+    answer: "We geloven zo sterk in het traject dat je na 2 weken mag stoppen. Voel je geen richting of zie je geen vooruitgang? Dan krijg je je geld terug. No questions asked.",
   },
   {
     question: "Kan ik na 100 dagen doorgaan?",

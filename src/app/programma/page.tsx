@@ -61,8 +61,8 @@ const programmaFaqs = [
     answer: "Core is de eerlijke instap: het fundament zonder de verdieping. Performance is het vlaggenschip met wekelijkse Q&A's, trainingsschema op maat en 3 jaar Notion-toegang. Ultimate voegt wekelijks 1-op-1 coaching met Rick toe.",
   },
   {
-    question: "Wat houdt de proces-garantie in?",
-    answer: "Als je elke stap uitvoert (check-ins, metingen, opdrachten, trainingsschema) en na 100 dagen geen aantoonbare vooruitgang ziet, dan werkt Rick kosteloos extra tijd met je door. De garantie zit in het proces: als jij het werk doet, werkt het.",
+    question: "Wat is de garantie?",
+    answer: "We geloven zo sterk in het traject dat je na 2 weken mag stoppen. Voel je geen richting of zie je geen vooruitgang? Dan krijg je je geld terug. No questions asked.",
   },
 ];
 
@@ -474,20 +474,19 @@ export default function ProgrammaPage() {
             verified
           </span>
           <h2 className="font-[family-name:var(--font-headline)] text-4xl md:text-5xl font-black tracking-tight mb-6">
-            Proces-garantie
+            Twee weken proberen. Niet overtuigd? Geld terug.
           </h2>
           <p className="text-lg text-on-surface-variant leading-relaxed max-w-2xl mx-auto mb-8">
-            Als jij elke stap uitvoert zoals we die samen uitzetten (check-ins,
-            metingen, opdrachten, trainingsschema) en je ziet na 100 dagen geen
-            aantoonbare vooruitgang op jouw doelen, dan werk ik kosteloos
-            extra tijd met je door tot je het haalt.
+            We geloven zo sterk in het traject dat je na 2 weken mag stoppen.
+            Voel je geen richting of zie je geen vooruitgang? Dan krijg je je
+            geld terug. No questions asked.
           </p>
           <div className="inline-flex items-center gap-3 bg-white px-6 py-4 rounded-xl editorial-shadow">
             <span className="material-symbols-outlined text-primary text-2xl" style={{ fontVariationSettings: "'FILL' 1" }}>
               shield
             </span>
             <p className="text-sm font-bold text-on-surface">
-              De garantie zit in het proces. Als jij het werk doet, werkt het.
+              Niet tevreden na 2 weken? Je krijgt je geld terug. No questions asked.
             </p>
           </div>
         </div>

@@ -45,7 +45,7 @@ export default function IntakeBedanktPage() {
       <section className="py-8 px-8 md:px-16 mb-12">
         <div className="max-w-3xl mx-auto">
           <iframe
-            src="https://plucky-cardigan-72d.notion.site/ebd//35e0e1a2805f810886d3f5beb9dff748"
+            src="https://plucky-cardigan-72d.notion.site/ebd//ae70e1a2805f82c3a19d8164a3a6b136"
             width="100%"
             height="600"
             frameBorder="0"

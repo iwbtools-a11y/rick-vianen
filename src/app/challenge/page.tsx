@@ -5,7 +5,7 @@ import Image from "next/image";
 export const metadata: Metadata = {
   title: "MOVE the Challenge | MOVE Coaching",
   description:
-    "Heb je al te lang een ambitie op de plank liggen? MOVE the Challenge brengt je in 5 dagen van uitstelgedrag naar eerste beweging. €100. Procesgarantie.",
+    "Heb je al te lang een ambitie op de plank liggen? MOVE the Challenge brengt je in 5 dagen van uitstelgedrag naar eerste beweging. €100. Verrekenbaar met MOVE.",
 };
 
 export default function ChallengePage() {
@@ -19,7 +19,7 @@ export default function ChallengePage() {
           {/* Left — text */}
           <div>
             <span className="inline-block px-3 py-1 bg-secondary-container/80 text-on-secondary-container font-bold text-xs uppercase tracking-widest rounded-full mb-6 backdrop-blur-sm">
-              5 dagen &middot; &euro;100 &middot; Procesgarantie
+              5 dagen &middot; &euro;100 &middot; Verrekenbaar met MOVE
             </span>
 
             <h1 className="font-[family-name:var(--font-headline)] text-5xl md:text-7xl font-black tracking-tighter leading-[0.9] mb-4 max-w-3xl">
