@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Faq } from "@/components/faq";
 import { FaqJsonLd } from "@/components/faq-jsonld";
+import { QuizCTA } from "@/components/quiz-cta";
 
 export const metadata: Metadata = {
   title: "Programma | MOVE Coaching",
@@ -587,6 +588,11 @@ export default function ProgrammaPage() {
           </div>
         </div>
         <FaqJsonLd items={programmaFaqs} />
+      </section>
+
+      {/* ===== QUIZ CTA ===== */}
+      <section className="py-12 md:py-16">
+        <QuizCTA variant="card" />
       </section>
 
       {/* ===== FINAL CTA ===== */}

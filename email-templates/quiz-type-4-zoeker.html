@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="nl" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Jouw MOVE-testresultaat</title>
+  <!--[if mso]>
+  <xml><o:OfficeDocumentSettings><o:PixelsPerInch>96</o:PixelsPerInch><o:AllowPNG/></o:OfficeDocumentSettings></xml>
+  <![endif]-->
+  <style>
+    body { margin:0; padding:0; background:#F5F3EE; -webkit-text-size-adjust:100%; }
+    a { color:inherit; }
+    img { border:0; display:block; }
+    @media only screen and (max-width:620px) {
+      .email-container { width:100% !important; }
+      .hero-pad, .content-pad, .footer-pad { padding-left:24px !important; padding-right:24px !important; }
+      .h1 { font-size:28px !important; }
+      .score-label { font-size:13px !important; }
+    }
+  </style>
+</head>
+<body style="margin:0;padding:0;background-color:#F5F3EE;font-family:'Plus Jakarta Sans',Helvetica,Arial,sans-serif;">
+
+  <!-- Preheader -->
+  <div style="display:none;max-height:0;overflow:hidden;mso-hide:all;">
+    Jij bent De Zoeker — je weet wat je niet wil, maar nog niet precies wat je wel wil. Dat verandert nu.&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌
+  </div>
+
+  <table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation" style="background-color:#F5F3EE;">
+    <tr>
+      <td align="center" style="padding:32px 16px;">
+
+        <table class="email-container" width="600" cellpadding="0" cellspacing="0" border="0" role="presentation" style="max-width:600px;width:100%;">
+
+          <!-- ══ HEADER ══════════════════════════════════════════ -->
+          <tr>
+            <td style="background:#ffffff;border-radius:16px 16px 0 0;padding:24px 40px;border-bottom:1px solid #F0EBE6;" class="content-pad">
+              <table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation">
+                <tr>
+                  <td>
+                    <img src="https://rickvianen.nl/images/move-logo.png" alt="MOVE Coaching" width="100" style="height:auto;">
+                  </td>
+                  <td align="right" style="font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#8e7067;">
+                    Jouw testresultaat
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- ══ HERO ════════════════════════════════════════════ -->
+          <tr>
+            <td style="background:#271813;padding:48px 40px;" class="hero-pad">
+
+              <table cellpadding="0" cellspacing="0" border="0" role="presentation" style="margin-bottom:28px;">
+                <tr>
+                  <td style="background:rgba(232,82,17,0.15);border-radius:100px;padding:6px 16px;">
+                    <span style="font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#E85211;">&#9679; Type 4 van 4</span>
+                  </td>
+                </tr>
+              </table>
+
+              <p style="margin:0 0 6px;font-size:14px;color:rgba(255,255,255,0.45);font-weight:500;">
+                Hey {{ person.first_name|default:'daar' }},
+              </p>
+              <h1 class="h1" style="margin:0 0 20px;font-size:36px;font-weight:800;line-height:1.1;color:#ffffff;">
+                Jij bent<br><span style="color:#E85211;">De Zoeker</span>
+              </h1>
+              <p style="margin:0;font-size:17px;font-weight:600;color:rgba(255,255,255,0.75);line-height:1.5;">
+                Je weet wat je niet wil. Maar nog niet precies wat je wel wil.
+              </p>
+
+            </td>
+          </tr>
+
+          <!-- ══ CONTENT ═════════════════════════════════════════ -->
+          <tr>
+            <td style="background:#ffffff;padding:40px;" class="content-pad">
+
+              <p style="margin:0 0 20px;font-size:16px;line-height:1.75;color:#5a4138;">
+                Je staat op een punt van heroriëntatie. Het oude patroon werkt niet meer, een nieuw patroon is nog niet helder. Dat is geen probleem &mdash; dat is het begin van iets beters.
+              </p>
+              <p style="margin:0 0 36px;font-size:16px;line-height:1.75;color:#5a4138;">
+                Maar je hebt iemand nodig die je helpt die richting scherp te krijgen. Zonder die helderheid blijf je zoeken en kom je nergens aan toe.
+              </p>
+
+              <!-- Scores -->
+              <p style="margin:0 0 16px;font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#8e7067;">
+                Jouw scoreoverzicht
+              </p>
+              <table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation" style="margin-bottom:36px;">
+
+                <!-- Richting — HOOGSTE -->
+                <tr>
+                  <td style="padding:12px 0;border-bottom:1px solid #F0EBE6;">
+                    <table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation">
+                      <tr>
+                        <td style="font-size:14px;font-weight:700;color:#E85211;">&#9650; Richting</td>
+                        <td align="right">
+                          <span style="background:#E85211;color:#ffffff;border-radius:100px;padding:3px 12px;font-size:12px;font-weight:700;">{{ person.quiz_score_richting }}</span>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+
+                <!-- Structuur -->
+                <tr>
+                  <td style="padding:12px 0;border-bottom:1px solid #F0EBE6;">
+                    <table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation">
+                      <tr>
+                        <td style="font-size:14px;color:#8e7067;" class="score-label">Structuur</td>
+                        <td align="right" style="font-size:13px;font-weight:600;color:#5a4138;">{{ person.quiz_score_structuur }}</td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+
+                <!-- Energie -->
+                <tr>
+                  <td style="padding:12px 0;border-bottom:1px solid #F0EBE6;">
+                    <table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation">
+                      <tr>
+                        <td style="font-size:14px;color:#8e7067;" class="score-label">Energie</td>
+                        <td align="right" style="font-size:13px;font-weight:600;color:#5a4138;">{{ person.quiz_score_energie }}</td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+
+                <!-- Actie -->
+                <tr>
+                  <td style="padding:12px 0;">
+                    <table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation">
+                      <tr>
+                        <td style="font-size:14px;color:#8e7067;" class="score-label">Actie</td>
+                        <td align="right" style="font-size:13px;font-weight:600;color:#5a4138;">{{ person.quiz_score_actie }}</td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+
+              </table>
+
+            </td>
+          </tr>
+
+          <!-- ══ CTA ═════════════════════════════════════════════ -->
+          <tr>
+            <td style="background:#FFF1ED;padding:40px;" class="content-pad">
+
+              <p style="margin:0 0 8px;font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#8e7067;">
+                Jouw volgende stap
+              </p>
+              <h2 style="margin:0 0 16px;font-size:26px;font-weight:800;line-height:1.2;color:#271813;">
+                MOVE begint met precies die vraag.
+              </h2>
+              <p style="margin:0 0 32px;font-size:15px;line-height:1.7;color:#5a4138;">
+                De eerste stap is altijd helderheid: wat wil jij, en waar wil je naartoe? De 5-daagse challenge is de ideale plek om dat uit te zoeken. &euro;100, verrekenbaar met MOVE.
+              </p>
+
+              <table cellpadding="0" cellspacing="0" border="0" role="presentation">
+                <tr>
+                  <td style="border-radius:100px;background:linear-gradient(135deg,#E85211 0%,#d04400 100%);box-shadow:0 4px 16px rgba(232,82,17,0.35);">
+                    <a href="https://rickvianen.nl/challenge" style="display:inline-block;padding:16px 36px;font-size:15px;font-weight:700;color:#ffffff;text-decoration:none;border-radius:100px;mso-padding-alt:16px 36px;">
+                      Start de challenge &rarr;
+                    </a>
+                  </td>
+                </tr>
+              </table>
+
+              <p style="margin:20px 0 0;font-size:13px;color:#8e7067;">
+                Of bekijk jouw volledige resultaat online:<br>
+                <a href="https://rickvianen.nl/quiz" style="color:#E85211;font-weight:600;text-decoration:none;">rickvianen.nl/quiz</a>
+              </p>
+
+            </td>
+          </tr>
+
+          <!-- ══ SIGNATURE ═══════════════════════════════════════ -->
+          <tr>
+            <td style="background:#ffffff;padding:32px 40px;border-top:1px solid #F0EBE6;" class="content-pad">
+              <table cellpadding="0" cellspacing="0" border="0" role="presentation">
+                <tr>
+                  <td style="padding-right:16px;vertical-align:top;">
+                    <img src="https://rickvianen.nl/images/rick-square.png" alt="Rick Vianen" width="48" height="48" style="border-radius:50%;width:48px;height:48px;object-fit:cover;">
+                  </td>
+                  <td style="vertical-align:top;">
+                    <p style="margin:0;font-size:14px;font-weight:700;color:#271813;">Rick Vianen</p>
+                    <p style="margin:4px 0 0;font-size:13px;color:#8e7067;line-height:1.5;">
+                      MOVE Coaching &mdash; Sport &middot; Mindset &middot; Business
+                    </p>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- ══ FOOTER ══════════════════════════════════════════ -->
+          <tr>
+            <td style="background:#F5F3EE;border-radius:0 0 16px 16px;padding:28px 40px;text-align:center;" class="footer-pad">
+              <p style="margin:0 0 8px;font-size:12px;color:#8e7067;line-height:1.6;">
+                Je ontvangt deze e-mail omdat je de MOVE-test hebt ingevuld op rickvianen.nl.
+              </p>
+              <p style="margin:0;font-size:12px;color:#8e7067;">
+                {% unsubscribe 'Uitschrijven' %}
+                &nbsp;&middot;&nbsp;
+                <a href="https://rickvianen.nl/privacy" style="color:#8e7067;text-decoration:underline;">Privacybeleid</a>
+                &nbsp;&middot;&nbsp;
+                <a href="https://rickvianen.nl" style="color:#8e7067;text-decoration:underline;">rickvianen.nl</a>
+              </p>
+            </td>
+          </tr>
+
+        </table>
+      </td>
+    </tr>
+  </table>
+
+</body>
+</html>

@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Faq } from "@/components/faq";
 import { FaqJsonLd } from "@/components/faq-jsonld";
+import { QuizCTA } from "@/components/quiz-cta";
 
 const homeFaqs = [
   {
@@ -75,6 +76,11 @@ export default function Home() {
                 <strong className="text-on-surface">3 mensen</strong>{" "}
                 voor de betaversie van het vernieuwde traject
               </span>
+            </div>
+
+            {/* Quiz hint */}
+            <div className="mt-5">
+              <QuizCTA variant="hint" />
             </div>
           </div>
 

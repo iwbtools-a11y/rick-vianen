@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { blogPosts } from "@/content/blog-posts";
+import { QuizCTA } from "@/components/quiz-cta";
 
 const articleImages: Record<string, string> = {
   "the-way-you-fck-yourself": "/images/blog-str.jpg",
@@ -97,6 +98,11 @@ export default async function BlogPostPage({
           </span>
           Terug naar Blog
         </Link>
+      </div>
+
+      {/* ─── QUIZ CTA ─── */}
+      <div className="max-w-3xl mx-auto px-8 md:px-16 mt-8">
+        <QuizCTA variant="inline" />
       </div>
 
       {/* ─── CTA ─── */}
