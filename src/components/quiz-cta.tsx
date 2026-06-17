@@ -46,7 +46,7 @@ export function QuizCTA({ variant }: { variant: "hint" | "card" | "inline" }) {
               Doe de test en ontdek in 2 minuten welk type jij bent — en welke stap als eerste het meeste verschil maakt.
             </p>
             <div className="flex gap-6 mt-4">
-              {["6 vragen", "Direct resultaat", "Persoonlijk advies per mail"].map((item) => (
+              {["6 vragen", "Direct inzicht", "Persoonlijk advies per mail"].map((item) => (
                 <span key={item} className="flex items-center gap-1.5 text-xs text-on-surface-variant">
                   <span
                     className="material-symbols-outlined text-sm text-primary"
@@ -87,7 +87,7 @@ export function QuizCTA({ variant }: { variant: "hint" | "card" | "inline" }) {
             Herken je dit? Ontdek jouw MOVE-type.
           </p>
           <p className="text-sm text-on-surface-variant leading-relaxed">
-            6 vragen. Direct resultaat. Je krijgt een persoonlijk advies in je inbox.
+            6 vragen. Direct inzicht. Je krijgt een persoonlijk advies in je inbox.
           </p>
         </div>
         <Link

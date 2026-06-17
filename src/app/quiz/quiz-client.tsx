@@ -324,7 +324,7 @@ export function QuizClient() {
                 {[
                   { icon: 'schedule', label: '2 minuten' },
                   { icon: 'checklist', label: '6 vragen' },
-                  { icon: 'bolt', label: 'Direct resultaat' },
+                  { icon: 'bolt', label: 'Direct inzicht' },
                 ].map(item => (
                   <span key={item.label} className="flex items-center gap-1.5 text-xs text-white/45">
                     <span className="material-symbols-outlined text-sm">{item.icon}</span>
