@@ -113,6 +113,11 @@ export function Footer() {
               </Link>
             </li>
             <li>
+              <Link href="/herroeping" className="hover:text-primary transition-colors">
+                Herroepingsrecht
+              </Link>
+            </li>
+            <li>
               <a
                 href="https://www.linkedin.com/in/rick-vianen-481a73179/"
                 target="_blank"
