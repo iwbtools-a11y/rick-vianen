@@ -296,10 +296,6 @@ export function QuizClient() {
           <>
           <section className="bg-on-surface min-h-screen flex items-center px-6 md:px-16 pt-[120px] pb-16">
             <div className="w-full max-w-2xl mx-auto">
-              <p className="text-[11px] font-bold tracking-[0.14em] uppercase text-primary mb-4">
-                Rick Vianen · MOVE
-              </p>
-
               <div
                 className="font-[family-name:var(--font-headline)] text-primary font-black leading-[0.9] mb-2"
                 style={{ fontSize: 'clamp(72px, 18vw, 120px)' }}
