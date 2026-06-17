@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -25,6 +25,19 @@ const mobileNavLinks = [
 export function Navbar() {
   const pathname = usePathname();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [bannerVisible, setBannerVisible] = useState(false);
+
+  // Hydrate from localStorage after mount to avoid SSR mismatch
+  useEffect(() => {
+    setBannerVisible(localStorage.getItem("quizBannerDismissed") !== "1");
+  }, []);
+
+  function dismissBanner() {
+    localStorage.setItem("quizBannerDismissed", "1");
+    setBannerVisible(false);
+  }
+
+  const showBanner = bannerVisible && pathname !== "/quiz";
 
   return (
     <>
@@ -79,6 +92,29 @@ export function Navbar() {
             </button>
           </div>
         </div>
+
+        {/* Quiz announcement banner */}
+        {showBanner && (
+          <div className="bg-on-surface border-t border-white/5 px-4 py-2 flex items-center justify-center gap-3 text-sm relative">
+            <span className="text-white/50 hidden sm:inline">Ben jij er al klaar voor?</span>
+            <Link
+              href="/quiz"
+              className="text-primary font-bold inline-flex items-center gap-1.5 group"
+            >
+              Doe de quiz in 2 minuten
+              <span className="material-symbols-outlined text-base transition-transform duration-300 group-hover:translate-x-0.5">
+                arrow_forward
+              </span>
+            </Link>
+            <button
+              onClick={dismissBanner}
+              aria-label="Sluiten"
+              className="absolute right-4 top-1/2 -translate-y-1/2 text-white/30 hover:text-white/70 transition-colors"
+            >
+              <span className="material-symbols-outlined text-base">close</span>
+            </button>
+          </div>
+        )}
 
         {/* Mobile dropdown menu */}
         {mobileMenuOpen && (
