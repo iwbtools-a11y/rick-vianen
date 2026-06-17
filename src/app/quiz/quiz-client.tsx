@@ -293,6 +293,7 @@ export function QuizClient() {
 
         {/* ── INTRO ─────────────────────────────────────────────── */}
         {screen === 'intro' && (
+          <>
           <section className="bg-on-surface min-h-screen flex items-center px-6 md:px-16 pt-[120px] pb-16">
             <div className="w-full max-w-2xl mx-auto">
               <p className="text-[11px] font-bold tracking-[0.14em] uppercase text-primary mb-4">
@@ -341,6 +342,132 @@ export function QuizClient() {
               </button>
             </div>
           </section>
+
+          {/* ── TYPES PREVIEW ─────────────────────────────────────── */}
+          <section className="gradient-warm py-20 md:py-28 px-6 md:px-16">
+            <div className="max-w-4xl mx-auto">
+              <div className="mb-12">
+                <p className="text-xs font-bold tracking-[0.14em] uppercase text-primary mb-3">4 types</p>
+                <h2 className="font-[family-name:var(--font-headline)] text-3xl md:text-4xl font-black tracking-tight text-on-surface">
+                  Welke ben jij?
+                </h2>
+                <p className="text-on-surface-variant mt-2 max-w-md">
+                  Elk type heeft een andere rem. De test vertelt je welke van jou is — en wat je ermee doet.
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {[
+                  { num: '01', name: 'De Strateeg zonder Structuur', hook: 'Je weet wat je wil. Maar je mist het systeem om het te realiseren.', icon: 'account_tree' },
+                  { num: '02', name: 'De Uitsteller met Potentieel', hook: 'Je weet wat de volgende stap is. Maar je zet hem niet.', icon: 'pending' },
+                  { num: '03', name: 'De Overlever', hook: 'Je presteert. Maar het kost je meer dan het zou moeten.', icon: 'local_fire_department' },
+                  { num: '04', name: 'De Zoeker', hook: 'Je weet wat je niet wil. Maar nog niet precies wat je wel wil.', icon: 'explore' },
+                ].map((type) => (
+                  <div key={type.num} className="bg-white rounded-2xl p-7 border border-outline-variant/10 card-hover">
+                    <div className="flex items-start gap-4">
+                      <div className="shrink-0 w-9 h-9 rounded-xl bg-primary/8 flex items-center justify-center">
+                        <span
+                          className="material-symbols-outlined text-primary text-xl"
+                          style={{ fontVariationSettings: "'FILL' 1" }}
+                        >
+                          {type.icon}
+                        </span>
+                      </div>
+                      <div>
+                        <p className="text-[10px] font-bold tracking-widest uppercase text-on-surface-variant/50 mb-1">
+                          Type {type.num}
+                        </p>
+                        <h3 className="font-[family-name:var(--font-headline)] font-bold text-base text-on-surface leading-tight mb-2">
+                          {type.name}
+                        </h3>
+                        <p className="text-sm text-on-surface-variant leading-relaxed">
+                          {type.hook}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              <div className="mt-10 text-center">
+                <button
+                  onClick={startQuiz}
+                  className="btn-primary inline-flex items-center gap-2.5 px-8 py-4 rounded-full font-bold"
+                >
+                  Ontdek jouw type
+                  <span className="material-symbols-outlined text-lg">arrow_forward</span>
+                </button>
+              </div>
+            </div>
+          </section>
+
+          {/* ── SOCIAL PROOF ──────────────────────────────────────── */}
+          <section className="bg-on-surface py-20 md:py-28 px-6 md:px-16">
+            <div className="max-w-4xl mx-auto">
+              <p className="text-xs font-bold tracking-[0.14em] uppercase text-primary mb-10">Wat anderen zeggen</p>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {/* Featured quote */}
+                <div className="md:col-span-2 bg-white/5 border border-white/8 rounded-2xl p-8 md:p-10">
+                  <div className="flex gap-1 mb-5">
+                    {[1,2,3,4,5].map(i => (
+                      <span key={i} className="material-symbols-outlined text-primary text-base" style={{ fontVariationSettings: "'FILL' 1" }}>star</span>
+                    ))}
+                  </div>
+                  <p className="text-white/90 text-xl md:text-2xl italic leading-relaxed font-medium mb-6">
+                    &ldquo;Het vinden van balans, en daarmee rust, overzicht en controle op mijn leven. De eerste stap was de sportieve uitdaging aangaan. Toen bleek verandering vooral te komen door te doen.&rdquo;
+                  </p>
+                  <div className="flex items-center gap-3">
+                    <div className="w-9 h-9 rounded-full bg-primary/20 flex items-center justify-center font-bold text-primary text-sm">B</div>
+                    <div>
+                      <p className="text-white font-bold text-sm">Barbara</p>
+                      <p className="text-white/40 text-xs">Ambachtelijk Kleermaker · MOVE deelnemer</p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Quote 2 */}
+                <div className="bg-white/5 border border-white/8 rounded-2xl p-8">
+                  <p className="text-white/75 italic leading-relaxed mb-5 text-sm">
+                    &ldquo;Was iemand die dacht: coaching niets voor mij. Niets bleek minder waar. Belangrijkste wat ik meeneem: je hebt maar 1 lichaam en geest, zorg daarvoor.&rdquo;
+                  </p>
+                  <div className="flex items-center gap-3">
+                    <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center font-bold text-primary text-xs">S</div>
+                    <div>
+                      <p className="text-white/80 font-bold text-sm">Simon</p>
+                      <p className="text-white/35 text-xs">Horecaondernemer</p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Quote 3 */}
+                <div className="bg-white/5 border border-white/8 rounded-2xl p-8">
+                  <p className="text-white/75 italic leading-relaxed mb-5 text-sm">
+                    &ldquo;Weet je wat je doel is? Dan is Rick de beste coach om daar te komen. Hij vergoelijkt niet, maar zet je op scherp.&rdquo;
+                  </p>
+                  <div className="flex items-center gap-3">
+                    <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center font-bold text-primary text-xs">K</div>
+                    <div>
+                      <p className="text-white/80 font-bold text-sm">Koen</p>
+                      <p className="text-white/35 text-xs">Strategisch Communicatieadviseur</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="mt-12 text-center">
+                <button
+                  onClick={startQuiz}
+                  className="btn-primary inline-flex items-center gap-2.5 px-8 py-4 rounded-full font-bold"
+                >
+                  Start de test
+                  <span className="material-symbols-outlined text-lg">arrow_forward</span>
+                </button>
+                <p className="text-white/30 text-xs mt-4">2 minuten · gratis · direct resultaat</p>
+              </div>
+            </div>
+          </section>
+          </>
         )}
 
         {/* ── QUIZ ──────────────────────────────────────────────── */}
