@@ -463,7 +463,7 @@ export function QuizClient() {
                   Start de test
                   <span className="material-symbols-outlined text-lg">arrow_forward</span>
                 </button>
-                <p className="text-white/30 text-xs mt-4">2 minuten · gratis · direct resultaat</p>
+                <p className="text-white/30 text-xs mt-4">2 minuten · gratis · direct inzicht</p>
               </div>
             </div>
           </section>
