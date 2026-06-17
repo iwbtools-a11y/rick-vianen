@@ -300,10 +300,10 @@ export function QuizClient() {
                 className="font-[family-name:var(--font-headline)] text-primary font-black leading-[0.9] mb-2"
                 style={{ fontSize: 'clamp(72px, 18vw, 120px)' }}
               >
-                95<span style={{ fontSize: '0.5em', opacity: 0.6 }}>%</span>
+                1
               </div>
               <p className="text-[13px] font-medium text-white/55 tracking-[0.06em] uppercase mb-8">
-                van de mensen haalt hun doelen niet
+                focus die alles verandert
               </p>
 
               <h1
@@ -313,7 +313,7 @@ export function QuizClient() {
                 Ben jij klaar voor je volgende stap?
               </h1>
               <p className="text-base text-white/75 leading-relaxed mb-10 max-w-[480px]">
-                Je wil groeien in business, conditie en focus. Maar je hebt zes doelen en geen van alle staat écht stil. Doe de test en ontdek in 2 minuten welk één ding voor jou het meeste verschil maakt.
+                Je wil meer. Meer energie, meer focus, meer groei in business, conditie en relaties. Maar als alles prioriteit heeft, heeft niets prioriteit. Doe de test en ontdek welke ene focus voor jou nu het meeste verschil maakt.
               </p>
 
               <div className="flex gap-6 flex-wrap mb-10">
