@@ -348,7 +348,7 @@ export function QuizClient() {
                   Welke ben jij?
                 </h2>
                 <p className="text-on-surface-variant mt-2 max-w-md">
-                  Elk type heeft een andere rem. De test vertelt je welke van jou is en wat je ermee doet.
+                  Elk type heeft een andere rem. De test vertelt je jouw type en wat je ermee zou kunnen doen.
                 </p>
               </div>
 
