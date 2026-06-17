@@ -43,7 +43,7 @@ export function QuizCTA({ variant }: { variant: "hint" | "card" | "inline" }) {
               Twijfel je of MOVE bij jou past?
             </h3>
             <p className="text-on-surface-variant text-sm leading-relaxed max-w-md">
-              Doe de test en ontdek in 2 minuten welk type jij bent — en welke stap als eerste het meeste verschil maakt.
+              Doe de test en ontdek in 2 minuten welk type jij bent en welke stap als eerste het meeste verschil maakt.
             </p>
             <div className="flex gap-6 mt-4">
               {["6 vragen", "Direct inzicht", "Persoonlijk advies per mail"].map((item) => (

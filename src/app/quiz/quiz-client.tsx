@@ -297,7 +297,7 @@ export function QuizClient() {
           <section className="bg-on-surface min-h-screen flex items-center px-6 md:px-16 pt-[120px] pb-16">
             <div className="w-full max-w-2xl mx-auto">
               <p className="text-[11px] font-bold tracking-[0.14em] uppercase text-primary mb-4">
-                Rick Vianen — MOVE
+                Rick Vianen · MOVE
               </p>
 
               <div
@@ -317,7 +317,7 @@ export function QuizClient() {
                 Ben jij klaar voor je volgende stap?
               </h1>
               <p className="text-base text-white/75 leading-relaxed mb-10 max-w-[480px]">
-                Je wil groeien — in business, conditie, focus. Maar je hebt zes doelen en geen van alle staat écht stil. Doe de test en ontdek in 2 minuten welk één ding voor jou het meeste verschil maakt.
+                Je wil groeien in business, conditie en focus. Maar je hebt zes doelen en geen van alle staat écht stil. Doe de test en ontdek in 2 minuten welk één ding voor jou het meeste verschil maakt.
               </p>
 
               <div className="flex gap-6 flex-wrap mb-10">
@@ -352,7 +352,7 @@ export function QuizClient() {
                   Welke ben jij?
                 </h2>
                 <p className="text-on-surface-variant mt-2 max-w-md">
-                  Elk type heeft een andere rem. De test vertelt je welke van jou is — en wat je ermee doet.
+                  Elk type heeft een andere rem. De test vertelt je welke van jou is en wat je ermee doet.
                 </p>
               </div>
 
