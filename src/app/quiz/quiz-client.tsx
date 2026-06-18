@@ -3,6 +3,18 @@
 import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 
+declare global {
+  interface Window {
+    dataLayer: Record<string, unknown>[];
+  }
+}
+
+const pushDataLayer = (event: Record<string, unknown>) => {
+  if (typeof window === 'undefined') return;
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push(event);
+};
+
 // TODO: update KLAVIYO_LIST_ID with the quiz-specific list ID from your Klaviyo account
 const KLAVIYO_COMPANY_ID = 'YgCeNj';
 const KLAVIYO_LIST_ID = 'XpKvKm';
@@ -158,6 +170,7 @@ export function QuizClient() {
   const startQuiz = () => {
     setCurrentQ(0);
     setAnswers(Array(QUESTIONS.length).fill(null));
+    pushDataLayer({ event: 'quiz_start', quiz_id: 'move_quiz' });
     goToScreen('quiz');
   };
 
@@ -169,6 +182,7 @@ export function QuizClient() {
     if (advanceTimer.current) clearTimeout(advanceTimer.current);
     advanceTimer.current = setTimeout(() => {
       advanceTimer.current = null;
+      pushDataLayer({ event: 'quiz_step', quiz_id: 'move_quiz', step: currentQ + 1 });
       if (currentQ < QUESTIONS.length - 1) {
         setCurrentQ(q => q + 1);
         setAnimKey(k => k + 1);
@@ -182,6 +196,7 @@ export function QuizClient() {
   const nextQuestion = () => {
     if (answers[currentQ] === null) return;
     if (advanceTimer.current) { clearTimeout(advanceTimer.current); advanceTimer.current = null; }
+    pushDataLayer({ event: 'quiz_step', quiz_id: 'move_quiz', step: currentQ + 1 });
     if (currentQ < QUESTIONS.length - 1) {
       setCurrentQ(q => q + 1);
       setAnimKey(k => k + 1);
@@ -212,6 +227,13 @@ export function QuizClient() {
     const scores = calculateScores(answers);
     const typeIdx = getWinningType(scores);
 
+    pushDataLayer({
+      event: 'form_submit',
+      form_id: 'quiz',
+      quiz_result: RESULTS[typeIdx].typeLabel,
+      quiz_result_index: typeIdx + 1,
+    });
+
     await sendToKlaviyo(name, email, typeIdx, scores);
 
     setFinalScores(scores);
@@ -219,7 +241,15 @@ export function QuizClient() {
     setIsSubmitting(false);
     goToScreen('loading');
 
-    setTimeout(() => goToScreen('result'), 1800);
+    setTimeout(() => {
+      pushDataLayer({
+        event: 'quiz_complete',
+        quiz_id: 'move_quiz',
+        quiz_result: RESULTS[typeIdx].typeLabel,
+        quiz_result_index: typeIdx + 1,
+      });
+      goToScreen('result');
+    }, 1800);
   };
 
   const sendToKlaviyo = async (
