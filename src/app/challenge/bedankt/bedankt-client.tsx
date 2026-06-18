@@ -5,14 +5,23 @@ import Link from 'next/link';
 
 export function ChallengeBedanktClient() {
   useEffect(() => {
+    const p = new URLSearchParams(window.location.search);
     window.dataLayer = window.dataLayer || [];
     window.dataLayer.push({
       event: 'purchase',
       ecommerce: {
-        transaction_id: new URLSearchParams(window.location.search).get('order_id') ?? undefined,
-        value: 100,
-        currency: 'EUR',
-        items: [{ item_name: 'MOVE the Challenge', price: 100, quantity: 1 }],
+        transaction_id: p.get('tx_id') ?? undefined,
+        order_id: p.get('id') ?? undefined,
+        order_number: p.get('nr') ?? undefined,
+        value: parseFloat(p.get('order_value') ?? '100'),
+        tax: parseFloat(p.get('tax') ?? '0'),
+        currency: p.get('currency') ?? 'EUR',
+        items: [{
+          item_name: p.get('product_name') ?? 'MOVE the Challenge',
+          item_id: p.get('sku') ?? undefined,
+          price: parseFloat(p.get('order_value') ?? '100'),
+          quantity: parseInt(p.get('quantity') ?? '1', 10),
+        }],
       },
     });
   }, []);

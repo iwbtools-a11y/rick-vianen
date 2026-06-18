@@ -80,32 +80,42 @@ export default function OverRickVianen() {
               </h2>
               <div className="space-y-6 text-on-surface-variant leading-relaxed">
                 <p>
-                  Het begon met het inschrijven voor de eerste halve IRONMAN. Van
-                  feestbeest naar IRONMAN finisher, met tranen over
-                  zijn wangen bij de finish. De echte winst was niet de finish,
-                  maar de skills: discipline, dealen met gedachten, prioriteiten
-                  stellen.
+                  Het begint met een hoop buikpijn bij het inschrijven voor de IRONMAN 70.3 Duisburg.
+                  Rick&rsquo;s eerste halve triathlon. Dat was de bevestiging van de transformatie van
+                  feestbeest naar IRONMAN finisher. Hij loopt de rode loper op. De omroeper roept zijn
+                  naam: &ldquo;Rick, you are an IRONMAN!&rdquo; Hij valt, letterlijk, in de armen van
+                  een onbekende naast de finish en breekt.
                 </p>
                 <p>
-                  Die ervaring plantte het zaadje voor wat later MOVE zou worden:
-                  een coachingfilosofie die sport, mindset en business als
-                  &eacute;&eacute;n onlosmakelijk geheel beschouwt. Geen
-                  theorie, geen fluff, maar alleen werkende structuur.
+                  Maar de echte winst was nooit alleen de finish. Niet de tijd op de klok is wat
+                  blijft hangen. Het zijn de skills die hij zichzelf moest leren om daar te komen:
+                  doorzetten als het zwaar wordt, omgaan met de gedachten die je willen laten stoppen,
+                  kiezen wat prioriteit krijgt als alles tegelijk om aandacht vraagt. Skills die niemand
+                  je meer afneemt. Skills die je als persoon laten groeien, ook in mindset en business.
                 </p>
                 <p>
-                  Vandaag coacht Rick ambitieuze professionals die goed
-                  presteren aan de buitenkant, maar merken dat gezondheid,
-                  energie en structuur achterblijven bij wie ze willen zijn.
-                  Confronterend, meetbaar, blijvend.
+                  Die ervaring plant het zaadje voor wat later MOVE wordt: een coachingfilosofie die
+                  sport, mindset en business niet als drie aparte dingen ziet, maar als &eacute;&eacute;n
+                  geheel. Geen theorie. Alleen structuur die werkt.
                 </p>
                 <p>
-                  Rick investeerde bijna &euro;100.000 om getraind te worden als coach, onder leiding van Dusan Djukich, een van de grootste business coaches van Amerika, schrijver van het boek en founder van Straight Line Leadership. Hiervoor is hij onder andere meerdere weekenden naar Amerika geweest om te trainen en het werk zelf te implementeren.
+                  De coachingvaardigheden leert Rick van Dusan Djukich, schrijver van Straight Line
+                  Leadership en een van de grootste business coaches van Amerika. Hiervoor is hij onder
+                  andere meerdere jaren aangesloten geweest bij verschillende trajecten en ook voor
+                  weekenden naar Amerika geweest om te trainen en het werk zelf te implementeren.
+                  Een uitspraak van Djukich blijft hem bij: het idee dat wat je niet verandert,
+                  eigenlijk een keuze is. Dat stilstand geen toeval is, maar iets dat je zelf in stand houdt.
                 </p>
                 <p>
-                  Naast de coaching is Rick zelf IRONMAN finisher en ervaarde zelf de waarde van het behalen van zo&rsquo;n groot doel voor zijn persoonlijke en zakelijke leven.
+                  Rick herkent het verschil ook in zichzelf. Als toekomstig vader. In hoeveel mensen
+                  hij positief be&iuml;nvloedt en groter maakt. Als voorbeeld voor zijn omgeving.
+                  En als coach: de ervaring zelf doorleefd te hebben, maakt hem scherper in wat hij
+                  van anderen vraagt.
                 </p>
                 <p>
-                  Dit samen is de grondslag van MOVE. De combinatie van sport en business coaching.
+                  Dat is de grondslag van MOVE, gebouwd op niets anders dan eigen ervaring. Want als
+                  Rick zelf niet bereid is het werk te doen, hoe eerlijk zou het zijn om dat van
+                  anderen te verwachten?
                 </p>
               </div>
               <Link

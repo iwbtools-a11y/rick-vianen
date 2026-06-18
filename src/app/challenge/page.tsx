@@ -109,10 +109,10 @@ export default function ChallengePage() {
               <div className="w-16 h-1 bg-gradient-to-r from-primary to-secondary rounded-full mb-8" />
               <div className="space-y-5">
                 {[
-                  { icon: "target", text: "Een concreet, meetbaar doel met een deadline" },
-                  { icon: "favorite", text: "Een waarom dat trekt als de motivatie wegvalt" },
-                  { icon: "bolt", text: "Drie acties die je al weet dat ze impact hebben" },
-                  { icon: "directions_run", text: "Je eerste beweging al gemaakt. Niet gepland, gewoon gedaan." },
+                  { icon: "target", text: "Een keihard, onontkoombaar strijdplan met een deadline die directe actie forceert." },
+                  { icon: "favorite", text: "Een onbreekbare fundering gebouwd, waardoor opgeven simpelweg geen optie meer is — zelfs als de motivatie ver te zoeken is." },
+                  { icon: "bolt", text: "Geen eindeloze to-do lijsten, maar een data-gedreven dashboard met precies die acties die jouw succes onvermijdelijk maken." },
+                  { icon: "directions_run", text: "Je bent direct in actie gekomen, dwars door de weerstand en smoesjes van de stem in je hoofd heen." },
                 ].map((item, i) => (
                   <div key={i} className="flex items-center gap-4 py-3 border-b border-outline-variant/20 last:border-0">
                     <span
