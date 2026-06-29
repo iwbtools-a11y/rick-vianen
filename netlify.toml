@@ -2,6 +2,15 @@
   command = "npm run build"
   publish = "out"
 
+[context.production]
+  command = "npm run build"
+
+[context.branch-deploy]
+  ignore = "exit 0"
+
+[context.deploy-preview]
+  ignore = "exit 0"
+
 [[headers]]
   for = "/_next/static/*"
   [headers.values]
