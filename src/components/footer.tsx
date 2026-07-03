@@ -47,8 +47,8 @@ export function Footer() {
               </Link>
             </li>
             <li>
-              <Link href="/blog" className="hover:text-primary transition-colors">
-                Blog
+              <Link href="/content" className="hover:text-primary transition-colors">
+                Content
               </Link>
             </li>
             <li>
@@ -110,6 +110,16 @@ export function Footer() {
             <li>
               <Link href="/privacy" className="hover:text-primary transition-colors">
                 Privacybeleid
+              </Link>
+            </li>
+            <li>
+              <Link href="/challenge/ondernemer" className="hover:text-primary transition-colors">
+                MOVE Challenge ondernemers
+              </Link>
+            </li>
+            <li>
+              <Link href="/programma/ondernemer" className="hover:text-primary transition-colors">
+                MOVE Programma voor ondernemers
               </Link>
             </li>
             <li>
