@@ -12,6 +12,7 @@ export const metadata: Metadata = {
 const sections = [
   { id: "over-move", label: "Over MOVE", icon: "info" },
   { id: "programma", label: "Het programma", icon: "calendar_month" },
+  { id: "challenge", label: "MOVE Challenge", icon: "bolt" },
   { id: "prijzen", label: "Prijzen & investering", icon: "payments" },
   { id: "praktisch", label: "Praktisch", icon: "build" },
   { id: "bezwaren", label: "Twijfels & bezwaren", icon: "psychology_alt" },
@@ -47,7 +48,7 @@ const programmaFaqs = [
   },
   {
     question: "Wat als ik een week mis?",
-    answer: "Het leven gebeurt. Je krijgt de opname en opdracht achteraf. Maar MOVE werkt door consistentie. De groep houdt je scherp en mist het als je er niet bent. Dat is juist de kracht van peer-group coaching.",
+    answer: "Het leven gebeurt. Je krijgt de opname en opdracht achteraf. Maar MOVE werkt door consistentie. De groep houdt je scherp en mist het als je er niet bent. Dat is juist de kracht van peer-group traject.",
   },
   {
     question: "Hoe groot is de groep?",
@@ -105,11 +106,11 @@ const prijzenFaqs = [
 const praktischFaqs = [
   {
     question: "Hoe begin ik?",
-    answer: "Met een kennismakingsgesprek van 30 minuten. Geen verkooppitch. Rick kijkt eerlijk of MOVE bij jou past. Daarna besluit je zelf.",
+    answer: "Met een kennismakingsgesprek van 30 minuten. Open gesprek, geen verplichtingen. Rick kijkt eerlijk of MOVE bij jou past. Daarna besluit je zelf.",
   },
   {
     question: "Wanneer start het volgende cohort?",
-    answer: "Het beta cohort heeft nog 3 plekken beschikbaar. Er zijn 4 cohorten per jaar. Na sluiting kom je op de wachtlijst voor het volgende cohort.",
+    answer: "Er zijn 4 cohorten per jaar, met maximaal 8 deelnemers per groep. Later starten? Schrijf je in op de wachtlijst via move-coaching.nl/wachtlijst en Rick neemt contact op zodra er ruimte is.",
   },
   {
     question: "Waar vinden de sessies plaats?",
@@ -125,9 +126,37 @@ const praktischFaqs = [
   },
 ];
 
+const challengeFaqs = [
+  {
+    question: "Wat is de MOVE Challenge precies?",
+    answer: "5 dagen. Elke dag een korte video van Rick als kader, daarna doe jij het werk. Geen theorie voor de boekenplank, maar een concrete opdracht per dag. Aan het einde heb je 5 resultaten staan die blijven.",
+  },
+  {
+    question: "Wat kost de Challenge?",
+    answer: "€100 eenmalig. Geen abonnement, geen verborgen kosten. Stap je daarna in het MOVE Programma? Dan wordt de €100 direct verrekend als korting op je investering.",
+  },
+  {
+    question: "Wat is het verschil tussen de Challenge en het Programma?",
+    answer: "De Challenge is 5 dagen en €100: een eerste stap. Het Programma is 100 dagen peer-group traject met structuur, accountability en een volledige MOVE-cyclus. De Challenge laat je voelen wat mogelijk is. Het Programma verankert het.",
+  },
+  {
+    question: "Moet ik sportief zijn om mee te doen?",
+    answer: "Nee. De Challenge is er voor mensen die iets willen veranderen, niet voor mensen die al alles op orde hebben. Het gaat niet om waar je nu staat, maar dat je in beweging komt.",
+  },
+  {
+    question: "Wanneer kan ik starten?",
+    answer: "Direct na aanmelding. De Challenge is evergreen: je start op het moment dat jij er klaar voor bent, niet wanneer een cohort toevallig opent.",
+  },
+  {
+    question: "Kan ik van de Challenge overstappen naar het Programma?",
+    answer: "Ja, en dat is precies de bedoeling. De Challenge is bewust het instapmoment voor MOVE. Als je na 5 dagen merkt dat dit werkt, is een kennismakingsgesprek over het Programma de logische volgende stap. Je €100 gaat er direct af als korting.",
+  },
+];
+
 const allFaqsForSchema = [
   ...overMoveFaqs,
   ...programmaFaqs,
+  ...challengeFaqs,
   ...prijzenFaqs,
   ...praktischFaqs,
 ];
@@ -139,7 +168,7 @@ const objections = [
   },
   {
     objection: "“Kan ik het ook zelf?”",
-    response: "Als je het zelf kon, had je het al gedaan. Wat is er anders aan je 10e poging? MOVE biedt wat je zelf niet kunt organiseren: een groep die je niet laat zitten, wekelijkse structuur, en iemand die eerlijk tegen je is.",
+    response: "Als je het zelf kon, had je het al gedaan. Wat is er anders aan je 10e poging? MOVE biedt wat je zelf niet kunt organiseren: een kleine groep die je scherp houdt als jij dat zelf even niet doet, wekelijkse structuur, en iemand die eerlijk tegen je is.",
   },
   {
     objection: "“Klinkt zweverig.”",
@@ -227,6 +256,21 @@ export default function VeelgesteldeVragenPage() {
         </div>
       </section>
 
+      {/* ===== CHALLENGE ===== */}
+      <section id="challenge" className="py-20 px-8 md:px-16 scroll-mt-32">
+        <div className="max-w-4xl mx-auto">
+          <div className="flex items-center gap-3 mb-8">
+            <span className="material-symbols-outlined text-primary text-3xl" style={{ fontVariationSettings: "'FILL' 1" }}>
+              bolt
+            </span>
+            <h2 className="font-[family-name:var(--font-headline)] text-3xl font-black tracking-tight">
+              MOVE Challenge
+            </h2>
+          </div>
+          <Faq items={challengeFaqs} />
+        </div>
+      </section>
+
       {/* ===== PRIJZEN ===== */}
       <section id="prijzen" className="py-20 px-8 md:px-16 scroll-mt-32">
         <div className="max-w-4xl mx-auto">
@@ -306,7 +350,7 @@ export default function VeelgesteldeVragenPage() {
                 Nog vragen?
               </h2>
               <p className="text-on-surface-variant text-lg mb-8 max-w-lg mx-auto">
-                Plan een kennismakingsgesprek. 30 minuten, geen pitch.
+                Plan een kennismakingsgesprek. 30 minuten, open gesprek.
                 Rick beantwoordt alles persoonlijk.
               </p>
               <Link

@@ -74,7 +74,7 @@ export default function PrijsPage() {
       {/* ============================================================ */}
       {/*  1 — HERO                                                    */}
       {/* ============================================================ */}
-      <section className="gradient-hero pt-32 px-8 md:px-16 relative overflow-hidden">
+      <section className="gradient-hero pt-40 px-8 md:px-16 relative overflow-hidden">
         <div className="absolute top-20 left-0 w-[400px] h-[400px] rounded-full bg-secondary/[0.03] blur-[80px] pointer-events-none" />
         <div className="max-w-7xl mx-auto py-20 md:py-28 relative">
           {/* Badge */}
@@ -98,7 +98,7 @@ export default function PrijsPage() {
               error
             </span>
             <p className="font-bold text-lg text-on-surface">
-              Beta cohort: nog <span className="text-primary">3 plekken</span> beschikbaar
+              Maximaal <span className="text-primary">8 deelnemers</span> per cohort
             </p>
           </div>
         </div>
@@ -181,8 +181,8 @@ export default function PrijsPage() {
                 </div>
 
                 <div className="flex items-center gap-2 mb-6">
-                  <span className="text-xs text-on-surface-variant line-through">&euro;8.358 waarde</span>
-                  <span className="text-xs font-bold text-white bg-secondary px-2 py-0.5 rounded-full">Bespaar 70%</span>
+                  <span className="text-xs text-on-surface-variant line-through">&euro;6.594 waarde</span>
+                  <span className="text-xs font-bold text-white bg-secondary px-2 py-0.5 rounded-full">Bespaar 57%</span>
                 </div>
 
                 <Link
@@ -204,7 +204,6 @@ export default function PrijsPage() {
                 <ul>
                   <ValueItem value="€397" icon="card_giftcard" highlight>Persoonlijke kick-off (1-op-1 intake)</ValueItem>
                   <ValueItem value="€597" icon="card_giftcard" highlight>Groeps kick-off (max 8)</ValueItem>
-                  <ValueItem value="€1.764" icon="card_giftcard" highlight>12 weken exclusieve content</ValueItem>
                   <ValueItem value="€647" icon="card_giftcard" highlight>Eindevenement + metingen</ValueItem>
                   <ValueItem value="€297" icon="card_giftcard" highlight>Directe vraagstelmogelijkheid via kanaal</ValueItem>
                   <ValueItem value="€197" icon="card_giftcard" highlight>Bibliotheek trainingen &amp; inspiratie</ValueItem>
@@ -232,8 +231,8 @@ export default function PrijsPage() {
                 </div>
 
                 <div className="flex items-center gap-2 mb-6">
-                  <span className="text-xs text-on-surface-variant line-through">&euro;13.322 waarde</span>
-                  <span className="text-xs font-bold text-white bg-secondary px-2 py-0.5 rounded-full">Bespaar 62%</span>
+                  <span className="text-xs text-on-surface-variant line-through">&euro;11.558 waarde</span>
+                  <span className="text-xs font-bold text-white bg-secondary px-2 py-0.5 rounded-full">Bespaar 57%</span>
                 </div>
 
                 <Link
@@ -255,7 +254,6 @@ export default function PrijsPage() {
                   <ValueItem value="€2.364" icon="card_giftcard" highlight>12&times; wekelijkse Q&amp;A + verdieping</ValueItem>
                   <ValueItem value="€501" icon="card_giftcard" highlight>Trainingsschema op maat</ValueItem>
                   <ValueItem value="€1.497" icon="card_giftcard" highlight>3 jaar Notion-systeem</ValueItem>
-                  <ValueItem value="€1.764" icon="card_giftcard" highlight>12 weken exclusieve content</ValueItem>
                   <ValueItem value="€647" icon="card_giftcard" highlight>Eindevenement + metingen</ValueItem>
                   <ValueItem value="€197" icon="card_giftcard" highlight>Bibliotheek trainingen &amp; inspiratie</ValueItem>
                   <ValueItem value="€97" icon="card_giftcard" highlight>MOVE Foodguide</ValueItem>
@@ -519,8 +517,7 @@ export default function PrijsPage() {
               vandaag.
             </h2>
             <p className="text-on-surface-variant mt-6 leading-relaxed max-w-lg mx-auto">
-              Beta cohort: nog 3 plekken beschikbaar. Exclusieve vroegboekprijs. Geen
-              wachtlijst. Vol is vol.
+              Elke groep heeft maximaal 8 deelnemers. Plan een gesprek en kijk of MOVE bij jou past.
             </p>
 
             <div className="flex flex-col sm:flex-row justify-center gap-4 mt-10">
@@ -539,6 +536,10 @@ export default function PrijsPage() {
                 Bekijk het programma
               </Link>
             </div>
+            <Link href="/wachtlijst" className="mt-4 inline-flex items-center gap-1 text-sm text-on-surface-variant hover:text-primary transition-colors">
+              Later starten? Zet je op de wachtlijst
+              <span className="material-symbols-outlined text-base">arrow_forward</span>
+            </Link>
           </div>
         </div>
       </section>

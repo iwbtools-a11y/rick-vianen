@@ -11,7 +11,7 @@ const navLinks = [
   { href: "/prijs", label: "Prijs" },
   { href: "/challenge", label: "Challenge" },
   { href: "/over-rick-vianen", label: "Over Rick" },
-  { href: "/blog", label: "Blog" },
+  { href: "/content", label: "Content" },
 ];
 
 const mobileNavLinks = [
@@ -96,7 +96,7 @@ export function Navbar() {
         {/* Quiz announcement banner */}
         {showBanner && (
           <div className="bg-on-surface border-t border-white/5 px-4 py-2 flex items-center justify-center gap-3 text-sm relative">
-            <span className="text-white/50 hidden sm:inline">Ben jij er al klaar voor?</span>
+            <span className="text-white/50 hidden sm:inline">Jouw potentie ontdekken?</span>
             <Link
               href="/quiz"
               className="text-primary font-bold inline-flex items-center gap-1.5 group"

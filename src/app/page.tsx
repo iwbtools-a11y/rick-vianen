@@ -19,7 +19,7 @@ const homeFaqs = [
   },
   {
     question: "Hoe begin ik?",
-    answer: "Met een kennismakingsgesprek van 30 minuten. Geen verkooppitch. Rick kijkt eerlijk of MOVE bij jou past en wat je wilt bereiken. Daarna besluit je zelf.",
+    answer: "Met een kennismakingsgesprek van 30 minuten. Open gesprek, geen verplichtingen. Rick kijkt eerlijk of MOVE bij jou past en wat je wilt bereiken. Daarna besluit je zelf.",
   },
 ];
 
@@ -27,7 +27,7 @@ export default function Home() {
   return (
     <div className="pb-24 md:pb-0">
       {/* ───────────────────────── HERO ───────────────────────── */}
-      <section className="gradient-hero pt-32 pb-20 md:pt-44 md:pb-32 px-8 md:px-16 relative overflow-hidden">
+      <section className="gradient-hero pt-40 pb-20 md:pt-44 md:pb-32 px-8 md:px-16 relative overflow-hidden">
         {/* Soft ambient glow */}
         <div className="absolute top-20 right-0 w-[500px] h-[500px] rounded-full bg-primary/[0.03] blur-[100px] pointer-events-none" />
         <div className="absolute bottom-0 left-1/4 w-[400px] h-[400px] rounded-full bg-secondary/[0.04] blur-[80px] pointer-events-none" />
@@ -72,9 +72,8 @@ export default function Home() {
             <div className="flex items-center gap-2 mt-6 text-sm text-on-surface-variant">
               <span className="material-symbols-outlined text-lg text-secondary">group</span>
               <span>
-                Exclusieve mogelijkheid: We zijn op zoek naar nog{" "}
-                <strong className="text-on-surface">3 mensen</strong>{" "}
-                voor de betaversie van het vernieuwde traject
+                Elke groep is maximaal 8 deelnemers.{" "}
+                <Link href="/wachtlijst" className="text-primary font-semibold hover:underline">Later starten? Zet je op de wachtlijst.</Link>
               </span>
             </div>
 
@@ -600,7 +599,7 @@ export default function Home() {
                 doet.
               </h2>
               <p className="text-on-surface-variant mt-4 text-lg leading-relaxed max-w-lg mx-auto">
-                30 minuten. Geen pitch. Daarna weet je waar je staat.
+                30 minuten. Open gesprek, geen verplichtingen.
               </p>
               <Link
                 href="/intake"
@@ -611,10 +610,8 @@ export default function Home() {
               <div className="mt-5 text-on-surface-variant text-sm flex items-start justify-center gap-2">
                 <span className="material-symbols-outlined text-secondary text-lg mt-0.5 shrink-0">group</span>
                 <span>
-                  Exclusieve mogelijkheid: We zijn op zoek naar nog{" "}
-                  <strong className="text-on-surface">3 mensen</strong>
-                  <br />
-                  voor de betaversie van het vernieuwde traject
+                  Elke groep is maximaal 8 deelnemers.{" "}
+                  <Link href="/wachtlijst" className="text-primary font-semibold hover:underline">Later starten? Zet je op de wachtlijst.</Link>
                 </span>
               </div>
             </div>

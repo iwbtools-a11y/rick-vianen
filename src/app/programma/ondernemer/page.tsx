@@ -3,12 +3,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { Faq } from "@/components/faq";
 import { FaqJsonLd } from "@/components/faq-jsonld";
-import { QuizCTA } from "@/components/quiz-cta";
 
 export const metadata: Metadata = {
-  title: "Programma | MOVE Coaching",
+  title: "MOVE Programma voor Ondernemers | MOVE Coaching",
   description:
-    "Het MOVE programma: peer-group methode, radicale accountability en elite coaching. Ontdek de groepsdynamiek van Rick Vianen.",
+    "Als ondernemer run je alles zelf. MOVE geeft je de structuur, het systeem en de groep die je scherp houdt. 100 dagen. Meetbaar resultaat. Plan een gesprek met Rick.",
 };
 
 function ValueItem({
@@ -40,83 +39,128 @@ function ValueItem({
   );
 }
 
-const programmaFaqs = [
+const ondernemerFaqs = [
   {
-    question: "Hoe ziet een typische MOVE-week eruit?",
-    answer: "Elke week volgt dezelfde structuur: een kort kennismoment (3-10 min), een praktische opdracht die je direct toepast, en op donderdag een live groeps-Q&A. Daarnaast train je volgens je schema en check je in via de accountability-tool. Totaal 2-3 uur per week.",
+    question: "Ik heb het al druk. Hoeveel tijd kost dit?",
+    answer: "2 tot 3 uur per week. Geen vage losse sessies maar een vaste structuur: een kort kennismoment (3-10 min), een praktische opdracht die je direct toepast, en op donderdag een live Q&A. Je investeert minder uren dan je nu kwijt bent aan uitstellen.",
   },
   {
-    question: "Wat als ik een week mis?",
-    answer: "Het leven gebeurt. Als je een sessie mist, krijg je de opname en de opdracht achteraf. Maar: MOVE werkt door consistentie. De groep houdt je scherp en mist het als je er niet bent. Dat is juist de kracht.",
+    question: "Zit ik in een groep met andere ondernemers?",
+    answer: "De groep bestaat uit professionals die begrijpen hoe het is om veel te dragen. ZZP-ers, managers, ondernemers. Geen zaalvullers. Maximaal 8 per cohort. Iedereen in dezelfde fase: capabel, druk en klaar voor een andere aanpak.",
   },
   {
     question: "Hoe groot is de groep?",
-    answer: "Maximaal 8 professionals per cohort. Dit is geen marketing-getal maar een bewuste keuze: groot genoeg voor diversiteit aan perspectieven, klein genoeg zodat niemand zich kan verstoppen. Rick coacht elk cohort persoonlijk.",
+    answer: "Maximaal 8 professionals per cohort. Groot genoeg voor verschillende perspectieven, klein genoeg zodat niemand zich kan verstoppen. Rick coacht elk cohort persoonlijk.",
   },
   {
-    question: "Welke resultaten kan ik verwachten na 100 dagen?",
-    answer: "Zichtbaar fysiek resultaat, meer energie, betere focus en een werkend systeem dat je vasthoudt. De echte verschuiving: van 'ik moet mezelf motiveren' naar 'ik heb een structuur die het werk voor mij doet'. De eerste shift is voelbaar binnen 2 weken.",
+    question: "Wat als ik een week mis door mijn werk?",
+    answer: "Onverwachte verplichtingen horen erbij als ondernemer. Als je een sessie mist, krijg je de opname en de opdracht achteraf. Maar consistentie is precies waar MOVE over gaat. De groep merkt het als je er niet bent. Dat is de kracht.",
   },
   {
     question: "Wat is het verschil tussen Core, Performance en Ultimate?",
-    answer: "Core is de eerlijke instap: het fundament zonder de verdieping. Performance is het vlaggenschip met wekelijkse Q&A's, trainingsschema op maat en 3 jaar Notion-toegang. Ultimate voegt wekelijks 1-op-1 coaching met Rick toe.",
+    answer: "Core is de eerlijke instap: het fundament. Performance is het vlaggenschip met wekelijkse Q&A's, een trainingsschema op maat en 3 jaar Notion-toegang. Ultimate voegt wekelijks 1-op-1 coaching met Rick toe. Voor ondernemers die directe sparring partner willen.",
   },
   {
     question: "Wat is de garantie?",
-    answer: "We geloven zo sterk in het traject dat je na 2 weken mag stoppen. Voel je geen richting of zie je geen vooruitgang? Dan krijg je je geld terug. No questions asked.",
+    answer: "Je kunt na 2 weken stoppen. Voel je geen richting of zie je geen vooruitgang? Dan krijg je je geld terug. No questions asked.",
   },
 ];
 
-export default function ProgrammaPage() {
+export default function ProgrammaOndernemer() {
   return (
     <div className="pb-24 md:pb-0">
-      {/* ===== HERO SECTION ===== */}
+      {/* ===== HERO ===== */}
       <section className="gradient-hero px-8 md:px-16 pt-44 pb-24 relative overflow-hidden">
         <div className="absolute top-20 right-0 w-[400px] h-[400px] rounded-full bg-primary/[0.03] blur-[80px] pointer-events-none" />
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-12 items-end relative">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-12 items-center relative">
           <div className="flex-1">
             <span className="inline-block px-3 py-1 bg-secondary-container/80 text-on-secondary-container font-bold text-xs uppercase tracking-widest rounded-full mb-6 backdrop-blur-sm">
-              Peer-Group Traject
+              Peer-Group Traject &middot; 100 dagen &middot; Voor ondernemers
             </span>
-            <h1 className="font-[family-name:var(--font-headline)] text-5xl md:text-7xl font-black tracking-tighter leading-[0.9] mb-8">
-              Niet nog iemand <br />
-              die je vertelt <span className="text-primary">wat je al weet.</span>
+            <h1 className="font-[family-name:var(--font-headline)] text-5xl md:text-7xl font-black tracking-tighter leading-[1.05] mb-8">
+              Je bent druk.<br />
+              <span className="text-primary">Maar ben je ook bezig met wat ertoe doet?</span>
             </h1>
             <p className="text-xl md:text-2xl font-medium text-on-surface-variant max-w-xl">
-              Een kleine groep die je scherp houdt als jij dat zelf even niet doet. Maximaal 8
-              professionals per cohort. 100 dagen. Confronterend, meetbaar,
-              blijvend.
+              Als ondernemer run je alles zelf. Rick geeft je de structuur, het systeem en de groep die je scherp houdt. 100 dagen. Meetbaar. Blijvend.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-4">
-              <Link href="/intake" className="btn-primary px-8 py-4 rounded-lg font-bold text-lg text-center">
+              <Link
+                href="/intake"
+                className="btn-primary px-8 py-4 rounded-lg font-bold text-lg text-center"
+              >
                 Plan een gesprek met Rick
               </Link>
-              <p className="text-sm text-on-surface-variant self-center">30 minuten. Open gesprek, geen verplichtingen.</p>
+              <p className="text-sm text-on-surface-variant self-center">
+                30 minuten. Open gesprek, geen verplichtingen.
+              </p>
             </div>
           </div>
-          <div className="relative w-full md:w-1/3">
-            <div className="btn-primary p-6 rounded-xl relative z-10">
-              <div className="flex items-center gap-2 mb-2">
-                <span
-                  className="material-symbols-outlined text-white"
-                  style={{ fontVariationSettings: "'FILL' 1" }}
-                >
-                  group
-                </span>
-                <span className="font-bold text-sm">COMMUNITY STATUS</span>
-              </div>
-              <p className="text-3xl font-black italic mb-1">
-                Max 8 deelnemers per cohort
-              </p>
-              <p className="text-sm opacity-90">Kleine groepen · persoonlijke aandacht</p>
+          <div className="w-full md:w-[300px] shrink-0">
+            <div className="aspect-[9/16] rounded-2xl overflow-hidden shadow-2xl">
+              <video
+                src="/videos/ondernemer-intro.mp4"
+                controls
+                playsInline
+                className="w-full h-full object-cover"
+              />
             </div>
-            <div className="absolute -bottom-4 -right-4 w-full h-full bg-surface-container -z-10 rounded-xl" />
+          </div>
+        </div>
+      </section>
+
+      {/* ===== VOOR WIE ===== */}
+      <section className="py-24 px-8 md:px-16">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+            <div>
+              <span className="inline-block px-3 py-1 bg-surface-container text-on-surface-variant font-bold text-xs uppercase tracking-widest rounded-full mb-6">
+                Voor wie
+              </span>
+              <h2 className="font-[family-name:var(--font-headline)] text-4xl md:text-5xl font-black tracking-tight mb-8">
+                Dit programma is voor jou als je...
+              </h2>
+              <ul className="space-y-4">
+                {[
+                  "Je bedrijf goed draait, maar jezelf erbij vergeet",
+                  "Al weet wat je moet doen maar het niet volhoudt",
+                  "Geen zin hebt in vaag gecoach, maar concrete resultaten wil",
+                  "Liever in een kleine groep werkt dan alleen stoeien",
+                  "Klaar bent met starten en stoppen en eindelijk wil doorzetten",
+                ].map((item, i) => (
+                  <li key={i} className="flex items-start gap-3">
+                    <span
+                      className="material-symbols-outlined text-primary mt-0.5 shrink-0"
+                      style={{ fontVariationSettings: "'FILL' 1" }}
+                    >
+                      check_circle
+                    </span>
+                    <span className="text-on-surface-variant leading-relaxed">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="bg-on-surface rounded-2xl p-10 text-white">
+              <span className="material-symbols-outlined text-primary text-4xl mb-4">
+                format_quote
+              </span>
+              <p className="text-xl italic leading-relaxed mb-6">
+                &ldquo;Geen excuses meer bedenken om niet te gaan sporten maar gewoon doen. We voelen ons heerlijk, zowel fysiek als mentaal. Minder last van kleine kwaaltjes. Beter humeur en helderder.&rdquo;
+              </p>
+              <div className="flex items-center gap-3">
+                <div className="w-11 h-11 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold text-sm shrink-0">R</div>
+                <div>
+                  <p className="font-bold">Ronald</p>
+                  <p className="text-sm text-white/60">ZZP-er</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       {/* ===== HORIZONTAL TIMELINE ===== */}
-      <section className="py-24 md:py-32 px-8 md:px-16 overflow-hidden">
+      <section className="gradient-warm py-24 md:py-32 px-8 md:px-16 overflow-hidden">
         <div className="max-w-7xl mx-auto">
           <div className="mb-16">
             <span className="inline-block px-3 py-1 bg-secondary-container/80 text-on-secondary-container font-bold text-xs uppercase tracking-widest rounded-full mb-6">
@@ -133,7 +177,7 @@ export default function ProgrammaPage() {
                 {
                   step: "01",
                   title: "Kennismaking",
-                  desc: "30 minuten. Open gesprek, geen verplichtingen. We kijken of MOVE bij jou past.",
+                  desc: "30 minuten met Rick. Open gesprek, geen verplichtingen. We kijken of MOVE bij jou past.",
                   icon: "handshake",
                   when: "Voor de start",
                 },
@@ -156,7 +200,7 @@ export default function ProgrammaPage() {
                   title: "12 weken MOVE cyclus",
                   desc: "Elke week dezelfde structuur: Master, Operate, Validate, Elevate. Wekelijkse les, opdracht en Q&A.",
                   icon: "cycle",
-                  when: "Week 1–12",
+                  when: "Week 1 tot 12",
                 },
                 {
                   step: "05",
@@ -168,7 +212,6 @@ export default function ProgrammaPage() {
               ].map((item, i) => (
                 <div key={i} className="flex items-start flex-1 min-w-[170px]">
                   <div className="flex flex-col items-center w-full">
-                    {/* Node + line */}
                     <div className="flex items-center w-full mb-6">
                       <div className={`h-0.5 flex-1 ${i === 0 ? "bg-transparent" : "bg-gradient-to-r from-outline-variant/40 to-primary/40"}`} />
                       <div className="w-14 h-14 rounded-full bg-white border-[3px] border-primary flex items-center justify-center shrink-0 shadow-md relative z-10">
@@ -181,8 +224,6 @@ export default function ProgrammaPage() {
                       </div>
                       <div className={`h-0.5 flex-1 ${i === 4 ? "bg-transparent" : "bg-gradient-to-r from-primary/40 to-outline-variant/40"}`} />
                     </div>
-
-                    {/* Content */}
                     <div className="text-center px-3">
                       <span className="text-xs font-bold text-primary tracking-wider uppercase">
                         {item.when}
@@ -200,7 +241,7 @@ export default function ProgrammaPage() {
             </div>
           </div>
 
-          {/* MOVE Cycle detail */}
+          {/* MOVE Cycle */}
           <div className="mt-16 bg-on-surface p-1 rounded-xl">
             <div className="grid grid-cols-1 md:grid-cols-4 gap-1">
               {[
@@ -269,7 +310,7 @@ export default function ProgrammaPage() {
               30 dagen verandert niets. <span className="text-primary">100 dagen verandert gewoontes.</span>
             </h3>
             <p className="text-on-surface-variant leading-relaxed mb-6">
-              De meeste programma&apos;s zijn te kort om iets te laten beklijven, of zo lang dat het vaag wordt. 100 dagen is bewust gekozen: lang genoeg om echte patronen te doorbreken, kort genoeg om gefocust en concreet te blijven.
+              De meeste programma's zijn te kort om iets te laten beklijven, of zo lang dat het vaag wordt. 100 dagen is bewust gekozen: lang genoeg om echte patronen te doorbreken, kort genoeg om gefocust en concreet te blijven.
             </p>
             <ul className="space-y-4">
               {[
@@ -293,8 +334,8 @@ export default function ProgrammaPage() {
         </div>
       </section>
 
-      {/* ===== PEER-GROUP METHODE — Bento Grid ===== */}
-      <section className="gradient-warm py-32 px-8 md:px-16">
+      {/* ===== PEER-GROUP METHODE ===== */}
+      <section className="py-32 px-8 md:px-16">
         <div className="max-w-7xl mx-auto">
           <div className="mb-16">
             <h2 className="font-[family-name:var(--font-headline)] text-4xl font-bold mb-4">
@@ -311,9 +352,7 @@ export default function ProgrammaPage() {
                   Radicale accountability
                 </h3>
                 <p className="text-lg leading-relaxed text-on-surface-variant">
-                  Niet Rick die je bij de hand neemt, maar een kleine groep die je
-                  scherp houdt als jij dat zelf even niet doet. 11 van de 11 ge&iuml;nterviewde
-                  klanten noemen de groep als het #1 werkende element.
+                  Als ondernemer val je niemand af als je een dag niets doet. Behalve jezelf. MOVE geeft je een groep die je dat niet laat doen. 11 van de 11 ge&iuml;nterviewde klanten noemen de groep als het #1 werkende element.
                 </p>
               </div>
               <div className="w-full md:w-72 h-48 bg-surface-container-highest rounded-lg overflow-hidden shrink-0 relative">
@@ -326,7 +365,7 @@ export default function ProgrammaPage() {
               </div>
             </div>
 
-            {/* -80% stat */}
+            {/* Stat */}
             <div className="md:col-span-4 text-white p-12 rounded-2xl flex flex-col justify-center text-center" style={{ background: "linear-gradient(165deg, #b868c7 0%, #A559B4 50%, #8a3d9a 100%)" }}>
               <span className="text-6xl font-black mb-2">-80%</span>
               <span className="font-bold text-xl leading-tight">
@@ -334,7 +373,7 @@ export default function ProgrammaPage() {
               </span>
             </div>
 
-            {/* Strategisch Sparren */}
+            {/* Sparren */}
             <div className="md:col-span-5 bg-white p-12 rounded-2xl card-hover border border-outline-variant/10">
               <span className="material-symbols-outlined text-secondary text-4xl mb-4">
                 hub
@@ -343,23 +382,22 @@ export default function ProgrammaPage() {
                 Strategisch sparren
               </h3>
               <p className="text-on-surface-variant">
-                Directe feedback op je business- en mindsetuitdagingen van
-                ondernemers die in dezelfde loopgraven staan.
+                Directe feedback van mensen die begrijpen hoe het voelt om alles zelf te dragen. Geen theorie, maar echte gesprekken van mensen in dezelfde fase.
               </p>
             </div>
 
-            {/* Quote */}
+            {/* Rick quote */}
             <div className="md:col-span-7 bg-white p-12 rounded-2xl editorial-shadow flex flex-col justify-center">
               <p className="italic text-2xl leading-relaxed text-on-surface mb-6">
-                &ldquo;Geen excuses meer bedenken om niet te gaan sporten maar gewoon doen. We voelen ons heerlijk qua licht en geest. Minder last van kleine kwaaltjes. Beter humeur en helderder.&rdquo;
+                &ldquo;Weten is niet het probleem. Doen is het probleem. Ik help ondernemers die alles zelf doen om grip te krijgen op zichzelf. Het systeem dat werkt als de motivatie er even niet is.&rdquo;
               </p>
               <div className="flex items-center gap-3">
                 <div className="w-11 h-11 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold text-sm">R</div>
                 <div>
-                  <span className="text-sm font-bold not-italic text-secondary">
-                    Ronald
+                  <span className="text-sm font-bold not-italic text-primary">
+                    Rick Vianen
                   </span>
-                  <p className="text-xs text-on-surface-variant">ZZP-er</p>
+                  <p className="text-xs text-on-surface-variant">Coach</p>
                 </div>
               </div>
             </div>
@@ -367,22 +405,21 @@ export default function ProgrammaPage() {
         </div>
       </section>
 
-      {/* ===== ENRICHED PRICING — Value Stacks ===== */}
-      <section className="py-32 px-8 md:px-16">
+      {/* ===== PRICING ===== */}
+      <section className="gradient-warm py-32 px-8 md:px-16">
         <div className="max-w-7xl mx-auto">
           <div className="mb-24">
             <h2 className="font-[family-name:var(--font-headline)] text-5xl font-extrabold mb-4">
               Kies je traject.
             </h2>
             <p className="text-xl text-on-surface-variant max-w-2xl">
-              Alle trajecten duren 100 dagen. Eenmalige investering, inclusief kick-off en
-              afsluitevent. Bekijk precies wat je krijgt.
+              Alle trajecten duren 100 dagen. Eenmalige investering, inclusief kick-off en afsluitevent. Plan een gesprek om te bespreken wat het beste bij jou past.
             </p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {/* ── MOVE Core ── */}
-            <div className="bg-surface-container-low rounded-2xl overflow-hidden flex flex-col">
+            {/* MOVE Core */}
+            <div className="bg-white rounded-2xl overflow-hidden flex flex-col">
               <div className="p-10 pb-6">
                 <p className="font-[family-name:var(--font-headline)] text-2xl font-black tracking-tight">
                   MOVE Core
@@ -390,27 +427,23 @@ export default function ProgrammaPage() {
                 <p className="text-on-surface-variant text-sm mt-1 mb-6">
                   De eerlijke instap. Voor wie wil proeven wat implementatie echt betekent.
                 </p>
-
                 <div className="mb-6">
                   <span className="font-[family-name:var(--font-headline)] text-5xl font-black tracking-tighter">
                     &euro;1.497
                   </span>
                   <span className="text-on-surface-variant text-sm ml-1">eenmalig</span>
                 </div>
-
                 <div className="flex items-center gap-2 mb-6">
                   <span className="text-xs text-on-surface-variant line-through">&euro;4.193 waarde</span>
                   <span className="text-xs font-bold text-white bg-secondary px-2 py-0.5 rounded-full">Bespaar 64%</span>
                 </div>
-
                 <Link
                   href="/intake"
                   className="block text-center btn-secondary font-bold text-sm py-3.5 rounded-lg"
                 >
-                  Kies Core
+                  Plan een gesprek
                 </Link>
               </div>
-
               <div className="border-t border-outline-variant/20 p-10 pt-6 flex-1">
                 <p className="text-xs font-bold uppercase tracking-wider text-on-surface mb-4">Wat je krijgt</p>
                 <ul>
@@ -425,17 +458,16 @@ export default function ProgrammaPage() {
                   <ValueItem value="€297" icon="card_giftcard" highlight>Directe vraagstelmogelijkheid via kanaal</ValueItem>
                   <ValueItem value="€197" icon="card_giftcard" highlight>Bibliotheek met trainingen &amp; inspiratie</ValueItem>
                   <ValueItem value="€97" icon="card_giftcard" highlight>MOVE Foodguide</ValueItem>
-                  <ValueItem value="∞" icon="favorite" highlight>Kleine groep die elkaar support</ValueItem>
+                  <ValueItem value="&infin;" icon="favorite" highlight>Kleine groep die elkaar support</ValueItem>
                 </ul>
               </div>
             </div>
 
-            {/* ── MOVE Performance (Featured) ── */}
+            {/* MOVE Performance */}
             <div className="relative bg-white rounded-2xl shadow-xl lg:scale-[1.03] z-20 overflow-hidden flex flex-col border-2 border-primary/20">
               <span className="absolute -top-0 left-0 right-0 bg-primary text-white text-xs font-bold tracking-wider uppercase py-2.5 text-center">
-                MEEST GEKOZEN · HET VLAGGENSCHIP
+                MEEST GEKOZEN &middot; HET VLAGGENSCHIP
               </span>
-
               <div className="p-10 pb-6 pt-14">
                 <p className="font-[family-name:var(--font-headline)] text-2xl font-black tracking-tight text-primary">
                   MOVE Performance
@@ -443,27 +475,23 @@ export default function ProgrammaPage() {
                 <p className="text-on-surface-variant text-sm mt-1 mb-6">
                   De volle stack. Voor wie klaar is met alleen proberen.
                 </p>
-
                 <div className="mb-6">
                   <span className="font-[family-name:var(--font-headline)] text-5xl font-black tracking-tighter">
                     &euro;2.497
                   </span>
                   <span className="text-on-surface-variant text-sm ml-1">eenmalig</span>
                 </div>
-
                 <div className="flex items-center gap-2 mb-6">
                   <span className="text-xs text-on-surface-variant line-through">&euro;6.594 waarde</span>
                   <span className="text-xs font-bold text-white bg-secondary px-2 py-0.5 rounded-full">Bespaar 57%</span>
                 </div>
-
                 <Link
                   href="/intake"
                   className="block text-center btn-primary font-bold text-sm py-3.5 rounded-lg"
                 >
-                  Kies Performance
+                  Plan een gesprek
                 </Link>
               </div>
-
               <div className="border-t border-outline-variant/20 p-10 pt-6 flex-1">
                 <p className="text-xs font-bold uppercase tracking-wider text-on-surface mb-4">Alles uit Core, plus</p>
                 <ul>
@@ -479,41 +507,37 @@ export default function ProgrammaPage() {
                   <ValueItem value="€297" icon="card_giftcard" highlight>Directe vraagstelmogelijkheid via kanaal</ValueItem>
                   <ValueItem value="€197" icon="card_giftcard" highlight>Bibliotheek trainingen &amp; inspiratie</ValueItem>
                   <ValueItem value="€97" icon="card_giftcard" highlight>MOVE Foodguide</ValueItem>
-                  <ValueItem value="∞" icon="favorite" highlight>Kleine groep die elkaar support</ValueItem>
+                  <ValueItem value="&infin;" icon="favorite" highlight>Kleine groep die elkaar support</ValueItem>
                 </ul>
               </div>
             </div>
 
-            {/* ── MOVE Ultimate ── */}
-            <div className="bg-surface-container-low rounded-2xl overflow-hidden flex flex-col">
+            {/* MOVE Ultimate */}
+            <div className="bg-white rounded-2xl overflow-hidden flex flex-col">
               <div className="p-10 pb-6">
                 <p className="font-[family-name:var(--font-headline)] text-2xl font-black tracking-tight">
                   MOVE Ultimate
                 </p>
                 <p className="text-on-surface-variant text-sm mt-1 mb-6">
-                  Private. Voor wie wekelijks 1-op-1 met Rick wil werken.
+                  Private. Voor ondernemers die wekelijks 1-op-1 met Rick willen werken.
                 </p>
-
                 <div className="mb-6">
                   <span className="font-[family-name:var(--font-headline)] text-5xl font-black tracking-tighter">
                     &euro;4.997
                   </span>
                   <span className="text-on-surface-variant text-sm ml-1">eenmalig</span>
                 </div>
-
                 <div className="flex items-center gap-2 mb-6">
                   <span className="text-xs text-on-surface-variant line-through">&euro;11.558 waarde</span>
                   <span className="text-xs font-bold text-white bg-secondary px-2 py-0.5 rounded-full">Bespaar 57%</span>
                 </div>
-
                 <Link
                   href="/intake"
                   className="block text-center border-2 border-on-surface text-on-surface font-bold text-sm py-3.5 rounded-lg hover:bg-on-surface hover:text-white transition-all duration-300"
                 >
-                  Kies Ultimate
+                  Plan een gesprek
                 </Link>
               </div>
-
               <div className="border-t border-outline-variant/20 p-10 pt-6 flex-1">
                 <p className="text-xs font-bold uppercase tracking-wider text-on-surface mb-4">Alles uit Performance, plus</p>
                 <ul>
@@ -528,7 +552,7 @@ export default function ProgrammaPage() {
                   <ValueItem value="€647" icon="card_giftcard" highlight>Eindevenement + metingen</ValueItem>
                   <ValueItem value="€197" icon="card_giftcard" highlight>Bibliotheek trainingen &amp; inspiratie</ValueItem>
                   <ValueItem value="€97" icon="card_giftcard" highlight>MOVE Foodguide</ValueItem>
-                  <ValueItem value="∞" icon="favorite" highlight>Kleine groep die elkaar support</ValueItem>
+                  <ValueItem value="&infin;" icon="favorite" highlight>Kleine groep die elkaar support</ValueItem>
                 </ul>
               </div>
             </div>
@@ -537,7 +561,7 @@ export default function ProgrammaPage() {
       </section>
 
       {/* ===== GARANTIE ===== */}
-      <section className="gradient-warm py-24 md:py-32 px-8 md:px-16">
+      <section className="py-24 md:py-32 px-8 md:px-16">
         <div className="max-w-4xl mx-auto text-center">
           <span
             className="material-symbols-outlined text-secondary text-6xl mb-6"
@@ -549,11 +573,9 @@ export default function ProgrammaPage() {
             Twee weken proberen. Niet overtuigd? Geld terug.
           </h2>
           <p className="text-lg text-on-surface-variant leading-relaxed max-w-2xl mx-auto mb-8">
-            We geloven zo sterk in het traject dat je na 2 weken mag stoppen.
-            Voel je geen richting of zie je geen vooruitgang? Dan krijg je je
-            geld terug. No questions asked.
+            We geloven zo sterk in het traject dat je na 2 weken mag stoppen. Voel je geen richting of zie je geen vooruitgang? Dan krijg je je geld terug. No questions asked.
           </p>
-          <div className="inline-flex items-center gap-3 bg-white px-6 py-4 rounded-xl editorial-shadow">
+          <div className="inline-flex items-center gap-3 bg-surface-container-low px-6 py-4 rounded-xl editorial-shadow">
             <span className="material-symbols-outlined text-primary text-2xl" style={{ fontVariationSettings: "'FILL' 1" }}>
               shield
             </span>
@@ -564,8 +586,8 @@ export default function ProgrammaPage() {
         </div>
       </section>
 
-      {/* ===== SOCIAL PROOF — Testimonials ===== */}
-      <section className="py-32 overflow-hidden px-8 md:px-16">
+      {/* ===== TESTIMONIALS ===== */}
+      <section className="gradient-warm py-32 overflow-hidden px-8 md:px-16">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
             <h2 className="font-[family-name:var(--font-headline)] text-4xl font-bold max-w-md">
@@ -574,7 +596,6 @@ export default function ProgrammaPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            {/* Testimonial 1 */}
             <div className="bg-white p-12 rounded-2xl card-hover editorial-shadow">
               <div className="flex gap-1 mb-6">
                 {[1, 2, 3, 4, 5].map((i) => (
@@ -605,7 +626,6 @@ export default function ProgrammaPage() {
               </div>
             </div>
 
-            {/* Testimonial 2 */}
             <div className="bg-white p-12 rounded-2xl card-hover editorial-shadow">
               <div className="flex gap-1 mb-6">
                 {[1, 2, 3, 4, 5].map((i) => (
@@ -640,12 +660,12 @@ export default function ProgrammaPage() {
       </section>
 
       {/* ===== FAQ ===== */}
-      <section className="gradient-warm py-32 px-8 md:px-16">
+      <section className="py-32 px-8 md:px-16">
         <div className="max-w-4xl mx-auto">
           <h2 className="font-[family-name:var(--font-headline)] text-4xl font-bold mb-16">
             Veelgestelde vragen
           </h2>
-          <Faq items={programmaFaqs} />
+          <Faq items={ondernemerFaqs} />
           <div className="text-center mt-10">
             <Link
               href="/veelgestelde-vragen"
@@ -658,12 +678,7 @@ export default function ProgrammaPage() {
             </Link>
           </div>
         </div>
-        <FaqJsonLd items={programmaFaqs} />
-      </section>
-
-      {/* ===== QUIZ CTA ===== */}
-      <section className="py-12 md:py-16">
-        <QuizCTA variant="card" />
+        <FaqJsonLd items={ondernemerFaqs} />
       </section>
 
       {/* ===== FINAL CTA ===== */}
@@ -674,19 +689,17 @@ export default function ProgrammaPage() {
             <div className="absolute -bottom-20 -left-20 w-64 h-64 rounded-full bg-secondary/[0.06] blur-[60px] pointer-events-none" />
             <div className="relative z-10">
               <h2 className="font-[family-name:var(--font-headline)] text-4xl md:text-6xl font-black text-white mb-6">
-                Klaar om te bewegen?
+                Klaar om het gesprek aan te gaan?
               </h2>
               <p className="text-surface-container-highest/60 text-lg md:text-xl mb-12 max-w-2xl mx-auto">
-                Elke groep heeft maximaal 8 deelnemers. Plan een gesprek en kijk of MOVE bij jou past.
+                Plan een kennismaking met Rick en ontdek wat MOVE voor jou kan betekenen.
               </p>
               <div className="inline-flex flex-col items-center gap-4">
                 <Link
                   href="/intake"
-                  target="_blank"
-                  rel="noopener noreferrer"
                   className="btn-primary px-12 py-5 rounded-full text-xl font-bold"
                 >
-                  Plan een kennismakingsgesprek
+                  Plan een gesprek met Rick
                 </Link>
                 <p className="text-surface-container-highest/40 text-sm font-medium tracking-wide uppercase">
                   30 minuten. Open gesprek, geen verplichtingen.
@@ -706,10 +719,10 @@ export default function ProgrammaPage() {
         <div className="max-w-7xl mx-auto text-center">
           <p className="text-on-surface-variant text-sm mb-3">Nog niet klaar voor het volledige programma?</p>
           <Link
-            href="/challenge"
+            href="/challenge/ondernemer"
             className="inline-flex items-center gap-2 text-primary font-bold group link-hover"
           >
-            Begin met MOVE the Challenge voor &euro;100
+            Begin met de MOVE Challenge voor ondernemers
             <span className="material-symbols-outlined text-lg transition-transform duration-300 group-hover:translate-x-1">
               arrow_forward
             </span>

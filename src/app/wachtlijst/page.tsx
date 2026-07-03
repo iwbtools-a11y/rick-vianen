@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 export default function WachtlijstPage() {
   return (
     <div className="min-h-screen pb-24 md:pb-0">
-      <section className="gradient-hero pt-36 pb-16 px-8 md:px-16">
+      <section className="gradient-hero pt-48 pb-16 px-8 md:px-16">
         <div className="max-w-2xl mx-auto text-center">
           <span className="inline-block px-3 py-1 bg-secondary-container/80 text-on-secondary-container font-bold text-xs uppercase tracking-widest rounded-full mb-6">
             Beperkte plekken
@@ -49,7 +49,7 @@ export default function WachtlijstPage() {
           <div className="space-y-3 mb-10">
             {[
               "Je krijgt als eerste bericht zodra er een plek vrijkomt",
-              "Geen verplichtingen, geen verkooppitch",
+              "Geen verplichtingen, vrijblijvend",
               "Desgewenst plannen we alvast een vrijblijvend kennismakingsgesprek in",
             ].map((item, i) => (
               <div key={i} className="flex items-start gap-3">
@@ -66,12 +66,6 @@ export default function WachtlijstPage() {
 
           {/* Klaviyo form */}
           <div className="bg-surface-container-low rounded-2xl p-8">
-            <h2 className="font-[family-name:var(--font-headline)] text-xl font-black tracking-tight mb-2">
-              Schrijf je in
-            </h2>
-            <p className="text-on-surface-variant text-sm mb-6">
-              Vul je gegevens in en we nemen contact op zodra er ruimte is.
-            </p>
             <KlaviyoForm formId="VQ9LBc" />
           </div>
 

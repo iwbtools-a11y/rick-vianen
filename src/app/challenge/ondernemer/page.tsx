@@ -5,27 +5,27 @@ import { Faq } from "@/components/faq";
 import { FaqJsonLd } from "@/components/faq-jsonld";
 
 export const metadata: Metadata = {
-  title: "MOVE the Challenge | MOVE Coaching",
+  title: "MOVE Challenge Ondernemers | MOVE Coaching",
   description:
-    "Heb je al te lang een ambitie op de plank liggen? MOVE the Challenge brengt je in 5 dagen van uitstelgedrag naar eerste beweging. €100. Verrekenbaar met MOVE.",
+    "Run je je bedrijf in je eentje en doe je alles zelf? In 5 dagen van brandjes blussen naar grip op je dag, je lijf en je bedrijf. €100, verrekenbaar met MOVE.",
 };
 
 const challengeFaqs = [
   {
-    question: "Wat is de MOVE Challenge precies?",
-    answer: "5 dagen. Elke dag een korte video van Rick als kader, daarna doe jij het werk. Geen theorie voor de boekenplank, maar een concrete opdracht per dag. Aan het einde heb je 5 resultaten staan die blijven.",
+    question: "Wat is de MOVE Challenge voor ondernemers?",
+    answer: "5 dagen. Elke dag een korte video van Rick als kader, gericht op de uitdagingen van ondernemers. Daarna doe jij het werk. Concrete opdrachten die je direct kunt toepassen in je bedrijf en op jezelf. Aan het einde heb je 5 resultaten staan die blijven.",
   },
   {
     question: "Wat kost de Challenge?",
     answer: "€100 eenmalig. Geen abonnement, geen verborgen kosten. Stap je daarna in het MOVE Programma? Dan wordt de €100 direct verrekend als korting op je investering.",
   },
   {
-    question: "Wat is het verschil tussen de Challenge en het Programma?",
-    answer: "De Challenge is 5 dagen en €100: een eerste stap. Het Programma is 100 dagen peer-group traject met structuur, accountability en een volledige MOVE-cyclus. De Challenge laat je voelen wat mogelijk is. Het Programma verankert het.",
+    question: "Ik heb het al druk. Past dit wel?",
+    answer: "Precies waarom de Challenge is gebouwd zoals hij is. Geen lange sessies of uitgebreide opdrachten. Elke dag één korte video, één concrete actie. Je tijd is al schaars. Dat is niet het excuus, dat is de reden.",
   },
   {
-    question: "Moet ik sportief zijn om mee te doen?",
-    answer: "Nee. De Challenge is er voor mensen die iets willen veranderen, niet voor mensen die al alles op orde hebben. Het gaat niet om waar je nu staat, maar dat je in beweging komt.",
+    question: "Wat is het verschil tussen de Challenge en het Programma?",
+    answer: "De Challenge is 5 dagen en €100: een eerste stap. Het Programma is 100 dagen peer-group traject met structuur, accountability en een volledige MOVE-cyclus. De Challenge laat je voelen wat mogelijk is. Het Programma verankert het.",
   },
   {
     question: "Wanneer kan ik starten?",
@@ -37,30 +37,25 @@ const challengeFaqs = [
   },
 ];
 
-export default function ChallengePage() {
+export default function ChallengeZelfstandigePage() {
   return (
     <div className="pb-24 md:pb-0">
 
       {/* ===== HERO ===== */}
-      <section className="gradient-hero px-8 md:px-16 pt-36 pb-24 relative overflow-hidden">
-        <div className="absolute top-20 right-0 w-[500px] h-[500px] rounded-full bg-primary/[0.04] blur-[100px] pointer-events-none" />
-        <div className="max-w-7xl mx-auto relative grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-12 lg:gap-16 items-center">
-          {/* Left — text */}
-          <div>
+      <section className="gradient-hero px-8 md:px-16 pt-44 pb-24 relative overflow-hidden">
+        <div className="absolute top-20 right-0 w-[400px] h-[400px] rounded-full bg-primary/[0.03] blur-[80px] pointer-events-none" />
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-8 items-center relative">
+          <div className="flex-1">
             <span className="inline-block px-3 py-1 bg-secondary-container/80 text-on-secondary-container font-bold text-xs uppercase tracking-widest rounded-full mb-6 backdrop-blur-sm">
               5 dagen &middot; &euro;100 &middot; Verrekenbaar met MOVE
             </span>
-
-            <h1 className="font-[family-name:var(--font-headline)] text-5xl md:text-7xl font-black tracking-tighter leading-[0.9] mb-4 max-w-3xl">
-              De challenge die je leven <span className="text-primary italic">verandert.</span>
+            <h1 className="font-[family-name:var(--font-headline)] text-5xl md:text-7xl font-black tracking-tighter leading-[1.05] mb-8">
+              Run jij alles zelf? <br /><span className="text-primary italic">Behalve jezelf.</span>
             </h1>
-
-            <p className="text-lg text-on-surface-variant max-w-xl leading-relaxed mb-12">
-              Je hebt een ambitie die al veel te lang op de plank ligt. MOVE the Challenge
-              brengt je in 5 dagen van uitstelgedrag naar eerste beweging.
+            <p className="text-xl md:text-2xl font-medium text-on-surface-variant max-w-2xl">
+              Je regelt je sales, je klanten, je planning en je administratie. Het enige dat er structureel bij inschiet, ben jij. In 5 dagen ga je van achter de feiten aanlopen naar grip op je dag, je lijf en je bedrijf.
             </p>
-
-            <div className="flex flex-col items-start gap-2">
+            <div className="mt-8 flex flex-col items-start gap-2">
               <Link
                 href="https://rick-vianen.plugandpay.com/checkout/move-challenge"
                 className="btn-primary px-10 py-4 rounded-full text-lg font-bold"
@@ -76,29 +71,25 @@ export default function ChallengePage() {
                 >
                   verified
                 </span>
-                €100 korting op MOVE wanneer je investeert in de Challenge.
+                &euro;100 korting op MOVE wanneer je investeert in de Challenge.
               </div>
               <p className="text-xs text-on-surface-variant/60 pl-1">Veilige betaling via Plug&amp;Pay</p>
             </div>
           </div>
-
-          {/* Right — Ironman photo */}
-          <div className="relative w-full lg:w-[340px] xl:w-[400px] shrink-0">
-            <div className="aspect-[3/4] rounded-2xl overflow-hidden relative shadow-2xl">
-              <Image
-                src="/images/blog-coach.jpg"
-                alt="Rick Vianen finisht de Ironman"
-                fill
-                className="object-cover object-top"
-                priority
+          <div className="w-full md:w-[300px] shrink-0">
+            <div className="aspect-[9/16] rounded-2xl overflow-hidden shadow-2xl">
+              <video
+                src="/videos/ondernemer-intro.mp4"
+                controls
+                playsInline
+                className="w-full h-full object-cover"
               />
-              <div className="absolute inset-x-0 bottom-0 h-1/4 bg-gradient-to-t from-black/20 to-transparent" />
             </div>
           </div>
         </div>
       </section>
 
-      {/* ===== FOR WHO ===== */}
+      {/* ===== VOOR WIE + DE OMSLAG ===== */}
       <section className="py-24 px-8 md:px-16">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
           <div>
@@ -106,17 +97,17 @@ export default function ChallengePage() {
               Voor wie
             </span>
             <h2 className="font-[family-name:var(--font-headline)] text-4xl md:text-5xl font-black tracking-tight mb-3 leading-tight">
-              Die ambitie? <span className="text-primary">Die wacht te lang.</span>
+              Je bent de hele dag bezig. En &apos;s avonds vraag je je af wat je nou eigenlijk <span className="text-primary">gedaan hebt.</span>
             </h2>
             <p className="text-on-surface-variant mb-8 leading-relaxed">
-              Je weet zelf ook dat er iets moet veranderen. De challenge geeft je de structuur om het eindelijk te doen.
+              Je bent zelfstandig of hebt een klein team. Je bent goed in je vak. Maar je dag wordt geregeerd door wat er op je afkomt, niet door wat jij vooraf kiest.
             </p>
             <div className="space-y-4">
               {[
-                "Je weet al jaren wat je wilt bereiken, maar je komt er gewoon niet aan toe",
-                "Je begint vol goede moed, houdt het niet vol, en herkent het patroon",
-                "Privé of zakelijk: er is dat ene ding waar je écht verandering in wil brengen",
-                "Je wil dit jaar niet afsluiten met dezelfde ambitie op de plank als vorig jaar",
+                "Je blust de hele dag brandjes en komt aan je eigen dingen nooit toe",
+                "Je zet iedereen voor jezelf: klanten, gezin, vragen van buiten. Jij komt achteraan",
+                "Je administratie en je gezondheid schuiven elke week weer door naar 'later'",
+                "Je weet precies wat je zou moeten doen. Je doet het alleen niet",
               ].map((item, i) => (
                 <div key={i} className="flex items-start gap-3">
                   <span
@@ -130,18 +121,19 @@ export default function ChallengePage() {
               ))}
             </div>
           </div>
+
           <div className="relative">
             <div className="bg-surface-container-low rounded-2xl p-10">
               <p className="font-[family-name:var(--font-headline)] text-3xl font-black tracking-tight mb-3">
-                Na 5 dagen ligt die ambitie niet meer op de plank
+                Na 5 dagen loop je niet meer achter de feiten aan
               </p>
               <div className="w-16 h-1 bg-gradient-to-r from-primary to-secondary rounded-full mb-8" />
               <div className="space-y-5">
                 {[
-                  { icon: "target", text: "Een keihard, onontkoombaar strijdplan met een deadline die directe actie forceert." },
-                  { icon: "favorite", text: "Een onbreekbare fundering gebouwd, waardoor opgeven simpelweg geen optie meer is — zelfs als de motivatie ver te zoeken is." },
-                  { icon: "bolt", text: "Geen eindeloze to-do lijsten, maar een data-gedreven dashboard met precies die acties die jouw succes onvermijdelijk maken." },
-                  { icon: "directions_run", text: "Je bent direct in actie gekomen, dwars door de weerstand en smoesjes van de stem in je hoofd heen." },
+                  { icon: "target", text: "Een concreet plan met een deadline die je dwingt om vandaag te beginnen, niet 'volgende week als het rustiger is'." },
+                  { icon: "favorite", text: "Een fundering waardoor je dit volhoudt, ook op de dagen dat het druk is en de motivatie weg is." },
+                  { icon: "bolt", text: "Geen eindeloze to-do lijst, maar een dashboard met precies de acties die het verschil maken voor jou en je bedrijf." },
+                  { icon: "directions_run", text: "Je bent in beweging gekomen, dwars door de smoes 'ik heb geen tijd' heen." },
                 ].map((item, i) => (
                   <div key={i} className="flex items-center gap-4 py-3 border-b border-outline-variant/20 last:border-0">
                     <span
@@ -160,7 +152,7 @@ export default function ChallengePage() {
         </div>
       </section>
 
-      {/* ===== THE 5 DAYS ===== */}
+      {/* ===== HET PROGRAMMA ===== */}
       <section className="gradient-warm py-24 px-8 md:px-16">
         <div className="max-w-7xl mx-auto">
           <div className="mb-16">
@@ -168,10 +160,10 @@ export default function ChallengePage() {
               Het programma
             </span>
             <h2 className="font-[family-name:var(--font-headline)] text-4xl md:text-5xl font-black tracking-tight mb-3">
-              5 dagen. <span className="text-primary italic">Eén module per dag.</span>
+              5 dagen. <span className="text-primary italic">Eén module per dag. Max 30 minuten.</span>
             </h2>
             <p className="text-on-surface-variant text-lg max-w-2xl">
-              Geen uren aan video's, maar werk om te doen. Elke dag een korte video van Rick als kader, daarna doe jij het werk zelf. Maximaal 30 minuten. Elke dag een concreet resultaat dat blijft staan.
+              Je tijd is al schaars. Elke dag een korte video van Rick als kader, daarna doe jij het werk. Elke dag een concreet resultaat dat blijft staan.
             </p>
           </div>
 
@@ -237,7 +229,7 @@ export default function ChallengePage() {
         </div>
       </section>
 
-      {/* ===== HOW IT WORKS ===== */}
+      {/* ===== HOE HET WERKT ===== */}
       <section className="py-24 px-8 md:px-16">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
@@ -284,10 +276,9 @@ export default function ChallengePage() {
               </div>
             </div>
 
-            {/* Stat card */}
             <div className="space-y-4">
               <div className="bg-on-surface text-white p-10 rounded-2xl">
-                <p className="font-[family-name:var(--font-headline)] text-7xl font-black text-primary">48u</p>
+                <p className="font-[family-name:var(--font-headline)] text-7xl font-black text-primary">Na 48u</p>
                 <p className="text-xl font-bold mt-2 leading-snug">
                   Meer helderheid dan in het afgelopen jaar.
                 </p>
@@ -301,7 +292,7 @@ export default function ChallengePage() {
                   <p className="text-sm text-on-surface-variant font-medium mt-1">Dagen</p>
                 </div>
                 <div className="bg-surface-container-low rounded-xl p-6 text-center">
-                  <p className="font-[family-name:var(--font-headline)] text-4xl font-black text-secondary">30'</p>
+                  <p className="font-[family-name:var(--font-headline)] text-4xl font-black text-secondary">30&apos;</p>
                   <p className="text-sm text-on-surface-variant font-medium mt-1">Per dag max</p>
                 </div>
               </div>
@@ -310,7 +301,8 @@ export default function ChallengePage() {
         </div>
       </section>
 
-      {/* ===== QUOTE ===== */}
+      {/* ===== SOCIAAL BEWIJS ===== */}
+      {/* REVIEWS: uitbreiden met cases zelfstandigen + videoreview zodra beschikbaar */}
       <section className="gradient-warm py-16 px-8 md:px-16">
         <div className="max-w-4xl mx-auto text-center">
           <p className="font-[family-name:var(--font-headline)] text-3xl md:text-4xl font-black italic leading-snug mb-8">
@@ -326,42 +318,8 @@ export default function ChallengePage() {
         </div>
       </section>
 
-      {/* ===== GUARANTEE ===== */}
+      {/* ===== WIE IS RICK ===== */}
       <section className="py-24 px-8 md:px-16">
-        <div className="max-w-4xl mx-auto">
-          <div className="bg-white border-2 border-primary/20 rounded-2xl p-12 md:p-16 text-center editorial-shadow">
-            <span
-              className="material-symbols-outlined text-secondary text-6xl mb-6"
-              style={{ fontVariationSettings: "'FILL' 1" }}
-            >
-              verified
-            </span>
-            <h2 className="font-[family-name:var(--font-headline)] text-3xl md:text-4xl font-black tracking-tight mb-3">
-              Je €100 is geen uitgave.
-            </h2>
-            <p className="text-on-surface-variant font-medium mb-6">Het is je korting op MOVE.</p>
-            <p className="text-on-surface-variant text-lg leading-relaxed max-w-2xl mx-auto mb-8">
-              Doe alle 5 dagen het werk volledig af. Stap je daarna in MOVE? Dan verrekenen
-              we de €100 direct als korting op je investering. Je betaalt de challenge
-              dus letterlijk terug aan jezelf.
-            </p>
-            <div className="inline-flex items-center gap-3 bg-surface-container-low px-6 py-4 rounded-xl">
-              <span
-                className="material-symbols-outlined text-primary text-xl"
-                style={{ fontVariationSettings: "'FILL' 1" }}
-              >
-                shield
-              </span>
-              <p className="text-sm font-bold">
-                Finish de challenge. Stap in MOVE. Je €100 gaat er direct af.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ===== BRIDGE TO MOVE ===== */}
-      <section className="gradient-warm py-24 px-8 md:px-16">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
             <div>
@@ -373,14 +331,10 @@ export default function ChallengePage() {
               </h2>
               <p className="text-on-surface-variant font-medium mb-6">De challenge is de eerste 5% van MOVE, met 100% diepgang.</p>
               <p className="text-on-surface-variant leading-relaxed mb-6">
-                In 5 dagen bewijs je de methode aan jezelf. Je ervaart wat helderheid
-                en beweging voelt, misschien voor het eerst in jaren.
+                In 5 dagen bewijs je de methode aan jezelf. Je ervaart wat helderheid en beweging voelt, misschien voor het eerst in jaren.
               </p>
               <p className="text-on-surface-variant leading-relaxed">
-                Wat je in je eentje merkt, is dat de stem na 5 dagen niet weg is.
-                Momentum houden zonder structuur is precies waar de meeste mensen
-                stranden. Niet door gebrek aan kennis. Door gebrek aan een systeem
-                dat je vasthoudt als de motivatie wegvalt.
+                Wat je in je eentje merkt, is dat de stem na 5 dagen niet weg is. Momentum houden zonder structuur is precies waar de meeste mensen stranden. Niet door gebrek aan kennis. Door gebrek aan een systeem dat je vasthoudt als de motivatie wegvalt.
               </p>
             </div>
             <div className="bg-white rounded-2xl p-10 editorial-shadow">
@@ -398,8 +352,7 @@ export default function ChallengePage() {
                 </div>
               </div>
               <p className="text-on-surface-variant italic leading-relaxed mb-6">
-                &ldquo;Weten is niet het probleem. Doen is het probleem. Die ene zin is
-                de reden dat de challenge bestaat. En de reden dat MOVE doet wat het doet.&rdquo;
+                &ldquo;Weten is niet het probleem. Doen is het probleem. Ik help ondernemers die alles zelf doen om weer grip te krijgen.&rdquo;
               </p>
               <Link
                 href="/programma"
@@ -410,6 +363,40 @@ export default function ChallengePage() {
                   arrow_forward
                 </span>
               </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ===== €100 = KORTING ===== */}
+      <section className="gradient-warm py-24 px-8 md:px-16">
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-white border-2 border-primary/20 rounded-2xl p-12 md:p-16 text-center editorial-shadow">
+            <span
+              className="material-symbols-outlined text-secondary text-6xl mb-6"
+              style={{ fontVariationSettings: "'FILL' 1" }}
+            >
+              verified
+            </span>
+            <h2 className="font-[family-name:var(--font-headline)] text-3xl md:text-4xl font-black tracking-tight mb-3">
+              Je &euro;100 is geen uitgave.
+            </h2>
+            <p className="text-on-surface-variant font-medium mb-6">Het is je korting op MOVE.</p>
+            <p className="text-on-surface-variant text-lg leading-relaxed max-w-2xl mx-auto mb-8">
+              Doe alle 5 dagen het werk volledig af. Stap je daarna in MOVE? Dan verrekenen
+              we de &euro;100 direct als korting op je investering. Je betaalt de challenge
+              dus letterlijk terug aan jezelf.
+            </p>
+            <div className="inline-flex items-center gap-3 bg-surface-container-low px-6 py-4 rounded-xl">
+              <span
+                className="material-symbols-outlined text-primary text-xl"
+                style={{ fontVariationSettings: "'FILL' 1" }}
+              >
+                shield
+              </span>
+              <p className="text-sm font-bold">
+                Finish de challenge. Stap in MOVE. Je &euro;100 gaat er direct af.
+              </p>
             </div>
           </div>
         </div>
@@ -437,7 +424,7 @@ export default function ChallengePage() {
         <FaqJsonLd items={challengeFaqs} />
       </section>
 
-      {/* ===== FINAL CTA ===== */}
+      {/* ===== SLOT-CTA ===== */}
       <section className="py-20 px-8 md:px-16">
         <div className="max-w-7xl mx-auto">
           <div className="gradient-dark rounded-[3rem] p-12 md:p-24 text-center relative overflow-hidden">
@@ -452,7 +439,7 @@ export default function ChallengePage() {
               </h2>
               <p className="text-white/80 font-medium mb-4">Start wanneer je wilt. Doe het werk.</p>
               <p className="text-white/50 text-lg mb-12 max-w-xl mx-auto leading-relaxed">
-                Stap je daarna in MOVE? Dan gaat je €100 er direct af als korting. Je investering begint hier.
+                Stap je daarna in MOVE? Dan gaat je &euro;100 er direct af als korting. Je investering begint hier.
               </p>
               <div className="inline-flex flex-col items-center gap-4">
                 <Link
@@ -464,7 +451,7 @@ export default function ChallengePage() {
                   Start de challenge voor &euro;100
                 </Link>
                 <p className="text-white/40 text-sm font-medium tracking-wide uppercase">
-                  €100 korting op MOVE &middot; Evergreen &middot; Start direct
+                  &euro;100 korting op MOVE &middot; Evergreen &middot; Start direct
                 </p>
                 <p className="text-white/30 text-xs">Veilige betaling via Plug&amp;Pay</p>
               </div>
