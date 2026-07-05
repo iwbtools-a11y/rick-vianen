@@ -12,7 +12,7 @@ export default function OverRickVianen() {
   return (
     <div className="pb-24 md:pb-0">
       {/* ───────────────────────── 1. HERO ───────────────────────── */}
-      <section className="pt-32 gradient-hero">
+      <section className="pt-40 gradient-hero">
         <div className="max-w-7xl mx-auto px-8 py-12 md:py-20">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-end">
             {/* Left — 7 cols */}
@@ -231,7 +231,7 @@ export default function OverRickVianen() {
                   </h4>
                   <p className="text-on-surface-variant text-sm leading-relaxed">
                     Je maakt elkaar een belofte. Niet Rick die je bij de hand
-                    neemt, een groep die je niet laat zitten.
+                    neemt, een kleine groep die je scherp houdt als jij dat zelf even niet doet.
                   </p>
                 </div>
               </div>
@@ -256,8 +256,8 @@ export default function OverRickVianen() {
                   <span className="text-primary">Plan een gesprek.</span>
                 </h2>
                 <p className="text-surface-container-highest/60 leading-relaxed max-w-lg">
-                  30 minuten. Geen pitch. Rick benoemt wat hij ziet.
-                  Direct en zonder verzachten. Daarna weet je waar je staat.
+                  30 minuten. Open gesprek, geen verplichtingen.
+                  Rick benoemt wat hij ziet. Direct en zonder verzachten.
                 </p>
               </div>
 

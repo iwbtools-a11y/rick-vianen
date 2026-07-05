@@ -27,7 +27,7 @@ export function ChallengeBedanktClient() {
   }, []);
 
   return (
-    <div className="min-h-screen flex items-center justify-center px-8 pt-32 pb-24">
+    <div className="min-h-screen flex items-center justify-center px-8 pt-40 pb-24">
       <div className="max-w-lg w-full">
 
         <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mb-8">

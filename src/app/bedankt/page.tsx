@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function BedanktPage() {
   return (
-    <div className="min-h-screen flex items-center justify-center px-8 pt-32 pb-24 md:pb-0">
+    <div className="min-h-screen flex items-center justify-center px-8 pt-40 pb-24 md:pb-0">
       <div className="max-w-lg text-center">
         <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-8">
           <span
@@ -27,7 +27,7 @@ export default function BedanktPage() {
           Je ontvangt een e-mail met de details.
         </p>
         <p className="text-on-surface-variant leading-relaxed mb-10">
-          30 minuten. Geen pitch. Rick benoemt eerlijk wat hij ziet.
+          30 minuten. Open gesprek, geen verplichtingen.
         </p>
         <div className="flex flex-col sm:flex-row justify-center gap-4">
           <Link

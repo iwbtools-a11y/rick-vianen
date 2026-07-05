@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 export default function BookingPage() {
   return (
     <div className="pb-24 md:pb-0">
-      <section className="pt-32 pb-8 px-8 md:px-16">
+      <section className="pt-40 pb-8 px-8 md:px-16">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="font-[family-name:var(--font-headline)] text-3xl md:text-4xl font-black tracking-tight mb-3">
             Agenda van <span className="text-primary">Rick</span>

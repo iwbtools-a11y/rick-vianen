@@ -2,6 +2,18 @@
   command = "npm run build"
   publish = "out"
 
+[[redirects]]
+  from = "/blog"
+  to = "/content"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/*"
+  to = "/content/:splat"
+  status = 301
+  force = true
+
 [functions]
   directory = "netlify/functions"
 

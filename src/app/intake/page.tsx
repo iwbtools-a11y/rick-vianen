@@ -5,19 +5,19 @@ import { CalendlyEmbed } from "@/components/calendly-embed";
 export const metadata: Metadata = {
   title: "Intake | MOVE Coaching",
   description:
-    "Plan een kennismakingsgesprek met Rick Vianen. 30 minuten, geen pitch, eerlijk advies.",
+    "Plan een kennismakingsgesprek met Rick Vianen. 30 minuten, open gesprek, eerlijk advies.",
 };
 
 export default function IntakePage() {
   return (
     <div className="pb-24 md:pb-0">
-      <section className="pt-32 pb-8 px-8 md:px-16">
+      <section className="pt-40 pb-8 px-8 md:px-16">
         <div className="max-w-3xl mx-auto">
           <h1 className="font-[family-name:var(--font-headline)] text-3xl md:text-4xl font-black tracking-tight mb-3">
             Plan een <span className="text-primary">kennismakingsgesprek</span>
           </h1>
           <p className="text-on-surface-variant leading-relaxed mb-6">
-            30 minuten. Geen pitch. Rick benoemt eerlijk wat hij ziet. Daarna weet je waar je staat.
+            30 minuten. Open gesprek, geen verplichtingen. Rick benoemt eerlijk wat hij ziet.
           </p>
           <div className="inline-flex items-center gap-3 p-3 bg-surface-container-low rounded-xl">
             <Image
