@@ -1,32 +1,18 @@
 'use client';
 
-import { useEffect } from 'react';
 import { useRouter } from 'next/navigation';
+import { InlineWidget, useCalendlyEventListener } from 'react-calendly';
 
 export function CalendlyEmbed({ url, redirectTo }: { url: string; redirectTo: string }) {
   const router = useRouter();
 
-  useEffect(() => {
-    const handleMessage = (e: MessageEvent) => {
-      if (e.data?.event === 'calendly.event_scheduled') {
-        router.push(redirectTo);
-      }
-    };
-    window.addEventListener('message', handleMessage);
-    return () => window.removeEventListener('message', handleMessage);
-  }, [redirectTo, router]);
+  useCalendlyEventListener({
+    onEventScheduled: () => router.push(redirectTo),
+  });
 
   return (
     <div className="bg-white shadow-lg overflow-hidden">
-      <iframe
-        src={url}
-        style={{ border: 0 }}
-        width="100%"
-        height="800"
-        frameBorder="0"
-        title="Plan een kennismakingsgesprek met Rick Vianen"
-        className="w-full min-h-[800px] block"
-      />
+      <InlineWidget url={url} styles={{ height: '800px' }} />
     </div>
   );
 }

@@ -7,6 +7,7 @@ import { QuizCTA } from "@/components/quiz-cta";
 import { KlaviyoForm } from "@/components/klaviyo-form";
 
 const itemImages: Record<string, string> = {
+  "3-soorten-beloftes": "/images/thumb-3-soorten-beloftes.jpg",
   "the-way-you-fck-yourself": "/images/blog-str.jpg",
   "gewoontes-aanleren": "/images/rick-portrait.png",
   "beloftes-nakomen": "/images/blog-coach.jpg",

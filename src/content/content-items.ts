@@ -14,6 +14,45 @@ export type ContentItem = {
 
 export const contentItems: ContentItem[] = [
   {
+    type: "video",
+    slug: "3-soorten-beloftes",
+    title: "De 3 soorten beloftes die bepalen of je grip houdt op je leven",
+    date: "9 juli 2026",
+    category: "Implementatie",
+    excerpt:
+      "Er zijn drie soorten beloftes: de criminele, de zwakke en de krachtige. Zodra je ze uit elkaar kunt houden, zie je precies waar jij grip verliest.",
+    videoUrl: "https://www.youtube.com/embed/-ji1u4FV6Ck",
+    content: `
+      <p>Toen ik voor het eerst opschreef hoeveel beloftes ik op een dag maakte, schrok ik van het aantal. En nog meer van hoe weinig ik er echt nakwam. Niet uit onwil. Gewoon omdat ik nooit had stilgestaan bij wat een belofte eigenlijk is.</p>
+
+      <p>Er zijn drie soorten. Zodra je ze uit elkaar kunt houden, zie je precies waar jij grip verliest.</p>
+
+      <h3>De criminele belofte</h3>
+      <p>Dit is de belofte die je maakt terwijl je allebei weet dat het niks wordt. Je komt iemand tegen die je jaren niet zag, en aan het eind zeg je: we moeten echt weer eens wat drinken. Terwijl er een stemmetje zegt dat je daar helemaal niet op zit te wachten.</p>
+      <p>Je doet het uit vriendelijkheid. Om de ander niet teleur te stellen. Maar de kans dat je het nakomt is nul. En daarmee bedrieg je de ander eigenlijk, hoe hard dat ook klinkt.</p>
+
+      <h3>De zwakke belofte</h3>
+      <p>Dit is de belofte met de goede intentie, maar met vijftig procent kans. Ik kijk er deze week even naar. Ik ga echt twee keer sporten. Ik kom er zo snel mogelijk op terug.</p>
+      <p>De intentie is oprecht. Maar de taal is vaag, en die vaagheid is een achterdeur. Er belt een klant, de kinderen worden ziek, er komt iets tussendoor. En aan het eind van de week is het er niet van gekomen.</p>
+      <p>Dit is de belofte die we het vaakst maken. Zakelijk, privé, in gezondheid, naar onze kinderen. En het is precies de belofte die het meeste vertrouwen kost, bij anderen en bij jezelf.</p>
+
+      <h3>De krachtige belofte</h3>
+      <p>Dit is de belofte die je in honderd procent van de gevallen nakomt. Om vier uur bij de tandarts, en je bént er om vier uur. Het is de meest zeldzame belofte. En het is precies de belofte waar je op wil zitten.</p>
+      <p>Want iemand die alleen nog krachtige beloftes maakt, wordt vanzelf iemand op wie mensen kunnen bouwen. Als Rick iets zegt, dan gebeurt het. Dat versterkt elke relatie die je hebt.</p>
+
+      <h3>Begin bij jezelf, niet bij anderen</h3>
+      <p>De eerste stap is simpel: observeer. Op welke domeinen, werk, gezondheid, relaties, maak jij vooral krachtige, zwakke of criminele beloftes? Je zult zien dat je er veel meer maakt dan je denkt.</p>
+      <p>En dan komt het punt waar de meeste mensen het verkeerd aanpakken. Ze willen meteen anderen aanspreken. Doe dat niet. Begin bij de stilzwijgende beloftes aan jezelf. Om zeven uur beginnen met werken. Twee keer per week sporten.</p>
+      <p>Elke keer dat je zo'n afspraak met jezelf nakomt, bouw je bewijs op dat je iemand bent die zijn woord houdt. En elke keer dat je het niet doet, bouw je bewijs voor het tegenovergestelde. Doe je dat lang genoeg, dan wordt het genormaliseerd. Je bent gewoon iemand die er vijf over vijf is, en iedereen accepteert het, jij als eerste.</p>
+      <p>Zo bouw je een identiteit. Wil je een ander mens worden, dan voeg je bewijs toe op de andere stapel.</p>
+
+      <h3>Pas daarna: de beloftes naar anderen</h3>
+      <p>Heb je dit onder controle, dan kijk je naar hoe je beloftes naar anderen maakt. Beloof niet zomaar iets. Zeg vaker nee, ook als dat niet het antwoord is dat iemand wil horen. Iemand nu even teleurstellen is beter dan over een week een afspraak niet nakomen.</p>
+      <p>En onthoud: vraag nooit van een ander wat je zelf niet doet. Sla je met je vuist op tafel dat iedereen op tijd moet komen terwijl je zelf altijd te laat bent, dan krijg je precies de cultuur die je niet wil.</p>
+      <p>Het kost je veel energie en vertrouwen als je hierin blijft hangen. De uitweg begint niet bij meer kennis of meer motivatie. Hij begint bij één kleine belofte aan jezelf die je vandaag wél nakomt.</p>
+    `,
+  },
+  {
     type: "blog",
     slug: "the-way-you-fck-yourself",
     title: "\"The way you f*ck yourself is to lie to yourself.\"",
