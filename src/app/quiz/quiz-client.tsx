@@ -325,7 +325,7 @@ export function QuizClient() {
         {screen === 'intro' && (
           <>
           <section className="bg-on-surface min-h-screen flex items-center px-6 md:px-16 pt-[120px] pb-16">
-            <div className="w-full max-w-2xl mx-auto">
+            <div className="w-full max-w-4xl mx-auto">
               <div
                 className="font-[family-name:var(--font-headline)] text-primary font-black leading-[0.9] mb-2"
                 style={{ fontSize: 'clamp(72px, 18vw, 120px)' }}
