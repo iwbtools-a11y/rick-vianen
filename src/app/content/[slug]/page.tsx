@@ -7,6 +7,7 @@ import { QuizCTA } from "@/components/quiz-cta";
 import { KlaviyoForm } from "@/components/klaviyo-form";
 
 const itemImages: Record<string, string> = {
+  "geprogrammeerde-toekomst": "/images/thumb-geprogrammeerde-toekomst.jpg",
   "3-soorten-beloftes": "/images/thumb-3-soorten-beloftes.jpg",
   "the-way-you-fck-yourself": "/images/blog-str.jpg",
   "gewoontes-aanleren": "/images/rick-portrait.png",
@@ -154,9 +155,7 @@ export default async function ContentItemPage({
             </p>
 
             <Link
-              href="https://calendly.com/rick-rickvianen/kennismaking"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="/intake"
               className="inline-flex items-center justify-center bg-surface text-primary px-8 py-3.5 rounded-lg font-bold text-sm hover:bg-surface-container transition-colors font-[family-name:var(--font-headline)] mt-10"
             >
               Plan een gesprek

@@ -276,6 +276,10 @@ html {
   font-weight: 700;
 }
 
+.blog-content a {
+  color: var(--color-primary);
+}
+
 /* Klaviyo nieuwsbrief form — prevent iOS zoom on focus */
 .klaviyo-form-UmT95r input,
 .klaviyo-form-UmT95r button {

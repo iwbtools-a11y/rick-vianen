@@ -14,6 +14,7 @@ const typeLabels: Record<ContentType, string> = {
 };
 
 const itemImages: Record<string, string> = {
+  "geprogrammeerde-toekomst": "/images/thumb-geprogrammeerde-toekomst.jpg",
   "3-soorten-beloftes": "/images/thumb-3-soorten-beloftes.jpg",
   "the-way-you-fck-yourself": "/images/blog-str.jpg",
   "gewoontes-aanleren": "/images/rick-portrait.png",

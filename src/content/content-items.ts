@@ -15,6 +15,45 @@ export type ContentItem = {
 export const contentItems: ContentItem[] = [
   {
     type: "video",
+    slug: "geprogrammeerde-toekomst",
+    title:
+      "De geprogrammeerde toekomst: waarom je nu al weet waar je over vijf jaar staat",
+    date: "21 juli 2026",
+    category: "Mindset",
+    excerpt:
+      "Je gewicht van vandaag, je banksaldo van vandaag. Trek die lijn door en je hele toekomst zit er al in verstopt. Zo teken je hem uit, en zo doorbreek je hem.",
+    videoUrl: "https://www.youtube.com/embed/MHPgBamJ5QA",
+    content: `
+      <p>Vul voor jezelf een cijfer in. Je gewicht van vandaag. Je banksaldo van vandaag. Nu vraag ik je iets ongemakkelijkers: wat was dat cijfer een jaar geleden, en twee jaar geleden?</p>
+
+      <p>De meeste mensen hebben daar geen antwoord op. Niet omdat ze het niet zouden kunnen achterhalen, maar omdat ze er nooit naar hebben gekeken. En dat is precies het probleem, want in die lijn zit je hele toekomst al verstopt.</p>
+
+      <p>Ik noem dat de geprogrammeerde toekomst: de plek waar je over vijf, tien of twintig jaar staat als je gewoon doorgaat met wat je nu doet.</p>
+
+      <h3>Waarom je brein er liever niet naar kijkt</h3>
+      <p>Onderzoekers Green en Myerson noemden dit hyperbolic discounting. Mensen kregen de keuze tussen honderd euro nu of honderdtwintig euro over een jaar. De meeste mensen kozen voor het geld nu. Maar zodra diezelfde keuze een jaar verder in de tijd werd geschoven (honderdtwintig euro over twaalf maanden tegenover honderddertig euro over dertien maanden) kozen mensen opeens wel voor wachten.</p>
+      <p>Je brein waardeert het nu altijd zwaarder dan later. Dat is geen karakterfout. Dat is gewoon hoe het werkt.</p>
+
+      <h3>Het verborgen voordeel</h3>
+      <p>Bij elke gewoonte die je eigenlijk kwijt wilt, zit een verborgen voordeel. Snoezen geeft comfort. Toch ja zeggen bespaart een lastig gesprek. Te veel eten voelt op dat moment gewoon lekker.</p>
+      <p>En daarna praat je het goed. Je hebt hard genoeg gewerkt deze week. Dit koekje kan geen kwaad. Volgende week eet je weer gezond.</p>
+      <p>Als je daar niet eerlijk naar kijkt, krijg je precies de toekomst die je niet wilde.</p>
+
+      <h3>De lijn doortrekken</h3>
+      <p>Neem je gewicht. Vandaag tachtig kilo, een jaar geleden achtenzeventig. Trek diezelfde lijn vijf jaar door en je zit op negentig kilo. Twintig jaar door en je zit richting honderdvijf kilo.</p>
+      <p>Of neem je financiën. Als je banksaldo de afgelopen twee jaar van tachtigduizend naar honderdduizend euro groeide, dan zit er over vijf jaar waarschijnlijk honderdvijftigduizend euro op je rekening. Dat is misschien een lijn waar je juist wel blij mee bent, en dat is precies het punt: de geprogrammeerde toekomst laat zien wat je met dezelfde inzet krijgt, of dat nu een lijn is om te vieren of een lijn om te doorbreken.</p>
+
+      <h3>Vandaag, niet later</h3>
+      <p>Het punt van deze oefening is niet om je bang te maken. Het is om je scherp te maken. Want de toekomst wordt niet later gecreëerd. Die wordt nu gecreëerd, in de keuze die je vandaag maakt.</p>
+      <p>Dat vraagt eigenaarschap over je eigen patronen, en implementatie in plaats van nog een goed voornemen. Weten wat je moet doen was nooit het probleem. Doen is het probleem.</p>
+
+      <p>Teken voor jezelf je eigen lijn uit. Op je gezondheid, je financiën of je relaties. Kijk er eerlijk naar, ook als het een beetje buikpijn geeft. En stel jezelf daarna één vraag: past de dagelijkse keuze die ik vandaag maak bij de toekomst die ik eigenlijk wil?</p>
+
+      <p>Wil je hier niet alleen over nadenken, maar ook echt mee aan de slag? In MOVE bouwen we precies dat systeem: wekelijkse check-ins, een kleine groep en de accountability om je patronen daadwerkelijk te doorbreken. Bekijk het volledige verhaal in de video of <a href="/intake">plan een vrijblijvend kennismakingsgesprek</a>.</p>
+    `,
+  },
+  {
+    type: "video",
     slug: "3-soorten-beloftes",
     title: "De 3 soorten beloftes die bepalen of je grip houdt op je leven",
     date: "9 juli 2026",
