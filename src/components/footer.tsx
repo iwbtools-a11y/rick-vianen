@@ -1,8 +1,18 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { KlaviyoForm } from "@/components/klaviyo-form";
 
 export function Footer() {
+  const pathname = usePathname();
+
+  // /lp/* routes are standalone ad landing pages: no site footer, single conversion path.
+  if (pathname?.startsWith("/lp/")) {
+    return null;
+  }
+
   return (
     <footer className="bg-on-surface text-surface py-20 px-8">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-[2fr_1fr_1fr_1fr] gap-12 md:gap-20">

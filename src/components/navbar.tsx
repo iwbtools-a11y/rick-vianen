@@ -37,6 +37,11 @@ export function Navbar() {
     setBannerVisible(false);
   }
 
+  // /lp/* routes are standalone ad landing pages: no site nav, single conversion path.
+  if (pathname?.startsWith("/lp/")) {
+    return null;
+  }
+
   const showBanner = bannerVisible && pathname !== "/quiz";
 
   return (
