@@ -15,6 +15,49 @@ export type ContentItem = {
 export const contentItems: ContentItem[] = [
   {
     type: "video",
+    slug: "een-doel-dat-je-echt-haalt",
+    title: "Hoe zet je een doel dat je ook echt haalt?",
+    date: "27 juli 2026",
+    category: "Mindset",
+    excerpt:
+      "Zet twee elftallen tegenover elkaar en haal de doelen weg: negentig minuten lang gebeurt er van alles, maar niemand komt ergens. Een onderzoek onder 267 mensen laat zien hoe je de kans op je doel verdubbelt.",
+    videoUrl: "https://www.youtube.com/embed/WvnQaZXX3lU",
+    content: `
+      <p>Zet twee elftallen tegenover elkaar op een voetbalveld. Haal de doelen weg. Wat gebeurt er? Negentig minuten lang gebeurt er van alles, maar niemand komt ergens. Zonder doel heb je geen richting. Je kunt heel druk zijn, en toch geen stap verder komen.</p>
+
+      <p>Dat is precies wat er gebeurt als je door het leven gaat zonder een concreet doel. Je bent bezig, maar niet gericht bezig.</p>
+
+      <h3>De kracht van een uitdagend doel</h3>
+      <p>Bij het kiezen van een doel wil je juist een doel dat een beetje ongemakkelijk voelt. Iets waar je een beetje buikpijn van krijgt. Niet omdat ongemak leuk is, maar omdat een uitdagend doel je dwingt om te groeien.</p>
+      <p>De persoon die je nu bent, heeft bereikt wat je tot nu toe hebt bereikt met de vaardigheden die je nu hebt. Een uitdagend doel vraagt om een andere versie van jezelf. Meer discipline, andere vaardigheden, een ander gesprek in je hoofd.</p>
+      <p>Ik ondervond dit zelf toen ik in 2022 besloot een Iron Man te gaan lopen. Ik had nog nooit fatsoenlijk gezwommen, nog nooit op een racefiets gezeten. Om het doel te halen moest ik bijna twintig uur per week trainen, vroeg opstaan en discipline opbouwen die ik daarvoor niet had. Die discipline nam ik mee in alles daarna. Ik werd een betere coach, een rustiger ondernemer en eerlijk gezegd ook een leukere partner.</p>
+      <p>Toen ik over de finish liep, met tranen over mijn wangen, was dat niet om de medaille. Het was het gevoel dat al het harde werk je ergens heeft gebracht. Dat gevoel van voldoening is een van de sterkste dingen die er zijn.</p>
+
+      <h3>Kijk verder dan het doel zelf</h3>
+      <p>Stel dat je doel is: tien kilo afvallen. Op zich een concreet doel. Maar wil je een stap dieper kijken, vraag jezelf dan af wie je eigenlijk wil zijn. Iemand met een gezonde, sterke leefstijl valt vanzelf tien kilo af. Dat is het logische gevolg, niet het doel zelf.</p>
+      <p>En achter dat doel zit vaak nog een doel. Minder stress. Meer aanwezig zijn voor je kinderen. Beter kunnen omgaan met tegenslag. Daar zit de echte winst, niet in het cijfer op de weegschaal.</p>
+
+      <h3>Het onderzoek: van 35% naar ruim 70%</h3>
+      <p>In 2007 deed onderzoeker Gail Matthews van een universiteit in Californië onderzoek onder 267 mensen. Ze verdeelde ze in vijf groepen. De eerste groep dacht alleen aan hun doel. De tweede schreef hem op. De derde voegde een concreet eindpunt en beloning toe. De vierde deelde het doel met anderen. De vijfde gaf daarnaast ook nog wekelijkse updates.</p>
+      <p>Van de groep die alleen aan hun doel dacht, haalde ongeveer 35% hun doel. Van de groep die alles deed — opschrijven, een concreet eindpunt, delen met anderen en wekelijkse updates — steeg dat naar ruim 70%. Twee keer zoveel kans, puur door een paar simpele stappen toe te voegen.</p>
+
+      <h3>De vijf stappen</h3>
+      <ul>
+        <li><strong>Bepaal wie je wil zijn</strong> — en welke leefstijl daarbij hoort.</li>
+        <li><strong>Maak het concreet</strong> — hoeveel, hoe vaak, welke acties.</li>
+        <li><strong>Zet er een deadline op.</strong></li>
+        <li><strong>Vertel het</strong> aan een paar mensen om je heen.</li>
+        <li><strong>Geef wekelijks een update</strong> over waar je staat.</li>
+      </ul>
+      <p>Wil je jezelf nog een keer extra scherp zetten, geef jezelf dan twee opties: wat gebeurt er als het lukt, en wat geef je weg als het niet lukt. Hoe groter je dat tweede durft te maken, hoe eerlijker het antwoord is op de vraag of je echt bereid bent het werk te doen.</p>
+
+      <p>Een doel stellen is niet het eindpunt. Het is het startpunt van de persoon die je moet worden om het te halen. En dat is precies waar de winst zit.</p>
+
+      <p>Wil je hier niet alleen over lezen, maar ook echt mee aan de slag, met iemand die je onderweg accountable houdt? Bekijk de video voor het volledige verhaal of doe de <a href="/quiz">quiz</a> om te zien of MOVE bij je past.</p>
+    `,
+  },
+  {
+    type: "video",
     slug: "geprogrammeerde-toekomst",
     title:
       "De geprogrammeerde toekomst: waarom je nu al weet waar je over vijf jaar staat",
