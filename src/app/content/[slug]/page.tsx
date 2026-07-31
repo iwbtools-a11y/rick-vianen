@@ -7,6 +7,7 @@ import { QuizCTA } from "@/components/quiz-cta";
 import { KlaviyoForm } from "@/components/klaviyo-form";
 
 const itemImages: Record<string, string> = {
+  "onbewuste-overtuigingen": "/images/thumb-onbewuste-overtuigingen.jpg",
   "een-doel-dat-je-echt-haalt": "/images/thumb-een-doel-dat-je-echt-haalt.jpg",
   "geprogrammeerde-toekomst": "/images/thumb-geprogrammeerde-toekomst.jpg",
   "3-soorten-beloftes": "/images/thumb-3-soorten-beloftes.jpg",
@@ -74,7 +75,7 @@ export default async function ContentItemPage({
         </h1>
 
         {/* YouTube embed for videos */}
-        {item.type === "video" && item.videoUrl ? (
+        {item.videoUrl ? (
           <div className="mt-10 relative aspect-video rounded-xl overflow-hidden">
             <iframe
               src={item.videoUrl}

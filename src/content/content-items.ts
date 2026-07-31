@@ -14,6 +14,40 @@ export type ContentItem = {
 
 export const contentItems: ContentItem[] = [
   {
+    type: "blog",
+    slug: "onbewuste-overtuigingen",
+    title: "Gedrag veranderen begint bij je onbewuste overtuigingen",
+    date: "31 juli 2026",
+    category: "Mindset",
+    excerpt:
+      "Denk aan de laatste keer dat je de vaatwasser moest uitruimen. Een simpele taak die toch zwaarder voelde dan het hoort. Dat komt niet door de taak, maar door wat je erover denkt.",
+    videoUrl: "https://www.youtube.com/embed/TgiIQ02tJTg",
+    content: `
+      <p>Denk aan de laatste keer dat je de vaatwasser moest uitruimen of de was moest doen. Een simpele taak. Toch voelde het misschien zwaarder dan het hoort te zijn.</p>
+
+      <p>Dat komt niet door de taak zelf. Dat komt door wat je erover denkt.</p>
+
+      <h3>Het stemmetje in je hoofd</h3>
+      <p>Er is een stemmetje in je hoofd dat 24/7 aan staat. Het heeft een mening over elke taak, elke persoon, elke uitdaging en elk gesprek. Die mening is opgebouwd uit ervaringen, aannames en overtuigingen die je meestal niet bewust hebt gekozen.</p>
+      <p>Neem geld. De manier waarop je bent opgevoed, wat je hebt meegemaakt, wat je hebt geleerd, dat vormt allemaal een overtuiging. Voor de één is geld een noodzakelijk kwaad. Voor de ander is geld nodig om iets op te bouwen. Voor weer een ander voelt geld vies. Het gaat in alle gevallen om hetzelfde ding. Alleen het verhaal eromheen verschilt.</p>
+      <p>En dat verhaal heeft gevolgen. Als jij een overtuiging hebt dat geld vragen niet hoort, dan wordt het lastig om ooit iets te verkopen.</p>
+
+      <h3>90 tot 95% is onbewust</h3>
+      <p>Het lastige, en tegelijk het goede nieuws, is dat 90 tot 95% van deze overtuigingen onbewust zijn. Je merkt niet eens dat je op een bepaalde manier over iets denkt. Maar zodra je je daar bewust van wordt, kun je het ook veranderen. Blijf je onbewust, dan blijf je een soort slaaf van je eigen verhalen en aannames.</p>
+
+      <h3>Drie manieren om je overtuigingen bloot te leggen</h3>
+      <p><strong>Maak de zin af.</strong> Neem een persoon, taak, uitdaging of gesprek en vul in: "X is geweldig, maar...". Bijvoorbeeld: mijn partner is geweldig, maar zeurt wel veel. Alleen al dat "maar" laat zien waar je mening zit.</p>
+      <p><strong>Scheid feiten van meningen.</strong> Zet je aannames op een rij en vraag jezelf eerlijk af: is dit een feit, of is dit mijn mening? Iemand die "veel zeurt" is een mening, geen feit. Zodra je dat ziet, wordt het ook makkelijker om er verantwoordelijkheid voor te nemen in plaats van het gedrag van de ander de schuld te geven.</p>
+      <p><strong>Gebruik AI om ze bloot te leggen.</strong> Beschrijf je doel, waar je nu staat en waar je jezelf tegenhoudt, en vraag om honderd mogelijke overtuigingen die daarbij in de weg kunnen zitten. Loop ze een voor een langs. De meeste herken je niet, een paar wel, en precies die paar zijn het waard om aan te pakken.</p>
+
+      <h3>Maak het resultaat belangrijker dan het verhaal</h3>
+      <p>Stel dat je jezelf ziet als avondmens en om vijf uur 's ochtends op zou moeten staan, zeven dagen op rij. De kans dat je dat volhoudt op basis van wilskracht alleen is klein. Maar zet er honderdduizend euro tegenover als je het wel doet, en het verhaal wordt in één keer een stuk minder belangrijk dan het resultaat.</p>
+      <p>Dat is de kern. Niet elk verhaal dat je over jezelf vertelt is onwaar. Maar hoe langer je eraan vasthoudt, hoe vaster het komt te zitten. Bekritiseer je eigen geloofssysteem af en toe. Niet om jezelf af te breken, maar om te blijven groeien.</p>
+
+      <p>Volgende week deel ik deel 2: de omgeving als tweede grote beïnvloeder van je gedrag. Doe de <a href="/challenge">Challenge</a> als je zin hebt in een concrete volgende stap.</p>
+    `,
+  },
+  {
     type: "video",
     slug: "een-doel-dat-je-echt-haalt",
     title: "Hoe zet je een doel dat je ook echt haalt?",

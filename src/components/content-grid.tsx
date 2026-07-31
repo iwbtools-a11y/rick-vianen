@@ -14,6 +14,7 @@ const typeLabels: Record<ContentType, string> = {
 };
 
 const itemImages: Record<string, string> = {
+  "onbewuste-overtuigingen": "/images/thumb-onbewuste-overtuigingen.jpg",
   "een-doel-dat-je-echt-haalt": "/images/thumb-een-doel-dat-je-echt-haalt.jpg",
   "geprogrammeerde-toekomst": "/images/thumb-geprogrammeerde-toekomst.jpg",
   "3-soorten-beloftes": "/images/thumb-3-soorten-beloftes.jpg",
@@ -86,7 +87,7 @@ export function ContentGrid({ items }: { items: ContentItem[] }) {
                 <span className="absolute top-4 left-4 bg-secondary text-white text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full font-[family-name:var(--font-headline)] z-10">
                   {typeLabels[item.type]}
                 </span>
-                {item.type === "video" && (
+                {item.videoUrl && (
                   <div className="absolute inset-0 flex items-center justify-center">
                     <div className="w-12 h-12 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center">
                       <span className="material-symbols-outlined text-white text-2xl">

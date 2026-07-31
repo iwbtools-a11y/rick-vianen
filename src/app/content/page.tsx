@@ -12,6 +12,7 @@ export const metadata: Metadata = {
 };
 
 const itemImages: Record<string, string> = {
+  "onbewuste-overtuigingen": "/images/thumb-onbewuste-overtuigingen.jpg",
   "een-doel-dat-je-echt-haalt": "/images/thumb-een-doel-dat-je-echt-haalt.jpg",
   "geprogrammeerde-toekomst": "/images/thumb-geprogrammeerde-toekomst.jpg",
   "3-soorten-beloftes": "/images/thumb-3-soorten-beloftes.jpg",
@@ -64,7 +65,7 @@ export default function ContentPage() {
                   className="object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-on-surface/60 via-transparent to-transparent" />
-                {featured.type === "video" && (
+                {featured.videoUrl && (
                   <div className="absolute inset-0 flex items-center justify-center">
                     <div className="w-16 h-16 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center">
                       <span className="material-symbols-outlined text-white text-3xl">
