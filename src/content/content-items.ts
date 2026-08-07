@@ -14,6 +14,41 @@ export type ContentItem = {
 
 export const contentItems: ContentItem[] = [
   {
+    type: "video",
+    slug: "omgeving-bepaalt-gedrag",
+    title: "Waarom je omgeving je gedrag bepaalt (en hoe je dat om kunt draaien)",
+    date: "7 augustus 2026",
+    category: "Mindset",
+    excerpt:
+      "Mijn vriendin is fan van PSV. Zet vijf mensen bij elkaar die allemaal voor PSV zijn, en de kans is groot dat een zesde persoon dat ook wordt. Zo werkt je omgeving, in bijna alles.",
+    videoUrl: "https://www.youtube.com/embed/HpUzaaqbMw8",
+    content: `
+      <p>Mijn vriendin is fan van PSV. Zet vijf mensen bij elkaar die allemaal voor PSV zijn, en de kans is groot dat een zesde persoon dat ook wordt. Simpel voorbeeld, maar het werkt met bijna alles. Culturen, vriendengroepen, teams, bedrijven: als iets genormaliseerd is, gaat een nieuw iemand dat gedrag vaak overnemen.</p>
+
+      <p>Dat kan positief werken. Het kan ook negatief werken.</p>
+
+      <h3>Wat onderzoek laat zien</h3>
+      <p>Onderzoekers Christakis en Fowler volgden meer dan twaalfduizend mensen gedurende 32 jaar. Ze keken hoe obesitas zich verspreidde binnen sociale netwerken. De cijfers waren opvallend: had een vriend obesitas, dan was de kans dat jij dat ook ontwikkelde 57% hoger. Bij een broer of zus was dat 40%, bij een partner 37%.</p>
+      <p>Bij buren was er geen verband te zien. Puur in dezelfde straat wonen zonder sociale connectie bleek geen invloed te hebben. Het gaat dus niet om fysieke nabijheid, maar om sociale verbondenheid.</p>
+      <p>Dit onderzoek heeft overigens ook kritiek gekregen op de gebruikte methode, dus neem het cijfer niet als absolute waarheid. Maar de kern erachter, dat je omgeving je gedrag beïnvloedt, blijft overeind.</p>
+
+      <h3>Het lijnen-experiment</h3>
+      <p>Een ander, klassiek experiment van Solomon Asch laat iets vergelijkbaars zien, maar dan directer. Deelnemers moesten simpelweg aanwijzen welke van drie lijnen het langst was. Overduidelijk te zien met het blote oog.</p>
+      <p>Maar in de groep zaten acteurs die eerst allemaal het juiste antwoord gaven, en vervolgens allemaal bewust het foute antwoord. Zodra dat gebeurde, paste 37% van de deelnemers zich aan en gaf ook het foute antwoord, ook al zagen ze met hun eigen ogen dat het niet klopte.</p>
+      <p>Het interessante komt daarna. Zodra er in die groep acteurs één iemand was die wel het juiste antwoord bleef geven, daalde die aanpassing met 80%. Nog maar zo'n 7% van de deelnemers ging dan nog mee met de foute meerderheid.</p>
+      <p>Met andere woorden: je hebt maar één andere stem nodig om een hele groep een andere kant op te laten bewegen.</p>
+
+      <h3>Twee lessen</h3>
+      <p>De eerste les is simpel: zoek een omgeving op die past bij je doelen. Toen ik zelf ging trainen voor mijn Iron Man, sloot ik me aan bij een triatlonvereniging. Niemand in mijn oude omgeving had ooit van een Iron Man gehoord. In die vereniging was twintig uur per week trainen ineens volkomen normaal.</p>
+      <p>De tweede les is misschien nog waardevoller. Jij kunt die ene afwijkende stem zijn. Sinds ik zelf ben gaan triatlonnen, hebben tientallen mensen in mijn omgeving, zonder dat dat ooit mijn bedoeling was, ook een kwart triatlon gelopen. Niet omdat ik het ze vroeg. Maar omdat ik het voordeed.</p>
+      <p>Als je niet oplet, bepaalt je omgeving je gedrag. Let je er wel op, dan kun jij net zo goed die omgeving bepalen.</p>
+
+      <p>Vraag jezelf eens af: is de omgeving om je heen op dit moment ingericht op de doelen die jij wilt halen, of houdt hij je juist vast in een patroon dat je eigenlijk kwijt wilt? En andersom: welk voorbeeld ben jij op dit moment voor de mensen om je heen?</p>
+
+      <p>Wil je hier niet alleen over nadenken, maar ook echt in een omgeving stappen die op je doelen is afgestemd? Bekijk de video voor het volledige verhaal of <a href="/intake">plan een vrijblijvend kennismakingsgesprek</a>.</p>
+    `,
+  },
+  {
     type: "blog",
     slug: "onbewuste-overtuigingen",
     title: "Gedrag veranderen begint bij je onbewuste overtuigingen",

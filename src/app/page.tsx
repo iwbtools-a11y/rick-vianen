@@ -250,10 +250,12 @@ export default function Home() {
 
           <div className="relative rounded-2xl overflow-hidden shadow-2xl bg-on-surface">
             <div className="aspect-video">
-              <video
-                src="/videos/move-presentatie.mp4"
-                controls
-                className="absolute inset-0 w-full h-full object-cover"
+              <iframe
+                src="https://www.youtube.com/embed/P4CL11eOM5M"
+                title="Rick legt het zelf uit"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+                className="absolute inset-0 w-full h-full"
               />
             </div>
           </div>

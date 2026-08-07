@@ -333,17 +333,17 @@ export function QuizClient() {
                 1
               </div>
               <p className="text-[13px] font-medium text-white/55 tracking-[0.06em] uppercase mb-8">
-                focus die alles verandert
+                voor ondernemers die vol gas geven
               </p>
 
               <h1
                 className="font-[family-name:var(--font-headline)] text-white font-black leading-[1.0] mb-5"
                 style={{ fontSize: 'clamp(32px, 8vw, 52px)' }}
               >
-                Ben jij klaar voor je volgende stap?
+                Ondernemen kost energie.
               </h1>
               <p className="text-base text-white/75 leading-relaxed mb-10 max-w-[480px]">
-                Je wil meer. Meer energie, meer focus, meer groei in business, conditie en relaties. Maar als alles prioriteit heeft, heeft niets prioriteit. Doe de test en ontdek welke ene focus voor jou nu het meeste verschil maakt.
+                Je draait door op wilskracht, tot je energie op is. Sport en herstel staan onderaan de lijst, terwijl ze bepalen hoeveel je kunt geven aan je business. Doe de test en ontdek in 2 minuten waar jouw energie nu weglekt.
               </p>
 
               <div className="flex gap-6 flex-wrap mb-10">
