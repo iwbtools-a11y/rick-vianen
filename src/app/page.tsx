@@ -586,7 +586,7 @@ export default function Home() {
           {/* Urgency */}
           <div className="text-center mb-12">
             <p className="text-on-surface-variant text-lg italic leading-relaxed max-w-xl mx-auto">
-              Elke maand zonder systeem is een maand waarin je weet wat je moet doen, maar het niet doet.
+              Elke maand met de juiste structuur is een maand waarin je weet wat je moet doen, en het ook echt doet.
             </p>
           </div>
 
@@ -597,8 +597,7 @@ export default function Home() {
 
             <div className="relative">
               <h2 className="font-[family-name:var(--font-headline)] text-3xl md:text-5xl font-extrabold tracking-tighter text-on-surface">
-                Het probleem is niet wat je weet. Het probleem is dat je het niet
-                doet.
+                Je weet al wat je moet doen. Nu ga je het ook echt doen.
               </h2>
               <p className="text-on-surface-variant mt-4 text-lg leading-relaxed max-w-lg mx-auto">
                 30 minuten. Open gesprek, geen verplichtingen.
