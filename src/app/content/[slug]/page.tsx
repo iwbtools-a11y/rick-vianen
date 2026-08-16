@@ -7,6 +7,7 @@ import { QuizCTA } from "@/components/quiz-cta";
 import { KlaviyoForm } from "@/components/klaviyo-form";
 
 const itemImages: Record<string, string> = {
+  "jezelf-voorliegen-met-excuses": "/images/thumb-jezelf-voorliegen-met-excuses.jpg",
   "omgeving-bepaalt-gedrag": "/images/thumb-omgeving-bepaalt-gedrag.jpg",
   "onbewuste-overtuigingen": "/images/thumb-onbewuste-overtuigingen.jpg",
   "een-doel-dat-je-echt-haalt": "/images/thumb-een-doel-dat-je-echt-haalt.jpg",

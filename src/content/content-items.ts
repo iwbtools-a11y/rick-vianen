@@ -14,6 +14,43 @@ export type ContentItem = {
 
 export const contentItems: ContentItem[] = [
   {
+    type: "blog",
+    slug: "jezelf-voorliegen-met-excuses",
+    title: "Waarom je jezelf voorliegt met excuses (en hoe je dat doorbreekt)",
+    date: "16 augustus 2026",
+    category: "Mindset",
+    excerpt:
+      "Er stond ooit een marktkraam in India, en er was een probleem: apen. Zodra de verkopers even niet keken, gristen de apen het voedsel van de kraam.",
+    videoUrl: "https://www.youtube.com/embed/s7ZkD9l3mwQ",
+    content: `
+      <p>Er stond ooit een marktkraam in India, en er was een probleem: apen. Zodra de verkopers even niet keken, gristen de apen het voedsel van de kraam.</p>
+
+      <p>Iemand bedacht een oplossing zonder de dieren pijn te doen. Een kokosnoot, met een klein gaatje erin. Daarin een handvol nootjes waar de apen dol op waren.</p>
+
+      <p>De apen kwamen, staken hun hand door het gaatje, en grepen de nootjes vast. Zodra ze hun vuist sloten om de nootjes, kwam die vuist niet meer door het gaatje terug. Ze zaten vast. Niet omdat iemand ze vasthield. Omdat ze zelf niet loslieten.</p>
+
+      <p>Dit is precies wat de meeste mensen doen met hun eigen doelen.</p>
+
+      <h3>Wat een racket is</h3>
+      <p>We noemen dit een racket. Het woord komt van racketeer, oplichter. Alleen ben jij deze keer de oplichter van jezelf.</p>
+      <p>Je hebt een doel. Op het gebied van gezondheid, business, wat dan ook. En ergens onderweg begin je jezelf een verhaal te vertellen waarom het nu even niet lukt. Geen tijd. Geen motivatie. Moe. Een blessure. De kinderen.</p>
+      <p>Het zijn allemaal legitieme dingen om te noemen. Maar zolang je eraan vasthoudt, houd je jezelf net zo gevangen als het aapje in de kokosnoot.</p>
+
+      <h3>Waarom je dit doet: het verborgen voordeel</h3>
+      <p>Elk excuus heeft een verborgen voordeel. Als je niet gaat sporten omdat je moe bent, hoef je niet in actie te komen. Je blijft comfortabel. Dat is het voordeel. Niet het excuus zelf, maar wat het je oplevert: rust, geen ongemak, geen risico op falen.</p>
+      <p>Zolang je dat voordeel belangrijker vindt dan je doel, blijf je vastzitten. Niet omdat het excuus waar of onwaar is. Dat is niet eens de discussie. De vraag is of je eraan vasthoudt.</p>
+
+      <h3>Van extern naar intern</h3>
+      <p>Vaak beginnen excuses extern. Geen tijd. Een blessure. Maar zodra je daar doorheen prikt, kom je bij een dieper laagje. Tijd blijkt geen tijdprobleem, maar een prioriteitsprobleem. En dan verschuift het excuus naar binnen.</p>
+      <p>'Zo ben ik nou eenmaal.' 'Het zit in de familie.' Dit zijn interne rackets. Nog moeilijker te herkennen, omdat ze voelen als waarheid over wie je bent, in plaats van een verhaal dat je jezelf vertelt.</p>
+
+      <h3>Hoe je een racket loslaat</h3>
+      <p>Het enige wat nodig is, is bewustwording. Schrijf voor jezelf op welke excuses je gebruikt. Doe dit eerst bij anderen, dat gaat vaak makkelijker. Daarna bij jezelf.</p>
+      <p>Zodra je ziet welk verhaal je jezelf vertelt, hoef je er alleen nog maar geen aandacht meer aan te besteden. Net als het aapje dat de nootjes loslaat en zijn hand terugtrekt uit de kokosnoot.</p>
+      <p>Licht jezelf niet langer op. Laat het verhaal voor wat het is, en doe wat je al wist dat je moest doen.</p>
+    `,
+  },
+  {
     type: "video",
     slug: "omgeving-bepaalt-gedrag",
     title: "Waarom je omgeving je gedrag bepaalt (en hoe je dat om kunt draaien)",
