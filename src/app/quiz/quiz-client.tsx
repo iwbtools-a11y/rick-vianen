@@ -1,7 +1,6 @@
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
-import Link from 'next/link';
 
 declare global {
   interface Window {
@@ -78,40 +77,24 @@ const RESULTS = [
     headline: 'Jij weet wat je wil.',
     sub: 'Maar je mist het systeem om het te realiseren.',
     body: 'Je hebt visie, ambitie en meer dan genoeg energie. Wat ontbreekt is een structuur die die energie omzet in consistente actie. Je begint sterk, maar zonder een helder systeem verslapt het na een paar weken. Het goede nieuws: dit is het meest oplosbare probleem van de vier.',
-    ctaHeadline: 'MOVE geeft je precies dat systeem.',
-    ctaBody: 'In 100 dagen bouw je de structuur die ervoor zorgt dat jouw energie altijd op de juiste plek terechtkomt. Niet harder werken, maar slimmer sturen.',
-    ctaText: 'Ontdek MOVE',
-    ctaHref: '/programma',
   },
   {
     typeLabel: 'De Uitsteller met Potentieel',
     headline: 'Je weet wat de volgende stap is.',
     sub: 'Maar je zet hem niet.',
     body: 'Je hebt de kennis, vaak ook de ervaring. Maar er is iets wat je tegenhoudt: twijfel, drukte, of het gevoel dat de timing niet goed is. Spoiler: de timing wordt nooit perfect. Wat je nodig hebt is iemand die je helpt die stap wél te zetten, en je accountable houdt.',
-    ctaHeadline: 'Start met de 5-daagse challenge.',
-    ctaBody: 'In 5 dagen bewijs je aan jezelf dat je wél in actie kan komen. Geen theorie, maar een concrete eerste stap. €100, verrekenbaar met MOVE.',
-    ctaText: 'Doe mee aan de challenge',
-    ctaHref: '/challenge',
   },
   {
     typeLabel: 'De Overlever',
     headline: 'Je presteert.',
     sub: 'Maar het kost je meer dan het zou moeten.',
     body: 'Je haalt resultaten, maar het gaat gepaard met te veel energie, te weinig rust, en het gevoel dat je altijd aan het rennen bent. Groei voelt niet licht. Dat is geen karakterfout, dat is een signaal dat iets in je aanpak niet klopt.',
-    ctaHeadline: 'Groeien zonder jezelf op te branden.',
-    ctaBody: 'MOVE is gebouwd voor mensen die al presteren maar merken dat het niet duurzaam is. Je leert niet harder werken, maar de juiste dingen doen op het juiste moment.',
-    ctaText: 'Ontdek MOVE',
-    ctaHref: '/programma',
   },
   {
     typeLabel: 'De Zoeker',
     headline: 'Je weet wat je niet wil.',
     sub: 'Maar nog niet precies wat je wel wil.',
     body: 'Je staat op een punt van heroriëntatie. Het oude patroon werkt niet meer, een nieuw patroon is nog niet helder. Dat is geen probleem, dat is het begin van iets beters. Maar je hebt iemand nodig die je helpt die richting scherp te krijgen.',
-    ctaHeadline: 'MOVE begint met precies die vraag.',
-    ctaBody: 'De eerste stap is altijd helderheid. Wat wil jij, en waar wil je naartoe? De 5-daagse challenge is de ideale plek om dat uit te zoeken.',
-    ctaText: 'Start de challenge',
-    ctaHref: '/challenge',
   },
 ];
 
@@ -575,7 +558,7 @@ export function QuizClient() {
                 Waar stuur ik<br />jouw resultaat<br />naartoe?
               </h2>
               <p className="text-[15px] text-white/65 leading-relaxed mb-8">
-                Je uitslag is klaar. Vul je naam en e-mailadres in en ik stuur je het resultaat plus een persoonlijk advies.
+                Je uitslag is klaar. Vul je naam en e-mailadres in en je ontvangt niet alleen je resultaat, maar ook je persoonlijke <strong className="text-white">actieplan</strong>: een gerichte opdracht plus een kort verhaal waarmee je vandaag nog in actie komt.
               </p>
 
               <div className="mb-4">
@@ -621,7 +604,7 @@ export function QuizClient() {
               </button>
 
               <p className="text-xs text-white/30 mt-5 leading-relaxed max-w-sm">
-                Geen spam. Je gegevens worden alleen gebruikt om jou het resultaat en relevante updates van Rick Vianen te sturen. Je kunt je altijd afmelden.
+                Geen spam. Je ontvangt je resultaat, je actieplan en relevante updates van Rick Vianen. Je kunt je altijd afmelden.
               </p>
             </div>
           </section>
@@ -667,6 +650,30 @@ export function QuizClient() {
               <p className="text-lg font-semibold text-primary mb-6">{result.sub}</p>
               <p className="text-base text-on-surface/80 leading-[1.7] mb-9">{result.body}</p>
 
+              {/* Email confirmation */}
+              <div className="flex items-start gap-3 bg-primary/8 border border-primary/15 rounded-xl px-5 py-4 mb-4">
+                <span className="material-symbols-outlined text-primary text-xl shrink-0">mark_email_read</span>
+                <p className="text-[14px] text-on-surface/80 leading-relaxed">
+                  Check je inbox: we hebben je een e-mail gestuurd met dit resultaat én je persoonlijke <strong>actieplan</strong> &mdash; een gerichte opdracht plus een kort verhaal waarmee je vandaag nog in actie komt.
+                </p>
+              </div>
+
+              {/* WhatsApp CTA */}
+              <a
+                href="https://wa.me/31620523549"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex items-center gap-3 bg-[#25D366]/8 border border-[#25D366]/15 rounded-xl px-5 py-4 mb-9 hover:bg-[#25D366]/12 hover:border-[#25D366]/30 transition-colors"
+              >
+                <svg viewBox="0 0 24 24" fill="#25D366" className="w-5 h-5 shrink-0">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                </svg>
+                <p className="text-[14px] text-on-surface/80 leading-relaxed flex-1">
+                  Vragen over je uitslag? <span className="font-bold text-[#1da851] underline underline-offset-2 group-hover:text-[#25D366]">Stuur Rick een appje</span> via WhatsApp.
+                </p>
+                <span className="material-symbols-outlined text-[#25D366] text-xl shrink-0 transition-transform group-hover:translate-x-0.5">arrow_forward</span>
+              </a>
+
               {/* Score bars */}
               <div className="flex flex-col gap-3 mb-10">
                 {finalScores.map((s, i) => {
@@ -692,32 +699,8 @@ export function QuizClient() {
                 })}
               </div>
 
-              <div className="h-px bg-outline-variant/30 my-9" />
-
-              {/* CTA */}
-              <p className="text-xs font-bold uppercase tracking-[0.1em] text-on-surface-variant mb-3">
-                Jouw volgende stap
-              </p>
-              <h3
-                className="font-[family-name:var(--font-headline)] text-on-surface font-black leading-[1.1] mb-4"
-                style={{ fontSize: 'clamp(22px, 5vw, 34px)' }}
-              >
-                {result.ctaHeadline}
-              </h3>
-              <p className="text-[15px] text-on-surface/70 leading-relaxed mb-7">
-                {result.ctaBody}
-              </p>
-
-              <Link
-                href={result.ctaHref}
-                className="btn-primary inline-flex items-center gap-2.5 px-8 py-4 rounded-full font-bold"
-              >
-                {result.ctaText}
-                <span className="material-symbols-outlined text-lg">arrow_forward</span>
-              </Link>
-
               {/* Share */}
-              <div className="mt-8 pt-6 border-t border-outline-variant/30 flex items-center gap-3 flex-wrap">
+              <div className="pt-6 border-t border-outline-variant/30 flex items-center gap-3 flex-wrap">
                 <span className="text-[13px] text-on-surface-variant">Deel jouw type:</span>
                 <a
                   href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(typeof window !== 'undefined' ? window.location.href : 'https://rickvianen.nl/quiz')}`}

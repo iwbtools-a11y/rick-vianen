@@ -16,7 +16,7 @@ export function QuizCTA({ variant }: { variant: "hint" | "card" | "inline" }) {
         >
           quiz
         </span>
-        <span>Welk type ben jij?</span>
+        <span>Ontdekken waar jouw energie weglekt?</span>
         <Link
           href="/quiz"
           className="text-primary font-bold inline-flex items-center gap-1 group link-hover"

@@ -37,8 +37,8 @@ export function Navbar() {
     setBannerVisible(false);
   }
 
-  // /lp/* routes are standalone ad landing pages: no site nav, single conversion path.
-  if (pathname?.startsWith("/lp/")) {
+  // /lp/* and /actieplan* routes are standalone one-pagers: no site nav, single conversion path.
+  if (pathname?.startsWith("/lp/") || pathname?.startsWith("/actieplan")) {
     return null;
   }
 
@@ -101,12 +101,12 @@ export function Navbar() {
         {/* Quiz announcement banner */}
         {showBanner && (
           <div className="bg-on-surface border-t border-white/5 px-4 py-2 flex items-center justify-center gap-3 text-sm relative">
-            <span className="text-white/50 hidden sm:inline">Jouw potentie ontdekken?</span>
+            <span className="text-white/50 hidden sm:inline">Ontdekken waar jouw energie weglekt?</span>
             <Link
               href="/quiz"
               className="text-primary font-bold inline-flex items-center gap-1.5 group"
             >
-              Doe de quiz in 2 minuten
+              Doe de test in 2 minuten
               <span className="material-symbols-outlined text-base transition-transform duration-300 group-hover:translate-x-0.5">
                 arrow_forward
               </span>

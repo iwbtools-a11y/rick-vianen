@@ -8,8 +8,8 @@ import { KlaviyoForm } from "@/components/klaviyo-form";
 export function Footer() {
   const pathname = usePathname();
 
-  // /lp/* routes are standalone ad landing pages: no site footer, single conversion path.
-  if (pathname?.startsWith("/lp/")) {
+  // /lp/* and /actieplan* routes are standalone one-pagers: no site footer, single conversion path.
+  if (pathname?.startsWith("/lp/") || pathname?.startsWith("/actieplan")) {
     return null;
   }
 

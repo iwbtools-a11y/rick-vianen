@@ -1,5 +1,6 @@
 import { MetadataRoute } from "next";
 import { contentItems } from "@/content/content-items";
+import { actieplannen } from "@/content/actieplannen";
 
 export const dynamic = "force-static";
 
@@ -11,6 +12,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/over-rick-vianen`, priority: 0.8, changeFrequency: "monthly" },
     { url: `${BASE_URL}/programma`, priority: 0.9, changeFrequency: "monthly" },
     { url: `${BASE_URL}/programma/ondernemer`, priority: 0.8, changeFrequency: "monthly" },
+    { url: `${BASE_URL}/programma/sport`, priority: 0.8, changeFrequency: "monthly" },
     { url: `${BASE_URL}/prijs`, priority: 0.8, changeFrequency: "monthly" },
     { url: `${BASE_URL}/intake`, priority: 0.7, changeFrequency: "monthly" },
     { url: `${BASE_URL}/challenge`, priority: 0.8, changeFrequency: "monthly" },
@@ -19,6 +21,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/wachtlijst`, priority: 0.6, changeFrequency: "monthly" },
     { url: `${BASE_URL}/content`, priority: 0.8, changeFrequency: "weekly" },
     { url: `${BASE_URL}/quiz`, priority: 0.6, changeFrequency: "monthly" },
+    { url: `${BASE_URL}/actieplan`, priority: 0.7, changeFrequency: "weekly" },
     { url: `${BASE_URL}/herroeping`, priority: 0.2, changeFrequency: "yearly" },
     { url: `${BASE_URL}/privacy`, priority: 0.3, changeFrequency: "yearly" },
   ];
@@ -29,5 +32,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: "monthly",
   }));
 
-  return [...staticPages, ...contentPages];
+  const actieplanPages: MetadataRoute.Sitemap = actieplannen.map((plan) => ({
+    url: `${BASE_URL}/actieplan/${plan.slug}`,
+    priority: 0.6,
+    changeFrequency: "monthly",
+  }));
+
+  return [...staticPages, ...contentPages, ...actieplanPages];
 }
