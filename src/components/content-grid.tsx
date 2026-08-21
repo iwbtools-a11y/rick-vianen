@@ -14,6 +14,7 @@ const typeLabels: Record<ContentType, string> = {
 };
 
 const itemImages: Record<string, string> = {
+  "omgeving-gewoonte-vasthouden": "/images/thumb-omgeving-gewoonte-vasthouden.jpg",
   "jezelf-voorliegen-met-excuses": "/images/thumb-jezelf-voorliegen-met-excuses.jpg",
   "omgeving-bepaalt-gedrag": "/images/thumb-omgeving-bepaalt-gedrag.jpg",
   "onbewuste-overtuigingen": "/images/thumb-onbewuste-overtuigingen.jpg",

@@ -12,6 +12,7 @@ export const metadata: Metadata = {
 };
 
 const itemImages: Record<string, string> = {
+  "omgeving-gewoonte-vasthouden": "/images/thumb-omgeving-gewoonte-vasthouden.jpg",
   "jezelf-voorliegen-met-excuses": "/images/thumb-jezelf-voorliegen-met-excuses.jpg",
   "omgeving-bepaalt-gedrag": "/images/thumb-omgeving-bepaalt-gedrag.jpg",
   "onbewuste-overtuigingen": "/images/thumb-onbewuste-overtuigingen.jpg",
@@ -59,13 +60,8 @@ export default function ContentPage() {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
           <div className="md:col-span-7 relative">
             <Link href={`/content/${featured.slug}`} className="block">
-              <div
-                className={`rounded-xl bg-surface-container relative overflow-hidden ${
-                  featured.videoUrl
-                    ? "aspect-video"
-                    : "h-[400px] md:h-[600px]"
-                }`}
-              >
+              <div className="rounded-xl bg-surface-container relative overflow-hidden aspect-video">
+
                 <Image
                   src={itemImages[featured.slug] || "/images/rick-hero.png"}
                   alt={featured.title}

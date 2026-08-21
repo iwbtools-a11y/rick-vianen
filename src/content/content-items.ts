@@ -15,6 +15,38 @@ export type ContentItem = {
 export const contentItems: ContentItem[] = [
   {
     type: "blog",
+    slug: "omgeving-gewoonte-vasthouden",
+    title: "Zo gebruik je je omgeving om een gewoonte vast te houden",
+    date: "21 augustus 2026",
+    category: "Implementatie",
+    excerpt:
+      "Je koopt fruit bij de groenteboer met de beste intenties, legt het in de koelkast, en aan het einde van de dag denk je: shit, weer vergeten. Dat is geen wilskrachtprobleem. Het is een omgevingsprobleem.",
+    videoUrl: "https://www.youtube.com/embed/7r48ll2DvqM",
+    content: `
+      <p>Je koopt fruit bij de groenteboer met de beste intenties. Appels, bananen, mango. Je legt het in de koelkast. En aan het einde van de dag denk je: shit, weer vergeten.</p>
+
+      <p>Dat is geen wilskrachtprobleem. Het is een omgevingsprobleem.</p>
+
+      <h3>Elf miljoen receptoren</h3>
+      <p>Je lichaam heeft ongeveer elf miljoen receptoren verspreid over je zintuigen: zien, voelen, ruiken, proeven en horen. Tien miljoen daarvan zijn er alleen voor je zicht. Onderzoekers schatten dat ruim de helft van je gedrag daardoor wordt beïnvloed, nog voordat je er bewust over nadenkt.</p>
+      <p>Dat betekent dat wat je ziet, grotendeels bepaalt wat je doet.</p>
+
+      <h3>De fruitschaaltruc</h3>
+      <p>Wanneer je die fruitmand in de koelkast legt, loop je er nooit langs. Je hebt werk, klanten, misschien kinderen, en aan het eind van de dag ben je het vergeten.</p>
+      <p>Zet diezelfde schaal op je bureau of op het aanrecht waar je elke keer langsloopt, en het verandert. Elke keer dat je er langskomt, denk je: hé, ik zal wat fruit eten. Geen discipline nodig. Gewoon zichtbaarheid.</p>
+      <p>Dezelfde truc werkt voor elke gewoonte die je wilt aanleren. Ik wilde meer gaan sporten, maar het schoot er steeds bij in. Dus zette ik mijn golftas gewoon midden in de kamer. Elke keer dat ik hem zie, herinner ik mezelf eraan.</p>
+
+      <h3>De andere kant: een tegenwerkende omgeving</h3>
+      <p>Hetzelfde principe werkt averechts. Je telefoon binnen handbereik is een constante trigger om hem op te pakken. En elke melding die afgaat terwijl je werkt, kost je gemiddeld 23 minuten om weer terug te komen in dezelfde focus.</p>
+      <p>Als je wilt dat iets minder gebeurt, haal je het uit het zicht. Niet uit discipline, maar omdat je omgeving dan ophoudt je eraan te herinneren.</p>
+
+      <h3>Elke ruimte, een functie</h3>
+      <p>Hetzelfde geldt voor de ruimtes om je heen. Op kantoor werk je, in de slaapkamer slaap je. Geef elke ruimte een functie, en je gedrag volgt vanzelf de omgeving waarin je je bevindt.</p>
+      <p>Richt je omgeving in op wat je wilt bereiken, zakelijk of qua gezondheid, en maak het zichtbaar. Je zult verbaasd zijn hoe makkelijk een gewoonte aan of af te leren is zodra je omgeving voor je werkt in plaats van tegen je.</p>
+    `,
+  },
+  {
+    type: "blog",
     slug: "jezelf-voorliegen-met-excuses",
     title: "Waarom je jezelf voorliegt met excuses (en hoe je dat doorbreekt)",
     date: "16 augustus 2026",
