@@ -15,6 +15,36 @@ export type ContentItem = {
 export const contentItems: ContentItem[] = [
   {
     type: "blog",
+    slug: "nooit-afhankelijk-van-motivatie",
+    title: "Waarom je nooit afhankelijk moet zijn van motivatie",
+    date: "28 augustus 2026",
+    category: "Mindset",
+    excerpt:
+      "Ik heb voor meerdere IRONMANS getraind. Het hoogtepunt was Kopenhagen, onder de 10 uur. Negen tot tien trainingen per week. En ik kan op één hand tellen hoe vaak ik daadwerkelijk gemotiveerd was om te trainen.",
+    videoUrl: "https://www.youtube.com/embed/fANSEMrS8pY",
+    content: `
+      <p>Ik heb voor meerdere IRONMANS getraind. Het hoogtepunt was Kopenhagen, onder de 10 uur. Negen tot tien trainingen per week. En ik kan op één hand tellen hoe vaak ik daadwerkelijk gemotiveerd was om te trainen.</p>
+
+      <p>Daar zit precies de les. Motivatie is een van de gevaarlijkste dingen om afhankelijk van te zijn.</p>
+
+      <h3>Waarom motivatie je verraadt</h3>
+      <p>Juist op de momenten dat je motivatie het hardst nodig hebt, is die weg. Ik spreek met mezelf af: ik sta om 6 uur op en ik ga een uur hardlopen. De wekker gaat, en van motivatie is geen spoor te bekennen. Het bed ligt lekker, ik ben de enige die het merkt.</p>
+      <p>Als ik afhankelijk was van motivatie, bleef ik liggen. Maar omdat ik dat niet ben, sta ik op. Schoenen aan, deur uit, de ene voet voor de andere. En dan loop ik. Ook zonder motivatie.</p>
+
+      <h3>Zelfvertrouwen is net zo gevaarlijk</h3>
+      <p>Hetzelfde geldt voor zelfvertrouwen. Denk aan die keer dat je iemand wilde aanspreken in een kroeg. Precies op dat moment is je zelfvertrouwen weg. Je kunt kiezen om het niet te doen, of om het toch te doen, met kans op een nee.</p>
+      <p>Als je afhankelijk bent van zelfvertrouwen en je krijgt een paar keer nee, in sales, in business of in relaties, dan stop je. En dan bereik je nooit wat je wilde bereiken. Terwijl je ook zonder zelfvertrouwen die stap kunt zetten.</p>
+
+      <h3>Positieve gedachten en hoop</h3>
+      <p>Positief denken heeft zijn plek, maar positieve gedachten verdwijnen vaak precies wanneer je ze nodig hebt. En hoop legt de uitkomst buiten jezelf: ik hoop dat het lukt. De kracht zit juist in het doen. Zeg wat je gaat doen en doe het. Meer is het niet.</p>
+
+      <h3>De motivatie komt pas na de actie</h3>
+      <p>Terug naar dat hardlopen. Geen zin, geen motivatie, toch de deur uit. En na vijf minuten komt de gedachte: lekker bezig, iedereen slaapt nog. Na een half uur voel je je onoverwinnelijk. Na een uur ben je trots.</p>
+      <p>En wat komt er dan terug? De motivatie. Die komt pas nadat je in actie bent gekomen, niet ervoor. Dus wacht er niet op. Kies je doel, zet je acties neer, en doe het gewoon.</p>
+    `,
+  },
+  {
+    type: "blog",
     slug: "omgeving-gewoonte-vasthouden",
     title: "Zo gebruik je je omgeving om een gewoonte vast te houden",
     date: "21 augustus 2026",
