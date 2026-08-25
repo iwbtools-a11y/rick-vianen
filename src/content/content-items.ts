@@ -15,6 +15,67 @@ export type ContentItem = {
 export const contentItems: ContentItem[] = [
   {
     type: "blog",
+    slug: "verandering-begint-bij-identiteit",
+    title: "Waarom blijvende verandering begint bij je identiteit",
+    date: "4 september 2026",
+    category: "Mindset",
+    excerpt:
+      "Vijf jaar geleden kwam ik overal een kwartier te laat. Niet af en toe. Altijd. En als iemand er iets over zei, had ik mijn antwoord klaar: ik ben gewoon iemand die chaotisch is. Dat klonk als een feit. Het was geen feit.",
+    videoUrl: "https://www.youtube.com/embed/QXPrsPspOKw",
+    content: `
+      <p>Vijf jaar geleden kwam ik overal een kwartier te laat.</p>
+
+      <p>Niet af en toe. Altijd. Afspraken, etentjes, vergaderingen. En als iemand er iets over zei, had ik mijn antwoord klaar: ik ben gewoon iemand die chaotisch is.</p>
+
+      <p>Dat klonk als een feit. Het voelde als een feit. Het was geen feit.</p>
+
+      <h3>Je hebt geen discipline nodig, je hebt een ander zelfbeeld nodig</h3>
+      <p>Ik heb jaren geprobeerd om mijn gedrag te veranderen zonder mijn zelfbeeld aan te raken. Ik maakte plannen. Goede plannen. Ik ging vroeger opstaan, ik ging sporten, ik ging mijn week structureren.</p>
+      <p>En het werkte. Twee weken.</p>
+      <p>Dan zakte het in. Elke keer opnieuw. En elke keer trok ik dezelfde conclusie: zie je wel, ik ben gewoon niet zo iemand.</p>
+      <p>Wat ik toen niet zag: ik vroeg van mezelf gedrag dat niet paste bij wie ik dacht te zijn. Als jij van jezelf vindt dat je chaotisch bent, dan is elke gestructureerde dag een uitzondering. En uitzonderingen houden nooit lang stand. Je gedrag zakt altijd terug naar het niveau van je identiteit.</p>
+      <p>Daarom werkt discipline op de korte termijn en identiteit op de lange termijn.</p>
+
+      <h3>Die identiteit heb je zelf gebouwd, alleen niet bewust</h3>
+      <p>Hier zit het punt dat de meeste mensen liever overslaan.</p>
+      <p>&ldquo;Ik ben nou eenmaal zo&rdquo; voelt als iets wat je is overkomen. Alsof het meegeleverd werd bij je geboorte. Maar niemand heeft je dat gegeven. Je hebt het opgebouwd, jarenlang, met duizenden kleine keuzes die je nooit als keuze hebt gezien.</p>
+      <p>Elke keer dat je te laat kwam en er een grapje over maakte, bouwde je eraan. Elke keer dat je een training oversloeg en zei dat je gewoon geen sporttype bent, bouwde je eraan.</p>
+      <p>Dat is drift. Niet slecht, niet lui, gewoon onbewust. Je bent iemand geworden zonder ooit te kiezen wie je wilde zijn.</p>
+      <p>En dat is precies waarom het te veranderen is. Wat jij hebt gebouwd, kun jij ook opnieuw bouwen. Alleen deze keer bewust.</p>
+
+      <h3>Wat er gebeurde toen ik mijn eigen verhaal ging halen</h3>
+      <p>Toen ik me inschreef voor de IRONMAN 70.3 kwam ik voor het eerst in een situatie waarin &ldquo;ik ben nou eenmaal chaotisch&rdquo; me letterlijk niet ging helpen. Ik kon me niet naar de finish praten. Ik moest trainen.</p>
+      <p>En daar veranderde iets. Niet mijn discipline. Mijn zelfbeeld.</p>
+      <p>Ik werd iemand die niet chaotisch is, maar gestructureerd. Iemand die niet altijd het feestje afmaakt, maar iemand die geen training mist. Niet omdat ik ineens harder ging vechten, maar omdat het gedrag paste bij wie ik was geworden. Structuur werd geen inspanning meer. Het werd wie ik ben.</p>
+      <p>Dat is het verschil tussen willen en kiezen. Willen is hopen dat je vanzelf een ander mens wordt. Kiezen is besluiten wie je bent en daar vervolgens naar handelen, ook op de dag dat het niet uitkomt.</p>
+
+      <h3>De vraag die je omgeving voor je beantwoordt</h3>
+      <p>Een paar jaar geleden zat ik bij de dokter. Ik voelde me niet goed, ik was moe, ik dacht dat er iets mis was. Hij keek naar mijn cijfers en zei dat ik er goed uitzag voor mijn leeftijd.</p>
+      <p>Goed voor mijn leeftijd.</p>
+      <p>Dat was het moment dat het bij me binnenkwam. We hebben een norm gebouwd waarin een lijf dat langzaam achteruit gaat gewoon normaal is. Waarin moe zijn hoort bij veertig. Waarin je het als een medaille draagt dat je hard werkt en er slecht van slaapt.</p>
+      <p>Een fit lijf is geen luxe. Het is een vereiste. En zolang je jezelf vergelijkt met de mensen om je heen, kom je nooit in de buurt van wat er mogelijk is. Je omgeving houdt je niet tegen omdat ze slecht voor je zijn. Ze houden je tegen omdat ze jouw huidige identiteit bevestigen.</p>
+
+      <h3>Waarom je het beste vriendje van de wereld bent voor jezelf</h3>
+      <p>Jij bent de enige die precies weet welk excuus bij jou werkt.</p>
+      <p>Je weet exact wanneer je moet zeggen dat je te druk bent. Wanneer je moet zeggen dat je morgen begint. Wanneer je moet zeggen dat het deze week gewoon niet uitkomt. En jij bent de enige die er altijd in trapt.</p>
+      <p>Je bent het beste vriendje van de wereld voor jezelf. Je geeft jezelf altijd het voordeel van de twijfel, ook als je het niet verdient.</p>
+      <p>Dat stopt niet doordat je harder je best doet. Dat stopt op het moment dat je het uitspreekt tegen iemand anders. Daarom is accountability geen extraatje. Zolang jij de enige rechter bent, verlies je altijd.</p>
+
+      <h3>Wat je vandaag kunt doen</h3>
+      <p>Pak een leeg blad en schrijf op welke overtuigingen je over jezelf hebt. Alles wat begint met &ldquo;ik ben iemand die&rdquo; of &ldquo;ik ben nou eenmaal&rdquo;.</p>
+      <p>Zet er niets bij. Schrijf ze alleen op.</p>
+      <p>Kijk dan naar die lijst en stel per regel één vraag: is dit waar, of heb ik dit gebouwd?</p>
+      <p>Je zult zien dat het grootste deel niet waar is. Het is gedrag dat je zo vaak hebt herhaald dat het op een waarheid begon te lijken. En dat betekent dat je het kunt omzetten. Streep de overtuiging door, schrijf op wie je in plaats daarvan wilt zijn, en handel er vanaf morgen naar.</p>
+      <p>Niet als een plan van twee weken. Als een besluit over wie je bent.</p>
+      <p>Je weet het al. Je doet het alleen nog niet.</p>
+
+      <h3>Ontdek waar jij op vastloopt</h3>
+      <p>De meeste mensen weten precies wat ze zouden moeten doen. Ze komen niet in beweging omdat er iets onder zit: een overtuiging, een omgeving of een gebrek aan accountability.</p>
+      <p>Wil je weten wat dat bij jou is? Doe de <a href="/quiz">test van 2 minuten</a>. Je uitslag komt direct in je mail.</p>
+    `,
+  },
+  {
+    type: "blog",
     slug: "omgeving-gewoonte-vasthouden",
     title: "Zo gebruik je je omgeving om een gewoonte vast te houden",
     date: "21 augustus 2026",
