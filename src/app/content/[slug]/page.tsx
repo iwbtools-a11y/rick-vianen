@@ -7,6 +7,7 @@ import { QuizCTA } from "@/components/quiz-cta";
 import { KlaviyoForm } from "@/components/klaviyo-form";
 
 const itemImages: Record<string, string> = {
+  "gezondheid-geen-luxe": "/images/thumb-gezondheid-geen-luxe.jpg",
   "omgeving-gewoonte-vasthouden": "/images/thumb-omgeving-gewoonte-vasthouden.jpg",
   "jezelf-voorliegen-met-excuses": "/images/thumb-jezelf-voorliegen-met-excuses.jpg",
   "omgeving-bepaalt-gedrag": "/images/thumb-omgeving-bepaalt-gedrag.jpg",
