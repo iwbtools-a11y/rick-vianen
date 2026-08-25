@@ -15,6 +15,50 @@ export type ContentItem = {
 export const contentItems: ContentItem[] = [
   {
     type: "blog",
+    slug: "gezondheid-geen-luxe",
+    title: "Waarom gezondheid geen luxe is, maar een vereiste",
+    date: "11 september 2026",
+    category: "Mindset",
+    excerpt:
+      "Eerst het bedrijf op de rit, dan mijn gezondheid. Ik hoor het bijna elke week, en meestal van iemand die het goed doet. Die volgorde is precies verkeerd om. En dat is geen mening van mij, daar is inmiddels data voor.",
+    videoUrl: "https://www.youtube.com/embed/j8dITz8gGdQ",
+    content: `
+      <p>Eerst het bedrijf op de rit, dan mijn gezondheid. Ik hoor het bijna elke week, en meestal van iemand die het goed doet. Omzet loopt, team staat, agenda vol. Sporten komt straks, als het rustiger is.</p>
+
+      <p>Die volgorde is precies verkeerd om. En dat is geen mening van mij, daar is inmiddels data voor. Gezondheid geen luxe noemen is geen slogan: het is wat de cijfers laten zien.</p>
+
+      <h3>Studie 1: bijna elfduizend mensen en hun hersenfuncties</h3>
+      <p>In 2025 publiceerde Nature Scientific Reports een onderzoek onder 10.923 mensen. Ze keken naar fysieke inspanning in relatie tot hersenfuncties. Twee uitkomsten kwamen er bovenuit.</p>
+      <p>De eerste is emotieregulatie. Dat is niets anders dan omgaan met negatieve emoties zonder te breken. Woede, angst, frustratie. Die emoties kunnen je laten stoppen, en ze kunnen je verder van je doel af halen. Mensen die week in week uit fysieke inspanning leveren, zijn daar simpelweg beter in.</p>
+      <p>De tweede is zelfeffectiviteit. Het vertrouwen in je eigen persoonlijkheid dat je moeilijke dingen aankan. Dat je door kan gaan als het zwaar wordt. Fysieke inspanning levert je dat bewijs, direct. Als ik dit aankan, dan kan ik die situatie op werk ook aan.</p>
+      <p>Daar zit het mechanisme. Je lijf is de plek waar je jezelf laat zien dat je iets aankan, en dat vertrouwen neem je mee naar alles daarbuiten.</p>
+
+      <h3>Studie 2: één variabele, twaalf weken</h3>
+      <p>De tweede studie is kleiner en juist daarom scherp. Negenveertig mensen, een interventiestudie. Alle variabelen gelijk gehouden, op één na: drie keer per week sporten, twaalf weken lang.</p>
+      <p>Bij de groep die dat deed, bleek de cortisolreactie fors lager. Cortisol is je stresshormoon. Een lagere reactie betekent dat je minder hard aanspringt op wat er gebeurt.</p>
+      <p>Want dingen gebeuren. Iemand komt boos naar je toe. Er rijdt iemand tegen je auto. Een klant zegt nee. Je loopt een blessure op. Daar heb je geen invloed op. Hoe je ermee omgaat, daar ligt je kracht.</p>
+
+      <h3>Wat dat oplevert in je werk</h3>
+      <p>Besluitvorming. Zodra je je emoties beter kunt reguleren, neem je besluiten uit kracht in plaats van uit emotie.</p>
+      <p>Focus vasthouden. Mensen die fit zijn, houden hun aandacht aanzienlijk langer bij één ding. Niet iets meer, aanzienlijk langer.</p>
+      <p>Werkgeheugen. Wat je onthoudt en wat je laat vallen tijdens een werkdag. Ook daar zie je hetzelfde verband.</p>
+      <p>Dealen met omstandigheden. Misschien wel de belangrijkste. Niet wat er gebeurt, maar wat het met je doet.</p>
+
+      <h3>Wat dat oplevert thuis</h3>
+      <p>Meer geduld. Aanwezig blijven aan tafel, in plaats van met je gedachten nog in het gesprek van vier uur. En niet afreageren op je kinderen of je partner voor iets wat op je werk gebeurde.</p>
+      <p>Dat laatste is confronterend, want vrijwel iedereen doet het. Het is zelden de ander. Het is bijna altijd hoeveel je op dat moment nog kon dragen.</p>
+
+      <h3>Daarom noem ik het een vereiste</h3>
+      <p>Emotieregulatie, zelfeffectiviteit en je cortisolreactie zijn geen vage begrippen. Het zijn drie functies die je traint. Drie keer per week, twaalf weken. Dat is de investering.</p>
+      <p>Een fit lijf is geen luxe, maar een vereiste. Niet voor een mooier lichaam, maar voor een leven waarin je je eigen beslissingen neemt in plaats van erop reageert.</p>
+      <p>En je weet dit al. Je doet het alleen niet. Dat is geen kwestie van discipline, maar van implementatie. Gezondheid is geen luxe, het is de basis waarop de rest staat.</p>
+
+      <h3>Ontdek waar jij op vastloopt</h3>
+      <p>Wil je weten waar jij op vastloopt? Doe de <a href="/quiz">test van 2 minuten</a>. Je uitslag komt direct in je mail.</p>
+    `,
+  },
+  {
+    type: "blog",
     slug: "omgeving-gewoonte-vasthouden",
     title: "Zo gebruik je je omgeving om een gewoonte vast te houden",
     date: "21 augustus 2026",
