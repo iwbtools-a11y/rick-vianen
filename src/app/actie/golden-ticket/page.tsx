@@ -182,6 +182,7 @@ export default function GoldenTicketPage() {
                   "Aanwezig bij de live Q&A's, de groep rekent op jou",
                   "100 dagen volhouden, geen tussentijds opzeggen",
                   "De volledige investering vooraf, dat is bewust",
+                  "Een videotestimonial en uitgebreide feedback na afloop van het traject",
                 ].map((text, i) => (
                   <li key={i} className="flex items-start gap-3">
                     <span
