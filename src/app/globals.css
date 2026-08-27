@@ -126,6 +126,13 @@ body {
 .gradient-cta {
   background: linear-gradient(135deg, #fee2da 0%, #ffdbcf 50%, #fff1ed 100%);
 }
+.gradient-golden-ticket {
+  background: linear-gradient(135deg, #241611 0%, #4a3527 45%, #8a6a3d 78%, #d4b26a 100%);
+  background-color: #4a3527;
+}
+.gradient-gold-stub {
+  background: linear-gradient(165deg, #e8c98a 0%, #c9a227 100%);
+}
 
 /* ─── Avatar / testimonial photos ─── */
 .avatar {

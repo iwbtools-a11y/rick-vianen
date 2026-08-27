@@ -9,7 +9,16 @@ function generateEventId() {
   return `${Date.now()}-${Math.random().toString(36).slice(2, 9)}`;
 }
 
-export function sendCapiEvent(eventName: string, fbclid?: string) {
+type CapiCustomData = {
+  value?: number;
+  currency?: string;
+  content_name?: string;
+  content_ids?: string[];
+  content_type?: string;
+  num_items?: number;
+};
+
+export function sendCapiEvent(eventName: string, fbclid?: string, customData?: CapiCustomData) {
   return fetch('/.netlify/functions/capi', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
@@ -20,6 +29,7 @@ export function sendCapiEvent(eventName: string, fbclid?: string) {
       userAgent: navigator.userAgent,
       sourceUrl: window.location.href,
       eventId: generateEventId(),
+      customData,
     }),
   });
 }

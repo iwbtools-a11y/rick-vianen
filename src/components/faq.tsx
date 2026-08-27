@@ -4,7 +4,7 @@ import { useState } from "react";
 
 type FaqItem = {
   question: string;
-  answer: string;
+  answer: React.ReactNode;
 };
 
 export function Faq({ items }: { items: FaqItem[] }) {

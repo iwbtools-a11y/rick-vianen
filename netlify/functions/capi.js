@@ -10,7 +10,7 @@ exports.handler = async (event) => {
     return { statusCode: 500, body: JSON.stringify({ error: 'Missing config' }) };
   }
 
-  const { eventName, fbclid, userAgent, sourceUrl, eventId, fbp } = JSON.parse(event.body || '{}');
+  const { eventName, fbclid, userAgent, sourceUrl, eventId, fbp, customData } = JSON.parse(event.body || '{}');
 
   const ip =
     event.headers['x-forwarded-for']?.split(',')[0].trim() ??
@@ -32,6 +32,7 @@ exports.handler = async (event) => {
         action_source: 'website',
         event_id: eventId,
         user_data: userData,
+        ...(customData ? { custom_data: customData } : {}),
       },
     ],
   };

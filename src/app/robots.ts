@@ -7,7 +7,7 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: "*",
       allow: "/",
-      disallow: ["/bedankt", "/intake/bedankt", "/challenge/bedankt"],
+      disallow: ["/bedankt", "/intake/bedankt", "/challenge/bedankt", "/actie/golden-ticket/bedankt"],
     },
     sitemap: "https://rickvianen.nl/sitemap.xml",
   };

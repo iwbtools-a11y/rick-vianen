@@ -20,6 +20,12 @@
   status = 301
   force = true
 
+[[redirects]]
+  from = "/actie/gratis-move-traject"
+  to = "/actie/golden-ticket"
+  status = 301
+  force = true
+
 [functions]
   directory = "netlify/functions"
 
