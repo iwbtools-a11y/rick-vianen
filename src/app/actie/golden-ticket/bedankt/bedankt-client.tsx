@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
 import { useCookiebotConsent } from '@/lib/cookiebot';
@@ -9,8 +9,16 @@ import { sendCapiEvent } from '@/lib/meta-capi';
 export function GoldenTicketBedanktClient() {
   const searchParams = useSearchParams();
   const hasMarketingConsent = useCookiebotConsent('marketing');
+  const hasPushedDataLayer = useRef(false);
+  const hasSentCapiEvent = useRef(false);
 
+  // Los van consent: de GA4 purchase-push mag maar één keer, ongeacht hoe
+  // vaak dit effect opnieuw draait (bijvoorbeeld zodra Cookiebot de
+  // consent-status ophaalt).
   useEffect(() => {
+    if (hasPushedDataLayer.current) return;
+    hasPushedDataLayer.current = true;
+
     const p = searchParams;
     const value = parseFloat(p.get('order_value') ?? '375');
     const currency = p.get('currency') ?? 'EUR';
@@ -35,8 +43,20 @@ export function GoldenTicketBedanktClient() {
         }],
       },
     });
+  }, [searchParams]);
 
-    if (!hasMarketingConsent) return;
+  // Los effect voor Meta: moet wachten op marketing-consent, en mag daarna
+  // ook maar één keer vuren.
+  useEffect(() => {
+    if (!hasMarketingConsent || hasSentCapiEvent.current) return;
+    hasSentCapiEvent.current = true;
+
+    const p = searchParams;
+    const value = parseFloat(p.get('order_value') ?? '375');
+    const currency = p.get('currency') ?? 'EUR';
+    const productName = p.get('product_name') ?? 'MOVE Golden Ticket';
+    const sku = p.get('sku') ?? undefined;
+
     sendCapiEvent('Purchase', p.get('fbclid') ?? undefined, {
       value,
       currency,
