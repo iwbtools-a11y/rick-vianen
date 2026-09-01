@@ -15,7 +15,7 @@ export type ContentItem = {
 export const contentItems: ContentItem[] = [
   {
     type: "blog",
-    slug: "nooit-afhankelijk-van-motivatie",
+    slug: "motivatie-gevaarlijke-valkuil",
     title: "Waarom je nooit afhankelijk moet zijn van motivatie",
     date: "28 augustus 2026",
     category: "Mindset",

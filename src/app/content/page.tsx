@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 };
 
 const itemImages: Record<string, string> = {
-  "nooit-afhankelijk-van-motivatie": "/images/thumb-nooit-afhankelijk-van-motivatie.jpg",
+  "motivatie-gevaarlijke-valkuil": "/images/thumb-motivatie-gevaarlijke-valkuil.jpg",
   "omgeving-gewoonte-vasthouden": "/images/thumb-omgeving-gewoonte-vasthouden.jpg",
   "jezelf-voorliegen-met-excuses": "/images/thumb-jezelf-voorliegen-met-excuses.jpg",
   "omgeving-bepaalt-gedrag": "/images/thumb-omgeving-bepaalt-gedrag.jpg",
