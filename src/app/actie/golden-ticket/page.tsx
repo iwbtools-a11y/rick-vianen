@@ -98,9 +98,13 @@ export default function GoldenTicketPage() {
             {`Slechts ${GOLDEN_TICKET_TOTAL} tickets · eenmalig`}
           </span>
 
+          <h1 className="font-[family-name:var(--font-headline)] text-4xl md:text-6xl font-black tracking-tight leading-tight text-on-surface mb-6">
+            Is dit het nou? Haal ik nou echt alles uit het leven?
+          </h1>
+
           <div className="text-on-surface-variant text-base md:text-lg max-w-2xl mx-auto leading-relaxed mb-8 space-y-4">
             <p>
-              Is dit het nou? Haal ik nou echt alles uit het leven? Logische vragen, maar o zo onnodig. Zijn dit vragen die jij jezelf stelt? Dan weet ik zeker dat jij deze investering er dubbel en dwars uit haalt. MOVE biedt jou namelijk het systeem om deze vragen om te buigen naar een vanzelfsprekendheid.
+              Logische vragen, maar o zo onnodig. Zijn dit vragen die jij jezelf stelt? Dan weet ik zeker dat jij deze investering er dubbel en dwars uit haalt. MOVE biedt jou namelijk het systeem om deze vragen om te buigen naar een vanzelfsprekendheid.
             </p>
             <p>
               {`100 dagen. ${GOLDEN_TICKET_TOTAL} ambitieuze mensen. Je doorbreekt patronen die je al jaren tegenhielden en maakt een groei door die je nooit voor mogelijk had gehouden.`}
