@@ -1,11 +1,11 @@
 'use client';
 
 import { GoldenTicketVisual } from '@/components/golden-ticket-visual';
-import { GOLDEN_TICKET_DEADLINE_LABEL } from '@/lib/golden-ticket';
-import { useGoldenTicketExclusivePhase } from '@/lib/use-golden-ticket-exclusive-phase';
+import { GOLDEN_TICKET_DEADLINE_LABEL, GOLDEN_TICKET_PUBLIC_DEADLINE_LABEL } from '@/lib/golden-ticket';
+import { useGoldenTicketPhase } from '@/lib/use-golden-ticket-phase';
 
 export function GoldenTicketOffer() {
-  const isExclusivePhase = useGoldenTicketExclusivePhase();
+  const phase = useGoldenTicketPhase();
 
   return (
     <div>
@@ -20,9 +20,11 @@ export function GoldenTicketOffer() {
           <span className="material-symbols-outlined text-lg">arrow_forward</span>
         </a>
         <p className="text-sm text-on-surface-variant/70 mt-4">
-          {isExclusivePhase
+          {phase === 'exclusive'
             ? `Exclusieve toegang tot en met ${GOLDEN_TICKET_DEADLINE_LABEL} · Rick neemt persoonlijk contact met je op`
-            : 'Rick neemt persoonlijk contact met je op'}
+            : phase === 'closing'
+              ? `Aanmelden kan tot en met ${GOLDEN_TICKET_PUBLIC_DEADLINE_LABEL} · Rick neemt persoonlijk contact met je op`
+              : 'Rick neemt persoonlijk contact met je op'}
         </p>
       </div>
     </div>

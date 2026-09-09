@@ -1,10 +1,11 @@
 'use client';
 
 import { useSyncExternalStore } from 'react';
-import { GOLDEN_TICKET_DEADLINE_ISO } from '@/lib/golden-ticket';
+import { GOLDEN_TICKET_DEADLINE_ISO, GOLDEN_TICKET_PUBLIC_DEADLINE_ISO } from '@/lib/golden-ticket';
 
 type TimeLeft = {
   expired: boolean;
+  label: string;
   days: number;
   hours: number;
   minutes: number;
@@ -12,10 +13,21 @@ type TimeLeft = {
 };
 
 function getTimeLeft(): TimeLeft {
-  const diff = new Date(GOLDEN_TICKET_DEADLINE_ISO).getTime() - Date.now();
+  const now = Date.now();
+  const exclusiveDeadline = new Date(GOLDEN_TICKET_DEADLINE_ISO).getTime();
+  const publicDeadline = new Date(GOLDEN_TICKET_PUBLIC_DEADLINE_ISO).getTime();
+
+  // Vóór de exclusieve deadline telt de klok daarnaartoe af, daarna
+  // schakelt hij automatisch door naar de publieke deadline.
+  const isExclusivePhase = now < exclusiveDeadline;
+  const target = isExclusivePhase ? exclusiveDeadline : publicDeadline;
+  const label = isExclusivePhase ? 'Exclusieve toegang sluit over' : 'Aanmelden sluit over';
+
+  const diff = target - now;
   const clamped = Math.max(0, diff);
   return {
-    expired: diff <= 0,
+    expired: now >= publicDeadline,
+    label,
     days: Math.floor(clamped / (1000 * 60 * 60 * 24)),
     hours: Math.floor((clamped / (1000 * 60 * 60)) % 24),
     minutes: Math.floor((clamped / (1000 * 60)) % 60),
@@ -51,8 +63,8 @@ function getServerSnapshot(): TimeLeft | null {
 export function GoldenTicketCountdown() {
   const time = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
 
-  // Ook na de deadline: laat 'm dan gewoon helemaal weg, in plaats van een
-  // "gesloten"-melding die daarna voor altijd blijft staan.
+  // Ook na de publieke deadline: laat 'm dan gewoon helemaal weg, in plaats
+  // van een "gesloten"-melding die daarna voor altijd blijft staan.
   if (!time || time.expired) return null;
 
   const units = [
@@ -65,7 +77,7 @@ export function GoldenTicketCountdown() {
   return (
     <div className="inline-flex flex-col items-center gap-3 gradient-dark rounded-2xl px-6 py-5 md:px-10 md:py-6">
       <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-primary">
-        Exclusieve toegang sluit over
+        {time.label}
       </p>
       <div className="flex items-center gap-2.5 md:gap-4">
         {units.map((u, i) => (

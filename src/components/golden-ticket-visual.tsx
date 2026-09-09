@@ -1,6 +1,22 @@
-import { GOLDEN_TICKET_ORIGINAL_PRICE, GOLDEN_TICKET_PRICE, GOLDEN_TICKET_TOTAL } from '@/lib/golden-ticket';
+'use client';
+
+import {
+  GOLDEN_TICKET_KICKOFF_SHORT_LABEL,
+  GOLDEN_TICKET_ORIGINAL_PRICE,
+  GOLDEN_TICKET_PRICE,
+  GOLDEN_TICKET_PUBLIC_PRICE,
+  GOLDEN_TICKET_TOTAL,
+} from '@/lib/golden-ticket';
+import { useGoldenTicketPhase } from '@/lib/use-golden-ticket-phase';
 
 export function GoldenTicketVisual() {
+  const phase = useGoldenTicketPhase();
+  // Vóór hydratie (phase === null) tonen we de exclusieve prijs, dezelfde
+  // aanname die de rest van de pagina ook aanhoudt.
+  const isPublicPhase = phase === 'closing' || phase === 'closed';
+  const strikePrice = isPublicPhase ? GOLDEN_TICKET_PRICE : GOLDEN_TICKET_ORIGINAL_PRICE;
+  const activePrice = isPublicPhase ? GOLDEN_TICKET_PUBLIC_PRICE : GOLDEN_TICKET_PRICE;
+
   // Ponsgaatjes als echte uitsparing in het ticket (CSS mask), niet een
   // kleur die moet matchen met wat erachter staat. Werkt op elke
   // achtergrond, en levert bij een PNG-export ook echte transparantie op.
@@ -33,13 +49,16 @@ export function GoldenTicketVisual() {
             Golden Ticket
           </h2>
           <div className="flex items-baseline gap-3">
-            <span className="text-white/40 line-through text-base">{GOLDEN_TICKET_ORIGINAL_PRICE}</span>
+            <span className="text-white/40 line-through text-base">{strikePrice}</span>
             <span className="font-[family-name:var(--font-headline)] text-4xl font-black text-[#f0d9a8]">
-              {GOLDEN_TICKET_PRICE}
+              {activePrice}
             </span>
           </div>
           <p className="text-[11px] text-white/45 mt-1.5 uppercase tracking-wide font-medium">
             Eenmalig &middot; incl. btw
+          </p>
+          <p className="text-[11px] text-[#e8c98a] mt-2 uppercase tracking-wide font-bold">
+            {`Kick-off ${GOLDEN_TICKET_KICKOFF_SHORT_LABEL}`}
           </p>
         </div>
 
