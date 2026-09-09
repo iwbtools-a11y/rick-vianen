@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
 import { useCookiebotConsent } from '@/lib/cookiebot';
 import { sendCapiEvent } from '@/lib/meta-capi';
+import { GOLDEN_TICKET_KICKOFF_LABEL } from '@/lib/golden-ticket';
 
 export function GoldenTicketBedanktClient() {
   const searchParams = useSearchParams();
@@ -103,9 +104,9 @@ export function GoldenTicketBedanktClient() {
             groups
           </span>
           <div>
-            <p className="font-bold text-sm mb-1">Het cohort start zodra de groep compleet is</p>
+            <p className="font-bold text-sm mb-1">{`Live kick-off op ${GOLDEN_TICKET_KICKOFF_LABEL}`}</p>
             <p className="text-on-surface-variant text-sm leading-relaxed">
-              Zodra alle Golden Tickets zijn geclaimd, nemen we contact op om de startdatum in te plannen.
+              Zodra alle Golden Tickets zijn geclaimd, nemen we contact op om de intake in te plannen.
             </p>
           </div>
         </div>

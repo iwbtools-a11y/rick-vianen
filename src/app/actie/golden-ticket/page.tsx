@@ -4,11 +4,18 @@ import { Faq } from "@/components/faq";
 import { FaqJsonLd } from "@/components/faq-jsonld";
 import { GoldenTicketOffer } from "@/components/golden-ticket-offer";
 import { GoldenTicketCta } from "@/components/golden-ticket-cta";
-import { GOLDEN_TICKET_ORIGINAL_PRICE, GOLDEN_TICKET_PRICE, GOLDEN_TICKET_TOTAL } from "@/lib/golden-ticket";
+import { GoldenTicketForm } from "@/components/golden-ticket-form";
+import { GoldenTicketCountdown } from "@/components/golden-ticket-countdown";
+import {
+  GOLDEN_TICKET_KICKOFF_LABEL,
+  GOLDEN_TICKET_ORIGINAL_PRICE,
+  GOLDEN_TICKET_PRICE,
+  GOLDEN_TICKET_TOTAL,
+} from "@/lib/golden-ticket";
 
 export const metadata: Metadata = {
   title: "Golden Ticket · MOVE 100 dagen | Rick Vianen",
-  description: `${GOLDEN_TICKET_TOTAL} tickets voor het MOVE-traject van 100 dagen, eenmalig ${GOLDEN_TICKET_PRICE} incl. btw in plaats van ${GOLDEN_TICKET_ORIGINAL_PRICE}. Wie het eerst claimt, heeft de plek.`,
+  description: `${GOLDEN_TICKET_TOTAL} tickets voor het MOVE-traject van 100 dagen, eenmalig ${GOLDEN_TICKET_PRICE} incl. btw in plaats van ${GOLDEN_TICKET_ORIGINAL_PRICE}. Meld je aan en Rick neemt persoonlijk contact met je op.`,
   robots: {
     index: false,
     follow: false,
@@ -18,34 +25,30 @@ export const metadata: Metadata = {
 const actieFaqs = [
   {
     question: "Hoe werkt de Golden Ticket-actie?",
-    answer: `Er zijn ${GOLDEN_TICKET_TOTAL} tickets beschikbaar voor het volledige MOVE-traject, eenmalig ${GOLDEN_TICKET_PRICE} incl. btw in plaats van ${GOLDEN_TICKET_ORIGINAL_PRICE}. Geen loting of beoordeling: wie claimt, is binnen. Dat is bewust, want dit traject draait om in actie komen, en dat begint al bij het claimen van je ticket.`,
+    answer: `Er zijn ${GOLDEN_TICKET_TOTAL} plekken beschikbaar voor het volledige MOVE-traject, eenmalig ${GOLDEN_TICKET_PRICE} incl. btw in plaats van ${GOLDEN_TICKET_ORIGINAL_PRICE}. Dit is een testronde: Rick wil een eerste kleine groep die MOVE in deze nieuwe vorm bewijst, in ruil voor eerlijke feedback en een testimonial na afloop. Je meldt je aan met je motivatie, Rick neemt persoonlijk contact met je op en kiest de groep die het beste past.`,
   },
   {
-    question: "Wat als de tickets op zijn voor ik claim?",
+    question: "Wat als de groep al vol is als ik me aanmeld?",
     answer: "Dan is deze ronde vol. Je kunt je aanmelden voor de wachtlijst en hoort als eerste wanneer er een volgende kans komt.",
   },
   {
     question: "Wanneer start het traject?",
-    answer: `Zodra de groep van ${GOLDEN_TICKET_TOTAL} compleet is, nemen we contact op om de startdatum en intake in te plannen.`,
+    answer: `Het cohort start met een live kick-off op ${GOLDEN_TICKET_KICKOFF_LABEL}. Zodra de groep van ${GOLDEN_TICKET_TOTAL} compleet is, nemen we contact op om de intake in te plannen.`,
   },
   {
     question: "Kan ik dit ticket later nog krijgen tegen deze prijs?",
     answer: `Nee. Dit is een eenmalig aanbod voor deze groep van ${GOLDEN_TICKET_TOTAL}. Zodra de tickets op zijn, keert deze prijs niet terug.`,
   },
   {
-    question: "Moet ik al ondernemer zijn om mee te doen?",
-    answer: "Deze actie is gericht op ondernemers die hun energie en sportroutine weer op orde willen krijgen, maar iedereen die serieus wil werken aan structuur en energie mag meedoen.",
-  },
-  {
-    question: "Is de betaling veilig?",
-    answer: "Ja, het claimen van je ticket verloopt via een beveiligde checkout van PlugAndPay.",
+    question: "Wanneer en hoe betaal ik?",
+    answer: "Pas na het kennismakingsgesprek met Rick, en alleen als jullie samen besluiten dat MOVE bij je past. De betaling verloopt dan via een beveiligde checkout van PlugAndPay.",
   },
 ];
 
 // Zelfde vragen als hierboven (voor de JSON-LD structured data, platte tekst),
 // maar met een interne link in het wachtlijst-antwoord voor de zichtbare FAQ.
 const visualFaqs = actieFaqs.map((item) =>
-  item.question === "Wat als de tickets op zijn voor ik claim?"
+  item.question === "Wat als de groep al vol is als ik me aanmeld?"
     ? {
         ...item,
         answer: (
@@ -70,18 +73,26 @@ export default function GoldenTicketPage() {
       {/* ===== HERO ===== */}
       <section className="bg-surface px-8 md:px-16 pt-44 md:pt-52 pb-24 relative overflow-hidden">
         <div className="max-w-4xl mx-auto relative text-center">
+          <div className="mb-6">
+            <GoldenTicketCountdown />
+          </div>
+
           <span className="inline-block px-3 py-1 bg-primary/10 text-primary font-bold text-xs uppercase tracking-widest rounded-full mb-6">
             {`Slechts ${GOLDEN_TICKET_TOTAL} tickets · eenmalig`}
           </span>
 
-          <div className="text-on-surface-variant text-base md:text-lg max-w-2xl mx-auto leading-relaxed mb-12 space-y-4">
+          <div className="text-on-surface-variant text-base md:text-lg max-w-2xl mx-auto leading-relaxed mb-8 space-y-4">
             <p>
-              Ben jij (zelfstandig) ondernemer en heb je het gevoel dat je niet alles eruit haalt? Je bedrijf draait prima, maar je gezondheid, je gezin en/of je eigen geluk lijden eronder. Dan is MOVE de beste investering die je ooit in jezelf zal doen.
+              Heb je het gevoel dat je niet alles eruit haalt? Je energie raakt elke dag een stukje verder op, en dat begint zich te wreken. Dan is MOVE de beste investering die je ooit in jezelf doet.
             </p>
             <p>
-              {`100 dagen, ${GOLDEN_TICKET_TOTAL} ambitieuze personen, recht op je doel af. Waarom in een groep? Omdat dat krachtiger is dan alleen. Gelijkgestemden die hun doelen najagen, dat geeft kracht en energie. MOVE is het framework dat zorgt voor blijvende impact.`}
+              {`100 dagen. ${GOLDEN_TICKET_TOTAL} ambitieuze mensen. Recht op je doel af. Gelijkgestemden die hun doelen najagen, dat geeft kracht en energie.`}
             </p>
           </div>
+
+          <p className="font-bold text-on-surface text-lg md:text-xl mb-10">
+            Dit komt tegen deze prijs nooit meer terug.
+          </p>
 
           <GoldenTicketOffer />
         </div>
@@ -109,8 +120,11 @@ export default function GoldenTicketPage() {
             <p>
               Vanuit die ervaring ontwikkelde hij MOVE: geen individueel traject meer, maar een compleet 100-dagen programma gebouwd rond een kleine groep die elkaar scherp houdt.
             </p>
+            <p>
+              {`Dit is bewust een testronde. Rick wil eerst een kleine groep die MOVE in deze nieuwe vorm bewijst, met eerlijke feedback en een testimonial terug. Daarom staat de prijs zo laag dat hij er zelf op inlegt.`}
+            </p>
             <p className="font-semibold text-on-surface">
-              {`Met dit Golden Ticket geeft Rick ${GOLDEN_TICKET_TOTAL} mensen de kans om daar meteen bij te horen, tegen een fractie van de normale prijs.`}
+              {`Met dit Golden Ticket geeft Rick ${GOLDEN_TICKET_TOTAL} mensen de kans om daar meteen bij te horen, tegen een fractie van de normale prijs. Dit komt zo niet terug.`}
             </p>
           </div>
 
@@ -124,6 +138,39 @@ export default function GoldenTicketPage() {
                 className="absolute inset-0 w-full h-full"
               />
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ===== NA 100 DAGEN ===== */}
+      <section className="py-24 px-8 md:px-16">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-12">
+            <span className="inline-block px-3 py-1 bg-secondary-container/80 text-on-secondary-container font-bold text-xs uppercase tracking-widest rounded-full mb-6">
+              Het resultaat
+            </span>
+            <h2 className="font-[family-name:var(--font-headline)] text-4xl md:text-5xl font-black tracking-tight leading-tight">
+              Na 100 dagen is dit <span className="text-primary italic">anders.</span>
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-3xl mx-auto">
+            {[
+              "Je energie is terug. Je voelt het verschil in je werk, je gezin en jezelf.",
+              "Sport en herstel horen vanzelfsprekend bij je week, niet meer onderaan je lijst.",
+              "Je hebt een systeem dat blijft werken, ook als het druk wordt.",
+              "Je hoort bij een groep die je scherp hield, ook op de dagen dat je het zelf niet kon.",
+            ].map((item, i) => (
+              <div key={i} className="flex items-start gap-3 bg-surface-container-low rounded-xl p-5 border border-outline-variant/10">
+                <span
+                  className="material-symbols-outlined text-primary text-xl mt-0.5 shrink-0"
+                  style={{ fontVariationSettings: "'FILL' 1" }}
+                >
+                  trending_up
+                </span>
+                <p className="text-on-surface-variant leading-relaxed text-sm">{item}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -199,7 +246,7 @@ export default function GoldenTicketPage() {
           </div>
 
           <p className="text-center text-on-surface-variant text-sm mt-8 max-w-xl mx-auto leading-relaxed">
-            Wie claimt, is binnen. Niet omdat we het spannend willen maken, maar omdat dit traject draait om in actie komen. Dat beloont Rick liever dan lang twijfelen.
+            Meld je aan en Rick neemt persoonlijk contact met je op. Dit traject draait om in actie komen, en dat begint al bij die eerste stap.
           </p>
         </div>
       </section>
@@ -217,7 +264,7 @@ export default function GoldenTicketPage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-3xl mx-auto">
             {[
-              "Je bedrijf draait, maar je energie is op en dat begint zich te wreken",
+              "Je merkt dat je elke dag een stukje energie kwijtraakt, en dat begint zich te wreken",
               "Sport en herstel al maanden onderaan je lijst staan",
               "Je weet dat structuur het verschil maakt, maar mist het systeem",
               "Je zoekt geen quick fix, maar 100 dagen waarin het echt beklijft",
@@ -249,10 +296,10 @@ export default function GoldenTicketPage() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
             {[
-              { step: "1", title: "Claim je ticket", desc: `Betaal direct en veilig ${GOLDEN_TICKET_PRICE} incl. btw via de checkout.`, icon: "confirmation_number" },
-              { step: "2", title: "Bevestiging", desc: "Je ontvangt direct een bevestiging per e-mail met de vervolgstappen.", icon: "mail" },
-              { step: "3", title: "Intake", desc: "We plannen een kort intakegesprek om je doelen scherp te krijgen.", icon: "flag" },
-              { step: "4", title: "Cohort start", desc: `Zodra de groep van ${GOLDEN_TICKET_TOTAL} compleet is, starten jullie samen aan het traject.`, icon: "rocket_launch" },
+              { step: "1", title: "Meld je aan", desc: "Vul het formulier in met je naam, contactgegevens en je motivatie.", icon: "edit_note" },
+              { step: "2", title: "Rick neemt contact op", desc: "Een kort, persoonlijk kennismakingsgesprek over jouw doelen.", icon: "call" },
+              { step: "3", title: "Je hoort of je erbij bent", desc: `Rick kiest ${GOLDEN_TICKET_TOTAL} mensen die het beste bij de groep passen.`, icon: "flag" },
+              { step: "4", title: "Cohort start", desc: `Live kick-off op ${GOLDEN_TICKET_KICKOFF_LABEL}, zodra de groep compleet is.`, icon: "rocket_launch" },
             ].map((item) => (
               <div key={item.step} className="bg-white rounded-2xl p-8 border border-outline-variant/10 card-hover flex flex-col">
                 <span className="text-xs font-bold text-primary tracking-widest uppercase mb-3">
@@ -330,15 +377,21 @@ export default function GoldenTicketPage() {
       <section id="claim" className="py-24 px-8 md:px-16">
         <div className="max-w-2xl mx-auto text-center">
           <span className="inline-block px-3 py-1 bg-secondary-container/80 text-on-secondary-container font-bold text-xs uppercase tracking-widest rounded-full mb-6">
-            Claim je ticket
+            Meld je aan
           </span>
           <h2 className="font-[family-name:var(--font-headline)] text-4xl font-black tracking-tight mb-4 leading-tight">
-            Wie claimt, is binnen
+            Dit is jouw kans
           </h2>
-          <p className="text-on-surface-variant leading-relaxed mb-8 max-w-md mx-auto">
-            Geen loting, geen beoordeling. Dit traject draait om in actie komen, en dat begint met deze knop.
+          <p className="text-on-surface-variant leading-relaxed mb-3 max-w-md mx-auto">
+            Vul het formulier in en Rick neemt persoonlijk contact met je op voor een kort kennismakingsgesprek.
           </p>
-          <GoldenTicketCta size="large" />
+          <p className="font-bold text-on-surface mb-8">
+            Zo&apos;n kans komt niet nog een keer.
+          </p>
+          <div className="mb-10">
+            <GoldenTicketCountdown />
+          </div>
+          <GoldenTicketForm />
         </div>
       </section>
 
@@ -350,9 +403,9 @@ export default function GoldenTicketPage() {
           </h3>
           <ul className="space-y-2 text-sm text-on-surface-variant leading-relaxed list-disc pl-5">
             <li>{`Er zijn in totaal ${GOLDEN_TICKET_TOTAL} Golden Tickets beschikbaar, voor ${GOLDEN_TICKET_PRICE} incl. btw per ticket.`}</li>
-            <li>Wie het eerst betaalt, heeft de plek. Er is geen loting of beoordeling.</li>
-            <li>Zodra alle tickets zijn geclaimd, vervalt dit aanbod en keert deze prijs niet terug.</li>
-            <li>{`Het cohort start zodra de groep van ${GOLDEN_TICKET_TOTAL} compleet is.`}</li>
+            <li>Aanmelden gaat via het formulier. Rick neemt persoonlijk contact op met iedereen en kiest de groep die het beste past.</li>
+            <li>Zodra alle plekken zijn vergeven, vervalt dit aanbod en keert deze prijs niet terug.</li>
+            <li>{`Het cohort start met een live kick-off op ${GOLDEN_TICKET_KICKOFF_LABEL}, zodra de groep van ${GOLDEN_TICKET_TOTAL} compleet is.`}</li>
             <li>De actie is niet inwisselbaar voor geld of een ander product.</li>
             <li>Per persoon is één ticket geldig.</li>
             <li>Deelname aan deze actie betekent akkoord met deze voorwaarden.</li>
@@ -385,7 +438,7 @@ export default function GoldenTicketPage() {
                 Bouw de energie <span className="text-primary italic">die jouw ambitie verdient.</span>
               </h2>
               <p className="text-white/50 text-lg mb-12 max-w-xl mx-auto leading-relaxed">
-                {`${GOLDEN_TICKET_TOTAL} tickets, eenmalig ${GOLDEN_TICKET_PRICE} incl. btw. Wie het eerst claimt, heeft de plek.`}
+                {`${GOLDEN_TICKET_TOTAL} tickets, eenmalig ${GOLDEN_TICKET_PRICE} incl. btw. Meld je aan en Rick neemt persoonlijk contact met je op.`}
               </p>
               <GoldenTicketCta size="large" />
             </div>

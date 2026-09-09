@@ -1,9 +1,6 @@
 import { GOLDEN_TICKET_ORIGINAL_PRICE, GOLDEN_TICKET_PRICE, GOLDEN_TICKET_TOTAL } from '@/lib/golden-ticket';
 
-export function GoldenTicketVisual({ remaining }: { remaining: number | null }) {
-  const displayRemaining = remaining ?? GOLDEN_TICKET_TOTAL;
-  const soldOut = displayRemaining <= 0;
-
+export function GoldenTicketVisual() {
   // Ponsgaatjes als echte uitsparing in het ticket (CSS mask), niet een
   // kleur die moet matchen met wat erachter staat. Werkt op elke
   // achtergrond, en levert bij een PNG-export ook echte transparantie op.
@@ -55,10 +52,10 @@ export function GoldenTicketVisual({ remaining }: { remaining: number | null }) 
             Toegang
           </span>
           <span className="font-[family-name:var(--font-headline)] text-4xl font-black leading-none">
-            {soldOut ? '0' : displayRemaining}
+            {GOLDEN_TICKET_TOTAL}
           </span>
           <span className="text-[9px] font-bold uppercase tracking-[0.14em] text-[#241611]/70 mt-2 leading-tight">
-            {soldOut ? 'Uitverkocht' : `van de ${GOLDEN_TICKET_TOTAL} plekken`}
+            exclusieve plekken
           </span>
         </div>
       </div>
