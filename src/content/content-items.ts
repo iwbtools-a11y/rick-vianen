@@ -15,6 +15,49 @@ export type ContentItem = {
 export const contentItems: ContentItem[] = [
   {
     type: "blog",
+    slug: "gezondheid-geen-luxe",
+    title: "Waarom gezondheid geen luxe is, maar een vereiste",
+    date: "17 september 2026",
+    category: "Gezondheid",
+    excerpt:
+      "Eerst het bedrijf op de rit, dan mijn gezondheid. Ik hoor het bijna elke week, van iemand die het goed doet. Die volgorde is precies verkeerd om, en dat is geen mening meer. Daar is inmiddels data voor.",
+    videoUrl: "https://www.youtube.com/embed/j8dITz8gGdQ",
+    content: `
+      <p>Eerst het bedrijf op de rit, dan mijn gezondheid. Ik hoor het bijna elke week, en meestal van iemand die het goed doet. Omzet loopt, team staat, agenda vol. Sporten komt straks, als het rustiger is.</p>
+
+      <p>Die volgorde is precies verkeerd om. Dat gezondheid geen luxe is, maar een vereiste, is geen mening. Daar is inmiddels data voor.</p>
+
+      <h3>Studie 1: bijna elfduizend mensen en hun hersenfuncties</h3>
+      <p>In 2025 publiceerde Nature Scientific Reports een onderzoek onder 10.923 mensen. Ze keken naar fysieke inspanning in relatie tot hersenfuncties. Twee uitkomsten kwamen er bovenuit.</p>
+      <p>De eerste is emotieregulatie. Dat is niets anders dan omgaan met negatieve emoties zonder te breken. Woede, angst, frustratie. Die emoties kunnen je laten stoppen, en ze kunnen je verder van je doel af halen. Mensen die week in week uit fysieke inspanning leveren, zijn daar simpelweg beter in.</p>
+      <p>De tweede is zelfeffectiviteit. Het vertrouwen in je eigen persoonlijkheid dat je moeilijke dingen aankan. Dat je door kan gaan als het zwaar wordt. Fysieke inspanning levert je dat bewijs, direct. Als ik dit aankan, dan kan ik die situatie op werk ook aan.</p>
+      <p>Daar zit het mechanisme. Je lijf is de plek waar je jezelf laat zien dat je iets aankan, en dat vertrouwen neem je mee naar alles daarbuiten.</p>
+
+      <h3>Studie 2: één variabele, twaalf weken</h3>
+      <p>De tweede studie is kleiner en juist daarom scherp. Negenveertig mensen, een interventiestudie. Alle variabelen gelijk gehouden, op één na: drie keer per week sporten, twaalf weken lang.</p>
+      <p>Bij de groep die dat deed, bleek de cortisolreactie fors lager. Cortisol is je stresshormoon. Een lagere reactie betekent dat je minder hard aanspringt op wat er gebeurt.</p>
+      <p>Want dingen gebeuren. Iemand komt boos naar je toe. Er rijdt iemand tegen je auto. Een klant zegt nee. Je loopt een blessure op. Daar heb je geen invloed op. Hoe je ermee omgaat, daar ligt je kracht.</p>
+
+      <h3>Wat dat oplevert in je werk</h3>
+      <p><strong>Besluitvorming.</strong> Zodra je je emoties beter kunt reguleren, neem je besluiten uit kracht in plaats van uit emotie.</p>
+      <p><strong>Focus vasthouden.</strong> Mensen die fit zijn, houden hun aandacht aanzienlijk langer bij één ding. Niet iets meer, aanzienlijk langer.</p>
+      <p><strong>Werkgeheugen.</strong> Wat je onthoudt en wat je laat vallen tijdens een werkdag. Ook daar zie je hetzelfde verband.</p>
+      <p><strong>Dealen met omstandigheden.</strong> Misschien wel de belangrijkste. Niet wat er gebeurt, maar wat het met je doet.</p>
+
+      <h3>Wat dat oplevert thuis</h3>
+      <p><strong>Meer geduld.</strong> Aanwezig blijven aan tafel, in plaats van met je gedachten nog in het gesprek van vier uur. En niet afreageren op je kinderen of je partner voor iets wat op je werk gebeurde.</p>
+      <p>Dat laatste is confronterend, want vrijwel iedereen doet het. Het is zelden de ander. Het is bijna altijd hoeveel je op dat moment nog kon dragen.</p>
+
+      <h3>Daarom noem ik het een vereiste</h3>
+      <p>Emotieregulatie, zelfeffectiviteit en je cortisolreactie zijn geen vage begrippen. Het zijn drie functies die je traint. Drie keer per week, twaalf weken. Dat is de investering.</p>
+      <p>Dat gezondheid geen luxe is, maar een vereiste, mag inmiddels duidelijk zijn. Niet voor een mooier lichaam, maar voor een leven waarin je je eigen beslissingen neemt in plaats van erop reageert.</p>
+      <p>En je weet dit al. Je doet het alleen niet. Dat is geen kwestie van discipline, maar van implementatie.</p>
+
+      <p>Wil je weten waar jij op vastloopt? Doe de <a href="/quiz">test van 2 minuten</a>, je uitslag komt direct in je mail.</p>
+    `,
+  },
+  {
+    type: "blog",
     slug: "verandering-begint-bij-identiteit",
     title: "Waarom blijvende verandering begint bij je identiteit",
     date: "4 september 2026",
