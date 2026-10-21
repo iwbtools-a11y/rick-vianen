@@ -55,8 +55,8 @@ export function MoveMethode() {
           </h2>
           <div className="h-1 w-20 bg-primary mt-6 mb-6 rounded-full" />
           <p className="text-on-surface-variant leading-relaxed">
-            Geen theorie, werkende structuur. Elke week dezelfde cyclus
-            &mdash; totdat het een tweede natuur wordt.
+            Geen theorie, werkende structuur. Elke week dezelfde cyclus,
+            totdat het een tweede natuur wordt.
           </p>
         </div>
 

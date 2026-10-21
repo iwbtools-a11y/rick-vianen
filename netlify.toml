@@ -11,6 +11,33 @@
 [context.deploy-preview]
   ignore = "exit 0"
 
+[[redirects]]
+  from = "/blog"
+  to = "/content"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/*"
+  to = "/content/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/intake/booking"
+  to = "/intake"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/actie/gratis-move-traject"
+  to = "/actie/golden-ticket"
+  status = 301
+  force = true
+
+[functions]
+  directory = "netlify/functions"
+
 [[headers]]
   for = "/_next/static/*"
   [headers.values]

@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
 import { Plus_Jakarta_Sans, Manrope } from "next/font/google";
+import Script from "next/script";
+import { Suspense } from "react";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { WhatsAppButton } from "@/components/whatsapp-button";
+import { MetaCapi } from "@/components/meta-capi";
 
 import "./globals.css";
 
@@ -32,13 +35,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="nl" className={`${plusJakarta.variable} ${manrope.variable}`}>
+    <html lang="nl" className={`${plusJakarta.variable} ${manrope.variable}`} suppressHydrationWarning>
       <head>
-        <link
-          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
-          rel="stylesheet"
-        />
-        <script
+        <Script
+          id="gtm"
+          strategy="beforeInteractive"
           dangerouslySetInnerHTML={{
             __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -47,10 +48,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-NB827F68');`,
           }}
         />
-        <script
-          async
-          type="text/javascript"
-          src="//static.klaviyo.com/onsite/js/klaviyo.js?company_id=YgCeNj"
+        <link
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+          rel="stylesheet"
         />
       </head>
       <body className="min-h-screen antialiased">
@@ -62,10 +62,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             style={{ display: "none", visibility: "hidden" }}
           />
         </noscript>
+        <Suspense>
+          <MetaCapi />
+        </Suspense>
         <Navbar />
         <main>{children}</main>
         <Footer />
         <WhatsAppButton />
+        <Script
+          src="//static.klaviyo.com/onsite/js/klaviyo.js?company_id=YgCeNj"
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   );

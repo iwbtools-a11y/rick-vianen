@@ -12,6 +12,7 @@ export const metadata: Metadata = {
 const sections = [
   { id: "over-move", label: "Over MOVE", icon: "info" },
   { id: "programma", label: "Het programma", icon: "calendar_month" },
+  { id: "challenge", label: "MOVE Challenge", icon: "bolt" },
   { id: "prijzen", label: "Prijzen & investering", icon: "payments" },
   { id: "praktisch", label: "Praktisch", icon: "build" },
   { id: "bezwaren", label: "Twijfels & bezwaren", icon: "psychology_alt" },
@@ -20,19 +21,19 @@ const sections = [
 const overMoveFaqs = [
   {
     question: "Wat is MOVE precies?",
-    answer: "MOVE is een 100-dagen peer-group coachingtraject voor ambitieuze professionals. In kleine groepen van maximaal 8 deelnemers werk je gelijktijdig aan sport, mindset en business — onder begeleiding van Rick Vianen. Het is geen cursus, geen online programma, maar een gestructureerd traject met wekelijkse accountability.",
+    answer: "MOVE is een 100-dagen peer-group coachingtraject voor ambitieuze professionals. In kleine groepen van maximaal 8 deelnemers werk je gelijktijdig aan sport, mindset en business, onder begeleiding van Rick Vianen. Het is geen cursus, geen online programma, maar een gestructureerd traject met wekelijkse accountability.",
   },
   {
     question: "Voor wie is MOVE bedoeld?",
-    answer: "Voor professionals tussen de 30 en 50 jaar die goed presteren aan de buitenkant, maar merken dat gezondheid, energie en structuur achterblijven. Denk aan ondernemers, leidinggevenden en ambitieuze professionals die weten wat ze moeten doen — maar het niet consistent doen.",
+    answer: "Voor professionals tussen de 30 en 50 jaar die goed presteren aan de buitenkant, maar merken dat gezondheid, energie en structuur achterblijven. Denk aan ondernemers, leidinggevenden en ambitieuze professionals die weten wat ze moeten doen, maar het niet consistent doen.",
   },
   {
     question: "Voor wie is MOVE niet bedoeld?",
-    answer: "MOVE is niet voor mensen in acute crisis of met een klinische diagnose — daarvoor zijn andere professionals beter toegerust. Het is ook niet voor mensen die een quick fix zoeken of niet bereid zijn elke week te verschijnen. MOVE werkt door consistentie en commitment.",
+    answer: "MOVE is niet voor mensen in acute crisis of met een klinische diagnose. Daarvoor zijn andere professionals beter toegerust. Het is ook niet voor mensen die een quick fix zoeken of niet bereid zijn elke week te verschijnen. MOVE werkt door consistentie en commitment.",
   },
   {
     question: "Hoe verschilt MOVE van andere coaching?",
-    answer: "De meeste coaching focust op één domein: sport, mindset of business. MOVE integreert alle drie als één systeem. Bovendien is de groep het mechanisme — niet de coach alleen. 11 van de 11 geïnterviewde klanten noemen de groep als het #1 werkende element.",
+    answer: "De meeste coaching focust op één domein: sport, mindset of business. MOVE integreert alle drie als één systeem. Bovendien is de groep het mechanisme, niet de coach alleen. 11 van de 11 geïnterviewde klanten noemen de groep als het #1 werkende element.",
   },
   {
     question: "Wie is Rick Vianen?",
@@ -47,11 +48,11 @@ const programmaFaqs = [
   },
   {
     question: "Wat als ik een week mis?",
-    answer: "Het leven gebeurt. Je krijgt de opname en opdracht achteraf. Maar MOVE werkt door consistentie — de groep houdt je scherp en mist het als je er niet bent. Dat is juist de kracht van peer-group coaching.",
+    answer: "Het leven gebeurt. Je krijgt de opname en opdracht achteraf. Maar MOVE werkt door consistentie. De groep houdt je scherp en mist het als je er niet bent. Dat is juist de kracht van peer-group traject.",
   },
   {
     question: "Hoe groot is de groep?",
-    answer: "Maximaal 8 professionals per cohort. Groot genoeg voor diversiteit aan perspectieven, klein genoeg zodat niemand zich kan verstoppen. Rick coacht elk cohort persoonlijk — meer dan 8 is niet mogelijk zonder kwaliteitsverlies.",
+    answer: "Maximaal 8 professionals per cohort. Groot genoeg voor diversiteit aan perspectieven, klein genoeg zodat niemand zich kan verstoppen. Rick coacht elk cohort persoonlijk. Meer dan 8 is niet mogelijk zonder kwaliteitsverlies.",
   },
   {
     question: "Welke resultaten kan ik verwachten na 100 dagen?",
@@ -62,8 +63,8 @@ const programmaFaqs = [
     answer: "MOVE staat voor Master, Operate, Validate, Elevate. Het is een wekelijkse cyclus: je leert iets (Master), past het direct toe (Operate), kijkt eerlijk terug (Validate) en verfijnt je aanpak (Elevate). Na 100 dagen is dit een tweede natuur.",
   },
   {
-    question: "Wat houdt de proces-garantie in?",
-    answer: "Als je elke stap uitvoert — check-ins, metingen, opdrachten, trainingsschema — en na 100 dagen geen aantoonbare vooruitgang ziet op de doelen die jullie bij intake hebben vastgelegd, dan werkt Rick kosteloos extra tijd met je door. Bij Ultimate gaan ook de 1-op-1 sessies door.",
+    question: "Wat is de garantie?",
+    answer: "We geloven zo sterk in onze trajecten dat je na 2 weken mag stoppen, of je nu kiest voor de groep of 1-op-1. Voel je geen richting of zie je geen vooruitgang? Dan krijg je je geld terug. No questions asked.",
   },
   {
     question: "Kan ik na 100 dagen doorgaan?",
@@ -74,15 +75,15 @@ const programmaFaqs = [
 const prijzenFaqs = [
   {
     question: "Wat kost MOVE?",
-    answer: "MOVE Core: €1.497. MOVE Performance: €2.497 (meest gekozen). MOVE Ultimate: €4.997. Alle prijzen zijn eenmalig voor het volledige 100-dagen traject, inclusief kick-off en eindevenement.",
+    answer: "Het MOVE Groepstraject kost €2.497, eenmalig voor het volledige 100-dagen traject, inclusief kick-off en eindevenement. Het MOVE 1-op-1 traject (half jaar of jaar) is op aanvraag; de investering bespreken we in het kennismakingsgesprek.",
   },
   {
-    question: "Wat is het verschil tussen Core, Performance en Ultimate?",
-    answer: "Core is de eerlijke instap: wekelijkse content, groeps kick-off en eindevenement. Performance voegt wekelijkse Q&A's, trainingsschema op maat en 3 jaar Notion-toegang toe — dit is het vlaggenschip. Ultimate is alles uit Performance plus wekelijks 60 minuten privé coaching met Rick.",
+    question: "Wat is het verschil tussen het groepstraject en 1-op-1?",
+    answer: "Het groepstraject duurt 100 dagen met een kleine groep van maximaal 8, inclusief wekelijkse Q&A's, trainingsschema op maat en 3 jaar Notion-toegang. Bij het 1-op-1 traject werk je wekelijks privé met Rick, voor een half jaar of een jaar, met directe toegang tot Rick.",
   },
   {
     question: "Is dit een eenmalige betaling?",
-    answer: "Ja. MOVE is een eenmalige investering voor het volledige 100-dagen traject — geen abonnement, geen terugkerende kosten. Je betaalt één keer en krijgt het complete programma inclusief kick-off en eindevenement.",
+    answer: "Het groepstraject is een eenmalige investering voor het volledige 100-dagen traject. Geen abonnement, geen terugkerende kosten. Je betaalt één keer en krijgt het complete programma inclusief kick-off en eindevenement. Voor het 1-op-1 traject bespreken we de investering en betaalwijze in het kennismakingsgesprek.",
   },
   {
     question: "Kan ik in termijnen betalen?",
@@ -93,23 +94,23 @@ const prijzenFaqs = [
     answer: "In veel gevallen wel. Performance coaching is een investering in professionele ontwikkeling. Raadpleeg je boekhouder voor jouw specifieke situatie. Rick staat geregistreerd bij de KvK (94159475).",
   },
   {
-    question: "Waarom is Performance het meest gekozen?",
-    answer: "Performance bevat de volle stack: alles uit Core plus wekelijkse Q&A's voor context-verdieping, een trainingsschema op maat dat elke 4 weken wordt bijgesteld, en 3 jaar toegang tot het Notion-systeem. De totale waarde is €8.358 — je investeert eenmalig €2.497.",
+    question: "Groep of 1-op-1: wat past bij mij?",
+    answer: "Het groepstraject is voor wie wil groeien met een kleine groep die elkaar scherp houdt: 100 dagen, wekelijkse Q&A's, een trainingsschema op maat dat elke 4 weken wordt bijgesteld en 3 jaar toegang tot het Notion-systeem. Het 1-op-1 traject is voor wie wekelijks privé met Rick wil werken, voor een half jaar of een jaar. Twijfel je? In het kennismakingsgesprek kijken we samen wat het beste past.",
   },
   {
     question: "Wat als ik na een paar weken wil stoppen?",
-    answer: "MOVE is geen abonnement — het is een eenmalige investering en een commitment van 100 dagen. De groep rekent op jouw aanwezigheid en jij op die van hen. Twijfel je of MOVE bij je past? Daarom begint elk traject met een kennismakingsgesprek.",
+    answer: "MOVE is geen abonnement. Het groepstraject is een commitment van 100 dagen, het 1-op-1 traject van een half jaar of een jaar. De groep rekent op jouw aanwezigheid en jij op die van hen. Twijfel je of MOVE bij je past? Daarom begint elk traject met een kennismakingsgesprek. En voel je na 2 weken geen richting of zie je geen vooruitgang? Dan krijg je je geld terug, bij zowel het groepstraject als 1-op-1.",
   },
 ];
 
 const praktischFaqs = [
   {
     question: "Hoe begin ik?",
-    answer: "Met een kennismakingsgesprek van 30 minuten. Geen verkooppitch — Rick kijkt eerlijk of MOVE bij jou past. Daarna besluit je zelf.",
+    answer: "Met een kennismakingsgesprek van 30 minuten. Open gesprek, geen verplichtingen. Rick kijkt eerlijk of MOVE bij jou past. Daarna besluit je zelf.",
   },
   {
     question: "Wanneer start het volgende cohort?",
-    answer: "Cohort 1 start op 30 mei 2026. Er zijn 4 cohorten per jaar. Na sluiting kom je op de wachtlijst voor het volgende cohort.",
+    answer: "Er zijn 4 cohorten per jaar, met maximaal 8 deelnemers per groep. Later starten? Schrijf je in op de wachtlijst via move-coaching.nl/wachtlijst en Rick neemt contact op zodra er ruimte is.",
   },
   {
     question: "Waar vinden de sessies plaats?",
@@ -117,17 +118,45 @@ const praktischFaqs = [
   },
   {
     question: "Welke tools gebruik ik tijdens het traject?",
-    answer: "Je krijgt toegang tot een Notion-systeem voor tracking en opdrachten, een accountability-tool voor dagelijkse check-ins, en een besloten kanaal voor directe communicatie met de groep en Rick. Bij Performance en Ultimate houd je 3 jaar Notion-toegang na afloop.",
+    answer: "Je krijgt toegang tot een Notion-systeem voor tracking en opdrachten, een accountability-tool voor dagelijkse check-ins, en een besloten kanaal voor directe communicatie met de groep en Rick. Bij beide trajecten houd je 3 jaar Notion-toegang na afloop.",
   },
   {
     question: "Hoeveel tijd kost het per week?",
-    answer: "Reken op 2-3 uur per week: een kennismoment (3-10 min), je opdracht uitvoeren, de groeps-Q&A op donderdag, en je trainingen. MOVE is gebouwd voor drukke professionals — 1 prioriteit per week.",
+    answer: "Reken op 2-3 uur per week: een kennismoment (3-10 min), je opdracht uitvoeren, de groeps-Q&A op donderdag, en je trainingen. MOVE is gebouwd voor drukke professionals. Eén prioriteit per week.",
+  },
+];
+
+const challengeFaqs = [
+  {
+    question: "Wat is de MOVE Challenge precies?",
+    answer: "5 dagen. Elke dag een korte video van Rick als kader, daarna doe jij het werk. Geen theorie voor de boekenplank, maar een concrete opdracht per dag. Aan het einde heb je 5 resultaten staan die blijven.",
+  },
+  {
+    question: "Wat kost de Challenge?",
+    answer: "€100 eenmalig. Geen abonnement, geen verborgen kosten. Stap je daarna in het MOVE Programma? Dan wordt de €100 direct verrekend als korting op je investering.",
+  },
+  {
+    question: "Wat is het verschil tussen de Challenge en het Programma?",
+    answer: "De Challenge is 5 dagen en €100: een eerste stap. Het Programma is 100 dagen peer-group traject met structuur, accountability en een volledige MOVE-cyclus. De Challenge laat je voelen wat mogelijk is. Het Programma verankert het.",
+  },
+  {
+    question: "Moet ik sportief zijn om mee te doen?",
+    answer: "Nee. De Challenge is er voor mensen die iets willen veranderen, niet voor mensen die al alles op orde hebben. Het gaat niet om waar je nu staat, maar dat je in beweging komt.",
+  },
+  {
+    question: "Wanneer kan ik starten?",
+    answer: "Direct na aanmelding. De Challenge is evergreen: je start op het moment dat jij er klaar voor bent, niet wanneer een cohort toevallig opent.",
+  },
+  {
+    question: "Kan ik van de Challenge overstappen naar het Programma?",
+    answer: "Ja, en dat is precies de bedoeling. De Challenge is bewust het instapmoment voor MOVE. Als je na 5 dagen merkt dat dit werkt, is een kennismakingsgesprek over het Programma de logische volgende stap. Je €100 gaat er direct af als korting.",
   },
 ];
 
 const allFaqsForSchema = [
   ...overMoveFaqs,
   ...programmaFaqs,
+  ...challengeFaqs,
   ...prijzenFaqs,
   ...praktischFaqs,
 ];
@@ -135,11 +164,11 @@ const allFaqsForSchema = [
 const objections = [
   {
     objection: "“Het is veel geld.”",
-    response: "Klopt. Wat kost het je als er niets verandert? Je zei net dat je al drie keer bent vastgelopen op dit patroon. Wat kost dat je inmiddels — in energie, in werk, in relatie? Het geld is niet het probleem. Weer een jaar in hetzelfde patroon zitten is het probleem.",
+    response: "Klopt. Wat kost het je als er niets verandert? Je zei net dat je al drie keer bent vastgelopen op dit patroon. Wat kost dat je inmiddels, in energie, in werk, in relatie? Het geld is niet het probleem. Weer een jaar in hetzelfde patroon zitten is het probleem.",
   },
   {
     objection: "“Kan ik het ook zelf?”",
-    response: "Als je het zelf kon, had je het al gedaan. Wat is er anders aan je 10e poging? MOVE biedt wat je zelf niet kunt organiseren: een groep die je niet laat zitten, wekelijkse structuur, en iemand die eerlijk tegen je is.",
+    response: "Als je het zelf kon, had je het al gedaan. Wat is er anders aan je 10e poging? MOVE biedt wat je zelf niet kunt organiseren: een kleine groep die je scherp houdt als jij dat zelf even niet doet, wekelijkse structuur, en iemand die eerlijk tegen je is.",
   },
   {
     objection: "“Klinkt zweverig.”",
@@ -147,15 +176,15 @@ const objections = [
   },
   {
     objection: "“Ik moet er nog over nadenken.”",
-    response: "Prima. Wat moet je precies afwegen? Vaak komt iemand erachter dat er niets te overwegen valt — of juist dat er iets specifieks is waar je op kunt ingaan. Het kennismakingsgesprek is vrijblijvend.",
+    response: "Prima. Wat moet je precies afwegen? Vaak komt iemand erachter dat er niets te overwegen valt. Of juist dat er iets specifieks is waar je op kunt ingaan. Het kennismakingsgesprek is vrijblijvend.",
   },
   {
     objection: "“Is het goed voor mijn relatie?”",
-    response: "Groeien maakt je een betere partner, geen andere. De vraag is: wat zit er onder deze vraag? MOVE helpt je om op alle levensdomeinen controle te krijgen — inclusief hoe je je verhoudt tot de mensen om je heen.",
+    response: "Groeien maakt je een betere partner, geen andere. De vraag is: wat zit er onder deze vraag? MOVE helpt je om op alle levensdomeinen controle te krijgen, inclusief hoe je je verhoudt tot de mensen om je heen.",
   },
   {
     objection: "“Ik heb geen tijd.”",
-    response: "Tijd is niet het echte bezwaar — prioriteit is het bezwaar. MOVE kost 2-3 uur per week. Je kijkt nu al Netflix, scrollt al door je telefoon. Het gaat niet om tijd. Het gaat om wat je belangrijk genoeg vindt.",
+    response: "Tijd is niet het echte bezwaar. Prioriteit is het bezwaar. MOVE kost 2-3 uur per week. Je kijkt nu al Netflix, scrollt al door je telefoon. Het gaat niet om tijd. Het gaat om wat je belangrijk genoeg vindt.",
   },
 ];
 
@@ -174,7 +203,7 @@ export default function VeelgesteldeVragenPage() {
           </h1>
           <p className="text-xl text-on-surface-variant max-w-2xl">
             Alles wat je wilt weten over MOVE, het programma, de investering en
-            wat je kunt verwachten. Geen verkooppraatjes — eerlijke antwoorden.
+            wat je kunt verwachten. Geen verkooppraatjes, maar eerlijke antwoorden.
           </p>
         </div>
       </section>
@@ -227,6 +256,21 @@ export default function VeelgesteldeVragenPage() {
         </div>
       </section>
 
+      {/* ===== CHALLENGE ===== */}
+      <section id="challenge" className="py-20 px-8 md:px-16 scroll-mt-32">
+        <div className="max-w-4xl mx-auto">
+          <div className="flex items-center gap-3 mb-8">
+            <span className="material-symbols-outlined text-primary text-3xl" style={{ fontVariationSettings: "'FILL' 1" }}>
+              bolt
+            </span>
+            <h2 className="font-[family-name:var(--font-headline)] text-3xl font-black tracking-tight">
+              MOVE Challenge
+            </h2>
+          </div>
+          <Faq items={challengeFaqs} />
+        </div>
+      </section>
+
       {/* ===== PRIJZEN ===== */}
       <section id="prijzen" className="py-20 px-8 md:px-16 scroll-mt-32">
         <div className="max-w-4xl mx-auto">
@@ -269,7 +313,7 @@ export default function VeelgesteldeVragenPage() {
             </h2>
             <p className="text-on-surface-variant text-lg max-w-2xl mx-auto">
               De bezwaren die je nu hebt, had elke MOVE-deelnemer ook. Hier zijn
-              eerlijke antwoorden — geen verkooptrucs.
+              eerlijke antwoorden, geen verkooptrucs.
             </p>
           </div>
 
@@ -306,11 +350,11 @@ export default function VeelgesteldeVragenPage() {
                 Nog vragen?
               </h2>
               <p className="text-on-surface-variant text-lg mb-8 max-w-lg mx-auto">
-                Plan een kennismakingsgesprek. 30 minuten, geen pitch.
+                Plan een kennismakingsgesprek. 30 minuten, open gesprek.
                 Rick beantwoordt alles persoonlijk.
               </p>
               <Link
-                href="https://calendly.com/rick-rickvianen/kennismaking"
+                href="/intake"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-primary inline-block px-10 py-4 text-base font-bold rounded-xl"

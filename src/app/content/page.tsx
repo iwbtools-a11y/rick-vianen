@@ -1,15 +1,27 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { blogPosts } from "@/content/blog-posts";
+import { contentItems } from "@/content/content-items";
+import { ContentGrid } from "@/components/content-grid";
+import { KlaviyoForm } from "@/components/klaviyo-form";
 
 export const metadata: Metadata = {
-  title: "Blog | MOVE Coaching",
+  title: "Content | MOVE Coaching",
   description:
-    "Diepe inzichten over beweging, voeding en de psychologie achter topprestaties.",
+    "YouTube videos, podcasts, blogs en meer over beweging, voeding en de psychologie achter topprestaties.",
 };
 
-const articleImages: Record<string, string> = {
+const itemImages: Record<string, string> = {
+  "gezondheid-geen-luxe": "/images/thumb-gezondheid-geen-luxe.jpg",
+  "motivatie-gevaarlijke-valkuil": "/images/thumb-motivatie-gevaarlijke-valkuil.jpg",
+  "verandering-begint-bij-identiteit": "/images/thumb-verandering-begint-bij-identiteit.jpg",
+  "omgeving-gewoonte-vasthouden": "/images/thumb-omgeving-gewoonte-vasthouden.jpg",
+  "jezelf-voorliegen-met-excuses": "/images/thumb-jezelf-voorliegen-met-excuses.jpg",
+  "omgeving-bepaalt-gedrag": "/images/thumb-omgeving-bepaalt-gedrag.jpg",
+  "onbewuste-overtuigingen": "/images/thumb-onbewuste-overtuigingen.jpg",
+  "een-doel-dat-je-echt-haalt": "/images/thumb-een-doel-dat-je-echt-haalt.jpg",
+  "geprogrammeerde-toekomst": "/images/thumb-geprogrammeerde-toekomst.jpg",
+  "3-soorten-beloftes": "/images/thumb-3-soorten-beloftes.jpg",
   "the-way-you-fck-yourself": "/images/blog-str.jpg",
   "gewoontes-aanleren": "/images/rick-portrait.png",
   "beloftes-nakomen": "/images/blog-coach.jpg",
@@ -18,62 +30,67 @@ const articleImages: Record<string, string> = {
   "tools-die-het-verschil-maken": "/images/rick-coaching.jpg",
 };
 
-export default function BlogPage() {
-  const [featured, ...rest] = blogPosts;
+export default function ContentPage() {
+  const [featured, ...rest] = contentItems;
 
   return (
     <div className="pb-24 md:pb-0">
       {/* ─── 1. HERO / PAGE HEADER ─── */}
-      <section className="pt-32 px-8 md:px-16 max-w-7xl mx-auto">
+      <section className="pt-40 px-8 md:px-16 max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-end">
-          {/* Left 8 cols */}
           <div className="md:col-span-8">
             <span className="text-secondary uppercase tracking-widest text-xs font-bold font-[family-name:var(--font-headline)]">
-              Editorial journal
+              Groei begint hier
             </span>
             <h1 className="mt-4 text-5xl md:text-7xl font-black tracking-tighter leading-[0.9] font-[family-name:var(--font-headline)]">
-              KINETIC
+              ELKE DAG
               <br />
-              <span className="text-outline-variant opacity-40">MOMENTS.</span>
+              <span className="text-primary">BETER.</span>
             </h1>
           </div>
 
-          {/* Right 4 cols */}
           <div className="md:col-span-4 md:text-right pb-2">
             <p className="text-on-surface-variant text-base leading-relaxed">
-              Diepe inzichten over beweging, voeding en de psychologie achter
-              topprestaties.
+              Inzichten, video&apos;s en podcasts over de mindset en gewoontes
+              die échte ontwikkeling brengen.
             </p>
           </div>
         </div>
       </section>
 
-      {/* ─── 2. FEATURED ARTICLE ─── */}
+      {/* ─── 2. FEATURED ITEM ─── */}
       <section className="mt-20 px-8 md:px-16 max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
-          {/* Left 7 cols: tall image */}
           <div className="md:col-span-7 relative">
-            <Link href={`/blog/${featured.slug}`} className="block">
-              <div className="h-[400px] md:h-[600px] rounded-xl bg-surface-container relative overflow-hidden">
+            <Link href={`/content/${featured.slug}`} className="block">
+              <div className="rounded-xl bg-surface-container relative overflow-hidden aspect-video">
+
                 <Image
-                  src={articleImages[featured.slug] || "/images/rick-hero.png"}
+                  src={itemImages[featured.slug] || "/images/rick-hero.png"}
                   alt={featured.title}
                   fill
                   className="object-cover"
                 />
-                {/* Gradient overlay at bottom */}
                 <div className="absolute inset-0 bg-gradient-to-t from-on-surface/60 via-transparent to-transparent" />
+                {featured.videoUrl && (
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="w-16 h-16 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center">
+                      <span className="material-symbols-outlined text-white text-3xl">
+                        play_arrow
+                      </span>
+                    </div>
+                  </div>
+                )}
               </div>
             </Link>
           </div>
 
-          {/* Right 5 cols: content */}
           <div className="md:col-span-5 flex flex-col justify-center gap-6">
             <span className="inline-flex self-start bg-secondary-container text-on-secondary-container text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full font-[family-name:var(--font-headline)]">
-              {featured.category}
+              Uitgelicht
             </span>
 
-            <Link href={`/blog/${featured.slug}`}>
+            <Link href={`/content/${featured.slug}`}>
               <h2 className="text-3xl md:text-4xl font-black tracking-tight leading-tight font-[family-name:var(--font-headline)] hover:text-primary transition-colors">
                 {featured.title}
               </h2>
@@ -84,7 +101,6 @@ export default function BlogPage() {
             </p>
 
             <div className="flex items-center gap-4 mt-2">
-              {/* Avatar circle */}
               <Image
                 src="/images/rick-headshot.jpg"
                 alt="Rick Vianen"
@@ -101,9 +117,9 @@ export default function BlogPage() {
                 </p>
               </div>
               <Link
-                href={`/blog/${featured.slug}`}
+                href={`/content/${featured.slug}`}
                 className="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center hover:bg-primary-dark transition-colors shrink-0"
-                aria-label="Lees meer"
+                aria-label="Bekijk content"
               >
                 <span className="material-symbols-outlined text-xl">
                   arrow_forward
@@ -114,61 +130,12 @@ export default function BlogPage() {
         </div>
       </section>
 
-      {/* ─── 3. ALL ARTICLES GRID ─── */}
-      <section className="mt-28 px-8 md:px-16 max-w-7xl mx-auto">
-        {/* Header row */}
-        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6 mb-12">
-          <h2 className="text-3xl md:text-4xl font-black tracking-tight font-[family-name:var(--font-headline)]">
-            Alle artikelen
-          </h2>
-        </div>
-
-        {/* Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {rest.map((article) => (
-            <Link
-              key={article.slug}
-              href={`/blog/${article.slug}`}
-              className="group"
-            >
-              <article>
-                {/* Image */}
-                <div className="relative h-64 bg-surface-container-low rounded-xl overflow-hidden mb-5">
-                  <Image
-                    src={articleImages[article.slug] || "/images/rick-hero.png"}
-                    alt={article.title}
-                    fill
-                    className="object-cover"
-                  />
-                  <span className="absolute top-4 left-4 bg-secondary text-white text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full font-[family-name:var(--font-headline)] z-10">
-                    {article.category}
-                  </span>
-                </div>
-
-                {/* Date */}
-                <p className="text-on-surface-variant text-xs uppercase tracking-widest font-bold mb-2">
-                  {article.date}
-                </p>
-
-                {/* Title */}
-                <h3 className="text-xl font-bold tracking-tight leading-snug font-[family-name:var(--font-headline)] group-hover:text-primary transition-colors">
-                  {article.title}
-                </h3>
-
-                {/* Excerpt */}
-                <p className="mt-3 text-on-surface-variant text-sm leading-relaxed">
-                  {article.excerpt}
-                </p>
-              </article>
-            </Link>
-          ))}
-        </div>
-      </section>
+      {/* ─── 3. ALL CONTENT GRID ─── */}
+      <ContentGrid items={rest} />
 
       {/* ─── 4. CTA BANNER ─── */}
       <section className="mt-28 mb-20 px-8 md:px-16 max-w-7xl mx-auto">
         <div className="relative bg-primary-container rounded-2xl px-8 py-16 md:px-16 md:py-20 overflow-hidden">
-          {/* Decorative skewed background */}
           <div
             className="absolute inset-0 opacity-20 pointer-events-none"
             aria-hidden="true"
@@ -184,8 +151,8 @@ export default function BlogPage() {
 
             <p className="mt-6 text-white/80 leading-relaxed text-base md:text-lg">
               Ons elite programma combineert wetenschappelijk onderbouwde
-              training, voedingsstrategieen en mentale coaching om jou naar
-              je absolute top te brengen.
+              training, voedingsstrategieen en mentale coaching om jou naar je
+              absolute top te brengen.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 mt-10">
@@ -206,6 +173,10 @@ export default function BlogPage() {
         </div>
       </section>
 
+      {/* ─── 5. KLAVIYO FORM ─── */}
+      <section className="mt-20 mb-12 px-8 md:px-16 max-w-3xl mx-auto">
+        <KlaviyoForm formId="Y5TbE2" />
+      </section>
     </div>
   );
 }

@@ -2,11 +2,12 @@ import Image from "next/image";
 import Link from "next/link";
 import { Faq } from "@/components/faq";
 import { FaqJsonLd } from "@/components/faq-jsonld";
+import { QuizCTA } from "@/components/quiz-cta";
 
 const homeFaqs = [
   {
     question: "Wat is MOVE precies?",
-    answer: "MOVE is een 100-dagen peer-group coachingtraject voor ambitieuze professionals. In kleine groepen van maximaal 8 deelnemers werk je gelijktijdig aan sport, mindset en business — onder begeleiding van Rick Vianen.",
+    answer: "MOVE is een 100-dagen peer-group coachingtraject voor ambitieuze professionals. In kleine groepen van maximaal 8 deelnemers werk je gelijktijdig aan sport, mindset en business, onder begeleiding van Rick Vianen.",
   },
   {
     question: "Voor wie is MOVE bedoeld?",
@@ -14,11 +15,11 @@ const homeFaqs = [
   },
   {
     question: "Hoe verschilt MOVE van andere coaching?",
-    answer: "De meeste coaching focust op één domein: sport óf mindset óf business. MOVE integreert alle drie als één systeem. Bovendien is de groep het mechanisme — niet de coach alleen. 11 van de 11 geïnterviewde klanten noemen de groep als het #1 werkende element.",
+    answer: "De meeste coaching focust op één domein: sport óf mindset óf business. MOVE integreert alle drie als één systeem. Bovendien is de groep het mechanisme, niet de coach alleen. 11 van de 11 geïnterviewde klanten noemen de groep als het #1 werkende element.",
   },
   {
     question: "Hoe begin ik?",
-    answer: "Met een kennismakingsgesprek van 30 minuten. Geen verkooppitch — Rick kijkt eerlijk of MOVE bij jou past en wat je wilt bereiken. Daarna besluit je zelf.",
+    answer: "Met een kennismakingsgesprek van 30 minuten. Open gesprek, geen verplichtingen. Rick kijkt eerlijk of MOVE bij jou past en wat je wilt bereiken. Daarna besluit je zelf.",
   },
 ];
 
@@ -26,7 +27,7 @@ export default function Home() {
   return (
     <div className="pb-24 md:pb-0">
       {/* ───────────────────────── HERO ───────────────────────── */}
-      <section className="gradient-hero pt-32 pb-20 md:pt-44 md:pb-32 px-8 md:px-16 relative overflow-hidden">
+      <section className="gradient-hero pt-40 pb-20 md:pt-44 md:pb-32 px-8 md:px-16 relative overflow-hidden">
         {/* Soft ambient glow */}
         <div className="absolute top-20 right-0 w-[500px] h-[500px] rounded-full bg-primary/[0.03] blur-[100px] pointer-events-none" />
         <div className="absolute bottom-0 left-1/4 w-[400px] h-[400px] rounded-full bg-secondary/[0.04] blur-[80px] pointer-events-none" />
@@ -54,7 +55,7 @@ export default function Home() {
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row items-start gap-4 mt-8">
               <Link
-                href="https://calendly.com/rick-rickvianen/kennismaking" target="_blank" rel="noopener noreferrer"
+                href="/intake"
                 className="btn-primary px-8 py-4 text-base font-bold rounded-xl"
               >
                 Plan een kennismakingsgesprek
@@ -71,10 +72,14 @@ export default function Home() {
             <div className="flex items-center gap-2 mt-6 text-sm text-on-surface-variant">
               <span className="material-symbols-outlined text-lg text-secondary">group</span>
               <span>
-                Exclusieve mogelijkheid: We zijn opzoek naar nog{" "}
-                <strong className="text-on-surface">3 mensen</strong>{" "}
-                voor de beta versie van het vernieuwde traject
+                Elke groep is maximaal 8 deelnemers.{" "}
+                <Link href="/wachtlijst" className="text-primary font-semibold hover:underline">Later starten? Zet je op de wachtlijst.</Link>
               </span>
+            </div>
+
+            {/* Quiz hint */}
+            <div className="mt-5">
+              <QuizCTA variant="hint" />
             </div>
           </div>
 
@@ -106,8 +111,7 @@ export default function Home() {
             </h2>
             <div className="h-1 w-20 bg-gradient-to-r from-primary to-secondary mt-6 mb-6 rounded-full" />
             <p className="text-on-surface-variant leading-relaxed">
-              Geen theorie, werkende structuur. Elke week dezelfde cyclus
-              &mdash; totdat het een tweede natuur wordt.
+              Geen theorie, maar werkende structuur. Elke week dezelfde cyclus, totdat het een tweede natuur wordt.
             </p>
           </div>
 
@@ -146,7 +150,7 @@ export default function Home() {
               Drie pijlers. <span className="text-secondary">E&eacute;n systeem.</span>
             </h2>
             <p className="text-on-surface-variant mt-4 text-lg leading-relaxed">
-              <span className="text-primary font-bold">Sport</span>, <span className="text-secondary font-bold">mindset</span> en <span className="text-on-surface font-bold">business</span>{" "}als &eacute;&eacute;n geheel &mdash; niet als losse trajecten.
+              <span className="text-primary font-bold">Sport</span>, <span className="text-secondary font-bold">mindset</span> en <span className="text-on-surface font-bold">business</span>{" "}als &eacute;&eacute;n geheel, niet als losse trajecten.
             </p>
           </div>
 
@@ -246,12 +250,23 @@ export default function Home() {
 
           <div className="relative rounded-2xl overflow-hidden shadow-2xl bg-on-surface">
             <div className="aspect-video">
-              <video
-                src="/videos/move-presentatie.mp4"
-                controls
-                className="absolute inset-0 w-full h-full object-cover"
+              <iframe
+                src="https://www.youtube.com/embed/P4CL11eOM5M"
+                title="Rick legt het zelf uit"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+                className="absolute inset-0 w-full h-full"
               />
             </div>
+          </div>
+
+          <div className="text-center mt-10">
+            <Link
+              href="/intake"
+              className="btn-primary inline-block px-10 py-4 text-base font-bold rounded-xl"
+            >
+              Plan een kennismakingsgesprek
+            </Link>
           </div>
         </div>
       </section>
@@ -284,7 +299,7 @@ export default function Home() {
                 ))}
               </div>
               <p className="text-xl md:text-2xl italic leading-relaxed text-on-surface mb-8">
-                &ldquo;Het vinden van balans, en daarmee rust, overzicht en controle op mijn leven. De eerste stap was de sportieve uitdaging aangaan &mdash; en toen bleek verandering vooral te komen door te doen.&rdquo;
+                &ldquo;Het vinden van balans, en daarmee rust, overzicht en controle op mijn leven. De eerste stap was de sportieve uitdaging aangaan. Toen bleek verandering vooral te komen door te doen.&rdquo;
               </p>
               <div className="flex items-center gap-4">
                 <Image
@@ -325,8 +340,8 @@ export default function Home() {
                   </span>
                 </div>
                 <p className="text-on-surface-variant text-sm italic">
-                  &ldquo;Rick helpt je niet: hij helpt je verder. Verder dan je voor mogelijk hield.&rdquo;
-                  &mdash; Koen
+                  &ldquo;Rick helpt je niet, hij helpt je verder. Verder dan je voor mogelijk hield.&rdquo;
+                  <span className="block mt-2 not-italic font-bold text-xs">Koen</span>
                 </p>
               </div>
             </div>
@@ -474,25 +489,20 @@ export default function Home() {
             Investeer in jezelf
           </h2>
           <p className="text-on-surface-variant text-lg mb-12 max-w-2xl mx-auto">
-            Drie trajecten. E&eacute;n doel: jou in beweging krijgen en houden. 100 dagen, inclusief kick-off en afsluitevent.
+            Twee trajecten. E&eacute;n doel: jou in beweging krijgen en houden. Samen in een groep, of 1-op-1 met Rick.
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
-            <div className="bg-white p-8 rounded-2xl card-hover border border-outline-variant/10">
-              <p className="font-[family-name:var(--font-headline)] font-bold text-lg mb-1">MOVE Core</p>
-              <p className="font-[family-name:var(--font-headline)] text-3xl font-black tracking-tighter">&euro;1.497</p>
-              <p className="text-on-surface-variant text-sm">eenmalig</p>
-            </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10 max-w-2xl mx-auto">
             <div className="p-8 rounded-2xl relative card-hover text-white" style={{ background: "linear-gradient(135deg, #E85211 0%, #d04400 100%)" }}>
               <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-secondary text-white text-[10px] font-bold tracking-wider uppercase px-3 py-1 rounded-full shadow-md">Populair</span>
-              <p className="font-[family-name:var(--font-headline)] font-bold text-lg mb-1">MOVE Performance</p>
+              <p className="font-[family-name:var(--font-headline)] font-bold text-lg mb-1">MOVE Groepstraject</p>
               <p className="font-[family-name:var(--font-headline)] text-3xl font-black tracking-tighter">&euro;2.497</p>
-              <p className="text-white/80 text-sm">eenmalig</p>
+              <p className="text-white/80 text-sm">eenmalig &middot; 100 dagen</p>
             </div>
             <div className="bg-white p-8 rounded-2xl card-hover border border-outline-variant/10">
-              <p className="font-[family-name:var(--font-headline)] font-bold text-lg mb-1">MOVE Ultimate</p>
-              <p className="font-[family-name:var(--font-headline)] text-3xl font-black tracking-tighter">&euro;4.997</p>
-              <p className="text-on-surface-variant text-sm">eenmalig</p>
+              <p className="font-[family-name:var(--font-headline)] font-bold text-lg mb-1">MOVE 1-op-1</p>
+              <p className="font-[family-name:var(--font-headline)] text-3xl font-black tracking-tighter">Op aanvraag</p>
+              <p className="text-on-surface-variant text-sm">half jaar of jaar</p>
             </div>
           </div>
 
@@ -505,6 +515,34 @@ export default function Home() {
               arrow_forward
             </span>
           </Link>
+        </div>
+      </section>
+
+      {/* ───────────────── CHALLENGE BANNER ───────────────── */}
+      <section className="py-12 px-8 md:px-16">
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-on-surface rounded-2xl p-8 md:p-12 flex flex-col md:flex-row items-center gap-8 relative overflow-hidden">
+            <div className="absolute -top-10 -right-10 w-48 h-48 rounded-full bg-primary/10 blur-[50px] pointer-events-none" />
+            <div className="flex-1 relative">
+              <span className="inline-block px-3 py-1 bg-primary/20 text-primary font-bold text-xs uppercase tracking-widest rounded-full mb-4">
+                Nieuw &middot; &euro;100
+              </span>
+              <h2 className="font-[family-name:var(--font-headline)] text-2xl md:text-3xl font-black text-white tracking-tight mb-3">
+                Nog niet klaar voor MOVE? Begin met de Challenge.
+              </h2>
+              <p className="text-white/60 text-sm leading-relaxed">
+                5 dagen. Eén ambitie van de plank. Je €100 is direct je korting als je daarna instroomt in MOVE.
+              </p>
+            </div>
+            <div className="shrink-0 relative">
+              <Link
+                href="/challenge"
+                className="btn-primary px-8 py-4 rounded-xl font-bold whitespace-nowrap block text-center"
+              >
+                Bekijk de Challenge
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -543,7 +581,7 @@ export default function Home() {
           {/* Urgency */}
           <div className="text-center mb-12">
             <p className="text-on-surface-variant text-lg italic leading-relaxed max-w-xl mx-auto">
-              Elke maand zonder systeem is een maand waarin je weet wat je moet doen &mdash; maar het niet doet.
+              Elke maand met de juiste structuur is een maand waarin je weet wat je moet doen, en het ook echt doet.
             </p>
           </div>
 
@@ -554,26 +592,24 @@ export default function Home() {
 
             <div className="relative">
               <h2 className="font-[family-name:var(--font-headline)] text-3xl md:text-5xl font-extrabold tracking-tighter text-on-surface">
-                Het probleem is niet wat je weet. Het probleem is dat je het niet
-                doet.
+                Je weet al wat je moet doen. Nu ga je het ook echt doen.
               </h2>
               <p className="text-on-surface-variant mt-4 text-lg leading-relaxed max-w-lg mx-auto">
-                30 minuten. Geen pitch. Daarna weet je het.
+                30 minuten. Open gesprek, geen verplichtingen.
               </p>
               <Link
-                href="https://calendly.com/rick-rickvianen/kennismaking" target="_blank" rel="noopener noreferrer"
+                href="/intake"
                 className="btn-primary inline-block mt-8 px-10 py-4 text-base font-bold rounded-xl"
               >
                 Plan een kennismakingsgesprek
               </Link>
-              <p className="mt-5 text-on-surface-variant text-sm flex items-center justify-center gap-2">
-                <span className="material-symbols-outlined text-secondary text-lg">
-                  group
+              <div className="mt-5 text-on-surface-variant text-sm flex items-start justify-center gap-2">
+                <span className="material-symbols-outlined text-secondary text-lg mt-0.5 shrink-0">group</span>
+                <span>
+                  Elke groep is maximaal 8 deelnemers.{" "}
+                  <Link href="/wachtlijst" className="text-primary font-semibold hover:underline">Later starten? Zet je op de wachtlijst.</Link>
                 </span>
-                Exclusieve mogelijkheid: We zijn opzoek naar nog{" "}
-                <strong className="text-on-surface">3 mensen</strong>{" "}
-                voor de beta versie van het vernieuwde traject
-              </p>
+              </div>
             </div>
           </div>
         </div>

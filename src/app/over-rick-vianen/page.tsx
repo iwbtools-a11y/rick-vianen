@@ -12,7 +12,7 @@ export default function OverRickVianen() {
   return (
     <div className="pb-24 md:pb-0">
       {/* ───────────────────────── 1. HERO ───────────────────────── */}
-      <section className="pt-32 gradient-hero">
+      <section className="pt-40 gradient-hero">
         <div className="max-w-7xl mx-auto px-8 py-12 md:py-20">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-end">
             {/* Left — 7 cols */}
@@ -30,7 +30,7 @@ export default function OverRickVianen() {
             {/* Right — 5 cols */}
             <div className="md:col-span-5">
               <p className="text-on-surface-variant text-lg leading-relaxed">
-                Rick Vianen cre&euml;ert beweging &mdash; in lijf, hoofd en
+                Rick Vianen cre&euml;ert beweging, in lijf, hoofd en
                 leven. Voor professionals die weten wat ze moeten doen, maar het
                 niet volhouden.
               </p>
@@ -59,7 +59,7 @@ export default function OverRickVianen() {
                   format_quote
                 </span>
                 <p className="text-sm leading-relaxed font-medium">
-                  &ldquo;Rick leeft naar wat hij zegt.&rdquo; &mdash; Chantal
+                  &ldquo;Rick leeft naar wat hij zegt.&rdquo;<br />Chantal
                 </p>
               </div>
               {/* Mobile quote (shown inline) */}
@@ -68,7 +68,7 @@ export default function OverRickVianen() {
                   format_quote
                 </span>
                 <p className="text-sm leading-relaxed font-medium">
-                  &ldquo;Rick leeft naar wat hij zegt.&rdquo; &mdash; Chantal
+                  &ldquo;Rick leeft naar wat hij zegt.&rdquo;<br />Chantal
                 </p>
               </div>
             </div>
@@ -80,32 +80,42 @@ export default function OverRickVianen() {
               </h2>
               <div className="space-y-6 text-on-surface-variant leading-relaxed">
                 <p>
-                  Het begon met het inschrijven voor de eerste halve IRONMAN. Van
-                  feestbeest naar IRONMAN finisher &mdash; met tranen over
-                  zijn wangen bij de finish. De echte winst was niet de finish,
-                  maar de skills: discipline, dealen met gedachten, prioriteiten
-                  stellen.
+                  Het begint met een hoop buikpijn bij het inschrijven voor de IRONMAN 70.3 Duisburg.
+                  Rick&rsquo;s eerste halve triathlon. Dat was de bevestiging van de transformatie van
+                  feestbeest naar IRONMAN finisher. Hij loopt de rode loper op. De omroeper roept zijn
+                  naam: &ldquo;Rick, you are an IRONMAN!&rdquo; Hij valt, letterlijk, in de armen van
+                  een onbekende naast de finish en breekt.
                 </p>
                 <p>
-                  Die ervaring plantte het zaadje voor wat later MOVE zou worden:
-                  een coachingfilosofie die sport, mindset en business als
-                  &eacute;&eacute;n onlosmakelijk geheel beschouwt. Geen
-                  theorie, geen fluff &mdash; alleen werkende structuur.
+                  Maar de echte winst was nooit alleen de finish. Niet de tijd op de klok is wat
+                  blijft hangen. Het zijn de skills die hij zichzelf moest leren om daar te komen:
+                  doorzetten als het zwaar wordt, omgaan met de gedachten die je willen laten stoppen,
+                  kiezen wat prioriteit krijgt als alles tegelijk om aandacht vraagt. Skills die niemand
+                  je meer afneemt. Skills die je als persoon laten groeien, ook in mindset en business.
                 </p>
                 <p>
-                  Vandaag coacht Rick ambitieuze professionals die goed
-                  presteren aan de buitenkant, maar merken dat gezondheid,
-                  energie en structuur achterblijven bij wie ze willen zijn.
-                  Confronterend, meetbaar, blijvend.
+                  Die ervaring plant het zaadje voor wat later MOVE wordt: een coachingfilosofie die
+                  sport, mindset en business niet als drie aparte dingen ziet, maar als &eacute;&eacute;n
+                  geheel. Geen theorie. Alleen structuur die werkt.
                 </p>
                 <p>
-                  Rick investeerde bijna &euro;100.000 om getraind te worden als coach, onder leiding van Dusan Djukich, een van de grootste business coaches van Amerika, schrijver van het boek en founder van Straight Line Leadership. Hiervoor is hij onder andere meerdere weekenden naar Amerika geweest om te trainen en het werk zelf te implementeren.
+                  De coachingvaardigheden leert Rick van Dusan Djukich, schrijver van Straight Line
+                  Leadership en een van de grootste business coaches van Amerika. Hiervoor is hij onder
+                  andere meerdere jaren aangesloten geweest bij verschillende trajecten en ook voor
+                  weekenden naar Amerika geweest om te trainen en het werk zelf te implementeren.
+                  Een uitspraak van Djukich blijft hem bij: het idee dat wat je niet verandert,
+                  eigenlijk een keuze is. Dat stilstand geen toeval is, maar iets dat je zelf in stand houdt.
                 </p>
                 <p>
-                  Naast de coaching is Rick zelf IRONMAN finisher en ervaarde zelf de waarde van het behalen van zo&rsquo;n groot doel voor zijn persoonlijke en zakelijke leven.
+                  Rick herkent het verschil ook in zichzelf. Als toekomstig vader. In hoeveel mensen
+                  hij positief be&iuml;nvloedt en groter maakt. Als voorbeeld voor zijn omgeving.
+                  En als coach: de ervaring zelf doorleefd te hebben, maakt hem scherper in wat hij
+                  van anderen vraagt.
                 </p>
                 <p>
-                  Dit samen is de grondslag van MOVE. De combinatie van sport en business coaching.
+                  Dat is de grondslag van MOVE, gebouwd op niets anders dan eigen ervaring. Want als
+                  Rick zelf niet bereid is het werk te doen, hoe eerlijk zou het zijn om dat van
+                  anderen te verwachten?
                 </p>
               </div>
               <Link
@@ -158,7 +168,7 @@ export default function OverRickVianen() {
                 Alles hangt samen
               </h3>
               <p className="text-on-surface-variant leading-relaxed mb-8 max-w-lg">
-                Fysiek, mentaal, werk, relatie &mdash; niet los aanpakken. MOVE
+                Fysiek, mentaal, werk, relatie. Niet los aanpakken. MOVE
                 integreert alles in &eacute;&eacute;n systeem.
               </p>
               <div className="flex flex-wrap gap-3">
@@ -207,7 +217,7 @@ export default function OverRickVianen() {
                   </h4>
                   <p className="text-on-surface-variant text-sm leading-relaxed">
                     Jij bent verantwoordelijk, niet je omstandigheden. Dat is
-                    geen last &mdash; dat is vrijheid.
+                    geen last. Dat is vrijheid.
                   </p>
                 </div>
 
@@ -221,7 +231,7 @@ export default function OverRickVianen() {
                   </h4>
                   <p className="text-on-surface-variant text-sm leading-relaxed">
                     Je maakt elkaar een belofte. Niet Rick die je bij de hand
-                    neemt &mdash; een groep die je niet laat zitten.
+                    neemt, een kleine groep die je scherp houdt als jij dat zelf even niet doet.
                   </p>
                 </div>
               </div>
@@ -246,15 +256,15 @@ export default function OverRickVianen() {
                   <span className="text-primary">Plan een gesprek.</span>
                 </h2>
                 <p className="text-surface-container-highest/60 leading-relaxed max-w-lg">
-                  30 minuten. Geen pitch. Rick benoemt wat hij ziet &mdash;
-                  direct en zonder verzachten. Daarna weet je het.
+                  30 minuten. Open gesprek, geen verplichtingen.
+                  Rick benoemt wat hij ziet. Direct en zonder verzachten.
                 </p>
               </div>
 
               {/* Button — right */}
               <div className="md:col-span-4 flex md:justify-end">
                 <Link
-                  href="https://calendly.com/rick-rickvianen/kennismaking"
+                  href="/intake"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center gap-3 btn-primary px-8 py-4 rounded-lg font-bold text-lg whitespace-nowrap w-full md:w-auto"

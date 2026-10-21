@@ -3,27 +3,46 @@
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const navLinks = [
   { href: "/", label: "Home" },
   { href: "/programma", label: "Programma" },
   { href: "/prijs", label: "Prijs" },
+  { href: "/challenge", label: "Challenge" },
   { href: "/over-rick-vianen", label: "Over Rick" },
-  { href: "/blog", label: "Blog" },
+  { href: "/content", label: "Content" },
 ];
 
 const mobileNavLinks = [
   { href: "/", label: "Home", icon: "home" },
   { href: "/programma", label: "Programma", icon: "calendar_today" },
   { href: "/prijs", label: "Prijs", icon: "payments" },
+  { href: "/challenge", label: "Challenge", icon: "bolt" },
   { href: "/over-rick-vianen", label: "Over Rick", icon: "person" },
-  { href: "/blog", label: "Blog", icon: "article" },
 ];
 
 export function Navbar() {
   const pathname = usePathname();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [bannerVisible, setBannerVisible] = useState(false);
+
+  // Hydrate from localStorage after mount to avoid SSR mismatch
+  useEffect(() => {
+    setBannerVisible(localStorage.getItem("quizBannerDismissed") !== "1");
+  }, []);
+
+  function dismissBanner() {
+    localStorage.setItem("quizBannerDismissed", "1");
+    setBannerVisible(false);
+  }
+
+  // /lp/* and /actieplan* routes are standalone one-pagers: no site nav, single conversion path.
+  if (pathname?.startsWith("/lp/") || pathname?.startsWith("/actieplan")) {
+    return null;
+  }
+
+  const showBanner = bannerVisible && pathname !== "/quiz";
 
   return (
     <>
@@ -62,9 +81,7 @@ export function Navbar() {
 
           <div className="flex items-center gap-4">
             <Link
-              href="https://calendly.com/rick-rickvianen/kennismaking"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="/intake"
               className="btn-primary px-6 py-2.5 text-sm font-bold rounded-lg"
             >
               Plan gesprek
@@ -80,6 +97,29 @@ export function Navbar() {
             </button>
           </div>
         </div>
+
+        {/* Quiz announcement banner */}
+        {showBanner && (
+          <div className="bg-on-surface border-t border-white/5 px-4 py-2 flex items-center justify-center gap-3 text-sm relative">
+            <span className="text-white/50 hidden sm:inline">Ontdekken waar jouw energie weglekt?</span>
+            <Link
+              href="/quiz"
+              className="text-primary font-bold inline-flex items-center gap-1.5 group"
+            >
+              Doe de test in 2 minuten
+              <span className="material-symbols-outlined text-base transition-transform duration-300 group-hover:translate-x-0.5">
+                arrow_forward
+              </span>
+            </Link>
+            <button
+              onClick={dismissBanner}
+              aria-label="Sluiten"
+              className="absolute right-4 top-1/2 -translate-y-1/2 text-white/30 hover:text-white/70 transition-colors"
+            >
+              <span className="material-symbols-outlined text-base">close</span>
+            </button>
+          </div>
+        )}
 
         {/* Mobile dropdown menu */}
         {mobileMenuOpen && (
