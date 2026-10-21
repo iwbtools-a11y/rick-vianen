@@ -489,25 +489,20 @@ export default function Home() {
             Investeer in jezelf
           </h2>
           <p className="text-on-surface-variant text-lg mb-12 max-w-2xl mx-auto">
-            Drie trajecten. E&eacute;n doel: jou in beweging krijgen en houden. 100 dagen, inclusief kick-off en afsluitevent.
+            Twee trajecten. E&eacute;n doel: jou in beweging krijgen en houden. Samen in een groep, of 1-op-1 met Rick.
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
-            <div className="bg-white p-8 rounded-2xl card-hover border border-outline-variant/10">
-              <p className="font-[family-name:var(--font-headline)] font-bold text-lg mb-1">MOVE Core</p>
-              <p className="font-[family-name:var(--font-headline)] text-3xl font-black tracking-tighter">&euro;1.497</p>
-              <p className="text-on-surface-variant text-sm">eenmalig</p>
-            </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10 max-w-2xl mx-auto">
             <div className="p-8 rounded-2xl relative card-hover text-white" style={{ background: "linear-gradient(135deg, #E85211 0%, #d04400 100%)" }}>
               <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-secondary text-white text-[10px] font-bold tracking-wider uppercase px-3 py-1 rounded-full shadow-md">Populair</span>
-              <p className="font-[family-name:var(--font-headline)] font-bold text-lg mb-1">MOVE Performance</p>
+              <p className="font-[family-name:var(--font-headline)] font-bold text-lg mb-1">MOVE Groepstraject</p>
               <p className="font-[family-name:var(--font-headline)] text-3xl font-black tracking-tighter">&euro;2.497</p>
-              <p className="text-white/80 text-sm">eenmalig</p>
+              <p className="text-white/80 text-sm">eenmalig &middot; 100 dagen</p>
             </div>
             <div className="bg-white p-8 rounded-2xl card-hover border border-outline-variant/10">
-              <p className="font-[family-name:var(--font-headline)] font-bold text-lg mb-1">MOVE Ultimate</p>
-              <p className="font-[family-name:var(--font-headline)] text-3xl font-black tracking-tighter">&euro;4.997</p>
-              <p className="text-on-surface-variant text-sm">eenmalig</p>
+              <p className="font-[family-name:var(--font-headline)] font-bold text-lg mb-1">MOVE 1-op-1</p>
+              <p className="font-[family-name:var(--font-headline)] text-3xl font-black tracking-tighter">Op aanvraag</p>
+              <p className="text-on-surface-variant text-sm">half jaar of jaar</p>
             </div>
           </div>
 

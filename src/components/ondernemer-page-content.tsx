@@ -4,6 +4,7 @@ import { Faq } from "@/components/faq";
 import { FaqJsonLd } from "@/components/faq-jsonld";
 import { QuizCTA } from "@/components/quiz-cta";
 import { CalendlyPopupCta } from "@/components/calendly-popup-cta";
+import { Aanbod } from "@/components/aanbod";
 
 /**
  * On the "site" variant this navigates to /intake (full page, full site chrome).
@@ -29,35 +30,6 @@ function BookCallCta({
   );
 }
 
-function ValueItem({
-  children,
-  value,
-  icon = "check_circle",
-  highlight = false,
-}: {
-  children: React.ReactNode;
-  value: string;
-  icon?: string;
-  highlight?: boolean;
-}) {
-  return (
-    <li className="flex items-center justify-between gap-3 py-3 border-b border-outline-variant/15 last:border-0">
-      <div className="flex items-start gap-3 flex-1">
-        <span
-          className={`material-symbols-outlined text-lg mt-0.5 shrink-0 ${highlight ? "text-secondary" : "text-primary"}`}
-          style={highlight ? { fontVariationSettings: "'FILL' 1" } : undefined}
-        >
-          {icon}
-        </span>
-        <span className="text-on-surface-variant text-sm leading-relaxed">{children}</span>
-      </div>
-      <span className={`text-sm font-bold shrink-0 ${highlight ? "text-secondary" : "text-on-surface/60"}`}>
-        {value}
-      </span>
-    </li>
-  );
-}
-
 const ondernemerFaqs = [
   {
     question: "Ik heb het al druk. Hoeveel tijd kost dit?",
@@ -76,12 +48,12 @@ const ondernemerFaqs = [
     answer: "Onverwachte verplichtingen horen erbij als ondernemer. Als je een sessie mist, krijg je de opname en de opdracht achteraf. Maar consistentie is precies waar MOVE over gaat. De groep merkt het als je er niet bent. Dat is de kracht.",
   },
   {
-    question: "Wat is het verschil tussen Core, Performance en Ultimate?",
-    answer: "Core is de eerlijke instap: het fundament. Performance is het vlaggenschip met wekelijkse Q&A's, een trainingsschema op maat en 3 jaar Notion-toegang. Ultimate voegt wekelijks 1-op-1 coaching met Rick toe. Voor ondernemers die directe sparring partner willen.",
+    question: "Wat is het verschil tussen het groepstraject en 1-op-1?",
+    answer: "Het groepstraject duurt 100 dagen met maximaal 8 professionals, inclusief wekelijkse Q&A's, een trainingsschema op maat en 3 jaar Notion-toegang. Bij het 1-op-1 traject werk je wekelijks privé met Rick, voor een half jaar of een jaar. Voor ondernemers die een directe sparringpartner willen.",
   },
   {
     question: "Wat is de garantie?",
-    answer: "Je kunt na 2 weken stoppen. Voel je geen richting of zie je geen vooruitgang? Dan krijg je je geld terug. No questions asked.",
+    answer: "Je kunt na 2 weken stoppen, bij zowel het groepstraject als 1-op-1. Voel je geen richting of zie je geen vooruitgang? Dan krijg je je geld terug. No questions asked.",
   },
 ];
 
@@ -410,7 +382,7 @@ export function OndernemerPageContent({
             <div className="md:col-span-4 text-white p-12 rounded-2xl flex flex-col justify-center text-center" style={{ background: "linear-gradient(165deg, #b868c7 0%, #A559B4 50%, #8a3d9a 100%)" }}>
               <span className="text-6xl font-black mb-2">-80%</span>
               <span className="font-bold text-xl leading-tight">
-                Minder terugval door groepsaccountability vs. solo coaching
+                Minder terugval als je het niet alleen hoeft te doen
               </span>
             </div>
 
@@ -454,150 +426,11 @@ export function OndernemerPageContent({
               Kies je traject.
             </h2>
             <p className="text-xl text-on-surface-variant max-w-2xl">
-              Alle trajecten duren 100 dagen. Eenmalige investering, inclusief kick-off en afsluitevent. Plan een gesprek om te bespreken wat het beste bij jou past.
+              Samen in een groep van 100 dagen, of 1-op-1 met Rick voor een half jaar of een jaar. Plan een gesprek om te bespreken wat het beste bij jou past.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {/* MOVE Core */}
-            <div className="bg-white rounded-2xl overflow-hidden flex flex-col">
-              <div className="p-10 pb-6">
-                <p className="font-[family-name:var(--font-headline)] text-2xl font-black tracking-tight">
-                  MOVE Core
-                </p>
-                <p className="text-on-surface-variant text-sm mt-1 mb-6">
-                  De eerlijke instap. Voor wie wil proeven wat implementatie echt betekent.
-                </p>
-                <div className="mb-6">
-                  <span className="font-[family-name:var(--font-headline)] text-5xl font-black tracking-tighter">
-                    &euro;1.497
-                  </span>
-                  <span className="text-on-surface-variant text-sm ml-1">eenmalig</span>
-                </div>
-                <div className="flex items-center gap-2 mb-6">
-                  <span className="text-xs text-on-surface-variant line-through">&euro;4.193 waarde</span>
-                  <span className="text-xs font-bold text-white bg-secondary px-2 py-0.5 rounded-full">Bespaar 64%</span>
-                </div>
-                <BookCallCta
-                  variant={variant}
-                  className="block text-center btn-secondary font-bold text-sm px-6 py-3.5 rounded-lg"
-                >
-                  Plan een gesprek
-                </BookCallCta>
-              </div>
-              <div className="border-t border-outline-variant/20 p-10 pt-6 flex-1">
-                <p className="text-xs font-bold uppercase tracking-wider text-on-surface mb-4">Wat je krijgt</p>
-                <ul>
-                  <ValueItem value="€397">Persoonlijke kick-off (1-op-1 intake + doelen)</ValueItem>
-                  <ValueItem value="€597">Groeps kick-off (start cohort, max 8)</ValueItem>
-                  <ValueItem value="€1.764">12 weken exclusieve content</ValueItem>
-                  <ValueItem value="€647">Eindevenement (afsluiting + metingen)</ValueItem>
-                </ul>
-                <p className="text-xs font-bold uppercase tracking-wider text-on-surface mb-4 mt-6">Bonussen</p>
-                <ul>
-                  <ValueItem value="€197" icon="card_giftcard" highlight>Notion volgsysteem</ValueItem>
-                  <ValueItem value="€297" icon="card_giftcard" highlight>Directe vraagstelmogelijkheid via kanaal</ValueItem>
-                  <ValueItem value="€197" icon="card_giftcard" highlight>Bibliotheek met trainingen &amp; inspiratie</ValueItem>
-                  <ValueItem value="€97" icon="card_giftcard" highlight>MOVE Foodguide</ValueItem>
-                  <ValueItem value="&infin;" icon="favorite" highlight>Kleine groep die elkaar support</ValueItem>
-                </ul>
-              </div>
-            </div>
-
-            {/* MOVE Performance */}
-            <div className="relative bg-white rounded-2xl shadow-xl lg:scale-[1.03] z-20 overflow-hidden flex flex-col border-2 border-primary/20">
-              <span className="absolute -top-0 left-0 right-0 bg-primary text-white text-xs font-bold tracking-wider uppercase py-2.5 text-center">
-                MEEST GEKOZEN &middot; HET VLAGGENSCHIP
-              </span>
-              <div className="p-10 pb-6 pt-14">
-                <p className="font-[family-name:var(--font-headline)] text-2xl font-black tracking-tight text-primary">
-                  MOVE Performance
-                </p>
-                <p className="text-on-surface-variant text-sm mt-1 mb-6">
-                  De volle stack. Voor wie klaar is met alleen proberen.
-                </p>
-                <div className="mb-6">
-                  <span className="font-[family-name:var(--font-headline)] text-5xl font-black tracking-tighter">
-                    &euro;2.497
-                  </span>
-                  <span className="text-on-surface-variant text-sm ml-1">eenmalig</span>
-                </div>
-                <div className="flex items-center gap-2 mb-6">
-                  <span className="text-xs text-on-surface-variant line-through">&euro;6.594 waarde</span>
-                  <span className="text-xs font-bold text-white bg-secondary px-2 py-0.5 rounded-full">Bespaar 57%</span>
-                </div>
-                <BookCallCta
-                  variant={variant}
-                  className="block text-center btn-primary font-bold text-sm px-6 py-3.5 rounded-lg"
-                >
-                  Plan een gesprek
-                </BookCallCta>
-              </div>
-              <div className="border-t border-outline-variant/20 p-10 pt-6 flex-1">
-                <p className="text-xs font-bold uppercase tracking-wider text-on-surface mb-4">Alles uit Core, plus</p>
-                <ul>
-                  <ValueItem value="€2.364" icon="bolt">12&times; wekelijkse Q&amp;A + context-verdieping</ValueItem>
-                  <ValueItem value="€501">Trainingsschema op maat (elke 4 weken bijgesteld)</ValueItem>
-                  <ValueItem value="€1.497" icon="bolt">3 jaar toegang Notion-systeem (ook na stop)</ValueItem>
-                </ul>
-                <p className="text-xs font-bold uppercase tracking-wider text-on-surface mb-4 mt-6">Bonussen</p>
-                <ul>
-                  <ValueItem value="€397" icon="card_giftcard" highlight>Persoonlijke kick-off (1-op-1 intake)</ValueItem>
-                  <ValueItem value="€597" icon="card_giftcard" highlight>Groeps kick-off (max 8)</ValueItem>
-                  <ValueItem value="€647" icon="card_giftcard" highlight>Eindevenement + metingen</ValueItem>
-                  <ValueItem value="€297" icon="card_giftcard" highlight>Directe vraagstelmogelijkheid via kanaal</ValueItem>
-                  <ValueItem value="€197" icon="card_giftcard" highlight>Bibliotheek trainingen &amp; inspiratie</ValueItem>
-                  <ValueItem value="€97" icon="card_giftcard" highlight>MOVE Foodguide</ValueItem>
-                  <ValueItem value="&infin;" icon="favorite" highlight>Kleine groep die elkaar support</ValueItem>
-                </ul>
-              </div>
-            </div>
-
-            {/* MOVE Ultimate */}
-            <div className="bg-white rounded-2xl overflow-hidden flex flex-col">
-              <div className="p-10 pb-6">
-                <p className="font-[family-name:var(--font-headline)] text-2xl font-black tracking-tight">
-                  MOVE Ultimate
-                </p>
-                <p className="text-on-surface-variant text-sm mt-1 mb-6">
-                  Private. Voor ondernemers die wekelijks 1-op-1 met Rick willen werken.
-                </p>
-                <div className="mb-6">
-                  <span className="font-[family-name:var(--font-headline)] text-5xl font-black tracking-tighter">
-                    &euro;4.997
-                  </span>
-                  <span className="text-on-surface-variant text-sm ml-1">eenmalig</span>
-                </div>
-                <div className="flex items-center gap-2 mb-6">
-                  <span className="text-xs text-on-surface-variant line-through">&euro;11.558 waarde</span>
-                  <span className="text-xs font-bold text-white bg-secondary px-2 py-0.5 rounded-full">Bespaar 57%</span>
-                </div>
-                <BookCallCta
-                  variant={variant}
-                  className="block text-center border-2 border-on-surface text-on-surface font-bold text-sm px-6 py-3.5 rounded-lg hover:bg-on-surface hover:text-white transition-all duration-300"
-                >
-                  Plan een gesprek
-                </BookCallCta>
-              </div>
-              <div className="border-t border-outline-variant/20 p-10 pt-6 flex-1">
-                <p className="text-xs font-bold uppercase tracking-wider text-on-surface mb-4">Alles uit Performance, plus</p>
-                <ul>
-                  <ValueItem value="€4.764" icon="bolt">12&times; wekelijkse 1-op-1 sessie met Rick</ValueItem>
-                  <ValueItem value="€497" icon="bolt">Directe toegang tot Rick (24/7)</ValueItem>
-                </ul>
-                <p className="text-xs font-bold uppercase tracking-wider text-on-surface mb-4 mt-6">Inclusief uit Performance</p>
-                <ul>
-                  <ValueItem value="€2.364" icon="card_giftcard" highlight>12&times; wekelijkse Q&amp;A + verdieping</ValueItem>
-                  <ValueItem value="€501" icon="card_giftcard" highlight>Trainingsschema op maat</ValueItem>
-                  <ValueItem value="€1.497" icon="card_giftcard" highlight>3 jaar Notion-systeem</ValueItem>
-                  <ValueItem value="€647" icon="card_giftcard" highlight>Eindevenement + metingen</ValueItem>
-                  <ValueItem value="€197" icon="card_giftcard" highlight>Bibliotheek trainingen &amp; inspiratie</ValueItem>
-                  <ValueItem value="€97" icon="card_giftcard" highlight>MOVE Foodguide</ValueItem>
-                  <ValueItem value="&infin;" icon="favorite" highlight>Kleine groep die elkaar support</ValueItem>
-                </ul>
-              </div>
-            </div>
-          </div>
+          <Aanbod variant={variant} />
         </div>
       </section>
 
@@ -614,7 +447,7 @@ export function OndernemerPageContent({
             Twee weken proberen. Niet overtuigd? Geld terug.
           </h2>
           <p className="text-lg text-on-surface-variant leading-relaxed max-w-2xl mx-auto mb-8">
-            We geloven zo sterk in het traject dat je na 2 weken mag stoppen. Voel je geen richting of zie je geen vooruitgang? Dan krijg je je geld terug. No questions asked.
+            We geloven zo sterk in onze trajecten dat je na 2 weken mag stoppen, of je nu kiest voor de groep of 1-op-1. Voel je geen richting of zie je geen vooruitgang? Dan krijg je je geld terug. No questions asked.
           </p>
           <div className="inline-flex items-center gap-3 bg-surface-container-low px-6 py-4 rounded-xl editorial-shadow">
             <span className="material-symbols-outlined text-primary text-2xl" style={{ fontVariationSettings: "'FILL' 1" }}>

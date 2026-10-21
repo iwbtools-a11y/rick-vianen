@@ -64,7 +64,7 @@ const programmaFaqs = [
   },
   {
     question: "Wat is de garantie?",
-    answer: "We geloven zo sterk in het traject dat je na 2 weken mag stoppen. Voel je geen richting of zie je geen vooruitgang? Dan krijg je je geld terug. No questions asked.",
+    answer: "We geloven zo sterk in onze trajecten dat je na 2 weken mag stoppen, of je nu kiest voor de groep of 1-op-1. Voel je geen richting of zie je geen vooruitgang? Dan krijg je je geld terug. No questions asked.",
   },
   {
     question: "Kan ik na 100 dagen doorgaan?",
@@ -75,15 +75,15 @@ const programmaFaqs = [
 const prijzenFaqs = [
   {
     question: "Wat kost MOVE?",
-    answer: "MOVE Core: €1.497. MOVE Performance: €2.497 (meest gekozen). MOVE Ultimate: €4.997. Alle prijzen zijn eenmalig voor het volledige 100-dagen traject, inclusief kick-off en eindevenement.",
+    answer: "Het MOVE Groepstraject kost €2.497, eenmalig voor het volledige 100-dagen traject, inclusief kick-off en eindevenement. Het MOVE 1-op-1 traject (half jaar of jaar) is op aanvraag; de investering bespreken we in het kennismakingsgesprek.",
   },
   {
-    question: "Wat is het verschil tussen Core, Performance en Ultimate?",
-    answer: "Core is de eerlijke instap: wekelijkse content, groeps kick-off en eindevenement. Performance voegt wekelijkse Q&A's, trainingsschema op maat en 3 jaar Notion-toegang toe. Dit is het vlaggenschip. Ultimate is alles uit Performance plus wekelijks 60 minuten privé coaching met Rick.",
+    question: "Wat is het verschil tussen het groepstraject en 1-op-1?",
+    answer: "Het groepstraject duurt 100 dagen met een kleine groep van maximaal 8, inclusief wekelijkse Q&A's, trainingsschema op maat en 3 jaar Notion-toegang. Bij het 1-op-1 traject werk je wekelijks privé met Rick, voor een half jaar of een jaar, met directe toegang tot Rick.",
   },
   {
     question: "Is dit een eenmalige betaling?",
-    answer: "Ja. MOVE is een eenmalige investering voor het volledige 100-dagen traject. Geen abonnement, geen terugkerende kosten. Je betaalt één keer en krijgt het complete programma inclusief kick-off en eindevenement.",
+    answer: "Het groepstraject is een eenmalige investering voor het volledige 100-dagen traject. Geen abonnement, geen terugkerende kosten. Je betaalt één keer en krijgt het complete programma inclusief kick-off en eindevenement. Voor het 1-op-1 traject bespreken we de investering en betaalwijze in het kennismakingsgesprek.",
   },
   {
     question: "Kan ik in termijnen betalen?",
@@ -94,12 +94,12 @@ const prijzenFaqs = [
     answer: "In veel gevallen wel. Performance coaching is een investering in professionele ontwikkeling. Raadpleeg je boekhouder voor jouw specifieke situatie. Rick staat geregistreerd bij de KvK (94159475).",
   },
   {
-    question: "Waarom is Performance het meest gekozen?",
-    answer: "Performance bevat de volle stack: alles uit Core plus wekelijkse Q&A's voor context-verdieping, een trainingsschema op maat dat elke 4 weken wordt bijgesteld, en 3 jaar toegang tot het Notion-systeem. De totale waarde is €8.358. Je investeert eenmalig €2.497.",
+    question: "Groep of 1-op-1: wat past bij mij?",
+    answer: "Het groepstraject is voor wie wil groeien met een kleine groep die elkaar scherp houdt: 100 dagen, wekelijkse Q&A's, een trainingsschema op maat dat elke 4 weken wordt bijgesteld en 3 jaar toegang tot het Notion-systeem. Het 1-op-1 traject is voor wie wekelijks privé met Rick wil werken, voor een half jaar of een jaar. Twijfel je? In het kennismakingsgesprek kijken we samen wat het beste past.",
   },
   {
     question: "Wat als ik na een paar weken wil stoppen?",
-    answer: "MOVE is geen abonnement. Het is een eenmalige investering en een commitment van 100 dagen. De groep rekent op jouw aanwezigheid en jij op die van hen. Twijfel je of MOVE bij je past? Daarom begint elk traject met een kennismakingsgesprek.",
+    answer: "MOVE is geen abonnement. Het groepstraject is een commitment van 100 dagen, het 1-op-1 traject van een half jaar of een jaar. De groep rekent op jouw aanwezigheid en jij op die van hen. Twijfel je of MOVE bij je past? Daarom begint elk traject met een kennismakingsgesprek. En voel je na 2 weken geen richting of zie je geen vooruitgang? Dan krijg je je geld terug, bij zowel het groepstraject als 1-op-1.",
   },
 ];
 
@@ -118,7 +118,7 @@ const praktischFaqs = [
   },
   {
     question: "Welke tools gebruik ik tijdens het traject?",
-    answer: "Je krijgt toegang tot een Notion-systeem voor tracking en opdrachten, een accountability-tool voor dagelijkse check-ins, en een besloten kanaal voor directe communicatie met de groep en Rick. Bij Performance en Ultimate houd je 3 jaar Notion-toegang na afloop.",
+    answer: "Je krijgt toegang tot een Notion-systeem voor tracking en opdrachten, een accountability-tool voor dagelijkse check-ins, en een besloten kanaal voor directe communicatie met de groep en Rick. Bij beide trajecten houd je 3 jaar Notion-toegang na afloop.",
   },
   {
     question: "Hoeveel tijd kost het per week?",

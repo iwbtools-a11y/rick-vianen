@@ -127,9 +127,12 @@ export function HerroepingClient() {
                 className="w-full bg-surface-container-low border border-outline-variant rounded-xl px-4 py-3 text-sm text-on-surface focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/10 transition-all"
               >
                 <option value="">Selecteer een product</option>
-                <option value="MOVE Core">MOVE Core</option>
-                <option value="MOVE Performance">MOVE Performance</option>
-                <option value="MOVE Ultimate">MOVE Ultimate</option>
+                <option value="MOVE Groepstraject">MOVE Groepstraject</option>
+                <option value="MOVE 1-op-1 (half jaar)">MOVE 1-op-1 (half jaar)</option>
+                <option value="MOVE 1-op-1 (jaar)">MOVE 1-op-1 (jaar)</option>
+                <option value="MOVE Core">MOVE Core (oud)</option>
+                <option value="MOVE Performance">MOVE Performance (oud)</option>
+                <option value="MOVE Ultimate">MOVE Ultimate (oud)</option>
                 <option value="MOVE the Challenge">MOVE the Challenge</option>
                 <option value="Anders">Anders</option>
               </select>
